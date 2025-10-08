@@ -346,7 +346,11 @@ def init_database() -> None:
                 miete TEXT,
                 wbs_erforderlich INTEGER DEFAULT 0,
                 link TEXT UNIQUE,
-                ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                applied INTEGER DEFAULT 0,
+                applied_ts TIMESTAMP,
+                application_status TEXT,
+                application_error TEXT
             )
         """)
 

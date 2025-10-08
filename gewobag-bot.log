@@ -729,3 +729,729 @@
 2025-10-08 03:57:30,223 - __main__ - INFO - ======================================================================
 2025-10-08 03:57:30,223 - __main__ - INFO - Zusammenfassung: 23 Angebote gefunden (mit aktiven Filtern), 0 neu gespeichert, 23 bereits bekannt
 2025-10-08 03:57:30,223 - __main__ - INFO - ======================================================================
+2025-10-08 16:29:40,717 - __main__ - INFO - 
+================================================================================
+2025-10-08 16:29:40,717 - __main__ - INFO - 📝 MODUS: NUR BEWERBUNGEN
+2025-10-08 16:29:40,717 - __main__ - INFO - ================================================================================
+2025-10-08 16:29:40,720 - application_bot - INFO - 📊 23 Wohnungen ohne Bewerbung gefunden
+2025-10-08 16:29:40,720 - __main__ - INFO - 📊 23 Wohnungen ohne Bewerbung gefunden
+2025-10-08 16:29:40,720 - application_bot - INFO - ================================================================================
+2025-10-08 16:29:40,720 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-08 16:29:40,720 - application_bot - INFO - ================================================================================
+2025-10-08 16:29:40,720 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-08 16:29:40,720 - application_bot - INFO - 📊 23 Wohnungen ohne Bewerbung gefunden
+2025-10-08 16:29:40,720 - application_bot - INFO - ⚠️  Limitiere auf 1 Bewerbungen (von 23)
+2025-10-08 16:29:40,720 - application_bot - INFO - 
+📋 Bewerbung 1/1
+2025-10-08 16:29:40,721 - application_bot - INFO - ================================================================================
+2025-10-08 16:29:40,721 - application_bot - INFO - 🏠 Starte Bewerbung für: Schicke Wohnung in der Waterkant sucht netten Nachmieter
+2025-10-08 16:29:40,721 - application_bot - INFO - 📍 Bezirk: Haselhorst
+2025-10-08 16:29:40,721 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01032-1402-0400/
+2025-10-08 16:29:40,721 - application_bot - INFO - ================================================================================
+2025-10-08 16:29:41,102 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 16:29:46,422 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01032-1402-0400/
+2025-10-08 16:29:52,779 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 16:29:52,819 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-08 16:30:22,825 - application_bot - ERROR - ⏱️  Timeout beim Laden des Formulars: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button[data-tab=\"rental-contact\"]").first
+    - locator resolved to <button class="rental-contact" data-tab="rental-contact">Anfrage senden</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div id="BorlabsDialogBackdrop" class="brlbs-cmpnt-dialog-backdrop"></div> from <div data-v-app="" data-nosnippet="" id="BorlabsCookieBox" data-borlabs-cookie-consent-required="true">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div id="BorlabsDialogBackdrop" class="brlbs-cmpnt-dialog-backdrop"></div> from <div data-v-app="" data-nosnippet="" id="BorlabsCookieBox" data-borlabs-cookie-consent-required="true">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div id="BorlabsDialogBackdrop" class="brlbs-cmpnt-dialog-backdrop"></div> from <div data-v-app="" data-nosnippet="" id="BorlabsCookieBox" data-borlabs-cookie-consent-required="true">…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+
+2025-10-08 16:30:23,040 - application_bot - ERROR - ❌ Fehler bei Bewerbung (Versuch 1/3): Formular konnte nicht ausgefüllt werden
+2025-10-08 16:30:23,040 - application_bot - INFO - 🔄 Wiederhole in 7.0 Sekunden...
+2025-10-08 16:30:30,255 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 16:30:31,035 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01032-1402-0400/
+2025-10-08 16:30:35,400 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 16:30:35,423 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-08 16:31:05,430 - application_bot - ERROR - ⏱️  Timeout beim Laden des Formulars: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button[data-tab=\"rental-contact\"]").first
+    - locator resolved to <button class="rental-contact" data-tab="rental-contact">Anfrage senden</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div id="BorlabsDialogBackdrop" class="brlbs-cmpnt-dialog-backdrop"></div> from <div data-v-app="" data-nosnippet="" id="BorlabsCookieBox" data-borlabs-cookie-consent-required="true">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div id="BorlabsDialogBackdrop" class="brlbs-cmpnt-dialog-backdrop"></div> from <div data-v-app="" data-nosnippet="" id="BorlabsCookieBox" data-borlabs-cookie-consent-required="true">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    56 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div id="BorlabsDialogBackdrop" class="brlbs-cmpnt-dialog-backdrop"></div> from <div data-v-app="" data-nosnippet="" id="BorlabsCookieBox" data-borlabs-cookie-consent-required="true">…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+
+2025-10-08 16:31:05,598 - application_bot - ERROR - ❌ Fehler bei Bewerbung (Versuch 2/3): Formular konnte nicht ausgefüllt werden
+2025-10-08 16:31:05,598 - application_bot - INFO - 🔄 Wiederhole in 12.3 Sekunden...
+2025-10-08 16:31:25,333 - __main__ - INFO - 
+================================================================================
+2025-10-08 16:31:25,333 - __main__ - INFO - 📝 MODUS: NUR BEWERBUNGEN
+2025-10-08 16:31:25,333 - __main__ - INFO - ================================================================================
+2025-10-08 16:31:25,333 - application_bot - INFO - 📊 23 Wohnungen ohne Bewerbung gefunden
+2025-10-08 16:31:25,333 - __main__ - INFO - 📊 23 Wohnungen ohne Bewerbung gefunden
+2025-10-08 16:31:25,334 - application_bot - INFO - ================================================================================
+2025-10-08 16:31:25,334 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-08 16:31:25,334 - application_bot - INFO - ================================================================================
+2025-10-08 16:31:25,334 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-08 16:31:25,334 - application_bot - INFO - 📊 23 Wohnungen ohne Bewerbung gefunden
+2025-10-08 16:31:25,334 - application_bot - INFO - ⚠️  Limitiere auf 1 Bewerbungen (von 23)
+2025-10-08 16:31:25,334 - application_bot - INFO - 
+📋 Bewerbung 1/1
+2025-10-08 16:31:25,334 - application_bot - INFO - ================================================================================
+2025-10-08 16:31:25,334 - application_bot - INFO - 🏠 Starte Bewerbung für: Schicke Wohnung in der Waterkant sucht netten Nachmieter
+2025-10-08 16:31:25,334 - application_bot - INFO - 📍 Bezirk: Haselhorst
+2025-10-08 16:31:25,335 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01032-1402-0400/
+2025-10-08 16:31:25,335 - application_bot - INFO - ================================================================================
+2025-10-08 16:31:25,570 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 16:31:26,499 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01032-1402-0400/
+2025-10-08 16:31:29,662 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-08 16:31:29,701 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-08 16:31:31,114 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 16:31:31,117 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-08 16:31:33,881 - application_bot - INFO - 🔍 Warte auf Formular-iFrame...
+2025-10-08 16:31:33,882 - application_bot - INFO - ✅ iFrame gefunden - fülle Formular aus...
+2025-10-08 16:31:38,886 - application_bot - INFO - 📝 Formular ausgefüllt - bereit zum Absenden
+2025-10-08 16:31:38,886 - application_bot - WARNING - ⚠️  HINWEIS: Automatisches Absenden ist deaktiviert - bitte manuell bestätigen!
+2025-10-08 16:31:38,886 - application_bot - INFO - Das Browser-Fenster bleibt 30 Sekunden offen zur manuellen Überprüfung...
+2025-10-08 16:32:09,057 - application_bot - INFO - ✅ Bewerbung erfolgreich!
+2025-10-08 16:32:09,058 - application_bot - INFO - ✅ Datenbank aktualisiert: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01032-1402-0400/ -> Status: success
+2025-10-08 16:32:09,060 - application_bot - INFO - 
+================================================================================
+2025-10-08 16:32:09,060 - application_bot - INFO - 📊 BEWERBUNGS-ZUSAMMENFASSUNG
+2025-10-08 16:32:09,060 - application_bot - INFO - ================================================================================
+2025-10-08 16:32:09,060 - application_bot - INFO - ✅ Erfolgreich: 1
+2025-10-08 16:32:09,060 - application_bot - INFO - ❌ Fehlgeschlagen: 0
+2025-10-08 16:32:09,060 - application_bot - INFO - 📈 Gesamt: 1
+2025-10-08 16:32:09,060 - application_bot - INFO - ================================================================================
+2025-10-08 16:52:00,984 - __main__ - INFO - 
+================================================================================
+2025-10-08 16:52:00,985 - __main__ - INFO - 📝 MODUS: NUR BEWERBUNGEN
+2025-10-08 16:52:00,985 - __main__ - INFO - ================================================================================
+2025-10-08 16:52:00,986 - application_bot - INFO - 📊 22 Wohnungen ohne Bewerbung gefunden
+2025-10-08 16:52:00,986 - __main__ - INFO - 📊 22 Wohnungen ohne Bewerbung gefunden
+2025-10-08 16:52:00,986 - application_bot - INFO - ================================================================================
+2025-10-08 16:52:00,986 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-08 16:52:00,986 - application_bot - INFO - ================================================================================
+2025-10-08 16:52:00,986 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-08 16:52:00,987 - application_bot - INFO - 📊 22 Wohnungen ohne Bewerbung gefunden
+2025-10-08 16:52:00,987 - application_bot - INFO - ⚠️  Limitiere auf 1 Bewerbungen (von 22)
+2025-10-08 16:52:00,987 - application_bot - INFO - 
+📋 Bewerbung 1/1
+2025-10-08 16:52:00,987 - application_bot - INFO - ================================================================================
+2025-10-08 16:52:00,987 - application_bot - INFO - 🏠 Starte Bewerbung für: Neubau mit Fußbodenheizung direkt an der Havel
+2025-10-08 16:52:00,987 - application_bot - INFO - 📍 Bezirk: Haselhorst
+2025-10-08 16:52:00,987 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01031-0801-0186/
+2025-10-08 16:52:00,987 - application_bot - INFO - ================================================================================
+2025-10-08 16:52:01,382 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 16:52:03,169 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01031-0801-0186/
+2025-10-08 16:52:07,735 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-08 16:52:07,765 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-08 16:52:09,503 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 16:52:09,510 - application_bot - ERROR - ❌ 'Anfrage senden' Button nicht gefunden!
+2025-10-08 16:52:09,697 - application_bot - ERROR - ❌ Fehler bei Bewerbung (Versuch 1/3): Formular konnte nicht ausgefüllt werden
+2025-10-08 16:52:09,697 - application_bot - INFO - 🔄 Wiederhole in 13.7 Sekunden...
+2025-10-08 16:52:23,626 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 16:52:24,533 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01031-0801-0186/
+2025-10-08 16:52:28,745 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-08 16:52:28,784 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-08 16:52:29,864 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 16:52:29,867 - application_bot - ERROR - ❌ 'Anfrage senden' Button nicht gefunden!
+2025-10-08 16:52:30,646 - application_bot - ERROR - ❌ Fehler bei Bewerbung (Versuch 2/3): Formular konnte nicht ausgefüllt werden
+2025-10-08 16:52:30,646 - application_bot - INFO - 🔄 Wiederhole in 14.6 Sekunden...
+2025-10-08 16:52:45,453 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 16:52:46,214 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01031-0801-0186/
+2025-10-08 16:52:50,002 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-08 16:52:50,025 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-08 16:52:51,539 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 16:52:51,544 - application_bot - ERROR - ❌ 'Anfrage senden' Button nicht gefunden!
+2025-10-08 16:52:51,721 - application_bot - ERROR - ❌ Fehler bei Bewerbung (Versuch 3/3): Formular konnte nicht ausgefüllt werden
+2025-10-08 16:52:51,721 - application_bot - ERROR - ❌ Max. Anzahl Wiederholungen erreicht - Bewerbung fehlgeschlagen
+2025-10-08 16:52:51,723 - application_bot - INFO - ✅ Datenbank aktualisiert: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01031-0801-0186/ -> Status: failed
+2025-10-08 16:52:51,724 - application_bot - INFO - 
+================================================================================
+2025-10-08 16:52:51,724 - application_bot - INFO - 📊 BEWERBUNGS-ZUSAMMENFASSUNG
+2025-10-08 16:52:51,724 - application_bot - INFO - ================================================================================
+2025-10-08 16:52:51,724 - application_bot - INFO - ✅ Erfolgreich: 0
+2025-10-08 16:52:51,724 - application_bot - INFO - ❌ Fehlgeschlagen: 1
+2025-10-08 16:52:51,724 - application_bot - INFO - 📈 Gesamt: 1
+2025-10-08 16:52:51,724 - application_bot - INFO - ================================================================================
+2025-10-08 16:53:27,909 - gewobag_bot - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 16:53:27,910 - gewobag_bot - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 16:53:27,910 - __main__ - INFO - 
+================================================================================
+2025-10-08 16:53:27,910 - __main__ - INFO - 🔍 MODUS: NUR WOHNUNGSSUCHE
+2025-10-08 16:53:27,910 - __main__ - INFO - ================================================================================
+2025-10-08 16:53:27,910 - gewobag_bot - INFO - ======================================================================
+2025-10-08 16:53:27,910 - gewobag_bot - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-08 16:53:27,910 - gewobag_bot - INFO - ======================================================================
+2025-10-08 16:53:27,910 - gewobag_bot - INFO - Keine Filter aktiv - suche alle Wohnungen
+2025-10-08 16:53:27,911 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-08 16:53:27,911 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 16:53:28,634 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-08 16:53:28,635 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-08 16:53:28,684 - gewobag_bot - INFO - 19 Angebote gefunden
+2025-10-08 16:53:28,687 - gewobag_bot - INFO - 19 Angebote erfolgreich extrahiert
+2025-10-08 16:53:28,687 - gewobag_bot - INFO - 📊 Seite 1: 19 Wohnungen gefunden
+2025-10-08 16:53:28,732 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-08 16:53:28,732 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 19 Wohnungen gefunden
+2025-10-08 16:53:28,734 - gewobag_bot - INFO - Neue Wohnung gespeichert: Renovierungsbedürftige Dreizimmerwohnung in der Paul-Hertz-Siedlung in Charlottenburg
+2025-10-08 16:53:28,734 - gewobag_bot - INFO - Neue Wohnung gespeichert: Renovierungsbedürftige Zweizimmerwohnung, bereits frei ab sofort in Charlottenburg
+2025-10-08 16:53:28,734 - gewobag_bot - INFO - Neue Wohnung gespeichert: Gepflegte Zweizimmerwohnung in der Paul-Hertz-Siedlung, frei ab sofort in Charlottenburg
+2025-10-08 16:53:28,734 - gewobag_bot - INFO - Neue Wohnung gespeichert: Altbauwohnung in Lichterfelde in Lichterfelde
+2025-10-08 16:53:28,734 - gewobag_bot - INFO - Neue Wohnung gespeichert: WBS (max. 140) 2 Räume erforderlich… in Prenzlauer Berg
+2025-10-08 16:53:28,734 - gewobag_bot - INFO - Neue Wohnung gespeichert: Singlewohnung in bester Lage in Prenzlauer Berg
+2025-10-08 16:53:28,734 - gewobag_bot - INFO - Neue Wohnung gespeichert: Wohnen in Hakenfelde in Hakenfelde
+2025-10-08 16:53:28,734 - gewobag_bot - INFO - Speicherung abgeschlossen: 7 neu, 12 bereits vorhanden
+2025-10-08 16:53:28,734 - gewobag_bot - INFO - ======================================================================
+2025-10-08 16:53:28,734 - gewobag_bot - INFO - Zusammenfassung: 19 Angebote gefunden (mit aktiven Filtern), 7 neu gespeichert, 12 bereits bekannt
+2025-10-08 16:53:28,734 - gewobag_bot - INFO - ======================================================================
+2025-10-08 16:53:28,734 - __main__ - INFO - 
+✅ 19 Wohnungen gefunden
+2025-10-08 16:53:28,734 - __main__ - INFO - 💡 Führen Sie 'python main.py --apply' aus, um sich zu bewerben
+2025-10-08 16:53:38,246 - __main__ - INFO - 
+================================================================================
+2025-10-08 16:53:38,246 - __main__ - INFO - 📝 MODUS: NUR BEWERBUNGEN
+2025-10-08 16:53:38,246 - __main__ - INFO - ================================================================================
+2025-10-08 16:53:38,247 - application_bot - INFO - 📊 28 Wohnungen ohne Bewerbung gefunden
+2025-10-08 16:53:38,247 - __main__ - INFO - 📊 28 Wohnungen ohne Bewerbung gefunden
+2025-10-08 16:53:38,247 - application_bot - INFO - ================================================================================
+2025-10-08 16:53:38,247 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-08 16:53:38,247 - application_bot - INFO - ================================================================================
+2025-10-08 16:53:38,247 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-08 16:53:38,247 - application_bot - INFO - 📊 28 Wohnungen ohne Bewerbung gefunden
+2025-10-08 16:53:38,247 - application_bot - INFO - ⚠️  Limitiere auf 1 Bewerbungen (von 28)
+2025-10-08 16:53:38,247 - application_bot - INFO - 
+📋 Bewerbung 1/1
+2025-10-08 16:53:38,247 - application_bot - INFO - ================================================================================
+2025-10-08 16:53:38,247 - application_bot - INFO - 🏠 Starte Bewerbung für: Renovierungsbedürftige Dreizimmerwohnung in der Paul-Hertz-Siedlung
+2025-10-08 16:53:38,247 - application_bot - INFO - 📍 Bezirk: Charlottenburg
+2025-10-08 16:53:38,247 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01609-1502-0550/
+2025-10-08 16:53:38,247 - application_bot - INFO - ================================================================================
+2025-10-08 16:53:38,625 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 16:53:40,209 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01609-1502-0550/
+2025-10-08 16:53:43,083 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-08 16:53:43,111 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-08 16:53:44,280 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 16:53:44,288 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-08 16:53:47,770 - application_bot - INFO - 🔍 Warte auf Formular-iFrame...
+2025-10-08 16:53:47,772 - application_bot - INFO - ✅ iFrame gefunden - fülle Formular aus...
+2025-10-08 16:53:52,174 - application_bot - INFO - ✓ Anrede: Herr
+2025-10-08 16:53:52,737 - application_bot - INFO - ✓ Vorname: Max
+2025-10-08 16:53:53,428 - application_bot - INFO - ✓ Nachname: Mustermann
+2025-10-08 16:53:54,241 - application_bot - INFO - ✓ E-Mail: max.mustermann@example.com
+2025-10-08 16:53:54,868 - application_bot - INFO - ✓ Telefon: +49 123 456789
+2025-10-08 16:53:55,610 - application_bot - INFO - ✓ Straße: Musterstraße
+2025-10-08 16:53:56,424 - application_bot - INFO - ✓ Hausnummer: 123
+2025-10-08 16:53:57,099 - application_bot - INFO - ✓ PLZ: 10115
+2025-10-08 16:53:57,886 - application_bot - INFO - ✓ Stadt: Berlin
+2025-10-08 16:54:27,893 - application_bot - WARNING - ⚠️  'Für wen'-Feld nicht ausgefüllt: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("iframe#contact-iframe").content_frame.locator("#formly_10_select_gewobag_fuer_wen_wird_die_wohnungsanfrage_gestellt_0_select, #formly_10_select_gewobag_fuer_wen_wird_die_wohnungsanfrage_gestellt_0").first
+
+2025-10-08 16:54:28,684 - application_bot - INFO - ✓ Anzahl Erwachsene: 1
+2025-10-08 16:54:29,599 - application_bot - INFO - ✓ Anzahl Kinder: 0
+2025-10-08 16:55:30,109 - application_bot - INFO - ✓ 1 Datenschutz-Checkbox(en) aktiviert
+2025-10-08 16:55:30,110 - application_bot - INFO - 📝 Formular ausgefüllt - bereit zum Absenden
+2025-10-08 16:55:30,110 - application_bot - WARNING - ⚠️  HINWEIS: Automatisches Absenden ist deaktiviert - bitte manuell bestätigen!
+2025-10-08 16:55:30,110 - application_bot - INFO - Das Browser-Fenster bleibt 30 Sekunden offen zur manuellen Überprüfung...
+2025-10-08 16:58:12,439 - __main__ - INFO - 
+================================================================================
+2025-10-08 16:58:12,439 - __main__ - INFO - 📝 MODUS: NUR BEWERBUNGEN
+2025-10-08 16:58:12,439 - __main__ - INFO - ================================================================================
+2025-10-08 16:58:12,439 - application_bot - INFO - 📊 28 Wohnungen ohne Bewerbung gefunden
+2025-10-08 16:58:12,440 - __main__ - INFO - 📊 28 Wohnungen ohne Bewerbung gefunden
+2025-10-08 16:58:12,440 - application_bot - INFO - ================================================================================
+2025-10-08 16:58:12,440 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-08 16:58:12,440 - application_bot - INFO - ================================================================================
+2025-10-08 16:58:12,440 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-08 16:58:12,440 - application_bot - INFO - 📊 28 Wohnungen ohne Bewerbung gefunden
+2025-10-08 16:58:12,440 - application_bot - INFO - ⚠️  Limitiere auf 1 Bewerbungen (von 28)
+2025-10-08 16:58:12,440 - application_bot - INFO - 
+📋 Bewerbung 1/1
+2025-10-08 16:58:12,440 - application_bot - INFO - ================================================================================
+2025-10-08 16:58:12,440 - application_bot - INFO - 🏠 Starte Bewerbung für: Renovierungsbedürftige Dreizimmerwohnung in der Paul-Hertz-Siedlung
+2025-10-08 16:58:12,440 - application_bot - INFO - 📍 Bezirk: Charlottenburg
+2025-10-08 16:58:12,440 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01609-1502-0550/
+2025-10-08 16:58:12,440 - application_bot - INFO - ================================================================================
+2025-10-08 16:58:12,817 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 16:58:14,488 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01609-1502-0550/
+2025-10-08 16:58:18,086 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-08 16:58:18,127 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-08 16:58:20,072 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 16:58:20,079 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-08 16:58:22,739 - application_bot - INFO - 🔍 Warte auf Formular-iFrame...
+2025-10-08 16:58:22,739 - application_bot - INFO - ✅ iFrame gefunden - fülle Formular aus...
+2025-10-08 16:58:26,956 - application_bot - INFO - ✓ Anrede: Herr
+2025-10-08 16:58:27,534 - application_bot - INFO - ✓ Vorname: Max
+2025-10-08 16:58:28,246 - application_bot - INFO - ✓ Nachname: Mustermann
+2025-10-08 16:58:29,153 - application_bot - INFO - ✓ E-Mail: max.mustermann@example.com
+2025-10-08 16:58:30,073 - application_bot - INFO - ✓ Telefon: +49 123 456789
+2025-10-08 16:58:30,989 - application_bot - INFO - ✓ Straße: Musterstraße
+2025-10-08 16:58:31,716 - application_bot - INFO - ✓ Hausnummer: 123
+2025-10-08 16:58:32,612 - application_bot - INFO - ✓ PLZ: 10115
+2025-10-08 16:58:33,432 - application_bot - INFO - ✓ Stadt: Berlin
+2025-10-08 16:58:34,788 - application_bot - INFO - ✓ Für wen wird die Anfrage gestellt: Für mich selbst
+2025-10-08 16:58:35,685 - application_bot - INFO - ✓ Anzahl Erwachsene: 1
+2025-10-08 16:58:36,207 - application_bot - INFO - ✓ Anzahl Kinder: 0
+2025-10-08 16:59:36,782 - application_bot - INFO - ✓ 1 Datenschutz-Checkbox(en) aktiviert
+2025-10-08 16:59:36,782 - application_bot - INFO - 📝 Formular ausgefüllt - bereit zum Absenden
+2025-10-08 16:59:36,783 - application_bot - WARNING - ⚠️  HINWEIS: Automatisches Absenden ist deaktiviert - bitte manuell bestätigen!
+2025-10-08 16:59:36,783 - application_bot - INFO - Das Browser-Fenster bleibt 30 Sekunden offen zur manuellen Überprüfung...
+2025-10-08 17:00:07,028 - application_bot - INFO - ✅ Bewerbung erfolgreich!
+2025-10-08 17:00:07,030 - application_bot - INFO - ✅ Datenbank aktualisiert: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01609-1502-0550/ -> Status: success
+2025-10-08 17:00:07,034 - application_bot - INFO - 
+================================================================================
+2025-10-08 17:00:07,034 - application_bot - INFO - 📊 BEWERBUNGS-ZUSAMMENFASSUNG
+2025-10-08 17:00:07,034 - application_bot - INFO - ================================================================================
+2025-10-08 17:00:07,034 - application_bot - INFO - ✅ Erfolgreich: 1
+2025-10-08 17:00:07,034 - application_bot - INFO - ❌ Fehlgeschlagen: 0
+2025-10-08 17:00:07,034 - application_bot - INFO - 📈 Gesamt: 1
+2025-10-08 17:00:07,034 - application_bot - INFO - ================================================================================
+2025-10-08 17:06:04,794 - __main__ - INFO - 
+================================================================================
+2025-10-08 17:06:04,794 - __main__ - INFO - 📝 MODUS: NUR BEWERBUNGEN
+2025-10-08 17:06:04,794 - __main__ - INFO - ================================================================================
+2025-10-08 17:06:04,795 - application_bot - INFO - 📊 27 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:06:04,795 - __main__ - INFO - 📊 27 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:06:04,795 - application_bot - INFO - ================================================================================
+2025-10-08 17:06:04,795 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-08 17:06:04,795 - application_bot - INFO - ================================================================================
+2025-10-08 17:06:04,796 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-08 17:06:04,796 - application_bot - INFO - 📊 27 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:06:04,796 - application_bot - INFO - ⚠️  Limitiere auf 1 Bewerbungen (von 27)
+2025-10-08 17:06:04,796 - application_bot - INFO - 
+📋 Bewerbung 1/1
+2025-10-08 17:06:04,796 - application_bot - INFO - ================================================================================
+2025-10-08 17:06:04,796 - application_bot - INFO - 🏠 Starte Bewerbung für: Renovierungsbedürftige Zweizimmerwohnung, bereits frei ab sofort
+2025-10-08 17:06:04,796 - application_bot - INFO - 📍 Bezirk: Charlottenburg
+2025-10-08 17:06:04,796 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01609-1801-0664/
+2025-10-08 17:06:04,796 - application_bot - INFO - ================================================================================
+2025-10-08 17:06:05,203 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 17:06:07,013 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01609-1801-0664/
+2025-10-08 17:06:10,156 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-08 17:06:10,197 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-08 17:06:12,239 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 17:06:12,247 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-08 17:06:14,647 - application_bot - INFO - 🔍 Warte auf Formular-iFrame...
+2025-10-08 17:06:14,647 - application_bot - INFO - ✅ iFrame gefunden - fülle Formular aus...
+2025-10-08 17:06:19,066 - application_bot - INFO - ✓ Anrede: Herr
+2025-10-08 17:06:19,921 - application_bot - INFO - ✓ Vorname: Max
+2025-10-08 17:06:20,863 - application_bot - INFO - ✓ Nachname: Mustermann
+2025-10-08 17:06:21,673 - application_bot - INFO - ✓ E-Mail: max.mustermann@example.com
+2025-10-08 17:06:22,231 - application_bot - INFO - ✓ Telefon: +49 123 456789
+2025-10-08 17:06:23,057 - application_bot - INFO - ✓ Straße: Musterstraße
+2025-10-08 17:06:23,703 - application_bot - INFO - ✓ Hausnummer: 123
+2025-10-08 17:06:24,597 - application_bot - INFO - ✓ PLZ: 10115
+2025-10-08 17:06:25,319 - application_bot - INFO - ✓ Stadt: Berlin
+2025-10-08 17:06:26,774 - application_bot - INFO - ✓ Für wen wird die Anfrage gestellt: Für mich selbst
+2025-10-08 17:06:27,775 - application_bot - INFO - ✓ Gesamtzahl Personen: 1
+2025-10-08 17:07:28,505 - application_bot - INFO - ✓ 1 Datenschutz-Checkbox(en) aktiviert
+2025-10-08 17:07:28,506 - application_bot - INFO - 📝 Formular ausgefüllt - bereit zum Absenden
+2025-10-08 17:07:28,506 - application_bot - WARNING - ⚠️  HINWEIS: Automatisches Absenden ist deaktiviert - bitte manuell bestätigen!
+2025-10-08 17:07:28,506 - application_bot - INFO - Das Browser-Fenster bleibt 30 Sekunden offen zur manuellen Überprüfung...
+2025-10-08 17:07:58,725 - application_bot - INFO - ✅ Bewerbung erfolgreich!
+2025-10-08 17:07:58,727 - application_bot - INFO - ✅ Datenbank aktualisiert: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01609-1801-0664/ -> Status: success
+2025-10-08 17:07:58,731 - application_bot - INFO - 
+================================================================================
+2025-10-08 17:07:58,731 - application_bot - INFO - 📊 BEWERBUNGS-ZUSAMMENFASSUNG
+2025-10-08 17:07:58,731 - application_bot - INFO - ================================================================================
+2025-10-08 17:07:58,731 - application_bot - INFO - ✅ Erfolgreich: 1
+2025-10-08 17:07:58,731 - application_bot - INFO - ❌ Fehlgeschlagen: 0
+2025-10-08 17:07:58,731 - application_bot - INFO - 📈 Gesamt: 1
+2025-10-08 17:07:58,731 - application_bot - INFO - ================================================================================
+2025-10-08 17:10:54,411 - __main__ - INFO - 
+================================================================================
+2025-10-08 17:10:54,411 - __main__ - INFO - 📝 MODUS: NUR BEWERBUNGEN
+2025-10-08 17:10:54,411 - __main__ - INFO - ================================================================================
+2025-10-08 17:10:54,411 - application_bot - INFO - 📊 26 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:10:54,411 - __main__ - INFO - 📊 26 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:10:54,411 - application_bot - INFO - ================================================================================
+2025-10-08 17:10:54,411 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-08 17:10:54,411 - application_bot - INFO - ================================================================================
+2025-10-08 17:10:54,412 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-08 17:10:54,412 - application_bot - INFO - 📊 26 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:10:54,412 - application_bot - INFO - ⚠️  Limitiere auf 1 Bewerbungen (von 26)
+2025-10-08 17:10:54,412 - application_bot - INFO - 
+📋 Bewerbung 1/1
+2025-10-08 17:10:54,412 - application_bot - INFO - ================================================================================
+2025-10-08 17:10:54,412 - application_bot - INFO - 🏠 Starte Bewerbung für: Gepflegte Zweizimmerwohnung in der Paul-Hertz-Siedlung, frei ab sofort
+2025-10-08 17:10:54,412 - application_bot - INFO - 📍 Bezirk: Charlottenburg
+2025-10-08 17:10:54,412 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01611-1502-0581/
+2025-10-08 17:10:54,412 - application_bot - INFO - ================================================================================
+2025-10-08 17:10:54,798 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 17:10:56,481 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01611-1502-0581/
+2025-10-08 17:11:01,577 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-08 17:11:01,612 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-08 17:11:03,498 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 17:11:03,508 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-08 17:11:06,888 - application_bot - INFO - 🔍 Warte auf Formular-iFrame...
+2025-10-08 17:11:06,888 - application_bot - INFO - ✅ iFrame gefunden - fülle Formular aus...
+2025-10-08 17:11:11,038 - application_bot - INFO - ✓ Anrede: Herr
+2025-10-08 17:11:11,878 - application_bot - INFO - ✓ Vorname: Max
+2025-10-08 17:11:12,534 - application_bot - INFO - ✓ Nachname: Mustermann
+2025-10-08 17:11:13,202 - application_bot - INFO - ✓ E-Mail: max.mustermann@example.com
+2025-10-08 17:11:14,219 - application_bot - INFO - ✓ Telefon: +49 123 456789
+2025-10-08 17:11:44,838 - application_bot - INFO - ✓ Straße: Musterstraße
+2025-10-08 17:11:45,449 - application_bot - INFO - ✓ Hausnummer: 123
+2025-10-08 17:11:46,392 - application_bot - INFO - ✓ PLZ: 10115
+2025-10-08 17:11:47,364 - application_bot - INFO - ✓ Stadt: Berlin
+2025-10-08 17:11:48,909 - application_bot - INFO - ✓ Für wen wird die Anfrage gestellt: Für mich selbst
+2025-10-08 17:11:49,925 - application_bot - INFO - ✓ Anzahl Erwachsene: 1
+2025-10-08 17:11:50,793 - application_bot - INFO - ✓ Anzahl Kinder: 0
+2025-10-08 17:12:52,021 - application_bot - INFO - ✓ 2 Datenschutz-Checkbox(en) aktiviert
+2025-10-08 17:12:52,021 - application_bot - INFO - 📝 Formular ausgefüllt - bereit zum Absenden
+2025-10-08 17:12:52,022 - application_bot - WARNING - ⚠️  HINWEIS: Automatisches Absenden ist deaktiviert - bitte manuell bestätigen!
+2025-10-08 17:12:52,022 - application_bot - INFO - Das Browser-Fenster bleibt 30 Sekunden offen zur manuellen Überprüfung...
+2025-10-08 17:16:00,059 - __main__ - INFO - 
+================================================================================
+2025-10-08 17:16:00,059 - __main__ - INFO - 📝 MODUS: NUR BEWERBUNGEN
+2025-10-08 17:16:00,059 - __main__ - INFO - ================================================================================
+2025-10-08 17:16:00,060 - application_bot - INFO - 📊 26 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:16:00,060 - __main__ - INFO - 📊 26 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:16:00,060 - application_bot - INFO - ================================================================================
+2025-10-08 17:16:00,060 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-08 17:16:00,060 - application_bot - INFO - ================================================================================
+2025-10-08 17:16:00,060 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-08 17:16:00,060 - application_bot - INFO - 📊 26 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:16:00,060 - application_bot - INFO - ⚠️  Limitiere auf 1 Bewerbungen (von 26)
+2025-10-08 17:16:00,060 - application_bot - INFO - 
+📋 Bewerbung 1/1
+2025-10-08 17:16:00,060 - application_bot - INFO - ================================================================================
+2025-10-08 17:16:00,060 - application_bot - INFO - 🏠 Starte Bewerbung für: Gepflegte Zweizimmerwohnung in der Paul-Hertz-Siedlung, frei ab sofort
+2025-10-08 17:16:00,060 - application_bot - INFO - 📍 Bezirk: Charlottenburg
+2025-10-08 17:16:00,060 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01611-1502-0581/
+2025-10-08 17:16:00,060 - application_bot - INFO - ================================================================================
+2025-10-08 17:16:00,451 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 17:16:02,351 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01611-1502-0581/
+2025-10-08 17:16:07,521 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-08 17:16:07,560 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-08 17:16:09,375 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 17:16:09,387 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-08 17:16:12,397 - application_bot - INFO - 🔍 Warte auf Formular-iFrame...
+2025-10-08 17:16:12,398 - application_bot - INFO - ✅ iFrame gefunden - fülle Formular aus...
+2025-10-08 17:16:16,448 - application_bot - INFO - ✓ Anrede: Herr
+2025-10-08 17:16:17,449 - application_bot - INFO - ✓ Vorname: Max
+2025-10-08 17:16:18,220 - application_bot - INFO - ✓ Nachname: Mustermann
+2025-10-08 17:16:18,948 - application_bot - INFO - ✓ E-Mail: max.mustermann@example.com
+2025-10-08 17:16:19,720 - application_bot - INFO - ✓ Telefon: +49 123 456789
+2025-10-08 17:16:20,568 - application_bot - INFO - ✓ Straße: Musterstraße
+2025-10-08 17:16:21,248 - application_bot - INFO - ✓ Hausnummer: 123
+2025-10-08 17:16:22,150 - application_bot - INFO - ✓ PLZ: 10115
+2025-10-08 17:16:22,968 - application_bot - INFO - ✓ Stadt: Berlin
+2025-10-08 17:16:24,404 - application_bot - INFO - ✓ Für wen wird die Anfrage gestellt: Für mich selbst
+2025-10-08 17:16:25,128 - application_bot - INFO - ✓ Anzahl Erwachsene: 1
+2025-10-08 17:16:25,963 - application_bot - INFO - ✓ Anzahl Kinder: 0
+2025-10-08 17:16:26,793 - application_bot - INFO - ✓ Mobilfunknummer: +49 123 456789
+2025-10-08 17:17:28,068 - application_bot - INFO - ✓ 2 Datenschutz-Checkbox(en) aktiviert
+2025-10-08 17:17:28,069 - application_bot - INFO - 📝 Formular ausgefüllt - bereit zum Absenden
+2025-10-08 17:17:28,069 - application_bot - WARNING - ⚠️  HINWEIS: Automatisches Absenden ist deaktiviert - bitte manuell bestätigen!
+2025-10-08 17:17:28,069 - application_bot - INFO - Das Browser-Fenster bleibt 30 Sekunden offen zur manuellen Überprüfung...
+2025-10-08 17:17:58,254 - application_bot - INFO - ✅ Bewerbung erfolgreich!
+2025-10-08 17:17:58,256 - application_bot - INFO - ✅ Datenbank aktualisiert: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01611-1502-0581/ -> Status: success
+2025-10-08 17:17:58,260 - application_bot - INFO - 
+================================================================================
+2025-10-08 17:17:58,260 - application_bot - INFO - 📊 BEWERBUNGS-ZUSAMMENFASSUNG
+2025-10-08 17:17:58,260 - application_bot - INFO - ================================================================================
+2025-10-08 17:17:58,260 - application_bot - INFO - ✅ Erfolgreich: 1
+2025-10-08 17:17:58,260 - application_bot - INFO - ❌ Fehlgeschlagen: 0
+2025-10-08 17:17:58,260 - application_bot - INFO - 📈 Gesamt: 1
+2025-10-08 17:17:58,260 - application_bot - INFO - ================================================================================
+2025-10-08 17:20:03,690 - __main__ - INFO - 
+================================================================================
+2025-10-08 17:20:03,690 - __main__ - INFO - 📝 MODUS: NUR BEWERBUNGEN
+2025-10-08 17:20:03,690 - __main__ - INFO - ================================================================================
+2025-10-08 17:20:03,691 - application_bot - INFO - 📊 25 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:20:03,691 - __main__ - INFO - 📊 25 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:20:03,691 - application_bot - INFO - ================================================================================
+2025-10-08 17:20:03,691 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-08 17:20:03,691 - application_bot - INFO - ================================================================================
+2025-10-08 17:20:03,691 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-08 17:20:03,691 - application_bot - INFO - 📊 25 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:20:03,691 - application_bot - INFO - ⚠️  Limitiere auf 1 Bewerbungen (von 25)
+2025-10-08 17:20:03,691 - application_bot - INFO - 
+📋 Bewerbung 1/1
+2025-10-08 17:20:03,691 - application_bot - INFO - ================================================================================
+2025-10-08 17:20:03,691 - application_bot - INFO - 🏠 Starte Bewerbung für: Altbauwohnung in Lichterfelde
+2025-10-08 17:20:03,691 - application_bot - INFO - 📍 Bezirk: Lichterfelde
+2025-10-08 17:20:03,691 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-70506-0101-0005/
+2025-10-08 17:20:03,691 - application_bot - INFO - ================================================================================
+2025-10-08 17:20:04,080 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 17:20:05,648 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-70506-0101-0005/
+2025-10-08 17:20:08,811 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-08 17:20:08,842 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-08 17:20:10,003 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 17:20:10,012 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-08 17:20:12,397 - application_bot - INFO - 🔍 Warte auf Formular-iFrame...
+2025-10-08 17:20:12,397 - application_bot - INFO - ✅ iFrame gefunden - fülle Formular aus...
+2025-10-08 17:20:16,180 - application_bot - INFO - ✓ Anrede: Herr
+2025-10-08 17:20:16,926 - application_bot - INFO - ✓ Vorname: Max
+2025-10-08 17:20:17,908 - application_bot - INFO - ✓ Nachname: Mustermann
+2025-10-08 17:20:18,763 - application_bot - INFO - ✓ E-Mail: max.mustermann@example.com
+2025-10-08 17:20:19,367 - application_bot - INFO - ✓ Telefon: +49 123 456789
+2025-10-08 17:20:20,369 - application_bot - INFO - ✓ Straße: Musterstraße
+2025-10-08 17:20:21,365 - application_bot - INFO - ✓ Hausnummer: 123
+2025-10-08 17:20:22,318 - application_bot - INFO - ✓ PLZ: 10115
+2025-10-08 17:20:22,870 - application_bot - INFO - ✓ Stadt: Berlin
+2025-10-08 17:20:24,184 - application_bot - INFO - ✓ Für wen wird die Anfrage gestellt: Für mich selbst
+2025-10-08 17:20:24,708 - application_bot - INFO - ✓ Anzahl Erwachsene: 1
+2025-10-08 17:20:25,224 - application_bot - INFO - ✓ Anzahl Kinder: 0
+2025-10-08 17:20:25,930 - application_bot - INFO - ✓ Mobilfunknummer: +49 123 456789
+2025-10-08 17:20:26,821 - application_bot - INFO - ✓ WBS vorhanden: Nein
+2025-10-08 17:20:57,820 - application_bot - INFO - ✓ 2 Datenschutz-Checkbox(en) aktiviert
+2025-10-08 17:20:57,821 - application_bot - INFO - 📝 Formular ausgefüllt - bereit zum Absenden
+2025-10-08 17:20:57,821 - application_bot - WARNING - ⚠️  HINWEIS: Automatisches Absenden ist deaktiviert - bitte manuell bestätigen!
+2025-10-08 17:20:57,821 - application_bot - INFO - Das Browser-Fenster bleibt 30 Sekunden offen zur manuellen Überprüfung...
+2025-10-08 17:21:28,074 - application_bot - INFO - ✅ Bewerbung erfolgreich!
+2025-10-08 17:21:28,076 - application_bot - INFO - ✅ Datenbank aktualisiert: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-70506-0101-0005/ -> Status: success
+2025-10-08 17:21:28,080 - application_bot - INFO - 
+================================================================================
+2025-10-08 17:21:28,080 - application_bot - INFO - 📊 BEWERBUNGS-ZUSAMMENFASSUNG
+2025-10-08 17:21:28,081 - application_bot - INFO - ================================================================================
+2025-10-08 17:21:28,081 - application_bot - INFO - ✅ Erfolgreich: 1
+2025-10-08 17:21:28,081 - application_bot - INFO - ❌ Fehlgeschlagen: 0
+2025-10-08 17:21:28,081 - application_bot - INFO - 📈 Gesamt: 1
+2025-10-08 17:21:28,081 - application_bot - INFO - ================================================================================
+2025-10-08 17:28:34,468 - __main__ - INFO - 
+================================================================================
+2025-10-08 17:28:34,468 - __main__ - INFO - 📝 MODUS: NUR BEWERBUNGEN
+2025-10-08 17:28:34,468 - __main__ - INFO - ================================================================================
+2025-10-08 17:28:34,470 - application_bot - INFO - 📊 24 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:28:34,470 - __main__ - INFO - 📊 24 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:28:34,470 - application_bot - INFO - ================================================================================
+2025-10-08 17:28:34,470 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-08 17:28:34,470 - application_bot - INFO - ================================================================================
+2025-10-08 17:28:34,470 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-08 17:28:34,470 - application_bot - INFO - 📊 24 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:28:34,470 - application_bot - INFO - ⚠️  Limitiere auf 1 Bewerbungen (von 24)
+2025-10-08 17:28:34,470 - application_bot - INFO - 
+📋 Bewerbung 1/1
+2025-10-08 17:28:34,470 - application_bot - INFO - ================================================================================
+2025-10-08 17:28:34,470 - application_bot - INFO - 🏠 Starte Bewerbung für: WBS (max. 140) 2 Räume erforderlich…
+2025-10-08 17:28:34,470 - application_bot - INFO - 📍 Bezirk: Prenzlauer Berg
+2025-10-08 17:28:34,470 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-79005-0103-0032/
+2025-10-08 17:28:34,470 - application_bot - INFO - ================================================================================
+2025-10-08 17:28:34,923 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 17:28:36,553 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-79005-0103-0032/
+2025-10-08 17:28:40,956 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-08 17:28:41,000 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-08 17:28:42,944 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 17:28:42,952 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-08 17:28:46,411 - application_bot - INFO - 🔍 Warte auf Formular-iFrame...
+2025-10-08 17:28:46,411 - application_bot - INFO - ✅ iFrame gefunden - fülle Formular aus...
+2025-10-08 17:28:50,174 - application_bot - INFO - ✓ Anrede: Herr
+2025-10-08 17:28:50,965 - application_bot - INFO - ✓ Vorname: Max
+2025-10-08 17:28:51,582 - application_bot - INFO - ✓ Nachname: Mustermann
+2025-10-08 17:28:52,428 - application_bot - INFO - ✓ E-Mail: max.mustermann@example.com
+2025-10-08 17:28:53,281 - application_bot - INFO - ✓ Telefon: +49 123 456789
+2025-10-08 17:28:54,237 - application_bot - INFO - ✓ Straße: Musterstraße
+2025-10-08 17:28:55,034 - application_bot - INFO - ✓ Hausnummer: 123
+2025-10-08 17:28:55,700 - application_bot - INFO - ✓ PLZ: 10115
+2025-10-08 17:28:56,475 - application_bot - INFO - ✓ Stadt: Berlin
+2025-10-08 17:28:58,329 - application_bot - INFO - ✓ Für wen wird die Anfrage gestellt: Für mich selbst
+2025-10-08 17:28:59,183 - application_bot - INFO - ✓ Gesamtzahl Personen: 1
+2025-10-08 17:28:59,959 - application_bot - INFO - ✓ Mobilfunknummer: +49 123 456789
+2025-10-08 17:29:00,729 - application_bot - INFO - ✓ WBS vorhanden: Nein
+2025-10-08 17:29:32,721 - application_bot - INFO - ✓ 1 Datenschutz-Checkbox(en) aktiviert
+2025-10-08 17:29:32,721 - application_bot - INFO - 📝 Formular ausgefüllt - bereit zum Absenden
+2025-10-08 17:29:32,722 - application_bot - WARNING - ⚠️  HINWEIS: Automatisches Absenden ist deaktiviert - bitte manuell bestätigen!
+2025-10-08 17:29:32,722 - application_bot - INFO - Das Browser-Fenster bleibt 30 Sekunden offen zur manuellen Überprüfung...
+2025-10-08 17:30:02,967 - application_bot - INFO - ✅ Bewerbung erfolgreich!
+2025-10-08 17:30:02,969 - application_bot - INFO - ✅ Datenbank aktualisiert: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-79005-0103-0032/ -> Status: success
+2025-10-08 17:30:02,975 - application_bot - INFO - 
+================================================================================
+2025-10-08 17:30:02,975 - application_bot - INFO - 📊 BEWERBUNGS-ZUSAMMENFASSUNG
+2025-10-08 17:30:02,975 - application_bot - INFO - ================================================================================
+2025-10-08 17:30:02,975 - application_bot - INFO - ✅ Erfolgreich: 1
+2025-10-08 17:30:02,975 - application_bot - INFO - ❌ Fehlgeschlagen: 0
+2025-10-08 17:30:02,975 - application_bot - INFO - 📈 Gesamt: 1
+2025-10-08 17:30:02,975 - application_bot - INFO - ================================================================================
+2025-10-08 17:40:51,050 - __main__ - INFO - 
+================================================================================
+2025-10-08 17:40:51,050 - __main__ - INFO - 📝 MODUS: NUR BEWERBUNGEN
+2025-10-08 17:40:51,050 - __main__ - INFO - ================================================================================
+2025-10-08 17:40:51,051 - application_bot - INFO - 📊 23 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:40:51,051 - __main__ - INFO - 📊 23 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:40:51,051 - application_bot - INFO - ================================================================================
+2025-10-08 17:40:51,051 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-08 17:40:51,051 - application_bot - INFO - ================================================================================
+2025-10-08 17:40:51,051 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-08 17:40:51,051 - application_bot - INFO - 📊 23 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:40:51,052 - application_bot - INFO - ⚠️  Limitiere auf 1 Bewerbungen (von 23)
+2025-10-08 17:40:51,052 - application_bot - INFO - 
+📋 Bewerbung 1/1
+2025-10-08 17:40:51,052 - application_bot - INFO - ================================================================================
+2025-10-08 17:40:51,052 - application_bot - INFO - 🏠 Starte Bewerbung für: Singlewohnung in bester Lage
+2025-10-08 17:40:51,052 - application_bot - INFO - 📍 Bezirk: Prenzlauer Berg
+2025-10-08 17:40:51,052 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/1000-00125-0101-0001/
+2025-10-08 17:40:51,052 - application_bot - INFO - ================================================================================
+2025-10-08 17:40:51,450 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 17:40:53,012 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/1000-00125-0101-0001/
+2025-10-08 17:40:56,911 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-08 17:40:56,980 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-08 17:40:58,811 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 17:40:58,815 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-08 17:41:02,681 - application_bot - INFO - 🔍 Warte auf Formular-iFrame...
+2025-10-08 17:41:02,681 - application_bot - INFO - ✅ iFrame gefunden - fülle Formular aus...
+2025-10-08 17:41:06,777 - application_bot - INFO - ✓ Anrede: Herr
+2025-10-08 17:41:07,321 - application_bot - INFO - ✓ Vorname: Max
+2025-10-08 17:41:08,132 - application_bot - INFO - ✓ Nachname: Mustermann
+2025-10-08 17:41:08,932 - application_bot - INFO - ✓ E-Mail: max.mustermann@example.com
+2025-10-08 17:41:09,782 - application_bot - INFO - ✓ Telefon: +49 123 456789
+2025-10-08 17:41:10,460 - application_bot - INFO - ✓ Straße: Musterstraße
+2025-10-08 17:41:11,137 - application_bot - INFO - ✓ Hausnummer: 123
+2025-10-08 17:41:11,880 - application_bot - INFO - ✓ PLZ: 10115
+2025-10-08 17:41:12,763 - application_bot - INFO - ✓ Stadt: Berlin
+2025-10-08 17:41:14,134 - application_bot - INFO - ✓ Für wen wird die Anfrage gestellt: Für mich selbst
+2025-10-08 17:41:14,884 - application_bot - INFO - ✓ Gesamtzahl Personen: 1
+2025-10-08 17:41:15,569 - application_bot - INFO - ✓ Mobilfunknummer: +49 123 456789
+2025-10-08 17:41:46,234 - application_bot - INFO - ✓ 1 Datenschutz-Checkbox(en) aktiviert
+2025-10-08 17:41:46,236 - application_bot - INFO - 📝 Formular ausgefüllt - bereit zum Absenden
+2025-10-08 17:41:46,236 - application_bot - WARNING - ⚠️  HINWEIS: Automatisches Absenden ist deaktiviert - bitte manuell bestätigen!
+2025-10-08 17:41:46,236 - application_bot - INFO - Das Browser-Fenster bleibt 30 Sekunden offen zur manuellen Überprüfung...
+2025-10-08 17:42:16,475 - application_bot - INFO - ✅ Bewerbung erfolgreich!
+2025-10-08 17:42:16,478 - application_bot - INFO - ✅ Datenbank aktualisiert: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/1000-00125-0101-0001/ -> Status: success
+2025-10-08 17:42:16,482 - application_bot - INFO - 
+================================================================================
+2025-10-08 17:42:16,482 - application_bot - INFO - 📊 BEWERBUNGS-ZUSAMMENFASSUNG
+2025-10-08 17:42:16,482 - application_bot - INFO - ================================================================================
+2025-10-08 17:42:16,482 - application_bot - INFO - ✅ Erfolgreich: 1
+2025-10-08 17:42:16,482 - application_bot - INFO - ❌ Fehlgeschlagen: 0
+2025-10-08 17:42:16,482 - application_bot - INFO - 📈 Gesamt: 1
+2025-10-08 17:42:16,482 - application_bot - INFO - ================================================================================
+2025-10-08 17:45:49,961 - __main__ - INFO - 
+================================================================================
+2025-10-08 17:45:49,961 - __main__ - INFO - 📝 MODUS: NUR BEWERBUNGEN
+2025-10-08 17:45:49,961 - __main__ - INFO - ================================================================================
+2025-10-08 17:45:49,962 - application_bot - INFO - 📊 22 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:45:49,963 - __main__ - INFO - 📊 22 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:45:49,963 - application_bot - INFO - ================================================================================
+2025-10-08 17:45:49,963 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-08 17:45:49,963 - application_bot - INFO - ================================================================================
+2025-10-08 17:45:49,963 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-08 17:45:49,963 - application_bot - INFO - 📊 22 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:45:49,963 - application_bot - INFO - ⚠️  Limitiere auf 1 Bewerbungen (von 22)
+2025-10-08 17:45:49,963 - application_bot - INFO - 
+📋 Bewerbung 1/1
+2025-10-08 17:45:49,963 - application_bot - INFO - ================================================================================
+2025-10-08 17:45:49,963 - application_bot - INFO - 🏠 Starte Bewerbung für: Wohnen in Hakenfelde
+2025-10-08 17:45:49,963 - application_bot - INFO - 📍 Bezirk: Hakenfelde
+2025-10-08 17:45:49,963 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01507-0103-0050/
+2025-10-08 17:45:49,963 - application_bot - INFO - ================================================================================
+2025-10-08 17:45:50,356 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 17:45:52,069 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01507-0103-0050/
+2025-10-08 17:45:56,001 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-08 17:45:56,021 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-08 17:45:57,393 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 17:45:57,401 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-08 17:45:59,920 - application_bot - INFO - 🔍 Warte auf Formular-iFrame...
+2025-10-08 17:45:59,920 - application_bot - INFO - ✅ iFrame gefunden - fülle Formular aus...
+2025-10-08 17:46:03,383 - application_bot - INFO - ✓ Anrede: Herr
+2025-10-08 17:46:04,295 - application_bot - INFO - ✓ Vorname: Max
+2025-10-08 17:46:05,194 - application_bot - INFO - ✓ Nachname: Mustermann
+2025-10-08 17:46:05,894 - application_bot - INFO - ✓ E-Mail: max.mustermann@example.com
+2025-10-08 17:46:06,620 - application_bot - INFO - ✓ Telefon: +49 123 456789
+2025-10-08 17:46:07,555 - application_bot - INFO - ✓ Straße: Musterstraße
+2025-10-08 17:46:08,316 - application_bot - INFO - ✓ Hausnummer: 123
+2025-10-08 17:46:08,890 - application_bot - INFO - ✓ PLZ: 10115
+2025-10-08 17:46:09,550 - application_bot - INFO - ✓ Stadt: Berlin
+2025-10-08 17:46:11,166 - application_bot - INFO - ✓ Für wen wird die Anfrage gestellt: Für mich selbst
+2025-10-08 17:46:11,719 - application_bot - INFO - ✓ Gesamtzahl Personen: 1
+2025-10-08 17:46:12,550 - application_bot - INFO - ✓ Mobilfunknummer: +49 123 456789
+2025-10-08 17:46:43,288 - application_bot - INFO - ✓ 1 Datenschutz-Checkbox(en) aktiviert
+2025-10-08 17:46:43,290 - application_bot - INFO - 📝 Formular ausgefüllt - bereit zum Absenden
+2025-10-08 17:46:43,290 - application_bot - WARNING - ⚠️  HINWEIS: Automatisches Absenden ist deaktiviert - bitte manuell bestätigen!
+2025-10-08 17:46:43,290 - application_bot - INFO - Das Browser-Fenster bleibt 30 Sekunden offen zur manuellen Überprüfung...
+2025-10-08 17:47:13,596 - application_bot - INFO - ✅ Bewerbung erfolgreich!
+2025-10-08 17:47:13,598 - application_bot - INFO - ✅ Datenbank aktualisiert: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01507-0103-0050/ -> Status: success
+2025-10-08 17:47:13,602 - application_bot - INFO - 
+================================================================================
+2025-10-08 17:47:13,602 - application_bot - INFO - 📊 BEWERBUNGS-ZUSAMMENFASSUNG
+2025-10-08 17:47:13,602 - application_bot - INFO - ================================================================================
+2025-10-08 17:47:13,602 - application_bot - INFO - ✅ Erfolgreich: 1
+2025-10-08 17:47:13,602 - application_bot - INFO - ❌ Fehlgeschlagen: 0
+2025-10-08 17:47:13,602 - application_bot - INFO - 📈 Gesamt: 1
+2025-10-08 17:47:13,602 - application_bot - INFO - ================================================================================
+2025-10-08 17:54:49,209 - __main__ - INFO - 
+================================================================================
+2025-10-08 17:54:49,209 - __main__ - INFO - 📝 MODUS: NUR BEWERBUNGEN
+2025-10-08 17:54:49,209 - __main__ - INFO - ================================================================================
+2025-10-08 17:54:49,210 - application_bot - INFO - 📊 21 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:54:49,210 - __main__ - INFO - 📊 21 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:54:49,210 - application_bot - INFO - ================================================================================
+2025-10-08 17:54:49,210 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-08 17:54:49,210 - application_bot - INFO - ================================================================================
+2025-10-08 17:54:49,210 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-08 17:54:49,211 - application_bot - INFO - 📊 21 Wohnungen ohne Bewerbung gefunden
+2025-10-08 17:54:49,211 - application_bot - INFO - ⚠️  Limitiere auf 1 Bewerbungen (von 21)
+2025-10-08 17:54:49,211 - application_bot - INFO - 
+📋 Bewerbung 1/1
+2025-10-08 17:54:49,211 - application_bot - INFO - ================================================================================
+2025-10-08 17:54:49,211 - application_bot - INFO - 🏠 Starte Bewerbung für: Neubauwohnung mit Fußbodenheizung und Terrasse
+2025-10-08 17:54:49,211 - application_bot - INFO - 📍 Bezirk: Falkenberg
+2025-10-08 17:54:49,211 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-02559-0201-0028/
+2025-10-08 17:54:49,211 - application_bot - INFO - ================================================================================
+2025-10-08 17:54:49,584 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 17:54:51,319 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-02559-0201-0028/
+2025-10-08 17:54:54,848 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-08 17:54:54,880 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-08 17:54:56,301 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 17:54:56,309 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-08 17:54:59,512 - application_bot - INFO - 🔍 Warte auf Formular-iFrame...
+2025-10-08 17:54:59,513 - application_bot - INFO - ✅ iFrame gefunden - fülle Formular aus...
+2025-10-08 17:55:03,861 - application_bot - INFO - ✓ Anrede: Herr
+2025-10-08 17:55:04,688 - application_bot - INFO - ✓ Vorname: Max
+2025-10-08 17:55:05,430 - application_bot - INFO - ✓ Nachname: Mustermann
+2025-10-08 17:55:06,039 - application_bot - INFO - ✓ E-Mail: max.mustermann@example.com
+2025-10-08 17:55:06,920 - application_bot - INFO - ✓ Telefon: +49 123 456789
+2025-10-08 17:55:07,545 - application_bot - INFO - ✓ Straße: Musterstraße
+2025-10-08 17:55:08,212 - application_bot - INFO - ✓ Hausnummer: 123
+2025-10-08 17:55:08,976 - application_bot - INFO - ✓ PLZ: 10115
+2025-10-08 17:55:09,621 - application_bot - INFO - ✓ Stadt: Berlin
+2025-10-08 17:55:11,576 - application_bot - INFO - ✓ Für wen wird die Anfrage gestellt: Für mich selbst
+2025-10-08 17:55:12,395 - application_bot - INFO - ✓ Gesamtzahl Personen: 1
+2025-10-08 17:55:12,946 - application_bot - INFO - ✓ Mobilfunknummer: +49 123 456789
+2025-10-08 17:55:43,370 - application_bot - INFO - ✓ 1 Datenschutz-Checkbox(en) aktiviert
+2025-10-08 17:55:43,371 - application_bot - INFO - 📝 Formular ausgefüllt - bereit zum Absenden
+2025-10-08 17:55:43,371 - application_bot - WARNING - ⚠️  HINWEIS: Automatisches Absenden ist deaktiviert - bitte manuell bestätigen!
+2025-10-08 17:55:43,371 - application_bot - INFO - Das Browser-Fenster bleibt 30 Sekunden offen zur manuellen Überprüfung...
+2025-10-08 17:56:13,535 - application_bot - INFO - ✅ Bewerbung erfolgreich!
+2025-10-08 17:56:13,537 - application_bot - INFO - ✅ Datenbank aktualisiert: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-02559-0201-0028/ -> Status: success
+2025-10-08 17:56:13,541 - application_bot - INFO - 
+================================================================================
+2025-10-08 17:56:13,541 - application_bot - INFO - 📊 BEWERBUNGS-ZUSAMMENFASSUNG
+2025-10-08 17:56:13,541 - application_bot - INFO - ================================================================================
+2025-10-08 17:56:13,541 - application_bot - INFO - ✅ Erfolgreich: 1
+2025-10-08 17:56:13,541 - application_bot - INFO - ❌ Fehlgeschlagen: 0
+2025-10-08 17:56:13,541 - application_bot - INFO - 📈 Gesamt: 1
+2025-10-08 17:56:13,541 - application_bot - INFO - ================================================================================

@@ -1,0 +1,38 @@
+{
+  "personal_info": {
+    "anrede": "Herr",
+    "vorname": "Max",
+    "nachname": "Mustermann",
+    "email": "max.mustermann@example.com",
+    "telefon": "+49 123 456789",
+    "mobil": "+49 123 456789",
+    "strasse": "Musterstraße",
+    "hausnummer": "123",
+    "plz": "10115",
+    "stadt": "Berlin",
+    "adresszusatz": "",
+    "fuer_wen_anfrage": "Für mich selbst",
+    "geburtsdatum": "01.01.1990",
+    "staatsangehoerigkeit": "Deutsch"
+  },
+  "household": {
+    "anzahl_personen": 1,
+    "anzahl_kinder": 0,
+    "wbs_vorhanden": false,
+    "wbs_gueltig_bis": "31.12.2025",
+    "wbs_art": "WBS 140",
+    "wbs_zimmer": "2",
+    "paragraph_9_bescheinigung": false,
+    "einkommen_in_spanne": true,
+    "haushaltseinkommen": "3000"
+  },
+  "documents": {
+    "personalausweis": "/path/to/personalausweis.pdf",
+    "gehaltsnachweis_1": "/path/to/gehaltsnachweis_1.pdf",
+    "gehaltsnachweis_2": "/path/to/gehaltsnachweis_2.pdf",
+    "gehaltsnachweis_3": "/path/to/gehaltsnachweis_3.pdf",
+    "schufa": "/path/to/schufa.pdf",
+    "mietschuldenfreiheit": "/path/to/mietschuldenfreiheit.pdf"
+  },
+  "nachricht": "Sehr geehrte Damen und Herren,\n\nhiermit bewerbe ich mich um die ausgeschriebene Wohnung. Ich bin berufstätig und suche nach einer langfristigen Wohnmöglichkeit.\n\nMit freundlichen Grüßen"
+}

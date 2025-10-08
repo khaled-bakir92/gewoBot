@@ -335,3 +335,5 @@ python application_bot.py
 - Check if filters are too restrictive
 - Run with empty filters to see all apartments
 - Check gewobag-bot.log for parsing errors
+- wenn du neue funktion hinzufügt dann aktualesiere immer @CLAUDE.md  und @README.md
+- nutze immer context7 mcp für sicher stellen dass alle tools in letzte vision sind und bei problem von implementieren oder konflikt zwischen tools immer context7 mcp nutzen um beste lösung zu finden

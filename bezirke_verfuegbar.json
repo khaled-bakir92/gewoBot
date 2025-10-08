@@ -1,0 +1,326 @@
+{
+  "stand": "2025-10-08 02:36:04",
+  "anzahl": 64,
+  "bezirke": [
+    {
+      "value": "charlottenburg-wilmersdorf",
+      "name": "Charlottenburg-Wilmersdorf",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "charlottenburg-wilmersdorf-charlottenburg",
+      "name": "Charlottenburg",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "charlottenburg-wilmersdorf-nord",
+      "name": "Charlottenburg-Nord",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "charlottenburg-wilmersdorf-grunewald",
+      "name": "Grunewald",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "charlottenburg-wilmersdorf-schmargendorf",
+      "name": "Schmargendorf",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "charlottenburg-wilmersdorf-wilmersdorf",
+      "name": "Wilmersdorf",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "friedrichshain-kreuzberg",
+      "name": "Friedrichshain-Kreuzberg",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "friedrichshain-kreuzberg-friedrichshain",
+      "name": "Friedrichshain",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "friedrichshain-kreuzberg-kreuzberg",
+      "name": "Kreuzberg",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "lichtenberg",
+      "name": "Lichtenberg",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "lichtenberg-alt-hohenschoenhausen",
+      "name": "Alt-Hohenschönhausen",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "lichtenberg-falkenberg",
+      "name": "Falkenberg",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "lichtenberg-fennpfuhl",
+      "name": "Fennpfuhl",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "lichtenberg-friedrichsfelde",
+      "name": "Friedrichsfelde",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "lichtenberg-lichtenberg",
+      "name": "Lichtenberg",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "marzahn-hellersdorf",
+      "name": "Marzahn-Hellersdorf",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "marzahn-hellersdorf-marzahn",
+      "name": "Marzahn",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "mitte",
+      "name": "Mitte",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "mitte-gesundbrunnen",
+      "name": "Gesundbrunnen",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "mitte-moabit",
+      "name": "Moabit",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "mitte-wedding",
+      "name": "Wedding",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "neukoelln",
+      "name": "Neukölln ",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "neukoelln-britz",
+      "name": "Britz",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "neukoelln-buckow",
+      "name": "Buckow",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "neukoelln-neukoelln",
+      "name": "Neukölln",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "neukoelln-rudow",
+      "name": "Rudow",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "pankow",
+      "name": "Pankow",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "pankow-pankow",
+      "name": "Pankow",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "pankow-prenzlauer-berg",
+      "name": "Prenzlauer Berg",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "reinickendorf",
+      "name": "Reinickendorf",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "reinickendorf-hermsdorf",
+      "name": "Hermsdorf",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "reinickendorf-reinickendorf",
+      "name": "Reinickendorf",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "reinickendorf-tegel",
+      "name": "Tegel",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "reinickendorf-waidmannslust",
+      "name": "Waidmannslust",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "spandau",
+      "name": "Spandau ",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "spandau-falkenhagener-feld",
+      "name": "Falkenhagener Feld",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "spandau-hakenfelde",
+      "name": "Hakenfelde",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "spandau-haselhorst",
+      "name": "Haselhorst",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "spandau-spandau",
+      "name": "Spandau",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "spandau-staaken",
+      "name": "Staaken",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "spandau-wilhelmstadt",
+      "name": "Wilhelmstadt",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "steglitz-zehlendorf",
+      "name": "Steglitz-Zehlendorf",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "steglitz-zehlendorf-lichterfelde",
+      "name": "Lichterfelde",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "tempelhof-schoeneberg",
+      "name": "Tempelhof-Schöneberg",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "tempelhof-schoeneberg-lichtenrade",
+      "name": "Lichtenrade",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "tempelhof-schoeneberg-mariendorf",
+      "name": "Mariendorf",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "tempelhof-schoeneberg-marienfelde",
+      "name": "Marienfelde",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "tempelhof-schoeneberg-schoeneberg",
+      "name": "Schöneberg",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "treptow-koepenick",
+      "name": "Treptow-Köpenick",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "treptow-koepenick-niederschoeneweide",
+      "name": "Niederschöneweide",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "treptow-koepenick-oberschoeneweide",
+      "name": "Oberschöneweide",
+      "typ": "Ortsteil"
+    },
+    {
+      "value": "Brandenburg",
+      "name": "Brandenburg",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "Charlottenburg-Wilmersdorf",
+      "name": "Charlottenburg-Wilmersdorf",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "Friedrichshain-Kreuzberg",
+      "name": "Friedrichshain-Kreuzberg",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "Lichtenberg",
+      "name": "Lichtenberg",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "Marzahn-Hellersdorf",
+      "name": "Marzahn-Hellersdorf",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "Mitte",
+      "name": "Mitte",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "Neukölln ",
+      "name": "Neukölln ",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "Pankow",
+      "name": "Pankow",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "Reinickendorf",
+      "name": "Reinickendorf",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "Spandau ",
+      "name": "Spandau ",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "Steglitz-Zehlendorf",
+      "name": "Steglitz-Zehlendorf",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "Tempelhof-Schöneberg",
+      "name": "Tempelhof-Schöneberg",
+      "typ": "Hauptbezirk"
+    },
+    {
+      "value": "Treptow-Köpenick",
+      "name": "Treptow-Köpenick",
+      "typ": "Hauptbezirk"
+    }
+  ]
+}

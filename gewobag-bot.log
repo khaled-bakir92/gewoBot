@@ -1,0 +1,731 @@
+2025-10-08 02:18:12,099 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 02:18:12,099 - __main__ - INFO - ======================================================================
+2025-10-08 02:18:12,099 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 02:18:12,099 - __main__ - INFO - ======================================================================
+2025-10-08 02:18:12,099 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 02:18:12,847 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 02:18:12,851 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 02:18:12,931 - __main__ - INFO - 20 Angebote gefunden
+2025-10-08 02:18:12,934 - __main__ - INFO - 20 Angebote erfolgreich extrahiert
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: Familiengerecht! in Wilhelmstadt
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: Bezugsfertig! in Wilhelmstadt
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: Mit neuem Wannenbad! in Staaken
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: Familiengerecht! in Staaken
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: 4 Zimmerwohnung im Neubau sucht neue Bewohner in Friedrichsfelde
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: 4 Zimmerwohnung im Neubau sucht neuen Mieter ab sofort! in Friedrichsfelde
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: 2 Zimmer mit WBS bis 160% ab sofort in Friedrichsfelde
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: 1 Zimmerwohnung mit WBS besonderem Wohnbedarf! in Friedrichsfelde
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: 1 Zimmerwohnung mit WBS bis 160% ab sofort! in Friedrichsfelde
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung in Haselhorst ab sofort verfügbar in Haselhorst
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung für Personen ab dem 55. Lebensjahr – handwerkliches Geschick erforderlich in Mariendorf
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung für Personen ab dem 55. Lebensjahr – handwerkliches Geschick erforderlich in Mariendorf
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung für aktive Senioren ab 60 Jahre in Reinickendorf
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: 2 Zimmer Hochparterre im Friedrichshainer Stalinbau! Ein WBS für min. 2 Zimmer ist erforderlich! in Friedrichshain
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen im Falkenhagener Feld in Spandau
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung für Personen ab dem 60. Lebensjahr in Lichtenrade
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: 2 Zimmerwohnung im Dachgeschoss in Schöneweide in Oberschöneweide
+2025-10-08 02:18:12,935 - __main__ - INFO - Neue Wohnung gespeichert: WBS mit besonderem Wohnbedarf benötigt in Prenzlauer Berg
+2025-10-08 02:18:12,936 - __main__ - INFO - Speicherung abgeschlossen: 20 neu, 0 bereits vorhanden
+2025-10-08 02:18:12,936 - __main__ - INFO - ======================================================================
+2025-10-08 02:18:12,936 - __main__ - INFO - Zusammenfassung: 20 Angebote gefunden, 20 neu gespeichert, 0 bereits bekannt
+2025-10-08 02:18:12,936 - __main__ - INFO - ======================================================================
+2025-10-08 02:36:03,768 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 02:36:03,768 - __main__ - INFO - 'bezirke_verfuegbar.json' nicht gefunden - erstelle Bezirksliste...
+2025-10-08 02:36:03,768 - __main__ - INFO - Extrahiere verfügbare Bezirke von der Gewobag-Website...
+2025-10-08 02:36:03,768 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 02:36:04,549 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 02:36:04,600 - __main__ - INFO - 64 Bezirke/Ortsteile gefunden
+2025-10-08 02:36:04,601 - __main__ - INFO - Bezirksliste erfolgreich in 'bezirke_verfuegbar.json' gespeichert
+2025-10-08 02:36:04,601 - __main__ - INFO - Beispiel-Konfigurationsdatei 'filter_config.json' erstellt
+2025-10-08 02:36:04,601 - __main__ - INFO - ======================================================================
+2025-10-08 02:36:04,601 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 02:36:04,601 - __main__ - INFO - ======================================================================
+2025-10-08 02:36:04,601 - __main__ - INFO - Keine Bezirksfilter in Konfiguration - suche in allen Bezirken
+2025-10-08 02:36:04,601 - __main__ - INFO - Keine Bezirksfilter aktiv - suche in allen Bezirken
+2025-10-08 02:36:04,601 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 02:36:05,318 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 02:36:05,320 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 02:36:05,386 - __main__ - INFO - 20 Angebote gefunden
+2025-10-08 02:36:05,389 - __main__ - INFO - 20 Angebote erfolgreich extrahiert
+2025-10-08 02:36:05,390 - __main__ - INFO - Speicherung abgeschlossen: 0 neu, 20 bereits vorhanden
+2025-10-08 02:36:05,390 - __main__ - INFO - ======================================================================
+2025-10-08 02:36:05,390 - __main__ - INFO - Zusammenfassung: 20 Angebote gefunden, 0 neu gespeichert, 20 bereits bekannt
+2025-10-08 02:36:05,390 - __main__ - INFO - ======================================================================
+2025-10-08 02:41:49,634 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 02:41:49,634 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 02:41:49,634 - __main__ - INFO - ======================================================================
+2025-10-08 02:41:49,634 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 02:41:49,634 - __main__ - INFO - ======================================================================
+2025-10-08 02:41:49,634 - __main__ - INFO - Lade 1 Bezirksfilter aus Konfiguration
+2025-10-08 02:41:49,634 - __main__ - INFO - Bezirksfilter aktiv für: spandau
+2025-10-08 02:41:49,634 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 02:41:50,323 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 02:41:50,325 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 02:41:50,385 - __main__ - INFO - 10 Angebote gefunden
+2025-10-08 02:41:50,387 - __main__ - INFO - 10 Angebote erfolgreich extrahiert
+2025-10-08 02:41:50,388 - __main__ - INFO - Neue Wohnung gespeichert: Schicke Wohnung in der Waterkant sucht netten Nachmieter in Haselhorst
+2025-10-08 02:41:50,389 - __main__ - INFO - Neue Wohnung gespeichert: Neubau mit Fußbodenheizung direkt an der Havel in Haselhorst
+2025-10-08 02:41:50,389 - __main__ - INFO - Speicherung abgeschlossen: 2 neu, 8 bereits vorhanden
+2025-10-08 02:41:50,389 - __main__ - INFO - ======================================================================
+2025-10-08 02:41:50,389 - __main__ - INFO - Zusammenfassung: 10 Angebote gefunden, 2 neu gespeichert, 8 bereits bekannt
+2025-10-08 02:41:50,389 - __main__ - INFO - ======================================================================
+2025-10-08 02:43:38,979 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 02:43:38,979 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 02:43:38,979 - __main__ - INFO - ======================================================================
+2025-10-08 02:43:38,979 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 02:43:38,979 - __main__ - INFO - ======================================================================
+2025-10-08 02:43:38,979 - __main__ - INFO - Lade 1 Bezirksfilter aus Konfiguration
+2025-10-08 02:43:38,979 - __main__ - INFO - Bezirksfilter aktiv für: spandau
+2025-10-08 02:43:38,979 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 02:43:39,707 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 02:43:39,710 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 02:43:39,778 - __main__ - INFO - 10 Angebote gefunden
+2025-10-08 02:43:39,780 - __main__ - INFO - 10 Angebote erfolgreich extrahiert
+2025-10-08 02:43:39,780 - __main__ - INFO - Speicherung abgeschlossen: 0 neu, 10 bereits vorhanden
+2025-10-08 02:43:39,780 - __main__ - INFO - ======================================================================
+2025-10-08 02:43:39,780 - __main__ - INFO - Zusammenfassung: 10 Angebote gefunden, 0 neu gespeichert, 10 bereits bekannt
+2025-10-08 02:43:39,780 - __main__ - INFO - ======================================================================
+2025-10-08 02:45:18,464 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 02:45:18,465 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 02:45:18,465 - __main__ - INFO - ======================================================================
+2025-10-08 02:45:18,465 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 02:45:18,465 - __main__ - INFO - ======================================================================
+2025-10-08 02:45:18,465 - __main__ - INFO - Lade 1 Bezirksfilter aus Konfiguration
+2025-10-08 02:45:18,465 - __main__ - INFO - Bezirksfilter aktiv für: spandau
+2025-10-08 02:45:18,465 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 02:45:19,306 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 02:45:19,308 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 02:45:19,362 - __main__ - INFO - 10 Angebote gefunden
+2025-10-08 02:45:19,364 - __main__ - INFO - 10 Angebote erfolgreich extrahiert
+2025-10-08 02:45:19,364 - __main__ - INFO - Speicherung abgeschlossen: 0 neu, 10 bereits vorhanden
+2025-10-08 02:45:19,364 - __main__ - INFO - ======================================================================
+2025-10-08 02:45:19,364 - __main__ - INFO - Zusammenfassung: 10 Angebote gefunden (mit aktiven Filtern), 0 neu gespeichert, 10 bereits bekannt
+2025-10-08 02:45:19,364 - __main__ - INFO - ======================================================================
+2025-10-08 02:46:30,712 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 02:46:30,713 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 02:46:30,713 - __main__ - INFO - ======================================================================
+2025-10-08 02:46:30,713 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 02:46:30,713 - __main__ - INFO - ======================================================================
+2025-10-08 02:46:30,713 - __main__ - INFO - Lade 1 Bezirksfilter aus Konfiguration
+2025-10-08 02:46:30,713 - __main__ - INFO - Bezirksfilter aktiv für: spandau
+2025-10-08 02:46:30,713 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 02:46:31,413 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 02:46:31,415 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 02:46:31,484 - __main__ - INFO - 10 Angebote gefunden
+2025-10-08 02:46:31,486 - __main__ - INFO - 10 Angebote erfolgreich extrahiert
+2025-10-08 02:46:31,487 - __main__ - INFO - Neue Wohnung gespeichert: Familiengerecht! in Wilhelmstadt
+2025-10-08 02:46:31,487 - __main__ - INFO - Neue Wohnung gespeichert: Bezugsfertig! in Wilhelmstadt
+2025-10-08 02:46:31,487 - __main__ - INFO - Neue Wohnung gespeichert: Mit neuem Wannenbad! in Staaken
+2025-10-08 02:46:31,487 - __main__ - INFO - Neue Wohnung gespeichert: Familiengerecht! in Staaken
+2025-10-08 02:46:31,487 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung in Haselhorst ab sofort verfügbar in Haselhorst
+2025-10-08 02:46:31,487 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 02:46:31,487 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 02:46:31,487 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen im Falkenhagener Feld in Spandau
+2025-10-08 02:46:31,487 - __main__ - INFO - Neue Wohnung gespeichert: Schicke Wohnung in der Waterkant sucht netten Nachmieter in Haselhorst
+2025-10-08 02:46:31,487 - __main__ - INFO - Neue Wohnung gespeichert: Neubau mit Fußbodenheizung direkt an der Havel in Haselhorst
+2025-10-08 02:46:31,488 - __main__ - INFO - Speicherung abgeschlossen: 10 neu, 0 bereits vorhanden
+2025-10-08 02:46:31,488 - __main__ - INFO - ======================================================================
+2025-10-08 02:46:31,488 - __main__ - INFO - Zusammenfassung: 10 Angebote gefunden (mit aktiven Filtern), 10 neu gespeichert, 0 bereits bekannt
+2025-10-08 02:46:31,488 - __main__ - INFO - ======================================================================
+2025-10-08 02:54:24,332 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 02:54:24,332 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 02:54:24,332 - __main__ - INFO - ======================================================================
+2025-10-08 02:54:24,332 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 02:54:24,332 - __main__ - INFO - ======================================================================
+2025-10-08 02:54:24,332 - __main__ - INFO - Lade 1 Bezirksfilter aus Konfiguration
+2025-10-08 02:54:24,332 - __main__ - INFO - Bezirksfilter aktiv für: spandau
+2025-10-08 02:54:24,332 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 02:54:25,038 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 02:54:25,040 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 02:54:25,091 - __main__ - INFO - 10 Angebote gefunden
+2025-10-08 02:54:25,093 - __main__ - INFO - 10 Angebote erfolgreich extrahiert
+2025-10-08 02:54:25,093 - __main__ - INFO - Neue Wohnung gespeichert: Familiengerecht! in Wilhelmstadt
+2025-10-08 02:54:25,093 - __main__ - INFO - Neue Wohnung gespeichert: Bezugsfertig! in Wilhelmstadt
+2025-10-08 02:54:25,093 - __main__ - INFO - Neue Wohnung gespeichert: Mit neuem Wannenbad! in Staaken
+2025-10-08 02:54:25,093 - __main__ - INFO - Neue Wohnung gespeichert: Familiengerecht! in Staaken
+2025-10-08 02:54:25,093 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung in Haselhorst ab sofort verfügbar in Haselhorst
+2025-10-08 02:54:25,093 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 02:54:25,093 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 02:54:25,093 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen im Falkenhagener Feld in Spandau
+2025-10-08 02:54:25,093 - __main__ - INFO - Neue Wohnung gespeichert: Schicke Wohnung in der Waterkant sucht netten Nachmieter in Haselhorst
+2025-10-08 02:54:25,093 - __main__ - INFO - Neue Wohnung gespeichert: Neubau mit Fußbodenheizung direkt an der Havel in Haselhorst
+2025-10-08 02:54:25,094 - __main__ - INFO - Speicherung abgeschlossen: 10 neu, 0 bereits vorhanden
+2025-10-08 02:54:25,094 - __main__ - INFO - ======================================================================
+2025-10-08 02:54:25,094 - __main__ - INFO - Zusammenfassung: 10 Angebote gefunden (mit aktiven Filtern), 10 neu gespeichert, 0 bereits bekannt
+2025-10-08 02:54:25,094 - __main__ - INFO - ======================================================================
+2025-10-08 03:01:20,975 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:01:20,975 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:01:20,975 - __main__ - INFO - ======================================================================
+2025-10-08 03:01:20,975 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:01:20,975 - __main__ - INFO - ======================================================================
+2025-10-08 03:01:20,975 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 933 € | Fläche:  - 81 m² | Zimmer: 3 - 
+2025-10-08 03:01:20,975 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=933&gesamtflaeche_von=&gesamtflaeche_bis=81&zimmer_von=3&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:01:21,780 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:01:21,781 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:01:21,814 - __main__ - WARNING - Keine Angebote gefunden!
+2025-10-08 03:01:21,814 - __main__ - WARNING - Keine Wohnungen gefunden
+2025-10-08 03:02:20,444 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:02:20,446 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:02:20,446 - __main__ - INFO - ======================================================================
+2025-10-08 03:02:20,446 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:02:20,446 - __main__ - INFO - ======================================================================
+2025-10-08 03:02:20,446 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 €
+2025-10-08 03:02:20,446 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:02:21,232 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:02:21,234 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:02:21,280 - __main__ - INFO - 8 Angebote gefunden
+2025-10-08 03:02:21,281 - __main__ - INFO - 8 Angebote erfolgreich extrahiert
+2025-10-08 03:02:21,282 - __main__ - INFO - Neue Wohnung gespeichert: Familiengerecht! in Wilhelmstadt
+2025-10-08 03:02:21,282 - __main__ - INFO - Neue Wohnung gespeichert: Bezugsfertig! in Wilhelmstadt
+2025-10-08 03:02:21,282 - __main__ - INFO - Neue Wohnung gespeichert: Mit neuem Wannenbad! in Staaken
+2025-10-08 03:02:21,282 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung in Haselhorst ab sofort verfügbar in Haselhorst
+2025-10-08 03:02:21,282 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 03:02:21,282 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 03:02:21,282 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen im Falkenhagener Feld in Spandau
+2025-10-08 03:02:21,282 - __main__ - INFO - Neue Wohnung gespeichert: Schicke Wohnung in der Waterkant sucht netten Nachmieter in Haselhorst
+2025-10-08 03:02:21,283 - __main__ - INFO - Speicherung abgeschlossen: 8 neu, 0 bereits vorhanden
+2025-10-08 03:02:21,283 - __main__ - INFO - ======================================================================
+2025-10-08 03:02:21,283 - __main__ - INFO - Zusammenfassung: 8 Angebote gefunden (mit aktiven Filtern), 8 neu gespeichert, 0 bereits bekannt
+2025-10-08 03:02:21,283 - __main__ - INFO - ======================================================================
+2025-10-08 03:03:37,378 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:03:37,378 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:03:37,378 - __main__ - INFO - ======================================================================
+2025-10-08 03:03:37,378 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:03:37,378 - __main__ - INFO - ======================================================================
+2025-10-08 03:03:37,379 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 €
+2025-10-08 03:03:37,379 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:03:38,141 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:03:38,145 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:03:38,210 - __main__ - INFO - 8 Angebote gefunden
+2025-10-08 03:03:38,211 - __main__ - INFO - 8 Angebote erfolgreich extrahiert
+2025-10-08 03:03:38,212 - __main__ - INFO - Speicherung abgeschlossen: 0 neu, 8 bereits vorhanden
+2025-10-08 03:03:38,212 - __main__ - INFO - ======================================================================
+2025-10-08 03:03:38,212 - __main__ - INFO - Zusammenfassung: 8 Angebote gefunden (mit aktiven Filtern), 0 neu gespeichert, 8 bereits bekannt
+2025-10-08 03:03:38,212 - __main__ - INFO - ======================================================================
+2025-10-08 03:05:39,906 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:05:39,906 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:05:39,906 - __main__ - INFO - ======================================================================
+2025-10-08 03:05:39,906 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:05:39,906 - __main__ - INFO - ======================================================================
+2025-10-08 03:05:39,906 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 € | Fläche:  - 81 m²
+2025-10-08 03:05:39,906 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=&gesamtflaeche_bis=81&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:05:40,730 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:05:40,731 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:05:40,771 - __main__ - INFO - 8 Angebote gefunden
+2025-10-08 03:05:40,772 - __main__ - INFO - 8 Angebote erfolgreich extrahiert
+2025-10-08 03:05:40,772 - __main__ - INFO - Speicherung abgeschlossen: 0 neu, 8 bereits vorhanden
+2025-10-08 03:05:40,772 - __main__ - INFO - ======================================================================
+2025-10-08 03:05:40,772 - __main__ - INFO - Zusammenfassung: 8 Angebote gefunden (mit aktiven Filtern), 0 neu gespeichert, 8 bereits bekannt
+2025-10-08 03:05:40,772 - __main__ - INFO - ======================================================================
+2025-10-08 03:06:39,733 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:06:39,733 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:06:39,734 - __main__ - INFO - ======================================================================
+2025-10-08 03:06:39,734 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:06:39,734 - __main__ - INFO - ======================================================================
+2025-10-08 03:06:39,734 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 € | Fläche: 80 -  m²
+2025-10-08 03:06:39,734 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=80&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:06:40,423 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:06:40,427 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:06:40,488 - __main__ - INFO - 1 Angebote gefunden
+2025-10-08 03:06:40,488 - __main__ - INFO - 1 Angebote erfolgreich extrahiert
+2025-10-08 03:06:40,489 - __main__ - INFO - Speicherung abgeschlossen: 0 neu, 1 bereits vorhanden
+2025-10-08 03:06:40,489 - __main__ - INFO - ======================================================================
+2025-10-08 03:06:40,489 - __main__ - INFO - Zusammenfassung: 1 Angebote gefunden (mit aktiven Filtern), 0 neu gespeichert, 1 bereits bekannt
+2025-10-08 03:06:40,489 - __main__ - INFO - ======================================================================
+2025-10-08 03:06:55,392 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:06:55,392 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:06:55,392 - __main__ - INFO - ======================================================================
+2025-10-08 03:06:55,392 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:06:55,392 - __main__ - INFO - ======================================================================
+2025-10-08 03:06:55,392 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 € | Fläche: 80 -  m²
+2025-10-08 03:06:55,393 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=80&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:06:56,175 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:06:56,180 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:06:56,241 - __main__ - INFO - 1 Angebote gefunden
+2025-10-08 03:06:56,241 - __main__ - INFO - 1 Angebote erfolgreich extrahiert
+2025-10-08 03:06:56,242 - __main__ - INFO - Neue Wohnung gespeichert: Familiengerecht! in Wilhelmstadt
+2025-10-08 03:06:56,242 - __main__ - INFO - Speicherung abgeschlossen: 1 neu, 0 bereits vorhanden
+2025-10-08 03:06:56,242 - __main__ - INFO - ======================================================================
+2025-10-08 03:06:56,242 - __main__ - INFO - Zusammenfassung: 1 Angebote gefunden (mit aktiven Filtern), 1 neu gespeichert, 0 bereits bekannt
+2025-10-08 03:06:56,242 - __main__ - INFO - ======================================================================
+2025-10-08 03:08:43,397 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:08:43,397 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:08:43,398 - __main__ - INFO - ======================================================================
+2025-10-08 03:08:43,398 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:08:43,398 - __main__ - INFO - ======================================================================
+2025-10-08 03:08:43,398 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 € | Fläche:  - 81 m²
+2025-10-08 03:08:43,398 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=&gesamtflaeche_bis=81&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:08:44,198 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:08:44,199 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:08:44,237 - __main__ - INFO - 8 Angebote gefunden
+2025-10-08 03:08:44,239 - __main__ - INFO - 8 Angebote erfolgreich extrahiert
+2025-10-08 03:08:44,239 - __main__ - INFO - Neue Wohnung gespeichert: Bezugsfertig! in Wilhelmstadt
+2025-10-08 03:08:44,239 - __main__ - INFO - Neue Wohnung gespeichert: Mit neuem Wannenbad! in Staaken
+2025-10-08 03:08:44,239 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung in Haselhorst ab sofort verfügbar in Haselhorst
+2025-10-08 03:08:44,239 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 03:08:44,239 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 03:08:44,239 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen im Falkenhagener Feld in Spandau
+2025-10-08 03:08:44,239 - __main__ - INFO - Neue Wohnung gespeichert: Schicke Wohnung in der Waterkant sucht netten Nachmieter in Haselhorst
+2025-10-08 03:08:44,240 - __main__ - INFO - Speicherung abgeschlossen: 7 neu, 1 bereits vorhanden
+2025-10-08 03:08:44,240 - __main__ - INFO - ======================================================================
+2025-10-08 03:08:44,240 - __main__ - INFO - Zusammenfassung: 8 Angebote gefunden (mit aktiven Filtern), 7 neu gespeichert, 1 bereits bekannt
+2025-10-08 03:08:44,240 - __main__ - INFO - ======================================================================
+2025-10-08 03:09:42,449 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:09:42,450 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:09:42,450 - __main__ - INFO - ======================================================================
+2025-10-08 03:09:42,450 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:09:42,450 - __main__ - INFO - ======================================================================
+2025-10-08 03:09:42,450 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 € | Fläche:  - 81 m² | Zimmer: 3 - 
+2025-10-08 03:09:42,450 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=&gesamtflaeche_bis=81&zimmer_von=3&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:09:43,397 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:09:43,399 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:09:43,447 - __main__ - WARNING - Keine Angebote gefunden!
+2025-10-08 03:09:43,447 - __main__ - WARNING - Keine Wohnungen gefunden
+2025-10-08 03:10:09,189 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:10:09,189 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:10:09,189 - __main__ - INFO - ======================================================================
+2025-10-08 03:10:09,189 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:10:09,189 - __main__ - INFO - ======================================================================
+2025-10-08 03:10:09,189 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 € | Fläche:  - 81 m² | Zimmer:  - 3
+2025-10-08 03:10:09,189 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=&gesamtflaeche_bis=81&zimmer_von=&zimmer_bis=3&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:10:10,290 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:10:10,293 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:10:10,360 - __main__ - INFO - 8 Angebote gefunden
+2025-10-08 03:10:10,361 - __main__ - INFO - 8 Angebote erfolgreich extrahiert
+2025-10-08 03:10:10,362 - __main__ - INFO - Speicherung abgeschlossen: 0 neu, 8 bereits vorhanden
+2025-10-08 03:10:10,362 - __main__ - INFO - ======================================================================
+2025-10-08 03:10:10,362 - __main__ - INFO - Zusammenfassung: 8 Angebote gefunden (mit aktiven Filtern), 0 neu gespeichert, 8 bereits bekannt
+2025-10-08 03:10:10,362 - __main__ - INFO - ======================================================================
+2025-10-08 03:12:58,086 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:12:58,086 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:12:58,086 - __main__ - INFO - ======================================================================
+2025-10-08 03:12:58,086 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:12:58,086 - __main__ - INFO - ======================================================================
+2025-10-08 03:12:58,086 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 € | Fläche:  - 81 m² | Zimmer:  - 3
+2025-10-08 03:12:58,086 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=&gesamtflaeche_bis=81&zimmer_von=&zimmer_bis=3&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:12:58,782 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:12:58,784 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:12:58,842 - __main__ - INFO - 8 Angebote gefunden
+2025-10-08 03:12:58,843 - __main__ - INFO - 8 Angebote erfolgreich extrahiert
+2025-10-08 03:12:58,843 - __main__ - INFO - Speicherung abgeschlossen: 0 neu, 8 bereits vorhanden
+2025-10-08 03:12:58,843 - __main__ - INFO - ======================================================================
+2025-10-08 03:12:58,843 - __main__ - INFO - Zusammenfassung: 8 Angebote gefunden (mit aktiven Filtern), 0 neu gespeichert, 8 bereits bekannt
+2025-10-08 03:12:58,844 - __main__ - INFO - ======================================================================
+2025-10-08 03:13:05,347 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:13:05,348 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:13:05,348 - __main__ - INFO - ======================================================================
+2025-10-08 03:13:05,348 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:13:05,348 - __main__ - INFO - ======================================================================
+2025-10-08 03:13:05,348 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 € | Fläche:  - 81 m² | Zimmer:  - 3
+2025-10-08 03:13:05,348 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=&gesamtflaeche_bis=81&zimmer_von=&zimmer_bis=3&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:13:06,140 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:13:06,142 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:13:06,202 - __main__ - INFO - 8 Angebote gefunden
+2025-10-08 03:13:06,203 - __main__ - INFO - 8 Angebote erfolgreich extrahiert
+2025-10-08 03:13:06,204 - __main__ - INFO - Speicherung abgeschlossen: 0 neu, 8 bereits vorhanden
+2025-10-08 03:13:06,204 - __main__ - INFO - ======================================================================
+2025-10-08 03:13:06,204 - __main__ - INFO - Zusammenfassung: 8 Angebote gefunden (mit aktiven Filtern), 0 neu gespeichert, 8 bereits bekannt
+2025-10-08 03:13:06,204 - __main__ - INFO - ======================================================================
+2025-10-08 03:13:19,789 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:13:19,795 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:13:19,795 - __main__ - INFO - ======================================================================
+2025-10-08 03:13:19,797 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:13:19,797 - __main__ - INFO - ======================================================================
+2025-10-08 03:13:19,797 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 € | Fläche:  - 81 m² | Zimmer: 3 - 
+2025-10-08 03:13:19,797 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=&gesamtflaeche_bis=81&zimmer_von=3&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:13:20,512 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:13:20,513 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:13:20,557 - __main__ - WARNING - Keine Angebote gefunden!
+2025-10-08 03:13:20,557 - __main__ - WARNING - Keine Wohnungen gefunden
+2025-10-08 03:13:38,103 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:13:38,103 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:13:38,104 - __main__ - INFO - ======================================================================
+2025-10-08 03:13:38,104 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:13:38,104 - __main__ - INFO - ======================================================================
+2025-10-08 03:13:38,104 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 € | Fläche:  - 81 m² | Zimmer: 3 - 
+2025-10-08 03:13:38,104 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=&gesamtflaeche_bis=81&zimmer_von=3&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:13:38,956 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:13:38,957 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:13:38,989 - __main__ - WARNING - Keine Angebote gefunden!
+2025-10-08 03:13:38,989 - __main__ - WARNING - Keine Wohnungen gefunden
+2025-10-08 03:15:14,885 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:15:14,886 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:15:14,886 - __main__ - INFO - ======================================================================
+2025-10-08 03:15:14,886 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:15:14,886 - __main__ - INFO - ======================================================================
+2025-10-08 03:15:14,886 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 € | Fläche:  - 81 m² | Zimmer: 3 - 
+2025-10-08 03:15:14,886 - __main__ - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-08 03:15:14,886 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=&gesamtflaeche_bis=81&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:15:15,583 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:15:15,585 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:15:15,641 - __main__ - INFO - 8 Angebote gefunden
+2025-10-08 03:15:15,642 - __main__ - INFO - 8 Angebote erfolgreich extrahiert
+2025-10-08 03:15:15,642 - __main__ - INFO - Clientseitige Zimmerfilterung: 8 -> 2 Wohnungen
+2025-10-08 03:15:15,642 - __main__ - INFO - Speicherung abgeschlossen: 0 neu, 2 bereits vorhanden
+2025-10-08 03:15:15,643 - __main__ - INFO - ======================================================================
+2025-10-08 03:15:15,643 - __main__ - INFO - Zusammenfassung: 2 Angebote gefunden (mit aktiven Filtern), 0 neu gespeichert, 2 bereits bekannt
+2025-10-08 03:15:15,643 - __main__ - INFO - ======================================================================
+2025-10-08 03:15:25,743 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:15:25,743 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:15:25,743 - __main__ - INFO - ======================================================================
+2025-10-08 03:15:25,744 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:15:25,744 - __main__ - INFO - ======================================================================
+2025-10-08 03:15:25,744 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 € | Fläche:  - 81 m² | Zimmer: 3 - 3
+2025-10-08 03:15:25,744 - __main__ - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-08 03:15:25,744 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=&gesamtflaeche_bis=81&zimmer_von=&zimmer_bis=3&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:15:26,429 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:15:26,431 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:15:26,495 - __main__ - INFO - 8 Angebote gefunden
+2025-10-08 03:15:26,497 - __main__ - INFO - 8 Angebote erfolgreich extrahiert
+2025-10-08 03:15:26,497 - __main__ - INFO - Clientseitige Zimmerfilterung: 8 -> 2 Wohnungen
+2025-10-08 03:15:26,497 - __main__ - INFO - Speicherung abgeschlossen: 0 neu, 2 bereits vorhanden
+2025-10-08 03:15:26,497 - __main__ - INFO - ======================================================================
+2025-10-08 03:15:26,497 - __main__ - INFO - Zusammenfassung: 2 Angebote gefunden (mit aktiven Filtern), 0 neu gespeichert, 2 bereits bekannt
+2025-10-08 03:15:26,497 - __main__ - INFO - ======================================================================
+2025-10-08 03:16:09,450 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:16:09,450 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:16:09,450 - __main__ - INFO - ======================================================================
+2025-10-08 03:16:09,450 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:16:09,450 - __main__ - INFO - ======================================================================
+2025-10-08 03:16:09,451 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 € | Fläche:  - 81 m² | Zimmer: 3 - 
+2025-10-08 03:16:09,451 - __main__ - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-08 03:16:09,451 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=&gesamtflaeche_bis=81&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:16:10,188 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:16:10,192 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:16:10,263 - __main__ - INFO - 8 Angebote gefunden
+2025-10-08 03:16:10,265 - __main__ - INFO - 8 Angebote erfolgreich extrahiert
+2025-10-08 03:16:10,265 - __main__ - INFO - Clientseitige Zimmerfilterung: 8 -> 2 Wohnungen
+2025-10-08 03:16:10,265 - __main__ - INFO - Speicherung abgeschlossen: 0 neu, 2 bereits vorhanden
+2025-10-08 03:16:10,265 - __main__ - INFO - ======================================================================
+2025-10-08 03:16:10,265 - __main__ - INFO - Zusammenfassung: 2 Angebote gefunden (mit aktiven Filtern), 0 neu gespeichert, 2 bereits bekannt
+2025-10-08 03:16:10,265 - __main__ - INFO - ======================================================================
+2025-10-08 03:16:53,680 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:16:53,681 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:16:53,681 - __main__ - INFO - ======================================================================
+2025-10-08 03:16:53,681 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:16:53,681 - __main__ - INFO - ======================================================================
+2025-10-08 03:16:53,681 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 € | Fläche:  - 81 m² | Zimmer:  - 3
+2025-10-08 03:16:53,681 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=&gesamtflaeche_bis=81&zimmer_von=&zimmer_bis=3&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:16:54,518 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:16:54,519 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:16:54,558 - __main__ - INFO - 8 Angebote gefunden
+2025-10-08 03:16:54,560 - __main__ - INFO - 8 Angebote erfolgreich extrahiert
+2025-10-08 03:16:54,561 - __main__ - INFO - Neue Wohnung gespeichert: Familiengerecht! in Wilhelmstadt
+2025-10-08 03:16:54,561 - __main__ - INFO - Neue Wohnung gespeichert: Bezugsfertig! in Wilhelmstadt
+2025-10-08 03:16:54,561 - __main__ - INFO - Neue Wohnung gespeichert: Mit neuem Wannenbad! in Staaken
+2025-10-08 03:16:54,561 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung in Haselhorst ab sofort verfügbar in Haselhorst
+2025-10-08 03:16:54,561 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 03:16:54,561 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 03:16:54,561 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen im Falkenhagener Feld in Spandau
+2025-10-08 03:16:54,561 - __main__ - INFO - Neue Wohnung gespeichert: Schicke Wohnung in der Waterkant sucht netten Nachmieter in Haselhorst
+2025-10-08 03:16:54,562 - __main__ - INFO - Speicherung abgeschlossen: 8 neu, 0 bereits vorhanden
+2025-10-08 03:16:54,562 - __main__ - INFO - ======================================================================
+2025-10-08 03:16:54,562 - __main__ - INFO - Zusammenfassung: 8 Angebote gefunden (mit aktiven Filtern), 8 neu gespeichert, 0 bereits bekannt
+2025-10-08 03:16:54,562 - __main__ - INFO - ======================================================================
+2025-10-08 03:17:29,142 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:17:29,142 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:17:29,142 - __main__ - INFO - ======================================================================
+2025-10-08 03:17:29,142 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:17:29,143 - __main__ - INFO - ======================================================================
+2025-10-08 03:17:29,143 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 € | Fläche:  - 81 m² | Zimmer: 3 - 
+2025-10-08 03:17:29,143 - __main__ - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-08 03:17:29,143 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=&gesamtflaeche_bis=81&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:17:29,928 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:17:29,932 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:17:30,001 - __main__ - INFO - 8 Angebote gefunden
+2025-10-08 03:17:30,002 - __main__ - INFO - 8 Angebote erfolgreich extrahiert
+2025-10-08 03:17:30,002 - __main__ - INFO - Clientseitige Zimmerfilterung: 8 -> 2 Wohnungen
+2025-10-08 03:17:30,004 - __main__ - INFO - Neue Wohnung gespeichert: Familiengerecht! in Wilhelmstadt
+2025-10-08 03:17:30,004 - __main__ - INFO - Neue Wohnung gespeichert: Mit neuem Wannenbad! in Staaken
+2025-10-08 03:17:30,004 - __main__ - INFO - Speicherung abgeschlossen: 2 neu, 0 bereits vorhanden
+2025-10-08 03:17:30,004 - __main__ - INFO - ======================================================================
+2025-10-08 03:17:30,005 - __main__ - INFO - Zusammenfassung: 2 Angebote gefunden (mit aktiven Filtern), 2 neu gespeichert, 0 bereits bekannt
+2025-10-08 03:17:30,005 - __main__ - INFO - ======================================================================
+2025-10-08 03:31:19,773 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:31:19,773 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:31:19,773 - __main__ - INFO - ======================================================================
+2025-10-08 03:31:19,773 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:31:19,773 - __main__ - INFO - ======================================================================
+2025-10-08 03:31:19,773 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 € | Fläche:  - 81 m² | Zimmer: 3 - 
+2025-10-08 03:31:19,773 - __main__ - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-08 03:31:19,773 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=&gesamtflaeche_bis=81&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:31:20,636 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:31:20,637 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:31:20,689 - __main__ - INFO - 8 Angebote gefunden
+2025-10-08 03:31:20,690 - __main__ - INFO - 8 Angebote erfolgreich extrahiert
+2025-10-08 03:31:20,690 - __main__ - INFO - Clientseitige Filterung: 8 -> 2 Wohnungen
+2025-10-08 03:31:20,691 - __main__ - INFO - Neue Wohnung gespeichert: Familiengerecht! in Wilhelmstadt
+2025-10-08 03:31:20,691 - __main__ - INFO - Neue Wohnung gespeichert: Mit neuem Wannenbad! in Staaken
+2025-10-08 03:31:20,691 - __main__ - INFO - Speicherung abgeschlossen: 2 neu, 0 bereits vorhanden
+2025-10-08 03:31:20,691 - __main__ - INFO - ======================================================================
+2025-10-08 03:31:20,691 - __main__ - INFO - Zusammenfassung: 2 Angebote gefunden (mit aktiven Filtern), 2 neu gespeichert, 0 bereits bekannt
+2025-10-08 03:31:20,692 - __main__ - INFO - ======================================================================
+2025-10-08 03:31:32,829 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:31:32,829 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:31:32,829 - __main__ - INFO - ======================================================================
+2025-10-08 03:31:32,829 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:31:32,829 - __main__ - INFO - ======================================================================
+2025-10-08 03:31:32,829 - __main__ - INFO - Aktive Filter: Bezirke: spandau | Miete:  - 1000 € | Fläche:  - 81 m²
+2025-10-08 03:31:32,829 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1000&gesamtflaeche_von=&gesamtflaeche_bis=81&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:31:33,592 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:31:33,596 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:31:33,663 - __main__ - INFO - 8 Angebote gefunden
+2025-10-08 03:31:33,665 - __main__ - INFO - 8 Angebote erfolgreich extrahiert
+2025-10-08 03:31:33,665 - __main__ - INFO - Neue Wohnung gespeichert: Bezugsfertig! in Wilhelmstadt
+2025-10-08 03:31:33,665 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung in Haselhorst ab sofort verfügbar in Haselhorst
+2025-10-08 03:31:33,665 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 03:31:33,665 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 03:31:33,665 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen im Falkenhagener Feld in Spandau
+2025-10-08 03:31:33,665 - __main__ - INFO - Neue Wohnung gespeichert: Schicke Wohnung in der Waterkant sucht netten Nachmieter in Haselhorst
+2025-10-08 03:31:33,666 - __main__ - INFO - Speicherung abgeschlossen: 6 neu, 2 bereits vorhanden
+2025-10-08 03:31:33,666 - __main__ - INFO - ======================================================================
+2025-10-08 03:31:33,666 - __main__ - INFO - Zusammenfassung: 8 Angebote gefunden (mit aktiven Filtern), 6 neu gespeichert, 2 bereits bekannt
+2025-10-08 03:31:33,666 - __main__ - INFO - ======================================================================
+2025-10-08 03:32:00,681 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:32:00,681 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:32:00,681 - __main__ - INFO - ======================================================================
+2025-10-08 03:32:00,681 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:32:00,681 - __main__ - INFO - ======================================================================
+2025-10-08 03:32:00,681 - __main__ - INFO - Aktive Filter: Miete:  - 700 €
+2025-10-08 03:32:00,681 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=700&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 03:32:01,388 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:32:01,389 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:32:01,428 - __main__ - INFO - 12 Angebote gefunden
+2025-10-08 03:32:01,431 - __main__ - INFO - 12 Angebote erfolgreich extrahiert
+2025-10-08 03:32:01,431 - __main__ - INFO - Neue Wohnung gespeichert: Bezugsfertig! in Wilhelmstadt
+2025-10-08 03:32:01,431 - __main__ - INFO - Neue Wohnung gespeichert: 2 Zimmer mit WBS bis 160% ab sofort in Friedrichsfelde
+2025-10-08 03:32:01,431 - __main__ - INFO - Neue Wohnung gespeichert: 1 Zimmerwohnung mit WBS besonderem Wohnbedarf! in Friedrichsfelde
+2025-10-08 03:32:01,431 - __main__ - INFO - Neue Wohnung gespeichert: 1 Zimmerwohnung mit WBS bis 160% ab sofort! in Friedrichsfelde
+2025-10-08 03:32:01,431 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung in Haselhorst ab sofort verfügbar in Haselhorst
+2025-10-08 03:32:01,432 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 03:32:01,432 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 03:32:01,432 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung für Personen ab dem 55. Lebensjahr – handwerkliches Geschick erforderlich in Mariendorf
+2025-10-08 03:32:01,432 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung für Personen ab dem 55. Lebensjahr – handwerkliches Geschick erforderlich in Mariendorf
+2025-10-08 03:32:01,432 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung für aktive Senioren ab 60 Jahre in Reinickendorf
+2025-10-08 03:32:01,432 - __main__ - INFO - Neue Wohnung gespeichert: 2 Zimmer Hochparterre im Friedrichshainer Stalinbau! Ein WBS für min. 2 Zimmer ist erforderlich! in Friedrichshain
+2025-10-08 03:32:01,432 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung für Personen ab dem 60. Lebensjahr in Lichtenrade
+2025-10-08 03:32:01,433 - __main__ - INFO - Speicherung abgeschlossen: 12 neu, 0 bereits vorhanden
+2025-10-08 03:32:01,433 - __main__ - INFO - ======================================================================
+2025-10-08 03:32:01,433 - __main__ - INFO - Zusammenfassung: 12 Angebote gefunden (mit aktiven Filtern), 12 neu gespeichert, 0 bereits bekannt
+2025-10-08 03:32:01,433 - __main__ - INFO - ======================================================================
+2025-10-08 03:32:19,499 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:32:19,499 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:32:19,499 - __main__ - INFO - ======================================================================
+2025-10-08 03:32:19,499 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:32:19,499 - __main__ - INFO - ======================================================================
+2025-10-08 03:32:19,499 - __main__ - INFO - Aktive Filter: Miete:  - 700 € | WBS: nur mit WBS
+2025-10-08 03:32:19,499 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=700&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 03:32:20,185 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:32:20,188 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:32:20,258 - __main__ - INFO - 12 Angebote gefunden
+2025-10-08 03:32:20,260 - __main__ - INFO - 12 Angebote erfolgreich extrahiert
+2025-10-08 03:32:20,260 - __main__ - INFO - Clientseitige Filterung: 12 -> 4 Wohnungen
+2025-10-08 03:32:20,260 - __main__ - INFO - Speicherung abgeschlossen: 0 neu, 4 bereits vorhanden
+2025-10-08 03:32:20,260 - __main__ - INFO - ======================================================================
+2025-10-08 03:32:20,261 - __main__ - INFO - Zusammenfassung: 4 Angebote gefunden (mit aktiven Filtern), 0 neu gespeichert, 4 bereits bekannt
+2025-10-08 03:32:20,261 - __main__ - INFO - ======================================================================
+2025-10-08 03:32:31,181 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:32:31,182 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:32:31,182 - __main__ - INFO - ======================================================================
+2025-10-08 03:32:31,182 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:32:31,182 - __main__ - INFO - ======================================================================
+2025-10-08 03:32:31,182 - __main__ - INFO - Aktive Filter: Miete:  - 700 € | WBS: nur ohne WBS
+2025-10-08 03:32:31,182 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=700&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 03:32:31,894 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:32:31,895 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:32:31,937 - __main__ - INFO - 12 Angebote gefunden
+2025-10-08 03:32:31,939 - __main__ - INFO - 12 Angebote erfolgreich extrahiert
+2025-10-08 03:32:31,939 - __main__ - INFO - Clientseitige Filterung: 12 -> 8 Wohnungen
+2025-10-08 03:32:31,940 - __main__ - INFO - Speicherung abgeschlossen: 0 neu, 8 bereits vorhanden
+2025-10-08 03:32:31,940 - __main__ - INFO - ======================================================================
+2025-10-08 03:32:31,940 - __main__ - INFO - Zusammenfassung: 8 Angebote gefunden (mit aktiven Filtern), 0 neu gespeichert, 8 bereits bekannt
+2025-10-08 03:32:31,940 - __main__ - INFO - ======================================================================
+2025-10-08 03:33:48,481 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:33:48,481 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:33:48,481 - __main__ - INFO - ======================================================================
+2025-10-08 03:33:48,481 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:33:48,481 - __main__ - INFO - ======================================================================
+2025-10-08 03:33:48,481 - __main__ - INFO - Aktive Filter: Bezirke: spandau | WBS: nur mit WBS
+2025-10-08 03:33:48,481 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=spandau
+2025-10-08 03:33:49,222 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:33:49,226 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:33:49,297 - __main__ - INFO - 10 Angebote gefunden
+2025-10-08 03:33:49,299 - __main__ - INFO - 10 Angebote erfolgreich extrahiert
+2025-10-08 03:33:49,299 - __main__ - INFO - Clientseitige Filterung: 10 -> 1 Wohnungen
+2025-10-08 03:33:49,300 - __main__ - INFO - Neue Wohnung gespeichert: Familiengerecht! in Staaken
+2025-10-08 03:33:49,300 - __main__ - INFO - Speicherung abgeschlossen: 1 neu, 0 bereits vorhanden
+2025-10-08 03:33:49,300 - __main__ - INFO - ======================================================================
+2025-10-08 03:33:49,300 - __main__ - INFO - Zusammenfassung: 1 Angebote gefunden (mit aktiven Filtern), 1 neu gespeichert, 0 bereits bekannt
+2025-10-08 03:33:49,300 - __main__ - INFO - ======================================================================
+2025-10-08 03:34:33,381 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:34:33,381 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:34:33,381 - __main__ - INFO - ======================================================================
+2025-10-08 03:34:33,381 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:34:33,381 - __main__ - INFO - ======================================================================
+2025-10-08 03:34:33,381 - __main__ - INFO - Aktive Filter: Bezirke:  | WBS: nur mit WBS
+2025-10-08 03:34:33,381 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=
+2025-10-08 03:34:34,136 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:34:34,139 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:34:34,193 - __main__ - WARNING - Keine Angebote gefunden!
+2025-10-08 03:34:34,193 - __main__ - WARNING - Keine Wohnungen gefunden
+2025-10-08 03:36:12,490 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:36:12,491 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:36:12,491 - __main__ - INFO - ======================================================================
+2025-10-08 03:36:12,491 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:36:12,491 - __main__ - INFO - ======================================================================
+2025-10-08 03:36:12,491 - __main__ - INFO - Aktive Filter: Bezirke:  | WBS: nur mit WBS
+2025-10-08 03:36:12,491 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=
+2025-10-08 03:36:13,194 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:36:13,197 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:36:13,249 - __main__ - WARNING - Keine Angebote gefunden!
+2025-10-08 03:36:13,249 - __main__ - WARNING - Keine Wohnungen gefunden
+2025-10-08 03:36:40,138 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:36:40,139 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:36:40,139 - __main__ - INFO - ======================================================================
+2025-10-08 03:36:40,139 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:36:40,139 - __main__ - INFO - ======================================================================
+2025-10-08 03:36:40,139 - __main__ - INFO - Aktive Filter: WBS: nur mit WBS
+2025-10-08 03:36:40,139 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 03:36:40,951 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:36:40,952 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:36:41,001 - __main__ - INFO - 20 Angebote gefunden
+2025-10-08 03:36:41,004 - __main__ - INFO - 20 Angebote erfolgreich extrahiert
+2025-10-08 03:36:41,004 - __main__ - INFO - Clientseitige Filterung: 20 -> 6 Wohnungen
+2025-10-08 03:36:41,005 - __main__ - INFO - Neue Wohnung gespeichert: Familiengerecht! in Staaken
+2025-10-08 03:36:41,005 - __main__ - INFO - Neue Wohnung gespeichert: 2 Zimmer mit WBS bis 160% ab sofort in Friedrichsfelde
+2025-10-08 03:36:41,005 - __main__ - INFO - Neue Wohnung gespeichert: 1 Zimmerwohnung mit WBS besonderem Wohnbedarf! in Friedrichsfelde
+2025-10-08 03:36:41,005 - __main__ - INFO - Neue Wohnung gespeichert: 1 Zimmerwohnung mit WBS bis 160% ab sofort! in Friedrichsfelde
+2025-10-08 03:36:41,005 - __main__ - INFO - Neue Wohnung gespeichert: 2 Zimmer Hochparterre im Friedrichshainer Stalinbau! Ein WBS für min. 2 Zimmer ist erforderlich! in Friedrichshain
+2025-10-08 03:36:41,005 - __main__ - INFO - Neue Wohnung gespeichert: WBS mit besonderem Wohnbedarf benötigt in Prenzlauer Berg
+2025-10-08 03:36:41,005 - __main__ - INFO - Speicherung abgeschlossen: 6 neu, 0 bereits vorhanden
+2025-10-08 03:36:41,006 - __main__ - INFO - ======================================================================
+2025-10-08 03:36:41,006 - __main__ - INFO - Zusammenfassung: 6 Angebote gefunden (mit aktiven Filtern), 6 neu gespeichert, 0 bereits bekannt
+2025-10-08 03:36:41,006 - __main__ - INFO - ======================================================================
+2025-10-08 03:37:03,549 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:37:03,549 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:37:03,549 - __main__ - INFO - ======================================================================
+2025-10-08 03:37:03,549 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:37:03,549 - __main__ - INFO - ======================================================================
+2025-10-08 03:37:03,549 - __main__ - INFO - Aktive Filter: WBS: nur mit WBS
+2025-10-08 03:37:03,550 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 03:37:04,485 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:37:04,487 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:37:04,553 - __main__ - INFO - 20 Angebote gefunden
+2025-10-08 03:37:04,556 - __main__ - INFO - 20 Angebote erfolgreich extrahiert
+2025-10-08 03:37:04,556 - __main__ - INFO - Clientseitige Filterung: 20 -> 6 Wohnungen
+2025-10-08 03:37:04,556 - __main__ - INFO - Neue Wohnung gespeichert: Familiengerecht! in Staaken
+2025-10-08 03:37:04,556 - __main__ - INFO - Neue Wohnung gespeichert: 2 Zimmer mit WBS bis 160% ab sofort in Friedrichsfelde
+2025-10-08 03:37:04,556 - __main__ - INFO - Neue Wohnung gespeichert: 1 Zimmerwohnung mit WBS besonderem Wohnbedarf! in Friedrichsfelde
+2025-10-08 03:37:04,556 - __main__ - INFO - Neue Wohnung gespeichert: 1 Zimmerwohnung mit WBS bis 160% ab sofort! in Friedrichsfelde
+2025-10-08 03:37:04,556 - __main__ - INFO - Neue Wohnung gespeichert: 2 Zimmer Hochparterre im Friedrichshainer Stalinbau! Ein WBS für min. 2 Zimmer ist erforderlich! in Friedrichshain
+2025-10-08 03:37:04,556 - __main__ - INFO - Neue Wohnung gespeichert: WBS mit besonderem Wohnbedarf benötigt in Prenzlauer Berg
+2025-10-08 03:37:04,557 - __main__ - INFO - Speicherung abgeschlossen: 6 neu, 0 bereits vorhanden
+2025-10-08 03:37:04,557 - __main__ - INFO - ======================================================================
+2025-10-08 03:37:04,557 - __main__ - INFO - Zusammenfassung: 6 Angebote gefunden (mit aktiven Filtern), 6 neu gespeichert, 0 bereits bekannt
+2025-10-08 03:37:04,557 - __main__ - INFO - ======================================================================
+2025-10-08 03:37:52,506 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:37:52,506 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:37:52,507 - __main__ - INFO - ======================================================================
+2025-10-08 03:37:52,507 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:37:52,507 - __main__ - INFO - ======================================================================
+2025-10-08 03:37:52,507 - __main__ - INFO - Aktive Filter: WBS: nur ohne WBS
+2025-10-08 03:37:52,507 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 03:37:53,220 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:37:53,223 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:37:53,308 - __main__ - INFO - 20 Angebote gefunden
+2025-10-08 03:37:53,312 - __main__ - INFO - 20 Angebote erfolgreich extrahiert
+2025-10-08 03:37:53,312 - __main__ - INFO - Clientseitige Filterung: 20 -> 14 Wohnungen
+2025-10-08 03:37:53,312 - __main__ - INFO - Neue Wohnung gespeichert: Familiengerecht! in Wilhelmstadt
+2025-10-08 03:37:53,312 - __main__ - INFO - Neue Wohnung gespeichert: Bezugsfertig! in Wilhelmstadt
+2025-10-08 03:37:53,312 - __main__ - INFO - Neue Wohnung gespeichert: Mit neuem Wannenbad! in Staaken
+2025-10-08 03:37:53,312 - __main__ - INFO - Neue Wohnung gespeichert: 4 Zimmerwohnung im Neubau sucht neue Bewohner in Friedrichsfelde
+2025-10-08 03:37:53,312 - __main__ - INFO - Neue Wohnung gespeichert: 4 Zimmerwohnung im Neubau sucht neuen Mieter ab sofort! in Friedrichsfelde
+2025-10-08 03:37:53,312 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung in Haselhorst ab sofort verfügbar in Haselhorst
+2025-10-08 03:37:53,312 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 03:37:53,313 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-08 03:37:53,313 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung für Personen ab dem 55. Lebensjahr – handwerkliches Geschick erforderlich in Mariendorf
+2025-10-08 03:37:53,313 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung für Personen ab dem 55. Lebensjahr – handwerkliches Geschick erforderlich in Mariendorf
+2025-10-08 03:37:53,313 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung für aktive Senioren ab 60 Jahre in Reinickendorf
+2025-10-08 03:37:53,313 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen im Falkenhagener Feld in Spandau
+2025-10-08 03:37:53,313 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung für Personen ab dem 60. Lebensjahr in Lichtenrade
+2025-10-08 03:37:53,313 - __main__ - INFO - Neue Wohnung gespeichert: 2 Zimmerwohnung im Dachgeschoss in Schöneweide in Oberschöneweide
+2025-10-08 03:37:53,313 - __main__ - INFO - Speicherung abgeschlossen: 14 neu, 0 bereits vorhanden
+2025-10-08 03:37:53,313 - __main__ - INFO - ======================================================================
+2025-10-08 03:37:53,313 - __main__ - INFO - Zusammenfassung: 14 Angebote gefunden (mit aktiven Filtern), 14 neu gespeichert, 0 bereits bekannt
+2025-10-08 03:37:53,313 - __main__ - INFO - ======================================================================
+2025-10-08 03:39:42,386 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:39:42,386 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:39:42,386 - __main__ - INFO - ======================================================================
+2025-10-08 03:39:42,386 - __main__ - INFO - Starte Gewobag Wohnungssuche
+2025-10-08 03:39:42,386 - __main__ - INFO - ======================================================================
+2025-10-08 03:39:42,386 - __main__ - INFO - Keine Filter aktiv - suche alle Wohnungen
+2025-10-08 03:39:42,386 - __main__ - INFO - Lade Seite von https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 03:39:43,130 - __main__ - INFO - Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:39:43,134 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:39:43,216 - __main__ - INFO - 20 Angebote gefunden
+2025-10-08 03:39:43,219 - __main__ - INFO - 20 Angebote erfolgreich extrahiert
+2025-10-08 03:39:43,220 - __main__ - INFO - Speicherung abgeschlossen: 0 neu, 20 bereits vorhanden
+2025-10-08 03:39:43,220 - __main__ - INFO - ======================================================================
+2025-10-08 03:39:43,220 - __main__ - INFO - Zusammenfassung: 20 Angebote gefunden (mit aktiven Filtern), 0 neu gespeichert, 20 bereits bekannt
+2025-10-08 03:39:43,220 - __main__ - INFO - ======================================================================
+2025-10-08 03:53:11,756 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:53:11,756 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:53:11,756 - __main__ - INFO - ======================================================================
+2025-10-08 03:53:11,756 - __main__ - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-08 03:53:11,756 - __main__ - INFO - ======================================================================
+2025-10-08 03:53:11,757 - __main__ - INFO - Keine Filter aktiv - suche alle Wohnungen
+2025-10-08 03:53:11,757 - __main__ - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-08 03:53:11,757 - __main__ - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 03:53:12,477 - __main__ - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:53:12,481 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:53:12,560 - __main__ - INFO - 20 Angebote gefunden
+2025-10-08 03:53:12,563 - __main__ - INFO - 20 Angebote erfolgreich extrahiert
+2025-10-08 03:53:12,563 - __main__ - INFO - 📊 Seite 1: 20 Wohnungen gefunden
+2025-10-08 03:53:12,609 - __main__ - INFO - Paginierung gefunden: 2 Seiten insgesamt
+2025-10-08 03:53:12,610 - __main__ - INFO - 📚 Paginierung erkannt: 2 Seiten insgesamt
+2025-10-08 03:53:12,610 - __main__ - INFO - ⏸️  Pausiere 5.95 Sekunden (Anti-Detection)...
+2025-10-08 03:53:18,562 - __main__ - INFO - 📄 Lade Seite 2/2...
+2025-10-08 03:53:18,563 - __main__ - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/page/2/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 03:53:19,625 - __main__ - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:53:19,627 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:53:19,671 - __main__ - INFO - 3 Angebote gefunden
+2025-10-08 03:53:19,671 - __main__ - INFO - 3 Angebote erfolgreich extrahiert
+2025-10-08 03:53:19,671 - __main__ - INFO - 📊 Seite 2: 3 Wohnungen gefunden
+2025-10-08 03:53:19,672 - __main__ - INFO - ✅ Alle 2 Seiten erfolgreich geladen - insgesamt 23 Wohnungen gefunden
+2025-10-08 03:53:19,673 - __main__ - INFO - Neue Wohnung gespeichert: Schicke Wohnung in der Waterkant sucht netten Nachmieter in Haselhorst
+2025-10-08 03:53:19,673 - __main__ - INFO - Neue Wohnung gespeichert: Neubau mit Fußbodenheizung direkt an der Havel in Haselhorst
+2025-10-08 03:53:19,673 - __main__ - INFO - Neue Wohnung gespeichert: Neubauwohnung mit Fußbodenheizung und Terrasse in Falkenberg
+2025-10-08 03:53:19,674 - __main__ - INFO - Speicherung abgeschlossen: 3 neu, 20 bereits vorhanden
+2025-10-08 03:53:19,674 - __main__ - INFO - ======================================================================
+2025-10-08 03:53:19,674 - __main__ - INFO - Zusammenfassung: 23 Angebote gefunden (mit aktiven Filtern), 3 neu gespeichert, 20 bereits bekannt
+2025-10-08 03:53:19,674 - __main__ - INFO - ======================================================================
+2025-10-08 03:57:25,109 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-08 03:57:25,109 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-08 03:57:25,109 - __main__ - INFO - ======================================================================
+2025-10-08 03:57:25,109 - __main__ - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-08 03:57:25,109 - __main__ - INFO - ======================================================================
+2025-10-08 03:57:25,110 - __main__ - INFO - Keine Filter aktiv - suche alle Wohnungen
+2025-10-08 03:57:25,110 - __main__ - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-08 03:57:25,110 - __main__ - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 03:57:25,925 - __main__ - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:57:25,927 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:57:25,979 - __main__ - INFO - 20 Angebote gefunden
+2025-10-08 03:57:25,982 - __main__ - INFO - 20 Angebote erfolgreich extrahiert
+2025-10-08 03:57:25,982 - __main__ - INFO - 📊 Seite 1: 20 Wohnungen gefunden
+2025-10-08 03:57:26,027 - __main__ - INFO - Paginierung gefunden: 2 Seiten insgesamt
+2025-10-08 03:57:26,027 - __main__ - INFO - 📚 Paginierung erkannt: 2 Seiten insgesamt
+2025-10-08 03:57:26,027 - __main__ - INFO - ⏸️  Pausiere 2.92 Sekunden (Anti-Detection)...
+2025-10-08 03:57:28,950 - __main__ - INFO - 📄 Lade Seite 2/2...
+2025-10-08 03:57:28,951 - __main__ - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/page/2/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 03:57:30,160 - __main__ - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-08 03:57:30,163 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-08 03:57:30,221 - __main__ - INFO - 3 Angebote gefunden
+2025-10-08 03:57:30,222 - __main__ - INFO - 3 Angebote erfolgreich extrahiert
+2025-10-08 03:57:30,222 - __main__ - INFO - 📊 Seite 2: 3 Wohnungen gefunden
+2025-10-08 03:57:30,222 - __main__ - INFO - ✅ Alle 2 Seiten erfolgreich geladen - insgesamt 23 Wohnungen gefunden
+2025-10-08 03:57:30,223 - __main__ - INFO - Speicherung abgeschlossen: 0 neu, 23 bereits vorhanden
+2025-10-08 03:57:30,223 - __main__ - INFO - ======================================================================
+2025-10-08 03:57:30,223 - __main__ - INFO - Zusammenfassung: 23 Angebote gefunden (mit aktiven Filtern), 0 neu gespeichert, 23 bereits bekannt
+2025-10-08 03:57:30,223 - __main__ - INFO - ======================================================================

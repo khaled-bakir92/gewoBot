@@ -1455,3 +1455,471 @@ Call log:
 2025-10-08 17:56:13,541 - application_bot - INFO - ❌ Fehlgeschlagen: 0
 2025-10-08 17:56:13,541 - application_bot - INFO - 📈 Gesamt: 1
 2025-10-08 17:56:13,541 - application_bot - INFO - ================================================================================
+2025-10-08 21:59:04,757 - __main__ - INFO - 
+================================================================================
+2025-10-08 21:59:04,757 - __main__ - INFO - 🤖 MODUS: VOLLAUTOMATISCH (SUCHE + BEWERBUNG)
+2025-10-08 21:59:04,757 - __main__ - INFO - ================================================================================
+2025-10-08 21:59:04,757 - __main__ - INFO - 
+📍 Schritt 1/2: Wohnungssuche...
+2025-10-08 21:59:04,757 - gewobag_bot - INFO - ======================================================================
+2025-10-08 21:59:04,757 - gewobag_bot - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-08 21:59:04,757 - gewobag_bot - INFO - ======================================================================
+2025-10-08 21:59:04,758 - gewobag_bot - INFO - Keine Filter aktiv - suche alle Wohnungen
+2025-10-08 21:59:04,758 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-08 21:59:04,758 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 21:59:05,473 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-08 21:59:05,474 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-08 21:59:05,520 - gewobag_bot - INFO - 20 Angebote gefunden
+2025-10-08 21:59:05,523 - gewobag_bot - INFO - 20 Angebote erfolgreich extrahiert
+2025-10-08 21:59:05,523 - gewobag_bot - INFO - 📊 Seite 1: 20 Wohnungen gefunden
+2025-10-08 21:59:05,568 - gewobag_bot - INFO - Paginierung gefunden: 2 Seiten insgesamt
+2025-10-08 21:59:05,568 - gewobag_bot - INFO - 📚 Paginierung erkannt: 2 Seiten insgesamt
+2025-10-08 21:59:05,568 - gewobag_bot - INFO - ⏸️  Pausiere 3.71 Sekunden (Anti-Detection)...
+2025-10-08 21:59:09,286 - gewobag_bot - INFO - 📄 Lade Seite 2/2...
+2025-10-08 21:59:09,286 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/page/2/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 21:59:10,374 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-08 21:59:10,377 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-08 21:59:10,446 - gewobag_bot - INFO - 11 Angebote gefunden
+2025-10-08 21:59:10,448 - gewobag_bot - INFO - 11 Angebote erfolgreich extrahiert
+2025-10-08 21:59:10,448 - gewobag_bot - INFO - 📊 Seite 2: 11 Wohnungen gefunden
+2025-10-08 21:59:10,448 - gewobag_bot - INFO - ✅ Alle 2 Seiten erfolgreich geladen - insgesamt 31 Wohnungen gefunden
+2025-10-08 21:59:10,452 - gewobag_bot - INFO - Neue Wohnung gespeichert: Großes Duschbad – offene Küche – oberster Etage mit Aufzug in Buckow
+2025-10-08 21:59:10,452 - gewobag_bot - INFO - Neue Wohnung gespeichert: Günstiges Wohnen für Personen ab dem 55. Lebensalter in Buckow
+2025-10-08 21:59:10,452 - gewobag_bot - INFO - Neue Wohnung gespeichert: Geräumige Wohnung zu vermieten in Falkenhagener Feld
+2025-10-08 21:59:10,452 - gewobag_bot - INFO - Neue Wohnung gespeichert: Helle Wohnung zu vermieten in Waidmannslust
+2025-10-08 21:59:10,452 - gewobag_bot - INFO - Neue Wohnung gespeichert: Geräumige Wohnung zu vermieten in Waidmannslust
+2025-10-08 21:59:10,453 - gewobag_bot - INFO - Neue Wohnung gespeichert: Gut geschnittene Wohnung zu vermieten in Waidmannslust
+2025-10-08 21:59:10,453 - gewobag_bot - INFO - Neue Wohnung gespeichert: Familienwohnung sucht Mieter in Waidmannslust
+2025-10-08 21:59:10,453 - gewobag_bot - INFO - Neue Wohnung gespeichert: Helle Wohnung zu vermieten in Reinickendorf
+2025-10-08 21:59:10,453 - gewobag_bot - INFO - Neue Wohnung gespeichert: 2,5 Zimmer für Selbstrenovierer in Prenzlauer Berg
+2025-10-08 21:59:10,453 - gewobag_bot - INFO - Neue Wohnung gespeichert: 2 Zimmer für Selbstrenovierer in Prenzlauer Berg
+2025-10-08 21:59:10,453 - gewobag_bot - INFO - Neue Wohnung gespeichert: Singlewohnung im ruhigen Gartenhaus in Prenzlauer Berg
+2025-10-08 21:59:10,453 - gewobag_bot - INFO - Neue Wohnung gespeichert: Familiengerecht! in Staaken
+2025-10-08 21:59:10,453 - gewobag_bot - INFO - Neue Wohnung gespeichert: Mit Balkon! in Staaken
+2025-10-08 21:59:10,453 - gewobag_bot - INFO - Speicherung abgeschlossen: 13 neu, 18 bereits vorhanden
+2025-10-08 21:59:10,453 - gewobag_bot - INFO - ======================================================================
+2025-10-08 21:59:10,453 - gewobag_bot - INFO - Zusammenfassung: 31 Angebote gefunden (mit aktiven Filtern), 13 neu gespeichert, 18 bereits bekannt
+2025-10-08 21:59:10,453 - gewobag_bot - INFO - ======================================================================
+2025-10-08 21:59:10,453 - __main__ - INFO - 
+✅ 31 Wohnungen gefunden
+2025-10-08 21:59:10,453 - __main__ - INFO - 
+📍 Schritt 2/2: Automatische Bewerbungen...
+2025-10-08 21:59:10,454 - application_bot - INFO - 📊 33 Wohnungen ohne Bewerbung gefunden
+2025-10-08 21:59:10,454 - __main__ - INFO - 📊 33 neue Wohnungen - starte Bewerbungen...
+2025-10-08 21:59:10,454 - application_bot - INFO - ================================================================================
+2025-10-08 21:59:10,454 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-08 21:59:10,454 - application_bot - INFO - ================================================================================
+2025-10-08 21:59:10,454 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-08 21:59:10,454 - application_bot - INFO - 📊 33 Wohnungen ohne Bewerbung gefunden
+2025-10-08 21:59:10,454 - application_bot - INFO - 
+📋 Bewerbung 1/33
+2025-10-08 21:59:10,454 - application_bot - INFO - ================================================================================
+2025-10-08 21:59:10,454 - application_bot - INFO - 🏠 Starte Bewerbung für: Großes Duschbad – offene Küche – oberster Etage mit Aufzug
+2025-10-08 21:59:10,454 - application_bot - INFO - 📍 Bezirk: Buckow
+2025-10-08 21:59:10,454 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-77709-0201-0063/
+2025-10-08 21:59:10,454 - application_bot - INFO - ================================================================================
+2025-10-08 21:59:10,812 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 21:59:19,298 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-77709-0201-0063/
+2025-10-08 21:59:22,120 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-08 21:59:22,156 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-08 21:59:23,904 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 21:59:23,908 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-08 21:59:50,645 - __main__ - INFO - 
+================================================================================
+2025-10-08 21:59:50,646 - __main__ - INFO - 🤖 MODUS: VOLLAUTOMATISCH (SUCHE + BEWERBUNG)
+2025-10-08 21:59:50,646 - __main__ - INFO - ================================================================================
+2025-10-08 21:59:50,646 - __main__ - INFO - 
+📍 Schritt 1/2: Wohnungssuche...
+2025-10-08 21:59:50,646 - gewobag_bot - INFO - ======================================================================
+2025-10-08 21:59:50,646 - gewobag_bot - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-08 21:59:50,646 - gewobag_bot - INFO - ======================================================================
+2025-10-08 21:59:50,646 - gewobag_bot - INFO - Keine Filter aktiv - suche alle Wohnungen
+2025-10-08 21:59:50,646 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-08 21:59:50,646 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 21:59:51,451 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-08 21:59:51,452 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-08 21:59:51,505 - gewobag_bot - INFO - 20 Angebote gefunden
+2025-10-08 21:59:51,508 - gewobag_bot - INFO - 20 Angebote erfolgreich extrahiert
+2025-10-08 21:59:51,508 - gewobag_bot - INFO - 📊 Seite 1: 20 Wohnungen gefunden
+2025-10-08 21:59:51,554 - gewobag_bot - INFO - Paginierung gefunden: 2 Seiten insgesamt
+2025-10-08 21:59:51,554 - gewobag_bot - INFO - 📚 Paginierung erkannt: 2 Seiten insgesamt
+2025-10-08 21:59:51,554 - gewobag_bot - INFO - ⏸️  Pausiere 6.43 Sekunden (Anti-Detection)...
+2025-10-08 21:59:57,987 - gewobag_bot - INFO - 📄 Lade Seite 2/2...
+2025-10-08 21:59:57,988 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/page/2/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-08 21:59:59,133 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-08 21:59:59,135 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-08 21:59:59,203 - gewobag_bot - INFO - 11 Angebote gefunden
+2025-10-08 21:59:59,205 - gewobag_bot - INFO - 11 Angebote erfolgreich extrahiert
+2025-10-08 21:59:59,205 - gewobag_bot - INFO - 📊 Seite 2: 11 Wohnungen gefunden
+2025-10-08 21:59:59,205 - gewobag_bot - INFO - ✅ Alle 2 Seiten erfolgreich geladen - insgesamt 31 Wohnungen gefunden
+2025-10-08 21:59:59,207 - gewobag_bot - INFO - Speicherung abgeschlossen: 0 neu, 31 bereits vorhanden
+2025-10-08 21:59:59,207 - gewobag_bot - INFO - ======================================================================
+2025-10-08 21:59:59,207 - gewobag_bot - INFO - Zusammenfassung: 31 Angebote gefunden (mit aktiven Filtern), 0 neu gespeichert, 31 bereits bekannt
+2025-10-08 21:59:59,207 - gewobag_bot - INFO - ======================================================================
+2025-10-08 21:59:59,207 - __main__ - INFO - 
+✅ 31 Wohnungen gefunden
+2025-10-08 21:59:59,207 - __main__ - INFO - 
+📍 Schritt 2/2: Automatische Bewerbungen...
+2025-10-08 21:59:59,208 - application_bot - INFO - 📊 33 Wohnungen ohne Bewerbung gefunden
+2025-10-08 21:59:59,208 - __main__ - INFO - 📊 33 neue Wohnungen - starte Bewerbungen...
+2025-10-08 21:59:59,208 - application_bot - INFO - ================================================================================
+2025-10-08 21:59:59,208 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-08 21:59:59,208 - application_bot - INFO - ================================================================================
+2025-10-08 21:59:59,208 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-08 21:59:59,208 - application_bot - INFO - 📊 33 Wohnungen ohne Bewerbung gefunden
+2025-10-08 21:59:59,208 - application_bot - INFO - 
+📋 Bewerbung 1/33
+2025-10-08 21:59:59,208 - application_bot - INFO - ================================================================================
+2025-10-08 21:59:59,208 - application_bot - INFO - 🏠 Starte Bewerbung für: Großes Duschbad – offene Küche – oberster Etage mit Aufzug
+2025-10-08 21:59:59,208 - application_bot - INFO - 📍 Bezirk: Buckow
+2025-10-08 21:59:59,208 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-77709-0201-0063/
+2025-10-08 21:59:59,208 - application_bot - INFO - ================================================================================
+2025-10-08 21:59:59,621 - application_bot - INFO - 🌐 Starte Browser...
+2025-10-08 22:00:01,289 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-77709-0201-0063/
+2025-10-08 22:00:05,474 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-08 22:00:05,514 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-08 22:00:06,893 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-08 22:00:06,900 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-08 22:00:09,854 - application_bot - INFO - 🔍 Warte auf Formular-iFrame...
+2025-10-08 22:00:09,854 - application_bot - INFO - ✅ iFrame gefunden - fülle Formular aus...
+2025-10-08 22:00:13,808 - application_bot - INFO - ✓ Anrede: Herr
+2025-10-08 22:00:14,661 - application_bot - INFO - ✓ Vorname: hatem
+2025-10-08 22:00:15,608 - application_bot - INFO - ✓ Nachname: Mustermann
+2025-10-08 22:00:16,335 - application_bot - INFO - ✓ E-Mail: max.mustermann@example.com
+2025-10-08 22:00:17,283 - application_bot - INFO - ✓ Telefon: +49 123 456789
+2025-10-08 22:00:17,902 - application_bot - INFO - ✓ Straße: Musterstraße
+2025-10-08 22:00:18,550 - application_bot - INFO - ✓ Hausnummer: 123
+2025-10-08 22:00:19,200 - application_bot - INFO - ✓ PLZ: 10115
+2025-10-08 22:00:19,733 - application_bot - INFO - ✓ Stadt: Berlin
+2025-10-08 22:00:21,255 - application_bot - INFO - ✓ Für wen wird die Anfrage gestellt: Für mich selbst
+2025-10-08 22:00:22,131 - application_bot - INFO - ✓ Gesamtzahl Personen: 1
+2025-10-08 22:00:22,897 - application_bot - INFO - ✓ Mobilfunknummer: +49 123 456789
+2025-10-08 22:00:53,331 - application_bot - INFO - ✓ 1 Datenschutz-Checkbox(en) aktiviert
+2025-10-08 22:00:53,332 - application_bot - INFO - 📝 Formular ausgefüllt - bereit zum Absenden
+2025-10-08 22:00:53,333 - application_bot - WARNING - ⚠️  HINWEIS: Automatisches Absenden ist deaktiviert - bitte manuell bestätigen!
+2025-10-08 22:00:53,333 - application_bot - INFO - Das Browser-Fenster bleibt 30 Sekunden offen zur manuellen Überprüfung...
+2025-10-08 22:01:23,528 - application_bot - INFO - ✅ Bewerbung erfolgreich!
+2025-10-08 22:01:23,529 - application_bot - INFO - ✅ Datenbank aktualisiert: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-77709-0201-0063/ -> Status: success
+2025-10-08 22:01:23,533 - application_bot - INFO - ⏸️  Pausiere 30 Sekunden vor nächster Bewerbung...
+2025-10-09 17:35:29,031 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-09 17:35:29,031 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-09 17:35:29,032 - __main__ - INFO - ======================================================================
+2025-10-09 17:35:29,032 - __main__ - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-09 17:35:29,032 - __main__ - INFO - ======================================================================
+2025-10-09 17:35:29,032 - __main__ - INFO - Keine Filter aktiv - suche alle Wohnungen
+2025-10-09 17:35:29,032 - __main__ - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-09 17:35:29,032 - __main__ - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-09 17:35:29,811 - __main__ - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-09 17:35:29,813 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-09 17:35:29,871 - __main__ - INFO - 20 Angebote gefunden
+2025-10-09 17:35:29,874 - __main__ - INFO - 20 Angebote erfolgreich extrahiert
+2025-10-09 17:35:29,874 - __main__ - INFO - 📊 Seite 1: 20 Wohnungen gefunden
+2025-10-09 17:35:29,920 - __main__ - INFO - Paginierung gefunden: 2 Seiten insgesamt
+2025-10-09 17:35:29,920 - __main__ - INFO - 📚 Paginierung erkannt: 2 Seiten insgesamt
+2025-10-09 17:35:29,920 - __main__ - INFO - ⏸️  Pausiere 3.64 Sekunden (Anti-Detection)...
+2025-10-09 17:35:33,562 - __main__ - INFO - 📄 Lade Seite 2/2...
+2025-10-09 17:35:33,562 - __main__ - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/page/2/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-09 17:35:34,806 - __main__ - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-09 17:35:34,808 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-09 17:35:34,850 - __main__ - INFO - 8 Angebote gefunden
+2025-10-09 17:35:34,851 - __main__ - INFO - 8 Angebote erfolgreich extrahiert
+2025-10-09 17:35:34,851 - __main__ - INFO - 📊 Seite 2: 8 Wohnungen gefunden
+2025-10-09 17:35:34,851 - __main__ - INFO - ✅ Alle 2 Seiten erfolgreich geladen - insgesamt 28 Wohnungen gefunden
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: Neubauwohnung mit Wasserblick – Nachmieter gesucht in Haselhorst
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: Großzügige 3-Zimmer-Altbauwohnung in Charlottenburg in Charlottenburg
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: Familiengerecht! in Spandau
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: Altstadtnah! in Spandau
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen an den Spektewiesen in Spandau
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen im Falkenhagener Feld in Spandau
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in der Wilhelmstadt in Wilhelmstadt
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Staaken in Staaken
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: Nette Familie mit WBS gesucht in Haselhorst
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen am Hahneberg in Staaken
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: Am Südpark! in Spandau
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: Großes Duschbad – offene Küche – oberster Etage mit Aufzug in Buckow
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: Günstiges Wohnen für Personen ab dem 55. Lebensalter in Buckow
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: Familienwohnung sucht Mieter in Waidmannslust
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: WBS (max. 140) 2 Räume erforderlich… in Prenzlauer Berg
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: 4 Zimmerwohnung im Neubau sucht neue Bewohner in Friedrichsfelde
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: 4 Zimmerwohnung im Neubau sucht neuen Mieter ab sofort! in Friedrichsfelde
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: 2 Zimmer mit WBS bis 160% ab sofort in Friedrichsfelde
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: 1 Zimmerwohnung mit WBS besonderem Wohnbedarf! in Friedrichsfelde
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: 1 Zimmerwohnung mit WBS bis 160% ab sofort! in Friedrichsfelde
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung für Personen ab dem 55. Lebensjahr – handwerkliches Geschick erforderlich in Mariendorf
+2025-10-09 17:35:34,852 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung für Personen ab dem 55. Lebensjahr – handwerkliches Geschick erforderlich in Mariendorf
+2025-10-09 17:35:34,853 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung für aktive Senioren ab 60 Jahre in Reinickendorf
+2025-10-09 17:35:34,853 - __main__ - INFO - Neue Wohnung gespeichert: Wohnung für Personen ab dem 60. Lebensjahr in Lichtenrade
+2025-10-09 17:35:34,853 - __main__ - INFO - Neue Wohnung gespeichert: WBS mit besonderem Wohnbedarf benötigt in Prenzlauer Berg
+2025-10-09 17:35:34,853 - __main__ - INFO - Neue Wohnung gespeichert: Schicke Wohnung in der Waterkant sucht netten Nachmieter in Haselhorst
+2025-10-09 17:35:34,853 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Hakenfelde in Hakenfelde
+2025-10-09 17:35:34,853 - __main__ - INFO - Neue Wohnung gespeichert: Neubauwohnung mit Fußbodenheizung und Terrasse in Falkenberg
+2025-10-09 17:35:34,853 - __main__ - INFO - Speicherung abgeschlossen: 28 neu, 0 bereits vorhanden
+2025-10-09 17:35:34,853 - __main__ - INFO - ======================================================================
+2025-10-09 17:35:34,853 - __main__ - INFO - Zusammenfassung: 28 Angebote gefunden (mit aktiven Filtern), 28 neu gespeichert, 0 bereits bekannt
+2025-10-09 17:35:34,853 - __main__ - INFO - ======================================================================
+2025-10-09 17:38:43,975 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-09 17:38:43,975 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-09 17:38:43,975 - __main__ - INFO - ======================================================================
+2025-10-09 17:38:43,975 - __main__ - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-09 17:38:43,975 - __main__ - INFO - ======================================================================
+2025-10-09 17:38:43,975 - __main__ - INFO - Aktive Filter: Miete:  - 1200 € | Fläche: 60 -  m² | Zimmer: 3 -  | WBS: nur ohne WBS
+2025-10-09 17:38:43,975 - __main__ - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-09 17:38:43,975 - __main__ - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-09 17:38:43,975 - __main__ - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1200&gesamtflaeche_von=60&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-09 17:38:44,768 - __main__ - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-09 17:38:44,769 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-09 17:38:44,805 - __main__ - INFO - 6 Angebote gefunden
+2025-10-09 17:38:44,806 - __main__ - INFO - 6 Angebote erfolgreich extrahiert
+2025-10-09 17:38:44,807 - __main__ - INFO - 📊 Seite 1: 6 Wohnungen gefunden
+2025-10-09 17:38:44,838 - __main__ - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-09 17:38:44,838 - __main__ - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 6 Wohnungen gefunden
+2025-10-09 17:38:44,838 - __main__ - INFO - Clientseitige Filterung: 6 -> 3 Wohnungen
+2025-10-09 17:38:44,840 - __main__ - INFO - Neue Wohnung gespeichert: Großzügige 3-Zimmer-Altbauwohnung in Charlottenburg in Charlottenburg
+2025-10-09 17:38:44,840 - __main__ - INFO - Neue Wohnung gespeichert: Familiengerecht! in Spandau
+2025-10-09 17:38:44,840 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen in Staaken in Staaken
+2025-10-09 17:38:44,840 - __main__ - INFO - Speicherung abgeschlossen: 3 neu, 0 bereits vorhanden
+2025-10-09 17:38:44,840 - __main__ - INFO - ======================================================================
+2025-10-09 17:38:44,841 - __main__ - INFO - Zusammenfassung: 3 Angebote gefunden (mit aktiven Filtern), 3 neu gespeichert, 0 bereits bekannt
+2025-10-09 17:38:44,841 - __main__ - INFO - ======================================================================
+2025-10-09 17:52:19,821 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-09 17:52:19,821 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-09 17:52:19,821 - __main__ - INFO - ======================================================================
+2025-10-09 17:52:19,822 - __main__ - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-09 17:52:19,822 - __main__ - INFO - ======================================================================
+2025-10-09 17:52:19,822 - __main__ - INFO - Aktive Filter: Bezirke: charlottenburg-wilmersdorf, steglitz-zehlendorf, tempelhof-schoeneberg, neukoelln | Miete:  - 1200 € | Fläche: 60 -  m² | Zimmer: 3 -  | WBS: nur ohne WBS
+2025-10-09 17:52:19,822 - __main__ - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-09 17:52:19,822 - __main__ - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-09 17:52:19,822 - __main__ - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1200&gesamtflaeche_von=60&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=charlottenburg-wilmersdorf&bezirke%5B%5D=steglitz-zehlendorf&bezirke%5B%5D=tempelhof-schoeneberg&bezirke%5B%5D=neukoelln
+2025-10-09 17:52:21,721 - __main__ - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-09 17:52:21,725 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-09 17:52:21,787 - __main__ - INFO - 1 Angebote gefunden
+2025-10-09 17:52:21,787 - __main__ - INFO - 1 Angebote erfolgreich extrahiert
+2025-10-09 17:52:21,787 - __main__ - INFO - 📊 Seite 1: 1 Wohnungen gefunden
+2025-10-09 17:52:21,820 - __main__ - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-09 17:52:21,820 - __main__ - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 1 Wohnungen gefunden
+2025-10-09 17:52:21,821 - __main__ - INFO - Neue Wohnung gespeichert: Großzügige 3-Zimmer-Altbauwohnung in Charlottenburg in Charlottenburg
+2025-10-09 17:52:21,821 - __main__ - INFO - Speicherung abgeschlossen: 1 neu, 0 bereits vorhanden
+2025-10-09 17:52:21,821 - __main__ - INFO - ======================================================================
+2025-10-09 17:52:21,821 - __main__ - INFO - Zusammenfassung: 1 Angebote gefunden (mit aktiven Filtern), 1 neu gespeichert, 0 bereits bekannt
+2025-10-09 17:52:21,821 - __main__ - INFO - ======================================================================
+2025-10-09 18:28:20,096 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-09 18:28:20,097 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-09 18:28:20,097 - __main__ - INFO - 
+================================================================================
+2025-10-09 18:28:20,097 - __main__ - INFO - 📝 MODUS: NUR BEWERBUNGEN
+2025-10-09 18:28:20,097 - __main__ - INFO - ================================================================================
+2025-10-09 18:28:20,099 - application_bot - INFO - 📊 1 Wohnungen ohne Bewerbung gefunden
+2025-10-09 18:28:20,099 - __main__ - INFO - 📊 1 Wohnungen ohne Bewerbung gefunden
+2025-10-09 18:28:20,099 - application_bot - INFO - ================================================================================
+2025-10-09 18:28:20,099 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-09 18:28:20,099 - application_bot - INFO - ================================================================================
+2025-10-09 18:28:20,099 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-09 18:28:20,099 - application_bot - INFO - 📊 1 Wohnungen ohne Bewerbung gefunden
+2025-10-09 18:28:20,099 - application_bot - INFO - 
+📋 Bewerbung 1/1
+2025-10-09 18:28:20,099 - application_bot - INFO - 📍 Wohnung: Großzügige 3-Zimmer-Altbauwohnung in Charlottenburg (Charlottenburg)
+2025-10-09 18:28:20,100 - application_bot - INFO - ================================================================================
+2025-10-09 18:28:20,100 - application_bot - INFO - 🏠 Starte Bewerbung für: Großzügige 3-Zimmer-Altbauwohnung in Charlottenburg
+2025-10-09 18:28:20,100 - application_bot - INFO - 📍 Bezirk: Charlottenburg
+2025-10-09 18:28:20,100 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-76113-0101-0008/
+2025-10-09 18:28:20,100 - application_bot - INFO - ================================================================================
+2025-10-09 18:28:20,521 - application_bot - INFO - 🌐 Starte Browser mit erweiterten Anti-Detection-Einstellungen...
+2025-10-09 18:28:21,654 - application_bot - INFO - 🔧 Browser-Kontext erstellt:
+2025-10-09 18:28:22,353 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-76113-0101-0008/
+2025-10-09 18:28:26,224 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-09 18:28:26,248 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-09 18:28:28,017 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-09 18:28:28,025 - application_bot - ERROR - ❌ 'Anfrage senden' Button nicht gefunden!
+2025-10-09 18:28:28,212 - application_bot - ERROR - ❌ Fehler bei Bewerbung (Versuch 1/3): Formular konnte nicht ausgefüllt werden
+2025-10-09 18:28:28,213 - application_bot - INFO - 🔄 Wiederhole in 8.3 Sekunden...
+2025-10-09 18:28:36,711 - application_bot - INFO - 🌐 Starte Browser mit erweiterten Anti-Detection-Einstellungen...
+2025-10-09 18:28:37,248 - application_bot - INFO - 🔧 Browser-Kontext erstellt:
+2025-10-09 18:28:37,865 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-76113-0101-0008/
+2025-10-09 18:28:41,133 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-09 18:28:41,174 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-09 18:28:42,975 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-09 18:28:42,987 - application_bot - ERROR - ❌ 'Anfrage senden' Button nicht gefunden!
+2025-10-09 18:28:43,157 - application_bot - ERROR - ❌ Fehler bei Bewerbung (Versuch 2/3): Formular konnte nicht ausgefüllt werden
+2025-10-09 18:28:43,157 - application_bot - INFO - 🔄 Wiederhole in 12.3 Sekunden...
+2025-10-09 18:28:55,740 - application_bot - INFO - 🌐 Starte Browser mit erweiterten Anti-Detection-Einstellungen...
+2025-10-09 18:28:56,125 - application_bot - INFO - 🔧 Browser-Kontext erstellt:
+2025-10-09 18:28:56,726 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-76113-0101-0008/
+2025-10-09 18:29:01,172 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-09 18:29:01,201 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-09 18:29:02,839 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-09 18:29:02,845 - application_bot - ERROR - ❌ 'Anfrage senden' Button nicht gefunden!
+2025-10-09 18:29:03,008 - application_bot - ERROR - ❌ Fehler bei Bewerbung (Versuch 3/3): Formular konnte nicht ausgefüllt werden
+2025-10-09 18:29:03,008 - application_bot - ERROR - ❌ Max. Anzahl Wiederholungen erreicht - Bewerbung fehlgeschlagen
+2025-10-09 18:29:03,010 - application_bot - INFO - ✅ Datenbank aktualisiert: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-76113-0101-0008/ -> Status: failed
+2025-10-09 18:29:03,010 - application_bot - ERROR - ❌ Bewerbung 1/1: FEHLGESCHLAGEN
+2025-10-09 18:29:03,010 - application_bot - INFO - 
+================================================================================
+2025-10-09 18:29:03,010 - application_bot - INFO - 📊 BEWERBUNGS-ZUSAMMENFASSUNG
+2025-10-09 18:29:03,010 - application_bot - INFO - ================================================================================
+2025-10-09 18:29:03,010 - application_bot - INFO - ✅ Erfolgreich: 0
+2025-10-09 18:29:03,010 - application_bot - INFO - ❌ Fehlgeschlagen: 1
+2025-10-09 18:29:03,010 - application_bot - INFO - 📈 Gesamt verarbeitet: 1
+2025-10-09 18:29:03,010 - application_bot - INFO - ================================================================================
+2025-10-09 18:29:03,010 - application_bot - INFO - 
+📊 GESAMTSTATISTIK (alle bisherigen Bewerbungen):
+2025-10-09 18:29:03,011 - application_bot - INFO -    ✅ Erfolgreich: 0
+2025-10-09 18:29:03,011 - application_bot - INFO -    ❌ Fehlgeschlagen: 1
+2025-10-09 18:29:03,011 - application_bot - INFO -    📈 Gesamt beworben: 1
+2025-10-09 18:30:51,883 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-09 18:30:51,883 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-09 18:30:51,884 - __main__ - INFO - 
+================================================================================
+2025-10-09 18:30:51,884 - __main__ - INFO - 🤖 MODUS: VOLLAUTOMATISCH (SUCHE + BEWERBUNG)
+2025-10-09 18:30:51,884 - __main__ - INFO - ================================================================================
+2025-10-09 18:30:51,884 - __main__ - INFO - 
+📍 Schritt 1/2: Wohnungssuche...
+2025-10-09 18:30:51,884 - gewobag_bot - INFO - ======================================================================
+2025-10-09 18:30:51,884 - gewobag_bot - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-09 18:30:51,884 - gewobag_bot - INFO - ======================================================================
+2025-10-09 18:30:51,884 - gewobag_bot - INFO - Aktive Filter: Bezirke: charlottenburg-wilmersdorf, steglitz-zehlendorf, tempelhof-schoeneberg, neukoelln | Miete:  - 1200 € | Fläche: 60 -  m² | Zimmer: 3 -  | WBS: nur ohne WBS
+2025-10-09 18:30:51,884 - gewobag_bot - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-09 18:30:51,884 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-09 18:30:51,884 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1200&gesamtflaeche_von=60&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=charlottenburg-wilmersdorf&bezirke%5B%5D=steglitz-zehlendorf&bezirke%5B%5D=tempelhof-schoeneberg&bezirke%5B%5D=neukoelln
+2025-10-09 18:30:52,790 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-09 18:30:52,791 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-09 18:30:52,823 - gewobag_bot - WARNING - Keine Angebote gefunden!
+2025-10-09 18:30:52,823 - gewobag_bot - INFO - 📊 Seite 1: 0 Wohnungen gefunden
+2025-10-09 18:30:52,862 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-09 18:30:52,862 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 0 Wohnungen gefunden
+2025-10-09 18:30:52,862 - gewobag_bot - WARNING - Keine Wohnungen gefunden
+2025-10-09 18:30:52,862 - __main__ - INFO - 
+ℹ️  Keine Wohnungen gefunden - keine Bewerbungen möglich
+2025-10-09 18:39:14,678 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-09 18:39:14,678 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-09 18:39:14,679 - __main__ - INFO - ℹ️  Kein Modus angegeben - starte vollautomatischen Modus (Standard)
+2025-10-09 18:39:14,679 - __main__ - INFO - 
+================================================================================
+2025-10-09 18:39:14,679 - __main__ - INFO - 🤖 MODUS: VOLLAUTOMATISCH (SUCHE + BEWERBUNG)
+2025-10-09 18:39:14,679 - __main__ - INFO - ================================================================================
+2025-10-09 18:39:14,679 - __main__ - INFO - 
+📍 Schritt 1/2: Wohnungssuche...
+2025-10-09 18:39:14,679 - gewobag_bot - INFO - ======================================================================
+2025-10-09 18:39:14,679 - gewobag_bot - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-09 18:39:14,679 - gewobag_bot - INFO - ======================================================================
+2025-10-09 18:39:14,679 - gewobag_bot - INFO - Aktive Filter: Bezirke: charlottenburg-wilmersdorf, steglitz-zehlendorf, tempelhof-schoeneberg, neukoelln, Spandau | Miete:  - 1200 € | Fläche: 60 -  m² | Zimmer: 3 -  | WBS: nur ohne WBS
+2025-10-09 18:39:14,679 - gewobag_bot - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-09 18:39:14,679 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-09 18:39:14,679 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1200&gesamtflaeche_von=60&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=charlottenburg-wilmersdorf&bezirke%5B%5D=steglitz-zehlendorf&bezirke%5B%5D=tempelhof-schoeneberg&bezirke%5B%5D=neukoelln&bezirke%5B%5D=Spandau
+2025-10-09 18:39:15,470 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-09 18:39:15,471 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-09 18:39:15,502 - gewobag_bot - INFO - 5 Angebote gefunden
+2025-10-09 18:39:15,503 - gewobag_bot - INFO - 5 Angebote erfolgreich extrahiert
+2025-10-09 18:39:15,503 - gewobag_bot - INFO - 📊 Seite 1: 5 Wohnungen gefunden
+2025-10-09 18:39:15,536 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-09 18:39:15,536 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 5 Wohnungen gefunden
+2025-10-09 18:39:15,536 - gewobag_bot - INFO - Clientseitige Filterung: 5 -> 2 Wohnungen
+2025-10-09 18:39:15,539 - gewobag_bot - INFO - Neue Wohnung gespeichert: Familiengerecht! in Spandau
+2025-10-09 18:39:15,539 - gewobag_bot - INFO - Neue Wohnung gespeichert: Wohnen in Staaken in Staaken
+2025-10-09 18:39:15,539 - gewobag_bot - INFO - Speicherung abgeschlossen: 2 neu, 0 bereits vorhanden
+2025-10-09 18:39:15,539 - gewobag_bot - INFO - ======================================================================
+2025-10-09 18:39:15,539 - gewobag_bot - INFO - Zusammenfassung: 2 Angebote gefunden (mit aktiven Filtern), 2 neu gespeichert, 0 bereits bekannt
+2025-10-09 18:39:15,539 - gewobag_bot - INFO - ======================================================================
+2025-10-09 18:39:15,539 - __main__ - INFO - 
+✅ 2 Wohnungen gefunden
+2025-10-09 18:39:15,539 - __main__ - INFO - 
+📍 Schritt 2/2: Automatische Bewerbungen...
+2025-10-09 18:39:15,540 - application_bot - INFO - 📊 2 Wohnungen ohne Bewerbung gefunden
+2025-10-09 18:39:15,540 - __main__ - INFO - 📊 2 neue Wohnungen - starte Bewerbungen...
+2025-10-09 18:39:15,540 - application_bot - INFO - ================================================================================
+2025-10-09 18:39:15,540 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-09 18:39:15,540 - application_bot - INFO - ================================================================================
+2025-10-09 18:39:15,540 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-09 18:39:15,540 - application_bot - INFO - 📊 2 Wohnungen ohne Bewerbung gefunden
+2025-10-09 18:39:15,540 - application_bot - INFO - 
+📋 Bewerbung 1/2
+2025-10-09 18:39:15,540 - application_bot - INFO - 📍 Wohnung: Familiengerecht! (Spandau)
+2025-10-09 18:39:15,540 - application_bot - INFO - ================================================================================
+2025-10-09 18:39:15,540 - application_bot - INFO - 🏠 Starte Bewerbung für: Familiengerecht!
+2025-10-09 18:39:15,540 - application_bot - INFO - 📍 Bezirk: Spandau
+2025-10-09 18:39:15,540 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01109-1901-0514/
+2025-10-09 18:39:15,540 - application_bot - INFO - ================================================================================
+2025-10-09 18:39:15,959 - application_bot - INFO - 🌐 Starte Browser mit erweiterten Anti-Detection-Einstellungen...
+2025-10-09 18:39:17,048 - application_bot - INFO - 🔧 Browser-Kontext erstellt:
+2025-10-09 18:39:17,706 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01109-1901-0514/
+2025-10-09 18:39:28,607 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-09 18:39:28,650 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-09 18:39:30,103 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-09 18:39:30,106 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-09 18:39:34,108 - application_bot - INFO - 🔍 Warte auf Formular-iFrame...
+2025-10-09 18:39:34,108 - application_bot - INFO - ✅ iFrame gefunden - fülle Formular aus...
+2025-10-09 18:39:38,035 - application_bot - INFO - ✓ Anrede: Frau
+2025-10-09 18:39:38,860 - application_bot - INFO - ✓ Vorname: Dina
+2025-10-09 18:39:39,825 - application_bot - INFO - ✓ Nachname: Amasha
+2025-10-09 18:39:40,392 - application_bot - INFO - ✓ E-Mail: khaled132112@gmail.com
+2025-10-09 18:39:41,063 - application_bot - INFO - ✓ Telefon: 016099110555
+2025-10-09 18:39:41,751 - application_bot - INFO - ✓ Straße: Mariendorfer Damm
+2025-10-09 18:39:42,535 - application_bot - INFO - ✓ Hausnummer: 57
+2025-10-09 18:39:43,280 - application_bot - INFO - ✓ PLZ: 12109
+2025-10-09 18:39:43,967 - application_bot - INFO - ✓ Stadt: Berlin
+2025-10-09 18:39:45,899 - application_bot - INFO - ✓ Für wen wird die Anfrage gestellt: Für mich selbst
+2025-10-09 18:39:46,870 - application_bot - INFO - ✓ Anzahl Erwachsene: 2
+2025-10-09 18:39:47,891 - application_bot - INFO - ✓ Anzahl Kinder: 0
+2025-10-09 18:39:48,871 - application_bot - INFO - ✓ Mobilfunknummer: 016099110555
+2025-10-09 18:39:49,560 - application_bot - INFO - ✓ WBS vorhanden: Nein
+2025-10-09 18:39:52,016 - application_bot - INFO - ✓ Haushaltseinkommen in Spanne: Ja
+2025-10-09 18:40:22,887 - application_bot - INFO - ✓ 2 Datenschutz-Checkbox(en) aktiviert
+2025-10-09 18:40:22,888 - application_bot - INFO - 📝 Formular ausgefüllt - bereit zum Absenden
+2025-10-09 18:40:22,888 - application_bot - INFO - 🚀 Sende Bewerbung automatisch ab...
+2025-10-09 18:40:22,994 - application_bot - INFO - ✅ Bewerbung wurde abgesendet!
+2025-10-09 18:40:27,807 - application_bot - INFO - ✅ Bewerbung erfolgreich!
+2025-10-09 18:40:27,809 - application_bot - INFO - ✅ Datenbank aktualisiert: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/0100-01109-1901-0514/ -> Status: success
+2025-10-09 18:40:27,814 - application_bot - INFO - ✅ Bewerbung 1/2: ERFOLGREICH
+2025-10-09 18:40:27,814 - application_bot - INFO - ⏸️  Pausiere 48 Sekunden vor nächster Bewerbung...
+2025-10-09 18:41:16,225 - application_bot - INFO - 
+📋 Bewerbung 2/2
+2025-10-09 18:41:16,226 - application_bot - INFO - 📍 Wohnung: Wohnen in Staaken (Staaken)
+2025-10-09 18:41:16,227 - application_bot - INFO - ================================================================================
+2025-10-09 18:41:16,227 - application_bot - INFO - 🏠 Starte Bewerbung für: Wohnen in Staaken
+2025-10-09 18:41:16,227 - application_bot - INFO - 📍 Bezirk: Staaken
+2025-10-09 18:41:16,227 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-74801-0101-0020/
+2025-10-09 18:41:16,227 - application_bot - INFO - ================================================================================
+2025-10-09 18:41:16,482 - application_bot - INFO - 🌐 Starte Browser mit erweiterten Anti-Detection-Einstellungen...
+2025-10-09 18:41:17,048 - application_bot - INFO - 🔧 Browser-Kontext erstellt:
+2025-10-09 18:41:17,663 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-74801-0101-0020/
+2025-10-09 18:41:21,143 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-09 18:41:21,186 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-09 18:41:22,718 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-09 18:41:22,722 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-09 18:41:25,544 - application_bot - INFO - 🔍 Warte auf Formular-iFrame...
+2025-10-09 18:41:25,544 - application_bot - INFO - ✅ iFrame gefunden - fülle Formular aus...
+2025-10-09 18:41:29,168 - application_bot - INFO - ✓ Anrede: Frau
+2025-10-09 18:41:29,857 - application_bot - INFO - ✓ Vorname: Dina
+2025-10-09 18:41:30,732 - application_bot - INFO - ✓ Nachname: Amasha
+2025-10-09 18:41:31,364 - application_bot - INFO - ✓ E-Mail: khaled132112@gmail.com
+2025-10-09 18:41:32,047 - application_bot - INFO - ✓ Telefon: 016099110555
+2025-10-09 18:41:32,713 - application_bot - INFO - ✓ Straße: Mariendorfer Damm
+2025-10-09 18:41:33,249 - application_bot - INFO - ✓ Hausnummer: 57
+2025-10-09 18:41:34,297 - application_bot - INFO - ✓ PLZ: 12109
+2025-10-09 18:41:34,875 - application_bot - INFO - ✓ Stadt: Berlin
+2025-10-09 18:41:36,689 - application_bot - INFO - ✓ Für wen wird die Anfrage gestellt: Für mich selbst
+2025-10-09 18:41:37,580 - application_bot - INFO - ✓ Gesamtzahl Personen: 2
+2025-10-09 18:41:38,401 - application_bot - INFO - ✓ Mobilfunknummer: 016099110555
+2025-10-09 18:42:08,991 - application_bot - INFO - ✓ 1 Datenschutz-Checkbox(en) aktiviert
+2025-10-09 18:42:08,993 - application_bot - INFO - 📝 Formular ausgefüllt - bereit zum Absenden
+2025-10-09 18:42:08,993 - application_bot - INFO - 🚀 Sende Bewerbung automatisch ab...
+2025-10-09 18:42:09,068 - application_bot - INFO - ✅ Bewerbung wurde abgesendet!
+2025-10-09 18:42:12,444 - application_bot - INFO - ✅ Bewerbung erfolgreich!
+2025-10-09 18:42:12,447 - application_bot - INFO - ✅ Datenbank aktualisiert: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-74801-0101-0020/ -> Status: success
+2025-10-09 18:42:12,451 - application_bot - INFO - ✅ Bewerbung 2/2: ERFOLGREICH
+2025-10-09 18:42:12,451 - application_bot - INFO - 
+================================================================================
+2025-10-09 18:42:12,451 - application_bot - INFO - 📊 BEWERBUNGS-ZUSAMMENFASSUNG
+2025-10-09 18:42:12,451 - application_bot - INFO - ================================================================================
+2025-10-09 18:42:12,451 - application_bot - INFO - ✅ Erfolgreich: 2
+2025-10-09 18:42:12,451 - application_bot - INFO - ❌ Fehlgeschlagen: 0
+2025-10-09 18:42:12,451 - application_bot - INFO - 📈 Gesamt verarbeitet: 2
+2025-10-09 18:42:12,451 - application_bot - INFO - ================================================================================
+2025-10-09 18:42:12,451 - application_bot - INFO - 
+📊 GESAMTSTATISTIK (alle bisherigen Bewerbungen):
+2025-10-09 18:42:12,451 - application_bot - INFO -    ✅ Erfolgreich: 2
+2025-10-09 18:42:12,451 - application_bot - INFO -    ❌ Fehlgeschlagen: 1
+2025-10-09 18:42:12,451 - application_bot - INFO -    📈 Gesamt beworben: 3
+2025-10-09 18:42:12,451 - __main__ - INFO - 
+================================================================================
+2025-10-09 18:42:12,451 - __main__ - INFO - ✅ VOLLAUTOMATISCHE AUSFÜHRUNG ABGESCHLOSSEN
+2025-10-09 18:42:12,451 - __main__ - INFO - ================================================================================

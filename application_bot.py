@@ -15,21 +15,46 @@ from typing import Dict, Optional, List
 from pathlib import Path
 from playwright.sync_api import sync_playwright, Page, Browser, BrowserContext, TimeoutError as PlaywrightTimeoutError
 
-
-# Logging-Setup
+# Logging-Setup (MUSS vor allen Imports mit logging stehen)
 logger = logging.getLogger(__name__)
+
+# Anti-Detection: playwright-stealth
+try:
+    from playwright_stealth import stealth_sync
+    STEALTH_AVAILABLE = True
+except ImportError:
+    logger.warning("⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert")
+    logger.warning("Installation: pip install playwright-stealth")
+    STEALTH_AVAILABLE = False
 
 # Konstanten
 DB_NAME = "gewobag_wohnungen.db"
 USER_DATA_FILE = "user_data.json"
 APPLICATION_TIMEOUT = 60000  # 60 Sekunden für Formular-Operationen
 
-# Anti-Detection: Verschiedene realistische User-Agents für Playwright
+# Anti-Detection: Erweiterte realistische User-Agents für 2025
 BROWSER_USER_AGENTS = [
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    # Chrome auf Windows
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+    # Chrome auf macOS
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+    # Firefox
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:122.0) Gecko/20100101 Firefox/122.0",
+    # Edge
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0",
+]
+
+# Realistische Viewport-Größen (Auflösungen von echten Geräten)
+VIEWPORT_SIZES = [
+    {'width': 1920, 'height': 1080},  # Full HD
+    {'width': 1536, 'height': 864},   # Laptop
+    {'width': 1440, 'height': 900},   # MacBook
+    {'width': 1366, 'height': 768},   # Laptop (häufig)
+    {'width': 2560, 'height': 1440},  # 2K Monitor
 ]
 
 # Retry-Konfiguration
@@ -99,37 +124,59 @@ def human_like_typing(page: Page, selector: str, text: str, delay_range: tuple =
 
 def setup_browser_context(browser: Browser) -> BrowserContext:
     """
-    Erstellt einen Browser-Kontext mit Anti-Detection-Einstellungen.
+    Erstellt einen Browser-Kontext mit erweiterten Anti-Detection-Einstellungen (2025).
 
     Args:
         browser: Playwright Browser-Objekt
 
     Returns:
-        Konfigurierter BrowserContext
+        Konfigurierter BrowserContext mit maximaler Tarnung
     """
     # Zufälliger User-Agent
     user_agent = random.choice(BROWSER_USER_AGENTS)
 
-    # Browser-Kontext mit realistischen Einstellungen
+    # Zufällige Viewport-Größe
+    viewport = random.choice(VIEWPORT_SIZES)
+
+    # Zufällige Berlin-Koordinaten (innerhalb von Berlin streuen)
+    latitude = 52.520008 + random.uniform(-0.05, 0.05)
+    longitude = 13.404954 + random.uniform(-0.05, 0.05)
+
+    # Zufällige Device Scale Factor (1.0, 1.25, 1.5, 2.0)
+    device_scale_factor = random.choice([1.0, 1.0, 1.25, 1.5])  # 1.0 ist am häufigsten
+
+    # Browser-Kontext mit erweiterten realistischen Einstellungen
     context = browser.new_context(
         user_agent=user_agent,
-        viewport={'width': 1920, 'height': 1080},
+        viewport=viewport,
         locale='de-DE',
         timezone_id='Europe/Berlin',
         permissions=['geolocation'],
-        geolocation={'latitude': 52.520008, 'longitude': 13.404954},  # Berlin
+        geolocation={'latitude': latitude, 'longitude': longitude},
         color_scheme='light',
         has_touch=False,
         is_mobile=False,
-        device_scale_factor=1,
+        device_scale_factor=device_scale_factor,
         extra_http_headers={
-            'Accept-Language': 'de-DE,de;q=0.9,en;q=0.8',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+            'Accept-Language': 'de-DE,de;q=0.9,en-US;q=0.8,en;q=0.7',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Cache-Control': 'max-age=0',
+            'Sec-Fetch-Dest': 'document',
+            'Sec-Fetch-Mode': 'navigate',
+            'Sec-Fetch-Site': 'none',
+            'Sec-Fetch-User': '?1',
+            'Upgrade-Insecure-Requests': '1',
             'DNT': '1',
         }
     )
 
-    logger.debug(f"Browser-Kontext erstellt mit User-Agent: {user_agent[:60]}...")
+    logger.info(f"🔧 Browser-Kontext erstellt:")
+    logger.debug(f"   User-Agent: {user_agent[:70]}...")
+    logger.debug(f"   Viewport: {viewport['width']}x{viewport['height']}")
+    logger.debug(f"   Device Scale: {device_scale_factor}")
+    logger.debug(f"   Geolocation: {latitude:.4f}, {longitude:.4f}")
+
     return context
 
 
@@ -639,31 +686,104 @@ def fill_application_form(page: Page, user_data: Dict, wohnung_link: str) -> boo
 
         logger.info("📝 Formular ausgefüllt - bereit zum Absenden")
 
-        # WICHTIG: Absende-Button NICHT automatisch klicken - Sicherheitsmaßnahme
-        # Der Benutzer sollte dies manuell bestätigen können
-        # Falls automatisches Absenden gewünscht ist, kommentieren Sie die folgenden Zeilen ein:
+        # AUTOMATISCHES ABSENDEN AKTIVIERT
+        try:
+            logger.info("🚀 Sende Bewerbung automatisch ab...")
+            submit_button = iframe_element.locator('button[type="submit"], input[type="submit"]').first
 
-        # try:
-        #     logger.info("🚀 Sende Bewerbung ab...")
-        #     submit_button = iframe_element.locator('button[type="submit"], input[type="submit"]').first
-        #     submit_button.click()
-        #     random_delay(3.0, 5.0)
-        #     logger.info("✅ Bewerbung abgesendet!")
-        # except Exception as e:
-        #     logger.error(f"❌ Fehler beim Absenden: {e}")
-        #     return False
+            # Prüfe, ob der Button sichtbar und aktiviert ist
+            if not submit_button.is_visible(timeout=5000):
+                raise Exception("Absende-Button nicht sichtbar")
 
-        logger.warning("⚠️  HINWEIS: Automatisches Absenden ist deaktiviert - bitte manuell bestätigen!")
-        logger.info("Das Browser-Fenster bleibt 30 Sekunden offen zur manuellen Überprüfung...")
-        time.sleep(30)  # Warte 30 Sekunden für manuelle Überprüfung
+            if not submit_button.is_enabled(timeout=5000):
+                raise Exception("Absende-Button ist deaktiviert (möglicherweise fehlen Pflichtfelder)")
 
-        return True
+            # Klicke auf Absende-Button
+            submit_button.click(timeout=APPLICATION_TIMEOUT)
+            logger.info("✅ Bewerbung wurde abgesendet!")
+
+            # Warte kurz, um sicherzustellen, dass die Anfrage gesendet wurde
+            random_delay(3.0, 5.0)
+
+            # Prüfe auf Erfolgs- oder Fehlermeldungen
+            try:
+                # Suche nach Erfolgsmeldung
+                success_message = page.locator('div[class*="success"], div[class*="Success"], p:has-text("Vielen Dank"), p:has-text("erfolgreich"), p:has-text("gesendet")').first
+                if success_message.is_visible(timeout=8000):
+                    success_text = success_message.inner_text()
+                    logger.info(f"✅ Erfolgsmeldung erkannt: {success_text[:100]}")
+                    return True
+            except:
+                logger.debug("Keine explizite Erfolgsmeldung gefunden (ist oft normal)")
+
+            return True
+
+        except Exception as e:
+            error_msg = f"Fehler beim automatischen Absenden: {e}"
+            logger.error(f"❌ {error_msg}")
+            logger.error(f"Fehlerdetails: {type(e).__name__} - {str(e)}")
+
+            # Versuche Screenshot zu machen für Debugging
+            try:
+                screenshot_path = f"error_screenshot_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+                page.screenshot(path=screenshot_path)
+                logger.info(f"📸 Screenshot gespeichert: {screenshot_path}")
+            except:
+                logger.debug("Konnte keinen Screenshot erstellen")
+
+            return False
 
     except PlaywrightTimeoutError as e:
-        logger.error(f"⏱️  Timeout beim Laden des Formulars: {e}")
+        error_msg = f"Timeout beim Laden des Formulars oder Elements (>{APPLICATION_TIMEOUT/1000}s): {str(e)}"
+        logger.error(f"⏱️  {error_msg}")
+        logger.error(f"Timeout-Details: Konnte Element nicht innerhalb der Wartezeit finden")
+        logger.error(f"URL: {wohnung_link}")
+
+        # Screenshot bei Timeout
+        try:
+            screenshot_path = f"timeout_error_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+            page.screenshot(path=screenshot_path, full_page=True)
+            logger.info(f"📸 Timeout-Screenshot gespeichert: {screenshot_path}")
+        except:
+            pass
+
         return False
+
     except Exception as e:
-        logger.error(f"❌ Fehler beim Ausfüllen des Formulars: {e}", exc_info=True)
+        error_type = type(e).__name__
+        error_msg = str(e)
+
+        logger.error(f"❌ Fehler beim Ausfüllen des Formulars")
+        logger.error(f"Fehlertyp: {error_type}")
+        logger.error(f"Fehlermeldung: {error_msg}")
+        logger.error(f"URL: {wohnung_link}")
+
+        # Erweiterte Fehleranalyse
+        if "cloudflare" in error_msg.lower() or "captcha" in error_msg.lower():
+            logger.error("🛡️  ACHTUNG: Cloudflare-Blockierung oder CAPTCHA erkannt!")
+            logger.error("Empfehlung: Längere Pausen zwischen Anfragen, User-Agent wechseln")
+
+        elif "connection" in error_msg.lower() or "network" in error_msg.lower():
+            logger.error("🌐 ACHTUNG: Netzwerkfehler erkannt!")
+            logger.error("Empfehlung: Internetverbindung prüfen, evtl. Proxy verwenden")
+
+        elif "iframe" in error_msg.lower():
+            logger.error("📦 ACHTUNG: iFrame konnte nicht geladen werden!")
+            logger.error("Empfehlung: Längere Wartezeit, Website-Struktur hat sich möglicherweise geändert")
+
+        elif "selector" in error_msg.lower() or "not found" in error_msg.lower():
+            logger.error("🔍 ACHTUNG: Formular-Element nicht gefunden!")
+            logger.error("Empfehlung: Website-Struktur hat sich geändert, Selektoren müssen aktualisiert werden")
+
+        # Screenshot bei allgemeinen Fehlern
+        try:
+            screenshot_path = f"general_error_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+            page.screenshot(path=screenshot_path, full_page=True)
+            logger.info(f"📸 Fehler-Screenshot gespeichert: {screenshot_path}")
+        except:
+            pass
+
+        logger.error("Stack Trace:", exc_info=True)
         return False
 
 
@@ -742,6 +862,42 @@ def get_unapplied_wohnungen() -> List[Dict[str, str]]:
         return []
 
 
+def is_already_applied(link: str) -> bool:
+    """
+    Prüft, ob für diese Wohnung bereits eine Bewerbung abgesendet wurde.
+
+    Args:
+        link: Link zur Wohnung
+
+    Returns:
+        True wenn bereits beworben, False wenn noch nicht beworben
+    """
+    try:
+        conn = sqlite3.connect(DB_NAME)
+        cursor = conn.cursor()
+
+        cursor.execute("""
+            SELECT applied, application_status, applied_ts
+            FROM wohnungen
+            WHERE link = ? AND applied = 1
+        """, (link,))
+
+        result = cursor.fetchone()
+        conn.close()
+
+        if result:
+            applied, status, applied_ts = result
+            logger.warning(f"⚠️  DUPLIKAT ERKANNT: Wohnung wurde bereits am {applied_ts} beworben (Status: {status})")
+            return True
+
+        return False
+
+    except sqlite3.Error as e:
+        logger.error(f"❌ Fehler bei Duplikat-Prüfung: {e}")
+        # Im Fehlerfall: Sicherheitshalber als "nicht beworben" behandeln
+        return False
+
+
 def apply_to_wohnung(wohnung: Dict, user_data: Dict, headless: bool = True) -> bool:
     """
     Bewirbt sich auf eine einzelne Wohnung.
@@ -760,49 +916,150 @@ def apply_to_wohnung(wohnung: Dict, user_data: Dict, headless: bool = True) -> b
     logger.info(f"🔗 Link: {wohnung['link']}")
     logger.info("=" * 80)
 
+    # DUPLIKAT-SCHUTZ: Prüfe VOR der Bewerbung, ob bereits beworben
+    if is_already_applied(wohnung['link']):
+        logger.error(f"❌ ABBRUCH: Diese Wohnung wurde bereits beworben! Überspringe...")
+        return False
+
     retry_count = 0
 
     while retry_count <= MAX_APPLICATION_RETRIES:
         try:
             with sync_playwright() as p:
-                # Browser starten
-                logger.info("🌐 Starte Browser...")
+                # Browser starten mit erweiterten Anti-Detection-Args
+                logger.info("🌐 Starte Browser mit erweiterten Anti-Detection-Einstellungen...")
                 browser = p.chromium.launch(
                     headless=headless,
                     args=[
+                        # Kern Anti-Detection
                         '--disable-blink-features=AutomationControlled',
+                        '--disable-features=IsolateOrigins,site-per-process',
+                        '--disable-site-isolation-trials',
+
+                        # Performance & Stability
                         '--disable-dev-shm-usage',
                         '--no-sandbox',
                         '--disable-setuid-sandbox',
+                        '--disable-gpu',
+
+                        # Weitere Anti-Detection
                         '--disable-web-security',
-                        '--disable-features=IsolateOrigins,site-per-process'
+                        '--disable-features=VizDisplayCompositor',
+                        '--disable-breakpad',
+                        '--disable-backing-store-limit',
+                        '--disable-extensions',
+                        '--disable-translate',
+                        '--metrics-recording-only',
+                        '--mute-audio',
+                        '--no-first-run',
+                        '--safebrowsing-disable-auto-update',
+                        '--no-default-browser-check',
+                        '--no-pings',
+                        '--password-store=basic',
+                        '--use-mock-keychain',
+
+                        # Window Size (wird durch Context überschrieben)
+                        '--window-size=1920,1080',
                     ]
                 )
 
-                # Browser-Kontext mit Anti-Detection
+                # Browser-Kontext mit erweiterten Anti-Detection-Einstellungen
                 context = setup_browser_context(browser)
 
                 # Neue Seite öffnen
                 page = context.new_page()
 
-                # Stealth-Skript injizieren
+                # Erweiterte Stealth-Skripte injizieren (Canvas, WebGL, Audio Fingerprinting)
+                logger.debug("🔒 Injiziere erweiterte Anti-Detection-Skripte...")
                 page.add_init_script("""
+                    // Navigator.webdriver entfernen
                     Object.defineProperty(navigator, 'webdriver', {
                         get: () => undefined
                     });
 
+                    // Chrome-Objekt hinzufügen
                     window.chrome = {
-                        runtime: {}
+                        runtime: {},
+                        loadTimes: function() {},
+                        csi: function() {},
+                        app: {}
                     };
 
+                    // Plugins überschreiben
                     Object.defineProperty(navigator, 'plugins', {
-                        get: () => [1, 2, 3, 4, 5]
+                        get: () => [
+                            {name: 'Chrome PDF Plugin', filename: 'internal-pdf-viewer'},
+                            {name: 'Chrome PDF Viewer', filename: 'mhjfbmdgcfjbbpaeojofohoefgiehjai'},
+                            {name: 'Native Client', filename: 'internal-nacl-plugin'}
+                        ]
                     });
 
+                    // Languages
                     Object.defineProperty(navigator, 'languages', {
                         get: () => ['de-DE', 'de', 'en-US', 'en']
                     });
+
+                    // Permissions
+                    const originalQuery = window.navigator.permissions.query;
+                    window.navigator.permissions.query = (parameters) => (
+                        parameters.name === 'notifications' ?
+                            Promise.resolve({ state: Notification.permission }) :
+                            originalQuery(parameters)
+                    );
+
+                    // Canvas Fingerprinting Randomisierung
+                    const getImageData = CanvasRenderingContext2D.prototype.getImageData;
+                    CanvasRenderingContext2D.prototype.getImageData = function(...args) {
+                        const imageData = getImageData.apply(this, args);
+                        for (let i = 0; i < imageData.data.length; i++) {
+                            imageData.data[i] = imageData.data[i] ^ (Math.random() < 0.1 ? 1 : 0);
+                        }
+                        return imageData;
+                    };
+
+                    // WebGL Vendor & Renderer Randomisierung
+                    const getParameter = WebGLRenderingContext.prototype.getParameter;
+                    WebGLRenderingContext.prototype.getParameter = function(parameter) {
+                        if (parameter === 37445) {
+                            return 'Intel Inc.';
+                        }
+                        if (parameter === 37446) {
+                            return 'Intel Iris OpenGL Engine';
+                        }
+                        return getParameter.apply(this, arguments);
+                    };
+
+                    // Screen-Fingerprinting-Schutz
+                    Object.defineProperty(screen, 'colorDepth', {
+                        get: () => 24
+                    });
+                    Object.defineProperty(screen, 'pixelDepth', {
+                        get: () => 24
+                    });
+
+                    // AudioContext Fingerprinting
+                    const audioContext = window.AudioContext || window.webkitAudioContext;
+                    if (audioContext) {
+                        const originalCreateOscillator = audioContext.prototype.createOscillator;
+                        audioContext.prototype.createOscillator = function() {
+                            const oscillator = originalCreateOscillator.apply(this, arguments);
+                            const originalStart = oscillator.start;
+                            oscillator.start = function() {
+                                originalStart.apply(this, arguments);
+                            };
+                            return oscillator;
+                        };
+                    }
                 """)
+
+                # playwright-stealth anwenden (falls verfügbar)
+                if STEALTH_AVAILABLE:
+                    logger.debug("🔒 Wende playwright-stealth an...")
+                    try:
+                        stealth_sync(page)
+                        logger.info("✅ playwright-stealth aktiviert")
+                    except Exception as e:
+                        logger.warning(f"⚠️  playwright-stealth konnte nicht angewendet werden: {e}")
 
                 # Bewerbungsformular ausfüllen
                 success = fill_application_form(page, user_data, wohnung['link'])
@@ -871,13 +1128,22 @@ def run_application_bot(headless: bool = True, max_applications: int = None) -> 
     # Bewerbe dich auf jede Wohnung
     for idx, wohnung in enumerate(wohnungen, 1):
         logger.info(f"\n📋 Bewerbung {idx}/{len(wohnungen)}")
+        logger.info(f"📍 Wohnung: {wohnung['titel']} ({wohnung['bezirk']})")
+
+        # ZUSÄTZLICHE SICHERHEITSPRÜFUNG: Überspringe bereits beworbene Wohnungen
+        if is_already_applied(wohnung['link']):
+            logger.warning(f"⚠️  Überspringe Duplikat - diese Wohnung wurde bereits beworben")
+            failed_count += 1
+            continue
 
         success = apply_to_wohnung(wohnung, user_data, headless=headless)
 
         if success:
             success_count += 1
+            logger.info(f"✅ Bewerbung {idx}/{len(wohnungen)}: ERFOLGREICH")
         else:
             failed_count += 1
+            logger.error(f"❌ Bewerbung {idx}/{len(wohnungen)}: FEHLGESCHLAGEN")
 
         # Pause zwischen Bewerbungen (außer bei der letzten)
         if idx < len(wohnungen):
@@ -891,8 +1157,35 @@ def run_application_bot(headless: bool = True, max_applications: int = None) -> 
     logger.info("=" * 80)
     logger.info(f"✅ Erfolgreich: {success_count}")
     logger.info(f"❌ Fehlgeschlagen: {failed_count}")
-    logger.info(f"📈 Gesamt: {len(wohnungen)}")
+    logger.info(f"📈 Gesamt verarbeitet: {len(wohnungen)}")
     logger.info("=" * 80)
+
+    # Zusätzliche Statistik: Gesamtanzahl aller Bewerbungen in DB
+    try:
+        conn = sqlite3.connect(DB_NAME)
+        cursor = conn.cursor()
+
+        # Gesamtanzahl aller Bewerbungen
+        cursor.execute("SELECT COUNT(*) FROM wohnungen WHERE applied = 1")
+        total_applied = cursor.fetchone()[0]
+
+        # Erfolgreiche Bewerbungen
+        cursor.execute("SELECT COUNT(*) FROM wohnungen WHERE application_status = 'success'")
+        total_success = cursor.fetchone()[0]
+
+        # Fehlgeschlagene Bewerbungen
+        cursor.execute("SELECT COUNT(*) FROM wohnungen WHERE application_status = 'failed'")
+        total_failed = cursor.fetchone()[0]
+
+        conn.close()
+
+        logger.info("\n📊 GESAMTSTATISTIK (alle bisherigen Bewerbungen):")
+        logger.info(f"   ✅ Erfolgreich: {total_success}")
+        logger.info(f"   ❌ Fehlgeschlagen: {total_failed}")
+        logger.info(f"   📈 Gesamt beworben: {total_applied}")
+
+    except sqlite3.Error as e:
+        logger.error(f"❌ Fehler beim Abrufen der Gesamtstatistik: {e}")
 
 
 if __name__ == "__main__":

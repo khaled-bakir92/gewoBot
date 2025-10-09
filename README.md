@@ -1,8 +1,18 @@
-# 🏠 Gewobag Bot v2.0 🤖
+# 🏠 Gewobag Bot v2.1 🤖
 
 **Automatische Wohnungssuche und Bewerbung für Gewobag (Berlin)**
 
-Dieser Bot sucht automatisch nach Wohnungen auf der Gewobag-Website, filtert nach Ihren Kriterien und bewirbt sich automatisch mit Ihren Daten.
+Dieser Bot sucht automatisch nach Wohnungen auf der Gewobag-Website, filtert nach Ihren Kriterien und bewirbt sich **vollautomatisch** mit Ihren Daten.
+
+## 🆕 Neu in Version 2.1
+
+- ✅ **Vollautomatisches Absenden aktiviert** - Keine manuelle Bestätigung mehr nötig!
+- 🚀 **Einfacherer Start** - Einfach `python main.py` ohne Argumente ausführen
+- 📋 **Detailliertes Fehler-Logging** mit spezifischen Fehlertypen und Empfehlungen
+- 📸 **Automatische Screenshots bei Fehlern** für besseres Debugging
+- 🎯 **Intelligente Fehlererkennung** (Cloudflare, Netzwerk, iFrame, Selektoren)
+- 🛡️ **Doppelter Duplikat-Schutz** - Verhindert mehrfache Bewerbungen auf dieselbe Wohnung
+- 📊 **Erweiterte Statistiken** - Zeigt alle bisherigen Bewerbungen an
 
 ---
 
@@ -18,6 +28,7 @@ Dieser Bot sucht automatisch nach Wohnungen auf der Gewobag-Website, filtert nac
 - ♻️ **Retry-Logik** bei Fehlern (HTTP 403/429)
 - 📊 **Detailliertes Logging** aller Operationen
 - ✅ **Status-Tracking** (erfolgreich/fehlgeschlagen)
+- 🔒 **Duplikat-Schutz** - Keine doppelten Bewerbungen auf dieselbe Wohnung
 
 ---
 
@@ -127,6 +138,18 @@ Bearbeiten Sie `user_data.json` und tragen Sie Ihre echten Daten ein:
 
 ## 📖 Verwendung
 
+### 🎯 Einfachster Weg (NEU!): Vollautomatisch
+```bash
+python main.py
+```
+- **Kein Argument nötig!** - Startet automatisch im Vollautomatik-Modus
+- Sucht neue Wohnungen
+- Bewirbt sich **automatisch** auf alle gefundenen Wohnungen
+- **Sendet Formulare automatisch ab** (kein manuelles Eingreifen nötig)
+- **Empfohlen für regelmäßige Ausführung**
+
+---
+
 ### Modus 1: Nur Wohnungen suchen
 ```bash
 python main.py --scrape
@@ -143,58 +166,70 @@ python main.py --apply
 ```
 - Öffnet alle Wohnungen aus der Datenbank, für die noch keine Bewerbung gesendet wurde
 - Füllt Bewerbungsformular automatisch aus
-- **Automatisches Absenden ist deaktiviert** (Sie müssen manuell bestätigen)
+- **Sendet Formulare automatisch ab** ✅
 
 **Mit sichtbarem Browser (Debugging):**
 ```bash
-python main.py --apply --show-browser
+python main.py --show-browser
 ```
 
 **Nur 3 Bewerbungen senden:**
 ```bash
-python main.py --apply --max 3
+python main.py --max 3
 ```
 
 ---
 
-### Modus 3: Vollautomatisch (Suchen + Bewerben)
+### Modus 3: Vollautomatisch (explizit)
 ```bash
 python main.py --full
 ```
 - Sucht neue Wohnungen
 - Bewirbt sich automatisch auf alle neuen Wohnungen
-- **Empfohlen für regelmäßige Ausführung**
+- Identisch zu `python main.py` (ohne Argumente)
 
 **Mit sichtbarem Browser:**
 ```bash
-python main.py --full --show-browser
+python main.py --show-browser
 ```
 
 ---
 
-## 🛡️ Automatisches Absenden aktivieren (Optional)
+## 🛡️ Automatisches Absenden
 
-**Standardmäßig ist das automatische Absenden DEAKTIVIERT.**
+**✅ Automatisches Absenden ist ab v2.1 STANDARDMÄSSIG AKTIVIERT!**
 
-Das Browser-Fenster bleibt 30 Sekunden offen, damit Sie die Daten manuell prüfen und abschicken können.
+Der Bot füllt das Formular aus und sendet es automatisch ab. Keine manuelle Bestätigung mehr nötig!
 
-**Um vollautomatisches Absenden zu aktivieren:**
+**Was passiert beim Absenden:**
+1. Bot füllt alle Formularfelder aus
+2. Bot prüft, ob der Absende-Button sichtbar und aktiviert ist
+3. Bot klickt auf "Absenden"
+4. Bot wartet 3-5 Sekunden
+5. Bot sucht nach Erfolgsmeldung (z.B. "Vielen Dank", "erfolgreich gesendet")
+6. Status wird in Datenbank gespeichert (`applied = 1`, `application_status = 'success'`)
 
-Bearbeiten Sie `application_bot.py` und entfernen Sie die Kommentare bei:
+**Bei Fehlern:**
+- Screenshot wird automatisch gespeichert (`error_screenshot_*.png`)
+- Detaillierte Fehlermeldung im Log (`application-bot.log`)
+- Status: `application_status = 'failed'` mit Fehlerbeschreibung
+- Empfehlungen werden ausgegeben (z.B. "Cloudflare-Blockierung erkannt")
 
-```python
-# try:
-#     logger.info("🚀 Sende Bewerbung ab...")
-#     submit_button = iframe_element.locator('button[type="submit"], input[type="submit"]').first
-#     submit_button.click()
-#     random_delay(3.0, 5.0)
-#     logger.info("✅ Bewerbung abgesendet!")
-# except Exception as e:
-#     logger.error(f"❌ Fehler beim Absenden: {e}")
-#     return False
+**Duplikat-Schutz (NEU!):**
+Der Bot prüft **zweimal**, ob eine Wohnung bereits beworben wurde:
+1. **Vor dem Abrufen** der Wohnungen (`WHERE applied = 0 OR applied IS NULL`)
+2. **Vor jeder einzelnen Bewerbung** (zusätzliche Sicherheitsprüfung)
+
+Falls ein Duplikat erkannt wird:
+```
+⚠️  DUPLIKAT ERKANNT: Wohnung wurde bereits am 2025-01-09 14:30:22 beworben (Status: success)
+❌ ABBRUCH: Diese Wohnung wurde bereits beworben! Überspringe...
 ```
 
-**⚠️ ACHTUNG:** Verwenden Sie dies nur, wenn Sie die Formulare vorher manuell geprüft haben!
+**Für Debugging (mit sichtbarem Browser):**
+```bash
+python main.py --show-browser
+```
 
 ---
 
@@ -211,32 +246,83 @@ SELECT titel, bezirk, miete, applied, application_status FROM wohnungen;
 
 **Nur unbeworbene Wohnungen:**
 ```sql
-SELECT * FROM wohnungen WHERE applied = 0;
+SELECT * FROM wohnungen WHERE applied = 0 OR applied IS NULL;
 ```
 
 **Erfolgreiche Bewerbungen:**
 ```sql
-SELECT * FROM wohnungen WHERE application_status = 'success';
+SELECT titel, adresse, applied_ts, application_status
+FROM wohnungen
+WHERE application_status = 'success'
+ORDER BY applied_ts DESC;
 ```
 
-**Fehlgeschlagene Bewerbungen:**
+**Fehlgeschlagene Bewerbungen mit Fehlermeldung:**
 ```sql
-SELECT * FROM wohnungen WHERE application_status = 'failed';
+SELECT titel, adresse, application_error, applied_ts
+FROM wohnungen
+WHERE application_status = 'failed'
+ORDER BY applied_ts DESC;
+```
+
+**Statistik anzeigen:**
+```sql
+SELECT
+    COUNT(*) as gesamt,
+    SUM(CASE WHEN applied = 1 THEN 1 ELSE 0 END) as beworben,
+    SUM(CASE WHEN application_status = 'success' THEN 1 ELSE 0 END) as erfolgreich,
+    SUM(CASE WHEN application_status = 'failed' THEN 1 ELSE 0 END) as fehlgeschlagen
+FROM wohnungen;
+```
+
+**Duplikate prüfen (sollte immer 0 sein!):**
+```sql
+SELECT link, COUNT(*) as anzahl
+FROM wohnungen
+WHERE applied = 1
+GROUP BY link
+HAVING COUNT(*) > 1;
 ```
 
 ---
 
-## 📝 Logs
+## 📝 Logs und Fehleranalyse
 
 **Log-Dateien:**
 - `gewobag-bot.log` - Wohnungssuche
-- `application-bot.log` - Bewerbungen
+- `application-bot.log` - Bewerbungen (detaillierte Fehleranalyse!)
 - `gewobag-main.log` - Hauptskript
 
 **Logs anzeigen:**
 ```bash
 tail -f gewobag-main.log
+tail -f application-bot.log  # Empfohlen für Fehleranalyse
 ```
+
+**Screenshot-Dateien bei Fehlern:**
+- `error_screenshot_*.png` - Screenshot beim Formular-Fehler
+- `timeout_error_*.png` - Screenshot bei Timeout
+- `general_error_*.png` - Screenshot bei allgemeinen Fehlern
+
+**Intelligente Fehleranalyse (NEU in v2.1):**
+
+Das Log enthält jetzt detaillierte Fehleranalysen:
+
+```
+❌ Fehler beim Ausfüllen des Formulars
+Fehlertyp: PlaywrightTimeoutError
+Fehlermeldung: Timeout 60000ms exceeded
+URL: https://www.gewobag.de/...
+🛡️  ACHTUNG: Cloudflare-Blockierung oder CAPTCHA erkannt!
+Empfehlung: Längere Pausen zwischen Anfragen, User-Agent wechseln
+📸 Screenshot gespeichert: error_screenshot_20250109_143022.png
+```
+
+**Fehlertypen und Empfehlungen:**
+- **Cloudflare/CAPTCHA**: Längere Pausen, User-Agent wechseln
+- **Netzwerkfehler**: Internetverbindung prüfen, Proxy erwägen
+- **iFrame nicht geladen**: Längere Wartezeit, Website-Struktur evtl. geändert
+- **Formular-Element nicht gefunden**: Selektoren müssen aktualisiert werden
 
 ---
 
@@ -245,13 +331,21 @@ tail -f gewobag-main.log
 **Test-Modus mit sichtbarem Browser:**
 ```bash
 # Nur 1 Bewerbung senden (für Test)
-python main.py --apply --max 1 --show-browser
+python main.py --max 1 --show-browser
 ```
 
 **Überprüfen Sie manuell:**
 1. Werden alle Formularfelder korrekt ausgefüllt?
-2. Werden die Dokumente hochgeladen?
-3. Funktioniert der Tab-Wechsel?
+2. Wird das Formular automatisch abgesendet?
+3. Erscheint eine Erfolgsmeldung?
+4. Wird der Status in der Datenbank korrekt gespeichert?
+
+**Nach dem Test:**
+```bash
+# Datenbank prüfen
+sqlite3 gewobag_wohnungen.db
+SELECT titel, applied, application_status, application_error FROM wohnungen WHERE applied = 1;
+```
 
 ---
 
@@ -287,10 +381,26 @@ playwright install chromium
 
 ### Problem: "Bewerbungen schlagen fehl"
 **Lösungen:**
-- Überprüfen Sie `user_data.json` auf fehlende/fehlerhafte Daten
-- Prüfen Sie, ob alle Dokument-Pfade existieren
-- Erhöhen Sie Timeouts in `application_bot.py`
-- Prüfen Sie `application-bot.log` für Details
+1. **Prüfen Sie die Log-Datei:**
+   ```bash
+   tail -n 50 application-bot.log
+   ```
+2. **Schauen Sie sich den Screenshot an:**
+   - Öffnen Sie `error_screenshot_*.png` oder `timeout_error_*.png`
+   - Sehen Sie, was genau auf der Seite angezeigt wurde
+3. **Überprüfen Sie `user_data.json`:**
+   - Sind alle Pflichtfelder ausgefüllt? (Vorname, Nachname, E-Mail, Anrede)
+   - Sind die Dokument-Pfade korrekt? (absolute Pfade verwenden!)
+4. **Testen Sie mit sichtbarem Browser:**
+   ```bash
+   python main.py --max 1 --show-browser
+   ```
+5. **Cloudflare-Blockierung:**
+   - Log zeigt "Cloudflare" oder "CAPTCHA"?
+   - Lösung: Längere Pausen zwischen Anfragen (erhöhen Sie `random_delay()` in `application_bot.py`)
+6. **Formular-Struktur geändert:**
+   - Log zeigt "Element nicht gefunden"?
+   - Lösung: Selektoren in `fill_application_form()` müssen aktualisiert werden
 
 ---
 

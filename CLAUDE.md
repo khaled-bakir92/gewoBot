@@ -58,21 +58,31 @@ Dependencies:
 # Initial setup (creates config files and database)
 python main.py --setup
 
+# DEFAULT MODE: Full automation (search + apply) - NO ARGUMENTS NEEDED!
+python main.py
+
 # Search for apartments only (no applications)
 python main.py --scrape
 
 # Apply to apartments already found in database
 python main.py --apply
 
-# Full automation: search + apply
+# Full automation: search + apply (explicit)
 python main.py --full
 
 # Show browser window for debugging
-python main.py --full --show-browser
+python main.py --show-browser
 
 # Limit number of applications
-python main.py --apply --max 3
+python main.py --max 3
 ```
+
+**IMPORTANT CHANGES v2.1:**
+- **Automatic form submission is NOW ENABLED by default** (previously disabled)
+- **No command-line arguments needed** - running `python main.py` automatically searches and applies
+- **Enhanced error logging** with detailed error messages, types, and recommendations
+- **Automatic screenshot capture** on errors for debugging (saved as `error_screenshot_*.png`)
+- **Success message detection** to confirm application submission
 
 **Legacy standalone scripts:**
 ```bash
@@ -207,13 +217,17 @@ python application_bot.py
 - SQLite integrity errors (duplicate links caught)
 - JSON parsing errors (configuration files)
 
-**Application Errors:**
-- Playwright timeout errors (60s timeout)
+**Application Errors (Enhanced in v2.1):**
+- Playwright timeout errors (60s timeout) - with detailed timeout messages
 - Missing form fields (warnings logged, continues)
-- iFrame loading failures
+- iFrame loading failures - specific error message and screenshot
 - File upload errors
 - Retry logic (max 2 retries per apartment)
-- All errors stored in database with status 'failed'
+- All errors stored in database with status 'failed' and detailed error message
+- **Cloudflare/CAPTCHA detection** - automatic detection with recommendations
+- **Network error detection** - specific network failure messages
+- **Selector error detection** - suggests website structure changes
+- **Automatic screenshot capture** - error_screenshot_*.png, timeout_error_*.png, general_error_*.png
 
 ### Logging
 
@@ -295,12 +309,13 @@ python application_bot.py
 - **Type hints:** All functions use Python type hints
 - **Database constraints:** UNIQUE on `link` prevents duplicates
 - **Timeouts:** 30s for HTTP requests, 60s for Playwright operations
-- **Safety:** Automatic form submission is **disabled by default**
-- **Manual verification:** Browser window stays open 30s for review
+- **Safety (v2.1 UPDATE):** Automatic form submission is **ENABLED by default** (changed from v2.0)
+- **Automatic submission:** Form is submitted automatically after filling, with success detection
 - **Headless mode:** Use `--show-browser` flag for debugging
-- **Rate limiting:** Built-in delays to avoid detection/blocking
+- **Rate limiting:** Built-in delays to avoid detection/blocking (30-60s between applications)
 - **Modularity:** Scripts can run standalone or through main.py
 - **Error resilience:** Continues processing even if individual apartments fail
+- **Screenshot debugging:** Automatic screenshots saved on errors for manual review
 
 ## Security & Privacy
 

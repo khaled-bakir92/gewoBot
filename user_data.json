@@ -1,22 +1,22 @@
 {
   "personal_info": {
-    "anrede": "Herr",
-    "vorname": "Max",
-    "nachname": "Mustermann",
-    "email": "max.mustermann@example.com",
-    "telefon": "+49 123 456789",
-    "mobil": "+49 123 456789",
-    "strasse": "Musterstraße",
-    "hausnummer": "123",
-    "plz": "10115",
+    "anrede": "Frau",
+    "vorname": "Dina",
+    "nachname": "Amasha",
+    "email": "khaled132112@gmail.com",
+    "telefon": "016099110555",
+    "mobil": "016099110555",
+    "strasse": "Mariendorfer Damm",
+    "hausnummer": "57",
+    "plz": "12109",
     "stadt": "Berlin",
     "adresszusatz": "",
     "fuer_wen_anfrage": "Für mich selbst",
-    "geburtsdatum": "01.01.1990",
+    "geburtsdatum": "03.12.1997",
     "staatsangehoerigkeit": "Deutsch"
   },
   "household": {
-    "anzahl_personen": 1,
+    "anzahl_personen": 2,
     "anzahl_kinder": 0,
     "wbs_vorhanden": false,
     "wbs_gueltig_bis": "31.12.2025",
@@ -24,7 +24,7 @@
     "wbs_zimmer": "2",
     "paragraph_9_bescheinigung": false,
     "einkommen_in_spanne": true,
-    "haushaltseinkommen": "3000"
+    "haushaltseinkommen": "4000"
   },
   "documents": {
     "personalausweis": "/path/to/personalausweis.pdf",

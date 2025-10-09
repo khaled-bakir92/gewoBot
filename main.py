@@ -176,23 +176,24 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Beispiele:
+  python main.py                             # Vollautomatisch (Standard): Suchen + Bewerben
   python main.py --scrape                    # Nur Wohnungen suchen
   python main.py --apply                     # Nur auf gefundene Wohnungen bewerben
   python main.py --full                      # Suchen + Bewerben (vollautomatisch)
-  python main.py --full --show-browser       # Mit sichtbarem Browser (Debugging)
-  python main.py --apply --max 3             # Maximal 3 Bewerbungen versenden
+  python main.py --show-browser              # Mit sichtbarem Browser (Debugging)
+  python main.py --max 3                     # Maximal 3 Bewerbungen versenden
   python main.py --setup                     # Initiale Konfiguration erstellen
         """
     )
 
     # Modi
-    group = parser.add_mutually_exclusive_group(required=True)
+    group = parser.add_mutually_exclusive_group(required=False)
     group.add_argument('--scrape', action='store_true',
                        help='Nur Wohnungen suchen (ohne Bewerbung)')
     group.add_argument('--apply', action='store_true',
                        help='Nur auf bereits gefundene Wohnungen bewerben')
     group.add_argument('--full', action='store_true',
-                       help='Vollautomatisch: Suchen + Bewerben')
+                       help='Vollautomatisch: Suchen + Bewerben (Standard)')
     group.add_argument('--setup', action='store_true',
                        help='Initiale Konfiguration durchführen')
 
@@ -220,6 +221,12 @@ Beispiele:
             run_apply_only(headless=headless, max_applications=args.max)
 
         elif args.full:
+            headless = not args.show_browser
+            run_full_automation(headless=headless, max_applications=args.max)
+
+        else:
+            # STANDARD-MODUS: Vollautomatische Ausführung wenn keine Argumente übergeben wurden
+            logger.info("ℹ️  Kein Modus angegeben - starte vollautomatischen Modus (Standard)")
             headless = not args.show_browser
             run_full_automation(headless=headless, max_applications=args.max)
 

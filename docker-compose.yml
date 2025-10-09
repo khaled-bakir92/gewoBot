@@ -1,0 +1,88 @@
+services:
+  gewobag-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gewobag-bot
+    restart: unless-stopped
+
+    # Umgebungsvariablen (optional)
+    environment:
+      - TZ=Europe/Berlin
+      - PYTHONUNBUFFERED=1
+
+    # Volumes für persistente Daten
+    volumes:
+      # Konfigurationsdateien (read-only)
+      - ./user_data.json:/app/user_data.json:ro
+      - ./filter_config.json:/app/filter_config.json:ro
+
+      # Datenbank und Logs (read-write)
+      - ./gewobag_wohnungen.db:/app/gewobag_wohnungen.db
+      - ./logs:/app/logs
+
+      # Optionale Dokumente (read-only)
+      - ./documents:/app/documents:ro
+
+    # Netzwerk (optional, falls Proxy benötigt wird)
+    # network_mode: host
+
+    # Ressourcen-Limits (optional, für Production empfohlen)
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+    # Logging-Konfiguration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+    # Standard-Kommando (kann überschrieben werden)
+    # Optionen: --scrape, --apply, --full, --setup
+    command: ["python", "main.py", "--full"]
+
+    # Healthcheck
+    healthcheck:
+      test: ["CMD", "test", "-f", "/app/gewobag_wohnungen.db"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # ===== Optional: Cronjob-Service für regelmäßige Ausführung =====
+  # Uncomment für automatische, geplante Ausführung
+  # gewobag-bot-cron:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   container_name: gewobag-bot-cron
+  #   restart: unless-stopped
+  #
+  #   environment:
+  #     - TZ=Europe/Berlin
+  #     - CRON_SCHEDULE=0 */6 * * *  # Alle 6 Stunden
+  #
+  #   volumes:
+  #     - ./user_data.json:/app/user_data.json:ro
+  #     - ./filter_config.json:/app/filter_config.json:ro
+  #     - ./gewobag_wohnungen.db:/app/gewobag_wohnungen.db
+  #     - ./logs:/app/logs
+  #
+  #   command: >
+  #     sh -c "
+  #       echo '$CRON_SCHEDULE python /app/main.py --full' > /etc/crontabs/botuser &&
+  #       crond -f -l 2
+  #     "
+
+# ===== Optionale Services =====
+
+# Webinterface zur Datenbankansicht (optional)
+# volumes:
+#   db-data:

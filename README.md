@@ -414,6 +414,82 @@ playwright install chromium
 
 ---
 
+## 🐳 Docker Deployment
+
+Der Bot kann vollständig mit Docker deployed werden - ideal für Server oder Cloud-Umgebungen!
+
+### Schnellstart mit Docker
+
+```bash
+# 1. Konfigurationsdateien vorbereiten
+python main.py --setup
+# Bearbeiten Sie user_data.json und filter_config.json
+
+# 2. Docker Image bauen
+docker-compose build
+
+# 3. Bot starten (Vollautomatik)
+docker-compose run --rm gewobag-bot
+
+# 4. Im Hintergrund laufen lassen
+docker-compose up -d
+```
+
+### Verschiedene Modi mit Docker
+
+```bash
+# Nur Suchen
+docker-compose run --rm gewobag-bot python main.py --scrape
+
+# Nur Bewerben
+docker-compose run --rm gewobag-bot python main.py --apply
+
+# Vollautomatik
+docker-compose run --rm gewobag-bot python main.py --full
+
+# Mit Limit
+docker-compose run --rm gewobag-bot python main.py --max 3
+```
+
+### Automatische Ausführung (Cron)
+
+**Option 1: Host Crontab**
+```bash
+# Alle 6 Stunden ausführen
+0 */6 * * * cd /Users/khaled/Desktop/bot\ new && docker-compose run --rm gewobag-bot >> /var/log/gewobag-cron.log 2>&1
+```
+
+**Option 2: Docker-basierte Lösung**
+```bash
+# In docker-compose.yml anpassen (siehe DEPLOYMENT.md)
+```
+
+### Logs & Monitoring
+
+```bash
+# Container-Logs anzeigen
+docker-compose logs -f gewobag-bot
+
+# Log-Dateien aus Volume
+tail -f logs/gewobag-main.log
+tail -f logs/application-bot.log
+
+# Datenbank inspizieren
+docker-compose exec gewobag-bot sqlite3 /app/gewobag_wohnungen.db "SELECT COUNT(*) FROM wohnungen;"
+```
+
+### Vorteile von Docker
+
+✅ **Isolierte Umgebung** - Keine Konflikte mit System-Paketen
+✅ **Einfaches Deployment** - Funktioniert auf jedem System mit Docker
+✅ **Reproduzierbar** - Immer dieselbe Umgebung
+✅ **Skalierbar** - Einfach auf Server deployen
+✅ **Sicher** - Läuft als Non-Root User
+
+**Detaillierte Docker-Dokumentation:** Siehe `DEPLOYMENT.md`
+
+---
+
 ## 📁 Projektstruktur
 
 ```
@@ -429,8 +505,13 @@ bot new/
 ├── application-bot.log          # Bewerbungs-Logs
 ├── gewobag-main.log             # Main-Logs
 ├── requirements.txt             # Python-Dependencies
+├── Dockerfile                   # Docker-Image-Konfiguration
+├── docker-compose.yml           # Docker-Compose-Konfiguration
+├── .dockerignore                # Docker-Ignore-Liste
+├── .env.example                 # Beispiel für Umgebungsvariablen
 ├── README.md                    # Diese Datei
-└── CLAUDE.md                    # Entwickler-Dokumentation
+├── CLAUDE.md                    # Entwickler-Dokumentation
+└── DEPLOYMENT.md                # Docker-Deployment-Guide
 ```
 
 ---

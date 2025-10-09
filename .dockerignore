@@ -1,0 +1,101 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+gewobag-bot.log
+application-bot.log
+gewobag-main.log
+
+# Database (wird über Volume gemounted)
+*.db
+*.db-journal
+gewobag_wohnungen.db
+
+# Screenshots
+*.png
+error_screenshot_*.png
+timeout_error_*.png
+general_error_*.png
+
+# Sensitive Data (WICHTIG!)
+user_data.json
+documents/
+*.pdf
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation (nicht für Runtime benötigt)
+README.md
+CLAUDE.md
+view.html
+anfrage.html
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Configuration (wird über Volume gemounted)
+filter_config.json
+bezirke_verfuegbar.json
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node (falls vorhanden)
+node_modules/
+package-lock.json
+
+# Misc
+*.bak
+*.tmp
+.env
+.env.local

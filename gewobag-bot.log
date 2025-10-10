@@ -1923,3 +1923,187 @@ Call log:
 ================================================================================
 2025-10-09 18:42:12,451 - __main__ - INFO - ✅ VOLLAUTOMATISCHE AUSFÜHRUNG ABGESCHLOSSEN
 2025-10-09 18:42:12,451 - __main__ - INFO - ================================================================================
+2025-10-10 19:01:21,755 - __main__ - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-10 19:01:21,755 - __main__ - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-10 19:01:21,755 - __main__ - INFO - ======================================================================
+2025-10-10 19:01:21,755 - __main__ - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-10 19:01:21,755 - __main__ - INFO - ======================================================================
+2025-10-10 19:01:21,756 - __main__ - INFO - Aktive Filter: Bezirke: charlottenburg-wilmersdorf, steglitz-zehlendorf, tempelhof-schoeneberg, neukoelln | Miete:  - 1200 € | Fläche: 60 -  m² | Zimmer: 3 -  | WBS: nur ohne WBS
+2025-10-10 19:01:21,756 - __main__ - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-10 19:01:21,756 - __main__ - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-10 19:01:21,757 - __main__ - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1200&gesamtflaeche_von=60&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=charlottenburg-wilmersdorf&bezirke%5B%5D=steglitz-zehlendorf&bezirke%5B%5D=tempelhof-schoeneberg&bezirke%5B%5D=neukoelln
+2025-10-10 19:01:22,536 - __main__ - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-10 19:01:22,538 - __main__ - INFO - Starte Parsing des HTML-Codes
+2025-10-10 19:01:22,573 - __main__ - INFO - 1 Angebote gefunden
+2025-10-10 19:01:22,574 - __main__ - INFO - 1 Angebote erfolgreich extrahiert
+2025-10-10 19:01:22,574 - __main__ - INFO - 📊 Seite 1: 1 Wohnungen gefunden
+2025-10-10 19:01:22,604 - __main__ - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-10 19:01:22,604 - __main__ - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 1 Wohnungen gefunden
+2025-10-10 19:01:22,604 - __main__ - INFO - Neue Wohnung gespeichert: Wohnen im grünen Buckow in Buckow
+2025-10-10 19:01:22,605 - __main__ - INFO - Speicherung abgeschlossen: 1 neu, 0 bereits vorhanden
+2025-10-10 19:01:22,605 - __main__ - INFO - ======================================================================
+2025-10-10 19:01:22,605 - __main__ - INFO - Zusammenfassung: 1 Angebote gefunden (mit aktiven Filtern), 1 neu gespeichert, 0 bereits bekannt
+2025-10-10 19:01:22,605 - __main__ - INFO - ======================================================================
+2025-10-10 19:06:03,903 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-10 19:06:03,903 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-10 19:06:03,904 - gewobag_bot - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-10 19:06:03,904 - gewobag_bot - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-10 19:06:03,904 - __main__ - INFO - 
+================================================================================
+2025-10-10 19:06:03,904 - __main__ - INFO - 🔍 MODUS: NUR WOHNUNGSSUCHE
+2025-10-10 19:06:03,904 - __main__ - INFO - ================================================================================
+2025-10-10 19:06:03,904 - gewobag_bot - INFO - ======================================================================
+2025-10-10 19:06:03,904 - gewobag_bot - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-10 19:06:03,904 - gewobag_bot - INFO - ======================================================================
+2025-10-10 19:06:03,905 - gewobag_bot - INFO - Aktive Filter: Bezirke: charlottenburg-wilmersdorf, steglitz-zehlendorf, tempelhof-schoeneberg, neukoelln | Miete:  - 1200 € | Fläche: 60 -  m² | Zimmer: 3 -  | WBS: nur ohne WBS
+2025-10-10 19:06:03,905 - gewobag_bot - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-10 19:06:03,905 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-10 19:06:03,905 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1200&gesamtflaeche_von=60&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=charlottenburg-wilmersdorf&bezirke%5B%5D=steglitz-zehlendorf&bezirke%5B%5D=tempelhof-schoeneberg&bezirke%5B%5D=neukoelln
+2025-10-10 19:06:04,608 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-10 19:06:04,609 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-10 19:06:04,638 - gewobag_bot - WARNING - Keine Angebote gefunden!
+2025-10-10 19:06:04,638 - gewobag_bot - INFO - 📊 Seite 1: 0 Wohnungen gefunden
+2025-10-10 19:06:04,667 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-10 19:06:04,667 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 0 Wohnungen gefunden
+2025-10-10 19:06:04,667 - gewobag_bot - WARNING - Keine Wohnungen gefunden
+2025-10-10 19:06:04,667 - __main__ - INFO - 
+ℹ️  Keine Wohnungen gefunden
+2025-10-10 19:09:28,980 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-10 19:09:28,980 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-10 19:09:28,981 - gewobag_bot - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-10 19:09:28,981 - gewobag_bot - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-10 19:09:28,981 - __main__ - INFO - 
+================================================================================
+2025-10-10 19:09:28,981 - __main__ - INFO - 🔍 MODUS: NUR WOHNUNGSSUCHE
+2025-10-10 19:09:28,981 - __main__ - INFO - ================================================================================
+2025-10-10 19:09:28,981 - gewobag_bot - INFO - ======================================================================
+2025-10-10 19:09:28,981 - gewobag_bot - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-10 19:09:28,981 - gewobag_bot - INFO - ======================================================================
+2025-10-10 19:09:28,981 - gewobag_bot - INFO - Aktive Filter: Bezirke: charlottenburg-wilmersdorf, steglitz-zehlendorf, tempelhof-schoeneberg, neukoelln | Miete:  - 1200 € | Fläche: 60 -  m² | Zimmer: 3 -  | WBS: nur ohne WBS
+2025-10-10 19:09:28,981 - gewobag_bot - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-10 19:09:28,981 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-10 19:09:28,981 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1200&gesamtflaeche_von=60&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=charlottenburg-wilmersdorf&bezirke%5B%5D=steglitz-zehlendorf&bezirke%5B%5D=tempelhof-schoeneberg&bezirke%5B%5D=neukoelln
+2025-10-10 19:09:29,714 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-10 19:09:29,715 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-10 19:09:29,746 - gewobag_bot - WARNING - Keine Angebote gefunden!
+2025-10-10 19:09:29,746 - gewobag_bot - INFO - 📊 Seite 1: 0 Wohnungen gefunden
+2025-10-10 19:09:29,778 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-10 19:09:29,778 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 0 Wohnungen gefunden
+2025-10-10 19:09:29,778 - gewobag_bot - WARNING - Keine Wohnungen gefunden
+2025-10-10 19:09:29,778 - __main__ - INFO - 
+ℹ️  Keine Wohnungen gefunden
+2025-10-10 19:12:07,387 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-10 19:12:07,387 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-10 19:12:07,388 - gewobag_bot - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-10 19:12:07,388 - gewobag_bot - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-10 19:12:07,388 - __main__ - INFO - 
+================================================================================
+2025-10-10 19:12:07,388 - __main__ - INFO - 🔍 MODUS: NUR WOHNUNGSSUCHE
+2025-10-10 19:12:07,388 - __main__ - INFO - ================================================================================
+2025-10-10 19:12:07,388 - gewobag_bot - INFO - ======================================================================
+2025-10-10 19:12:07,388 - gewobag_bot - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-10 19:12:07,388 - gewobag_bot - INFO - ======================================================================
+2025-10-10 19:12:07,388 - gewobag_bot - INFO - Aktive Filter: Bezirke: charlottenburg-wilmersdorf, steglitz-zehlendorf, tempelhof-schoeneberg, neukoelln | Miete:  - 1200 € | Fläche: 60 -  m² | Zimmer: 3 -  | WBS: nur ohne WBS
+2025-10-10 19:12:07,388 - gewobag_bot - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-10 19:12:07,388 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-10 19:12:07,388 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1200&gesamtflaeche_von=60&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=charlottenburg-wilmersdorf&bezirke%5B%5D=steglitz-zehlendorf&bezirke%5B%5D=tempelhof-schoeneberg&bezirke%5B%5D=neukoelln
+2025-10-10 19:12:08,149 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-10 19:12:08,151 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-10 19:12:08,179 - gewobag_bot - WARNING - Keine Angebote gefunden!
+2025-10-10 19:12:08,179 - gewobag_bot - INFO - 📊 Seite 1: 0 Wohnungen gefunden
+2025-10-10 19:12:08,211 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-10 19:12:08,211 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 0 Wohnungen gefunden
+2025-10-10 19:12:08,211 - gewobag_bot - WARNING - Keine Wohnungen gefunden
+2025-10-10 19:12:08,211 - __main__ - INFO - 
+ℹ️  Keine Wohnungen gefunden
+2025-10-10 19:12:33,888 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-10 19:12:33,889 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-10 19:12:33,889 - gewobag_bot - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-10 19:12:33,889 - gewobag_bot - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-10 19:12:33,889 - __main__ - INFO - 
+================================================================================
+2025-10-10 19:12:33,889 - __main__ - INFO - 🔍 MODUS: NUR WOHNUNGSSUCHE
+2025-10-10 19:12:33,889 - __main__ - INFO - ================================================================================
+2025-10-10 19:12:33,889 - gewobag_bot - INFO - ======================================================================
+2025-10-10 19:12:33,889 - gewobag_bot - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-10 19:12:33,889 - gewobag_bot - INFO - ======================================================================
+2025-10-10 19:12:33,890 - gewobag_bot - INFO - Aktive Filter: Bezirke: charlottenburg-wilmersdorf, friedrichshain-kreuzberg, lichtenberg, marzahn-hellersdorf, mitte, neukoelln, pankow, reinickendorf, spandau, steglitz-zehlendorf, tempelhof-schoeneberg, treptow-koepenick, Brandenburg, Charlottenburg-Wilmersdorf, Friedrichshain-Kreuzberg, Lichtenberg, Marzahn-Hellersdorf, Mitte, Neukölln , Pankow, Reinickendorf, Spandau , Steglitz-Zehlendorf, Tempelhof-Schöneberg, Treptow-Köpenick | Miete:  - 1200 € | Fläche: 60 -  m² | Zimmer: 3 -  | WBS: nur ohne WBS
+2025-10-10 19:12:33,890 - gewobag_bot - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-10 19:12:33,890 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-10 19:12:33,890 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1200&gesamtflaeche_von=60&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=charlottenburg-wilmersdorf&bezirke%5B%5D=friedrichshain-kreuzberg&bezirke%5B%5D=lichtenberg&bezirke%5B%5D=marzahn-hellersdorf&bezirke%5B%5D=mitte&bezirke%5B%5D=neukoelln&bezirke%5B%5D=pankow&bezirke%5B%5D=reinickendorf&bezirke%5B%5D=spandau&bezirke%5B%5D=steglitz-zehlendorf&bezirke%5B%5D=tempelhof-schoeneberg&bezirke%5B%5D=treptow-koepenick&bezirke%5B%5D=Brandenburg&bezirke%5B%5D=Charlottenburg-Wilmersdorf&bezirke%5B%5D=Friedrichshain-Kreuzberg&bezirke%5B%5D=Lichtenberg&bezirke%5B%5D=Marzahn-Hellersdorf&bezirke%5B%5D=Mitte&bezirke%5B%5D=Neukölln &bezirke%5B%5D=Pankow&bezirke%5B%5D=Reinickendorf&bezirke%5B%5D=Spandau &bezirke%5B%5D=Steglitz-Zehlendorf&bezirke%5B%5D=Tempelhof-Schöneberg&bezirke%5B%5D=Treptow-Köpenick
+2025-10-10 19:12:34,643 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-10 19:12:34,646 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-10 19:12:34,677 - gewobag_bot - INFO - 1 Angebote gefunden
+2025-10-10 19:12:34,678 - gewobag_bot - INFO - 1 Angebote erfolgreich extrahiert
+2025-10-10 19:12:34,678 - gewobag_bot - INFO - 📊 Seite 1: 1 Wohnungen gefunden
+2025-10-10 19:12:34,709 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-10 19:12:34,709 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 1 Wohnungen gefunden
+2025-10-10 19:12:34,711 - gewobag_bot - INFO - Neue Wohnung gespeichert: Altstadtnah! in Spandau
+2025-10-10 19:12:34,712 - gewobag_bot - INFO - Speicherung abgeschlossen: 1 neu, 0 bereits vorhanden
+2025-10-10 19:12:34,712 - gewobag_bot - INFO - ======================================================================
+2025-10-10 19:12:34,712 - gewobag_bot - INFO - Zusammenfassung: 1 Angebote gefunden (mit aktiven Filtern), 1 neu gespeichert, 0 bereits bekannt
+2025-10-10 19:12:34,712 - gewobag_bot - INFO - ======================================================================
+2025-10-10 19:12:34,712 - __main__ - INFO - 
+✅ 1 Wohnungen gefunden
+2025-10-10 19:12:34,712 - __main__ - INFO - 💡 Führen Sie 'python main.py --apply' aus, um sich zu bewerben
+2025-10-10 19:14:00,100 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-10 19:14:00,100 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-10 19:14:00,101 - gewobag_bot - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-10 19:14:00,101 - gewobag_bot - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-10 19:14:00,101 - __main__ - INFO - 
+================================================================================
+2025-10-10 19:14:00,101 - __main__ - INFO - 🔍 MODUS: NUR WOHNUNGSSUCHE
+2025-10-10 19:14:00,101 - __main__ - INFO - ================================================================================
+2025-10-10 19:14:00,101 - gewobag_bot - INFO - ======================================================================
+2025-10-10 19:14:00,101 - gewobag_bot - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-10 19:14:00,101 - gewobag_bot - INFO - ======================================================================
+2025-10-10 19:14:00,101 - gewobag_bot - INFO - Aktive Filter: Bezirke: charlottenburg-wilmersdorf, friedrichshain-kreuzberg, lichtenberg, marzahn-hellersdorf, mitte, neukoelln, pankow, reinickendorf, spandau, steglitz-zehlendorf, tempelhof-schoeneberg, treptow-koepenick, Brandenburg, Charlottenburg-Wilmersdorf, Friedrichshain-Kreuzberg, Lichtenberg, Marzahn-Hellersdorf, Mitte, Neukölln , Pankow, Reinickendorf, Spandau , Steglitz-Zehlendorf, Tempelhof-Schöneberg, Treptow-Köpenick | Miete:  - 2000 € | Fläche: 60 -  m² | Zimmer: 3 -  | WBS: nur ohne WBS
+2025-10-10 19:14:00,101 - gewobag_bot - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-10 19:14:00,101 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-10 19:14:00,101 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=2000&gesamtflaeche_von=60&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=charlottenburg-wilmersdorf&bezirke%5B%5D=friedrichshain-kreuzberg&bezirke%5B%5D=lichtenberg&bezirke%5B%5D=marzahn-hellersdorf&bezirke%5B%5D=mitte&bezirke%5B%5D=neukoelln&bezirke%5B%5D=pankow&bezirke%5B%5D=reinickendorf&bezirke%5B%5D=spandau&bezirke%5B%5D=steglitz-zehlendorf&bezirke%5B%5D=tempelhof-schoeneberg&bezirke%5B%5D=treptow-koepenick&bezirke%5B%5D=Brandenburg&bezirke%5B%5D=Charlottenburg-Wilmersdorf&bezirke%5B%5D=Friedrichshain-Kreuzberg&bezirke%5B%5D=Lichtenberg&bezirke%5B%5D=Marzahn-Hellersdorf&bezirke%5B%5D=Mitte&bezirke%5B%5D=Neukölln &bezirke%5B%5D=Pankow&bezirke%5B%5D=Reinickendorf&bezirke%5B%5D=Spandau &bezirke%5B%5D=Steglitz-Zehlendorf&bezirke%5B%5D=Tempelhof-Schöneberg&bezirke%5B%5D=Treptow-Köpenick
+2025-10-10 19:14:00,946 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-10 19:14:00,949 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-10 19:14:00,992 - gewobag_bot - INFO - 10 Angebote gefunden
+2025-10-10 19:14:00,993 - gewobag_bot - INFO - 10 Angebote erfolgreich extrahiert
+2025-10-10 19:14:00,994 - gewobag_bot - INFO - 📊 Seite 1: 10 Wohnungen gefunden
+2025-10-10 19:14:01,032 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-10 19:14:01,032 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 10 Wohnungen gefunden
+2025-10-10 19:14:01,032 - gewobag_bot - INFO - Clientseitige Filterung: 10 -> 8 Wohnungen
+2025-10-10 19:14:01,033 - gewobag_bot - INFO - Neue Wohnung gespeichert: Nachmieter zum 01.01.26 gesucht! in Friedrichsfelde
+2025-10-10 19:14:01,033 - gewobag_bot - INFO - Neue Wohnung gespeichert: Geräumige Wohnung zu vermieten in Lübars
+2025-10-10 19:14:01,033 - gewobag_bot - INFO - Neue Wohnung gespeichert: Einkommensgrenzen beachten… in Prenzlauer Berg
+2025-10-10 19:14:01,033 - gewobag_bot - INFO - Neue Wohnung gespeichert: Neubauwohnung mit Wasserblick – Nachmieter gesucht in Haselhorst
+2025-10-10 19:14:01,033 - gewobag_bot - INFO - Neue Wohnung gespeichert: 4 Zimmerwohnung im Neubau sucht neue Bewohner in Friedrichsfelde
+2025-10-10 19:14:01,033 - gewobag_bot - INFO - Neue Wohnung gespeichert: 4 Zimmerwohnung im Neubau sucht neuen Mieter ab sofort! in Friedrichsfelde
+2025-10-10 19:14:01,033 - gewobag_bot - INFO - Neue Wohnung gespeichert: Neubauwohnung mit Fußbodenheizung und Terrasse in Falkenberg
+2025-10-10 19:14:01,034 - gewobag_bot - INFO - Speicherung abgeschlossen: 7 neu, 1 bereits vorhanden
+2025-10-10 19:14:01,034 - gewobag_bot - INFO - ======================================================================
+2025-10-10 19:14:01,034 - gewobag_bot - INFO - Zusammenfassung: 8 Angebote gefunden (mit aktiven Filtern), 7 neu gespeichert, 1 bereits bekannt
+2025-10-10 19:14:01,034 - gewobag_bot - INFO - ======================================================================
+2025-10-10 19:14:01,034 - __main__ - INFO - 
+✅ 8 Wohnungen gefunden
+2025-10-10 19:14:01,034 - __main__ - INFO - 💡 Führen Sie 'python main.py --apply' aus, um sich zu bewerben
+2025-10-10 19:15:03,920 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-10 19:15:03,920 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-10 19:15:03,921 - gewobag_bot - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-10 19:15:03,921 - gewobag_bot - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-10 19:15:03,921 - __main__ - INFO - 
+================================================================================
+2025-10-10 19:15:03,921 - __main__ - INFO - 🔍 MODUS: NUR WOHNUNGSSUCHE
+2025-10-10 19:15:03,921 - __main__ - INFO - ================================================================================
+2025-10-10 19:15:03,921 - gewobag_bot - INFO - ======================================================================
+2025-10-10 19:15:03,921 - gewobag_bot - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-10 19:15:03,921 - gewobag_bot - INFO - ======================================================================
+2025-10-10 19:15:03,921 - gewobag_bot - INFO - Aktive Filter: Bezirke: charlottenburg-wilmersdorf, neukoelln, steglitz-zehlendorf, tempelhof-schoeneberg, Charlottenburg-Wilmersdorf, Neukölln , Steglitz-Zehlendorf, Tempelhof-Schöneberg | Miete:  - 1200 € | Fläche: 60 -  m² | Zimmer: 3 -  | WBS: nur ohne WBS
+2025-10-10 19:15:03,921 - gewobag_bot - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-10 19:15:03,921 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-10 19:15:03,921 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1200&gesamtflaeche_von=60&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=charlottenburg-wilmersdorf&bezirke%5B%5D=neukoelln&bezirke%5B%5D=steglitz-zehlendorf&bezirke%5B%5D=tempelhof-schoeneberg&bezirke%5B%5D=Charlottenburg-Wilmersdorf&bezirke%5B%5D=Neukölln &bezirke%5B%5D=Steglitz-Zehlendorf&bezirke%5B%5D=Tempelhof-Schöneberg
+2025-10-10 19:15:04,762 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-10 19:15:04,765 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-10 19:15:04,795 - gewobag_bot - WARNING - Keine Angebote gefunden!
+2025-10-10 19:15:04,795 - gewobag_bot - INFO - 📊 Seite 1: 0 Wohnungen gefunden
+2025-10-10 19:15:04,824 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-10 19:15:04,824 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 0 Wohnungen gefunden
+2025-10-10 19:15:04,824 - gewobag_bot - WARNING - Keine Wohnungen gefunden
+2025-10-10 19:15:04,824 - __main__ - INFO - 
+ℹ️  Keine Wohnungen gefunden

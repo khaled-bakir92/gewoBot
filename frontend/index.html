@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gewobag Bot - Control Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🏠 Gewobag Bot Control Panel</h1>
+            <div class="status-indicator" id="statusIndicator">
+                <span class="status-dot"></span>
+                <span class="status-text">Bot gestoppt</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar">
+                <nav class="nav">
+                    <button class="nav-item active" data-tab="dashboard">
+                        📊 Dashboard
+                    </button>
+                    <button class="nav-item" data-tab="user-data">
+                        👤 Benutzerdaten
+                    </button>
+                    <button class="nav-item" data-tab="filters">
+                        🔍 Filter
+                    </button>
+                    <button class="nav-item" data-tab="control">
+                        🎮 Bot-Steuerung
+                    </button>
+                    <button class="nav-item" data-tab="applications">
+                        📝 Bewerbungen
+                    </button>
+                </nav>
+            </aside>
+
+            <!-- Content Area -->
+            <main class="content">
+                <!-- Dashboard Tab -->
+                <section class="tab-content active" id="dashboard">
+                    <h2>Dashboard</h2>
+
+                    <!-- Statistics Cards -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">🏠</div>
+                            <div class="stat-info">
+                                <h3>Wohnungen gefunden</h3>
+                                <p class="stat-value" id="statTotal">0</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">📤</div>
+                            <div class="stat-info">
+                                <h3>Bewerbungen gesendet</h3>
+                                <p class="stat-value" id="statApplied">0</p>
+                            </div>
+                        </div>
+                        <div class="stat-card success">
+                            <div class="stat-icon">✅</div>
+                            <div class="stat-info">
+                                <h3>Erfolgreich</h3>
+                                <p class="stat-value" id="statSuccess">0</p>
+                            </div>
+                        </div>
+                        <div class="stat-card error">
+                            <div class="stat-icon">❌</div>
+                            <div class="stat-info">
+                                <h3>Fehlgeschlagen</h3>
+                                <p class="stat-value" id="statFailed">0</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Applications -->
+                    <div class="section">
+                        <h3>Letzte Bewerbungen</h3>
+                        <div class="recent-applications" id="recentApplications">
+                            <p class="placeholder">Keine Bewerbungen vorhanden</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- User Data Tab -->
+                <section class="tab-content" id="user-data">
+                    <h2>Benutzerdaten</h2>
+                    <form class="form" id="userDataForm">
+                        <!-- Personal Info -->
+                        <div class="form-section">
+                            <h3>Persönliche Informationen</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="anrede">Anrede *</label>
+                                    <select id="anrede" name="personal_info.anrede" required>
+                                        <option value="">Bitte wählen</option>
+                                        <option value="Herr">Herr</option>
+                                        <option value="Frau">Frau</option>
+                                        <option value="Divers">Divers</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="vorname">Vorname *</label>
+                                    <input type="text" id="vorname" name="personal_info.vorname" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nachname">Nachname *</label>
+                                    <input type="text" id="nachname" name="personal_info.nachname" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-Mail *</label>
+                                    <input type="email" id="email" name="personal_info.email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefon">Telefon *</label>
+                                    <input type="tel" id="telefon" name="personal_info.telefon" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mobil">Mobil</label>
+                                    <input type="tel" id="mobil" name="personal_info.mobil">
+                                </div>
+                                <div class="form-group">
+                                    <label for="geburtsdatum">Geburtsdatum *</label>
+                                    <input type="text" id="geburtsdatum" name="personal_info.geburtsdatum" placeholder="TT.MM.JJJJ" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="staatsangehoerigkeit">Staatsangehörigkeit *</label>
+                                    <input type="text" id="staatsangehoerigkeit" name="personal_info.staatsangehoerigkeit" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="form-section">
+                            <h3>Adresse</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="strasse">Straße</label>
+                                    <input type="text" id="strasse" name="personal_info.strasse">
+                                </div>
+                                <div class="form-group">
+                                    <label for="hausnummer">Hausnummer</label>
+                                    <input type="text" id="hausnummer" name="personal_info.hausnummer">
+                                </div>
+                                <div class="form-group">
+                                    <label for="plz">PLZ</label>
+                                    <input type="text" id="plz" name="personal_info.plz">
+                                </div>
+                                <div class="form-group">
+                                    <label for="stadt">Stadt</label>
+                                    <input type="text" id="stadt" name="personal_info.stadt">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="adresszusatz">Adresszusatz</label>
+                                    <input type="text" id="adresszusatz" name="personal_info.adresszusatz">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Household -->
+                        <div class="form-section">
+                            <h3>Haushalt</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="fuerWenAnfrage">Für wen ist die Anfrage? *</label>
+                                    <select id="fuerWenAnfrage" name="personal_info.fuer_wen_anfrage" required>
+                                        <option value="Für mich selbst">Für mich selbst</option>
+                                        <option value="Für eine andere Person">Für eine andere Person</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="anzahlPersonen">Anzahl Personen *</label>
+                                    <input type="number" id="anzahlPersonen" name="household.anzahl_personen" min="1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="anzahlKinder">Anzahl Kinder</label>
+                                    <input type="number" id="anzahlKinder" name="household.anzahl_kinder" min="0" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label for="haushaltseinkommen">Haushaltseinkommen (€/Monat) *</label>
+                                    <input type="number" id="haushaltseinkommen" name="household.haushaltseinkommen" required>
+                                </div>
+                            </div>
+
+                            <!-- WBS -->
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" id="wbsVorhanden" name="household.wbs_vorhanden">
+                                    WBS vorhanden
+                                </label>
+                            </div>
+                            <div id="wbsDetails" class="form-grid" style="display: none;">
+                                <div class="form-group">
+                                    <label for="wbsGueltigBis">WBS gültig bis</label>
+                                    <input type="text" id="wbsGueltigBis" name="household.wbs_gueltig_bis" placeholder="TT.MM.JJJJ">
+                                </div>
+                                <div class="form-group">
+                                    <label for="wbsArt">WBS Art</label>
+                                    <input type="text" id="wbsArt" name="household.wbs_art" placeholder="z.B. WBS 140">
+                                </div>
+                                <div class="form-group">
+                                    <label for="wbsZimmer">WBS Zimmer</label>
+                                    <input type="text" id="wbsZimmer" name="household.wbs_zimmer">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Documents -->
+                        <div class="form-section">
+                            <h3>Dokumente</h3>
+                            <p class="hint">Geben Sie die absoluten Pfade zu Ihren Dokumenten ein (z.B. /Users/name/Documents/ausweis.pdf)</p>
+                            <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label for="personalausweis">Personalausweis (PDF)</label>
+                                    <input type="text" id="personalausweis" name="documents.personalausweis" placeholder="/path/to/personalausweis.pdf">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="gehaltsnachweis1">Gehaltsnachweis 1 (PDF)</label>
+                                    <input type="text" id="gehaltsnachweis1" name="documents.gehaltsnachweis_1" placeholder="/path/to/gehaltsnachweis1.pdf">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="gehaltsnachweis2">Gehaltsnachweis 2 (PDF)</label>
+                                    <input type="text" id="gehaltsnachweis2" name="documents.gehaltsnachweis_2" placeholder="/path/to/gehaltsnachweis2.pdf">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="gehaltsnachweis3">Gehaltsnachweis 3 (PDF)</label>
+                                    <input type="text" id="gehaltsnachweis3" name="documents.gehaltsnachweis_3" placeholder="/path/to/gehaltsnachweis3.pdf">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="schufa">SCHUFA (PDF)</label>
+                                    <input type="text" id="schufa" name="documents.schufa" placeholder="/path/to/schufa.pdf">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="mietschuldenfreiheit">Mietschuldenfreiheit (PDF)</label>
+                                    <input type="text" id="mietschuldenfreiheit" name="documents.mietschuldenfreiheit" placeholder="/path/to/mietschuldenfreiheit.pdf">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-section">
+                            <h3>Nachricht</h3>
+                            <div class="form-group full-width">
+                                <label for="nachricht">Bewerbungsnachricht</label>
+                                <textarea id="nachricht" name="nachricht" rows="6" placeholder="Sehr geehrte Damen und Herren,..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">💾 Daten speichern</button>
+                            <button type="button" class="btn btn-secondary" onclick="loadUserData()">🔄 Neu laden</button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Filters Tab -->
+                <section class="tab-content" id="filters">
+                    <h2>Filter-Einstellungen</h2>
+                    <form class="form" id="filterForm">
+                        <!-- Bezirke -->
+                        <div class="form-section">
+                            <h3>Bezirke</h3>
+                            <p class="hint">Wählen Sie die gewünschten Bezirke aus (mehrere möglich)</p>
+                            <div class="form-actions" style="margin-bottom: 1rem;">
+                                <button type="button" class="btn btn-secondary" onclick="selectAllBezirke()">✓ Alle auswählen</button>
+                                <button type="button" class="btn btn-secondary" onclick="deselectAllBezirke()">✗ Alle abwählen</button>
+                            </div>
+                            <div id="bezirkeCheckboxes" class="checkbox-grid">
+                                <p class="placeholder">Lade Bezirke...</p>
+                            </div>
+                        </div>
+
+                        <!-- Rent -->
+                        <div class="form-section">
+                            <h3>Gesamtmiete</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="mieteVon">Von (€)</label>
+                                    <input type="number" id="mieteVon" name="gesamtmiete_von" placeholder="z.B. 800">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mieteBis">Bis (€)</label>
+                                    <input type="number" id="mieteBis" name="gesamtmiete_bis" placeholder="z.B. 1500">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Area -->
+                        <div class="form-section">
+                            <h3>Wohnfläche</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="flaecheVon">Von (m²)</label>
+                                    <input type="number" id="flaecheVon" name="gesamtflaeche_von" placeholder="z.B. 60">
+                                </div>
+                                <div class="form-group">
+                                    <label for="flaecheBis">Bis (m²)</label>
+                                    <input type="number" id="flaecheBis" name="gesamtflaeche_bis" placeholder="z.B. 100">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rooms -->
+                        <div class="form-section">
+                            <h3>Zimmer</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="zimmerVon">Von</label>
+                                    <input type="number" id="zimmerVon" name="zimmer_von" placeholder="z.B. 2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="zimmerBis">Bis</label>
+                                    <input type="number" id="zimmerBis" name="zimmer_bis" placeholder="z.B. 4">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- WBS Filter -->
+                        <div class="form-section">
+                            <h3>WBS-Anforderung</h3>
+                            <div class="form-group">
+                                <label for="wbsFilter">WBS-Filter</label>
+                                <select id="wbsFilter" name="wbs">
+                                    <option value="">Egal</option>
+                                    <option value="mit">Nur mit WBS</option>
+                                    <option value="ohne">Nur ohne WBS</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">💾 Filter speichern</button>
+                            <button type="button" class="btn btn-secondary" onclick="loadFilterConfig()">🔄 Neu laden</button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Control Tab -->
+                <section class="tab-content" id="control">
+                    <h2>Bot-Steuerung</h2>
+
+                    <!-- Bot Status -->
+                    <div class="section">
+                        <h3>Status</h3>
+                        <div class="bot-status-card">
+                            <div class="bot-status-info">
+                                <p><strong>Status:</strong> <span id="botStatusText">Gestoppt</span></p>
+                                <p><strong>Modus:</strong> <span id="botMode">-</span></p>
+                                <p><strong>Gestartet:</strong> <span id="botStarted">-</span></p>
+                                <p><strong>Letzte Aktivität:</strong> <span id="botLastActivity">-</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bot Controls -->
+                    <div class="section">
+                        <h3>Steuerung</h3>
+                        <div class="bot-controls">
+                            <div class="form-group">
+                                <label for="botMode">Modus auswählen</label>
+                                <select id="botModeSelect" class="control-select">
+                                    <option value="full">Vollautomatisch (Suchen + Bewerben)</option>
+                                    <option value="scrape">Nur Suchen</option>
+                                    <option value="apply">Nur Bewerben</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="maxApplications">Max. Bewerbungen (optional)</label>
+                                <input type="number" id="maxApplications" class="control-input" min="1" placeholder="Unbegrenzt">
+                            </div>
+                            <div class="control-buttons">
+                                <button class="btn btn-success btn-large" onclick="startBot()">
+                                    ▶️ Bot starten
+                                </button>
+                                <button class="btn btn-warning btn-large" onclick="pauseBot()" id="pauseBtn" disabled>
+                                    ⏸️ Pausieren
+                                </button>
+                                <button class="btn btn-info btn-large" onclick="resumeBot()" id="resumeBtn" disabled style="display: none;">
+                                    ▶️ Fortsetzen
+                                </button>
+                                <button class="btn btn-danger btn-large" onclick="stopBot()" id="stopBtn" disabled>
+                                    ⏹️ Stoppen
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Statistics -->
+                    <div class="section">
+                        <h3>Live-Statistiken</h3>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon">🏠</div>
+                                <div class="stat-info">
+                                    <h3>Wohnungen gefunden</h3>
+                                    <p class="stat-value" id="statTotalControl">0</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">📤</div>
+                                <div class="stat-info">
+                                    <h3>Bewerbungen gesendet</h3>
+                                    <p class="stat-value" id="statAppliedControl">0</p>
+                                </div>
+                            </div>
+                            <div class="stat-card success">
+                                <div class="stat-icon">✅</div>
+                                <div class="stat-info">
+                                    <h3>Erfolgreich</h3>
+                                    <p class="stat-value" id="statSuccessControl">0</p>
+                                </div>
+                            </div>
+                            <div class="stat-card error">
+                                <div class="stat-icon">⏳</div>
+                                <div class="stat-info">
+                                    <h3>Ausstehend</h3>
+                                    <p class="stat-value" id="statPendingControl">0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Findings -->
+                    <div class="section">
+                        <h3>Zuletzt gefundene Wohnungen</h3>
+                        <div class="recent-applications" id="recentFindings">
+                            <p class="placeholder">Keine neuen Wohnungen gefunden</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Applications Tab -->
+                <section class="tab-content" id="applications">
+                    <h2>Alle Bewerbungen</h2>
+                    <div class="section">
+                        <div class="table-container">
+                            <table class="applications-table" id="applicationsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Titel</th>
+                                        <th>Adresse</th>
+                                        <th>Bezirk</th>
+                                        <th>Zimmer</th>
+                                        <th>Fläche</th>
+                                        <th>Miete</th>
+                                        <th>Status</th>
+                                        <th>Datum</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="8" class="placeholder">Lade Bewerbungen...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

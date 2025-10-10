@@ -4,13 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Gewobag-Bot v2.0** is an automated web scraper and application bot that:
+**Gewobag-Bot v2.2** is an automated web scraper and application bot that:
 1. Extracts apartment listings from the Gewobag housing website (Berlin)
 2. Stores listings in a SQLite database with filtering capabilities
 3. **Automatically applies to apartments** using Playwright browser automation
 4. Fills out application forms with user data from a JSON configuration file
+5. **NEW: Web-based frontend** for easy control and monitoring
 
-The bot consists of three main Python scripts with advanced anti-detection mechanisms.
+The bot consists of three main Python scripts with advanced anti-detection mechanisms, plus a Flask web API and frontend for user interaction.
 
 ## Setup & Development
 
@@ -32,6 +33,8 @@ Dependencies:
 - `beautifulsoup4` - HTML parsing to extract apartment data
 - `apscheduler` - Optional scheduled execution
 - `playwright` - Browser automation for application forms
+- `flask` - Web API backend for frontend
+- `flask-cors` - Cross-Origin Resource Sharing support
 
 ### Configuration Files
 
@@ -52,7 +55,23 @@ Dependencies:
 
 ### Running the Bot
 
-**Main execution script:** `main.py`
+**NEW: Web Frontend (Recommended):**
+
+```bash
+# Start web server
+python web_api.py
+
+# Open browser to http://localhost:5000
+```
+
+The web frontend provides:
+- Dashboard with live statistics
+- User data management (forms)
+- Filter configuration
+- Bot control (start/stop/pause/resume)
+- Applications overview
+
+**Main CLI execution script:** `main.py`
 
 ```bash
 # Initial setup (creates config files and database)
@@ -95,7 +114,7 @@ python application_bot.py
 
 ## Architecture
 
-### Three-Script Design
+### Four-Component Design
 
 **1. gewobag-bot.py** - Web scraping and data collection
 - Fetches apartment listings from Gewobag website
@@ -120,6 +139,13 @@ python application_bot.py
 - Provides command-line arguments for different modes
 - Manages workflow: scrape → filter → apply
 - Handles initial setup and configuration
+
+**4. web_api.py** - Flask web API and frontend (NEW in v2.2)
+- REST API for frontend communication
+- Endpoints for user data, filters, bot control, statistics
+- Serves static frontend files (HTML/CSS/JS)
+- Real-time status updates via polling
+- Bot process management (start/stop/pause/resume)
 
 ### Key Functions (gewobag-bot.py)
 
@@ -247,6 +273,12 @@ python application_bot.py
 - **main.py** - Main CLI interface (orchestrates everything)
 - **gewobag-bot.py** - Web scraper
 - **application_bot.py** - Browser automation bot
+- **web_api.py** - Flask web API backend (NEW in v2.2)
+
+### Frontend Files (NEW in v2.2)
+- **frontend/index.html** - Main web interface
+- **frontend/style.css** - Stylesheet
+- **frontend/app.js** - JavaScript application logic
 
 ### Configuration Files
 - **user_data.json** - Personal data for applications (REQUIRED)
@@ -263,6 +295,7 @@ python application_bot.py
 - **view.html** - Example HTML snapshot of Gewobag listings page
 - **anfrage.html** - Example HTML snapshot of application form page
 - **requirements.txt** - Python dependencies
+- **FRONTEND.md** - Web frontend documentation (NEW in v2.2)
 
 ## Workflow
 

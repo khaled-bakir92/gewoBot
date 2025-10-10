@@ -1,10 +1,18 @@
-# 🏠 Gewobag Bot v2.1 🤖
+# 🏠 Gewobag Bot v2.2 🤖
 
 **Automatische Wohnungssuche und Bewerbung für Gewobag (Berlin)**
 
 Dieser Bot sucht automatisch nach Wohnungen auf der Gewobag-Website, filtert nach Ihren Kriterien und bewirbt sich **vollautomatisch** mit Ihren Daten.
 
-## 🆕 Neu in Version 2.1
+## 🆕 Neu in Version 2.2
+
+- 🖥️ **Web-Frontend** - Benutzerfreundliche grafische Oberfläche für volle Kontrolle
+- 📊 **Live-Dashboard** - Echtzeit-Statistiken und Status-Updates
+- 🎮 **Bot-Steuerung über GUI** - Start, Stop, Pause direkt im Browser
+- 👤 **Datenverwaltung im Browser** - Benutzerdaten und Filter bequem bearbeiten
+- 📝 **Bewerbungsübersicht** - Alle Wohnungen und Bewerbungen auf einen Blick
+
+## Highlights aus v2.1
 
 - ✅ **Vollautomatisches Absenden aktiviert** - Keine manuelle Bestätigung mehr nötig!
 - 🚀 **Einfacherer Start** - Einfach `python main.py` ohne Argumente ausführen
@@ -138,7 +146,30 @@ Bearbeiten Sie `user_data.json` und tragen Sie Ihre echten Daten ein:
 
 ## 📖 Verwendung
 
-### 🎯 Einfachster Weg (NEU!): Vollautomatisch
+### 🖥️ NEU: Web-Frontend (Empfohlen!)
+
+**Der einfachste Weg, den Bot zu steuern:**
+
+```bash
+# Web-Server starten
+python web_api.py
+```
+
+Dann im Browser öffnen: **http://localhost:5000**
+
+**Features des Web-Frontends:**
+- 📊 **Dashboard** mit Live-Statistiken
+- 👤 **Benutzerdaten bearbeiten** (Formular im Browser)
+- 🔍 **Filter einstellen** (Bezirke, Miete, Größe, etc.)
+- 🎮 **Bot steuern** (Start, Stop, Pause, Resume)
+- 📝 **Bewerbungen ansehen** (alle Wohnungen in Tabellenform)
+- ⚡ **Auto-Refresh** alle 2 Sekunden
+
+**Detaillierte Anleitung:** Siehe [FRONTEND.md](FRONTEND.md)
+
+---
+
+### 🎯 CLI: Vollautomatisch (klassisch)
 ```bash
 python main.py
 ```
@@ -497,6 +528,11 @@ bot new/
 ├── main.py                      # Haupt-CLI-Interface
 ├── gewobag-bot.py               # Web-Scraper
 ├── application_bot.py           # Browser-Automatisierung
+├── web_api.py                   # Flask Web-API (Backend für Frontend)
+├── frontend/                    # Web-Frontend
+│   ├── index.html               # Hauptseite
+│   ├── style.css                # Styles
+│   └── app.js                   # JavaScript-Logik
 ├── user_data.json               # Ihre persönlichen Daten (NICHT committen!)
 ├── filter_config.json           # Suchfilter
 ├── bezirke_verfuegbar.json      # Liste aller Bezirke (auto-generiert)
@@ -510,6 +546,7 @@ bot new/
 ├── .dockerignore                # Docker-Ignore-Liste
 ├── .env.example                 # Beispiel für Umgebungsvariablen
 ├── README.md                    # Diese Datei
+├── FRONTEND.md                  # Web-Frontend-Dokumentation
 ├── CLAUDE.md                    # Entwickler-Dokumentation
 └── DEPLOYMENT.md                # Docker-Deployment-Guide
 ```

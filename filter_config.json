@@ -1,24 +1,19 @@
 {
-  "_kommentar": "Konfiguration für Wohnungsfilter",
-  "_beispiel_bezirke": [
-    "friedrichshain-kreuzberg",
-    "mitte",
-    "pankow-prenzlauer-berg"
+  "gewuenschte_bezirke": [
+    "charlottenburg-wilmersdorf",
+    "neukoelln",
+    "steglitz-zehlendorf",
+    "tempelhof-schoeneberg",
+    "Charlottenburg-Wilmersdorf",
+    "Neukölln ",
+    "Steglitz-Zehlendorf",
+    "Tempelhof-Schöneberg"
   ],
-  "gewuenschte_bezirke": ["charlottenburg-wilmersdorf","steglitz-zehlendorf","tempelhof-schoeneberg","neukoelln"],
-
-  "_kommentar_miete": "Gesamtmiete in Euro (leer = keine Einschränkung)",
   "gesamtmiete_von": "",
   "gesamtmiete_bis": "1200",
-
-  "_kommentar_flaeche": "Wohnfläche in m² (leer = keine Einschränkung)",
   "gesamtflaeche_von": "60",
   "gesamtflaeche_bis": "",
-
-  "_kommentar_zimmer": "Anzahl Zimmer (leer = keine Einschränkung)",
   "zimmer_von": "3",
   "zimmer_bis": "",
-
-  "_kommentar_wbs": "WBS-Filter: 'mit' = nur WBS-Wohnungen, 'ohne' = nur ohne WBS, 'egal' oder leer = alle",
   "wbs": "ohne"
 }

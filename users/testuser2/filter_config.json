@@ -1,0 +1,13 @@
+{
+  "_kommentar": "Filter für testuser2 - sucht größere 3-4-Zimmer-Wohnungen",
+  "gewuenschte_bezirke": [
+    "spandau"
+  ],
+  "gesamtmiete_von": "700",
+  "gesamtmiete_bis": "740",
+  "gesamtflaeche_von": "60",
+  "gesamtflaeche_bis": "70",
+  "zimmer_von": "3",
+  "zimmer_bis": "3",
+  "wbs": ""
+}

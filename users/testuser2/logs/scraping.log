@@ -1,0 +1,14 @@
+2025-10-10 18:08:12 - user.testuser2.scraping - INFO - [testuser2] ======================================================================
+2025-10-10 18:08:12 - user.testuser2.scraping - INFO - [testuser2] Starte Gewobag Wohnungssuche für User: testuser2
+2025-10-10 18:08:12 - user.testuser2.scraping - INFO - [testuser2] ======================================================================
+2025-10-10 18:08:12 - user.testuser2.scraping - INFO - [testuser2] Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-10 18:08:13 - user.testuser2.scraping - WARNING - [testuser2] Keine Wohnungen gefunden
+2025-10-10 18:17:01 - user.testuser2.scraping - INFO - [testuser2] ======================================================================
+2025-10-10 18:17:01 - user.testuser2.scraping - INFO - [testuser2] Starte Gewobag Wohnungssuche für User: testuser2
+2025-10-10 18:17:01 - user.testuser2.scraping - INFO - [testuser2] ======================================================================
+2025-10-10 18:17:01 - user.testuser2.scraping - INFO - [testuser2] Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-10 18:17:01 - user.testuser2.scraping - INFO - [testuser2] Neue Wohnung gespeichert: Altstadtnah! in Spandau
+2025-10-10 18:17:01 - user.testuser2.scraping - INFO - [testuser2] Speicherung abgeschlossen: 1 neu, 0 bereits vorhanden
+2025-10-10 18:17:01 - user.testuser2.scraping - INFO - [testuser2] ======================================================================
+2025-10-10 18:17:01 - user.testuser2.scraping - INFO - [testuser2] Zusammenfassung: 1 Angebote gefunden, 1 neu gespeichert, 0 bereits bekannt
+2025-10-10 18:17:01 - user.testuser2.scraping - INFO - [testuser2] ======================================================================

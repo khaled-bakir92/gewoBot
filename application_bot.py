@@ -687,6 +687,15 @@ def fill_application_form(page: Page, user_data: Dict, wohnung_link: str) -> boo
         logger.info("📝 Formular ausgefüllt - bereit zum Absenden")
 
         # AUTOMATISCHES ABSENDEN AKTIVIERT
+        # Kann mit Umgebungsvariable NO_SUBMIT=1 deaktiviert werden
+        import os
+        if os.environ.get('NO_SUBMIT') == '1':
+            logger.info("⚠️  AUTO-SUBMIT DEAKTIVIERT (NO_SUBMIT=1)")
+            logger.info("💡 Browser bleibt offen - Sie können das Formular prüfen")
+            logger.info("⏸️  Warte 60 Sekunden, dann Browser schließen...")
+            time.sleep(60)
+            return True
+
         try:
             logger.info("🚀 Sende Bewerbung automatisch ab...")
             submit_button = iframe_element.locator('button[type="submit"], input[type="submit"]').first

@@ -1923,3 +1923,198 @@ Call log:
 ================================================================================
 2025-10-09 18:42:12,451 - __main__ - INFO - ✅ VOLLAUTOMATISCHE AUSFÜHRUNG ABGESCHLOSSEN
 2025-10-09 18:42:12,451 - __main__ - INFO - ================================================================================
+2025-10-10 17:56:05,287 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-10 17:56:05,287 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-10 17:56:05,290 - __main__ - INFO - ================================================================================
+2025-10-10 17:56:05,290 - __main__ - INFO - 🔧 INITIALE KONFIGURATION (MULTI-USER)
+2025-10-10 17:56:05,290 - __main__ - INFO - ================================================================================
+2025-10-10 17:56:05,291 - __main__ - INFO - 📦 Initialisiere Datenbank mit Multi-User-Support...
+2025-10-10 17:56:05,291 - migrate_database - INFO - 🔧 Initializing database 'gewobag_wohnungen.db' with multi-user support...
+2025-10-10 17:56:05,294 - migrate_database - INFO - ✅ Database initialized with multi-user support!
+2025-10-10 17:56:05,294 - __main__ - INFO - ✅ Initiale Konfiguration abgeschlossen
+2025-10-10 17:56:05,294 - __main__ - INFO - ================================================================================
+2025-10-10 17:56:05,294 - __main__ - INFO - 
+💡 Nächster Schritt:
+2025-10-10 17:56:05,294 - __main__ - INFO -    python main_multiuser.py --create-user <username>
+2025-10-10 17:56:16,512 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-10 17:56:16,512 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-10 17:56:16,514 - user_manager - INFO - 📄 Created: /Users/khaled/Desktop/bot new/users/testuser1/user_data.json
+2025-10-10 17:56:16,514 - user_manager - INFO - 📄 Created: /Users/khaled/Desktop/bot new/users/testuser1/filter_config.json
+2025-10-10 17:56:16,514 - user_manager - INFO - ✅ User 'testuser1' created successfully!
+2025-10-10 17:56:16,514 - user_manager - INFO - 📁 Directory: /Users/khaled/Desktop/bot new/users/testuser1
+2025-10-10 17:56:16,514 - user_manager - INFO - 📝 Please edit: /Users/khaled/Desktop/bot new/users/testuser1/user_data.json
+2025-10-10 17:56:16,514 - __main__ - INFO - 
+✅ User 'testuser1' erfolgreich erstellt!
+2025-10-10 17:56:16,514 - __main__ - INFO - 
+📝 Bitte bearbeiten Sie:
+2025-10-10 17:56:16,514 - __main__ - INFO -    /Users/khaled/Desktop/bot new/users/testuser1/user_data.json
+2025-10-10 17:56:16,514 - __main__ - INFO -    /Users/khaled/Desktop/bot new/users/testuser1/filter_config.json
+2025-10-10 17:56:16,514 - __main__ - INFO - 
+💡 Testen Sie mit:
+2025-10-10 17:56:16,514 - __main__ - INFO -    python main_multiuser.py --user testuser1 --scrape
+2025-10-10 17:56:16,691 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-10 17:56:16,691 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-10 17:56:16,693 - user_manager - INFO - 📄 Created: /Users/khaled/Desktop/bot new/users/testuser2/user_data.json
+2025-10-10 17:56:16,693 - user_manager - INFO - 📄 Created: /Users/khaled/Desktop/bot new/users/testuser2/filter_config.json
+2025-10-10 17:56:16,693 - user_manager - INFO - ✅ User 'testuser2' created successfully!
+2025-10-10 17:56:16,693 - user_manager - INFO - 📁 Directory: /Users/khaled/Desktop/bot new/users/testuser2
+2025-10-10 17:56:16,693 - user_manager - INFO - 📝 Please edit: /Users/khaled/Desktop/bot new/users/testuser2/user_data.json
+2025-10-10 17:56:16,693 - __main__ - INFO - 
+✅ User 'testuser2' erfolgreich erstellt!
+2025-10-10 17:56:16,694 - __main__ - INFO - 
+📝 Bitte bearbeiten Sie:
+2025-10-10 17:56:16,694 - __main__ - INFO -    /Users/khaled/Desktop/bot new/users/testuser2/user_data.json
+2025-10-10 17:56:16,694 - __main__ - INFO -    /Users/khaled/Desktop/bot new/users/testuser2/filter_config.json
+2025-10-10 17:56:16,694 - __main__ - INFO - 
+💡 Testen Sie mit:
+2025-10-10 17:56:16,694 - __main__ - INFO -    python main_multiuser.py --user testuser2 --scrape
+2025-10-10 17:56:29,005 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-10 17:56:29,005 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-10 18:06:17,187 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-10 18:06:17,187 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-10 18:06:17,189 - __main__ - INFO - ================================================================================
+2025-10-10 18:06:17,189 - __main__ - INFO - 🤖 BOT-AUSFÜHRUNG FÜR ALLE USER (SEQUENTIELL)
+2025-10-10 18:06:17,189 - __main__ - INFO -    Anzahl User: 2
+2025-10-10 18:06:17,189 - __main__ - INFO -    Modus: scrape
+2025-10-10 18:06:17,189 - __main__ - INFO - ================================================================================
+2025-10-10 18:06:17,189 - __main__ - INFO - 
+
+================================================================================
+2025-10-10 18:06:17,189 - __main__ - INFO - 👤 USER 1/2: testuser1
+2025-10-10 18:06:17,189 - __main__ - INFO - ================================================================================
+2025-10-10 18:06:17,189 - __main__ - WARNING - ⚠️  Template value in: personal_info.vorname
+2025-10-10 18:06:17,189 - __main__ - WARNING - ⚠️  Template value in: personal_info.nachname
+2025-10-10 18:06:17,189 - __main__ - INFO - ================================================================================
+2025-10-10 18:06:17,189 - __main__ - INFO - 🤖 BOT-AUSFÜHRUNG FÜR USER: testuser1
+2025-10-10 18:06:17,189 - __main__ - INFO - ================================================================================
+2025-10-10 18:06:17,189 - __main__ - INFO - 
+🔍 Modus: Nur Wohnungssuche
+2025-10-10 18:06:17,190 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-10 18:06:17,190 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=800&gesamtmiete_bis=1200&gesamtflaeche_von=50&gesamtflaeche_bis=70&zimmer_von=&zimmer_bis=2&sort-by=&bezirke%5B%5D=friedrichshain-kreuzberg&bezirke%5B%5D=neukoelln
+2025-10-10 18:06:18,002 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-10 18:06:18,004 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-10 18:06:18,054 - gewobag_bot - WARNING - Keine Angebote gefunden!
+2025-10-10 18:06:18,054 - gewobag_bot - INFO - 📊 Seite 1: 0 Wohnungen gefunden
+2025-10-10 18:06:18,088 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-10 18:06:18,088 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 0 Wohnungen gefunden
+2025-10-10 18:06:18,088 - __main__ - INFO - 
+⏸️  Pausiere 115 Sekunden vor nächstem User...
+2025-10-10 18:08:12,702 - __main__ - INFO - 
+
+================================================================================
+2025-10-10 18:08:12,705 - __main__ - INFO - 👤 USER 2/2: testuser2
+2025-10-10 18:08:12,705 - __main__ - INFO - ================================================================================
+2025-10-10 18:08:12,708 - __main__ - WARNING - ⚠️  Template value in: personal_info.vorname
+2025-10-10 18:08:12,708 - __main__ - WARNING - ⚠️  Template value in: personal_info.nachname
+2025-10-10 18:08:12,708 - __main__ - INFO - ================================================================================
+2025-10-10 18:08:12,708 - __main__ - INFO - 🤖 BOT-AUSFÜHRUNG FÜR USER: testuser2
+2025-10-10 18:08:12,708 - __main__ - INFO - ================================================================================
+2025-10-10 18:08:12,708 - __main__ - INFO - 
+🔍 Modus: Nur Wohnungssuche
+2025-10-10 18:08:12,710 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-10 18:08:12,710 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=1200&gesamtmiete_bis=1800&gesamtflaeche_von=80&gesamtflaeche_bis=120&zimmer_von=&zimmer_bis=4&sort-by=&bezirke%5B%5D=pankow-prenzlauer-berg&bezirke%5B%5D=charlottenburg-wilmersdorf
+2025-10-10 18:08:13,579 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-10 18:08:13,582 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-10 18:08:13,637 - gewobag_bot - WARNING - Keine Angebote gefunden!
+2025-10-10 18:08:13,637 - gewobag_bot - INFO - 📊 Seite 1: 0 Wohnungen gefunden
+2025-10-10 18:08:13,671 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-10 18:08:13,671 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 0 Wohnungen gefunden
+2025-10-10 18:08:13,672 - __main__ - INFO - 
+
+================================================================================
+2025-10-10 18:08:13,672 - __main__ - INFO - ✅ ALLE USER ABGESCHLOSSEN
+2025-10-10 18:08:13,672 - __main__ - INFO - ================================================================================
+2025-10-10 18:15:59,843 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-10 18:15:59,843 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-10 18:15:59,845 - __main__ - INFO - ================================================================================
+2025-10-10 18:15:59,845 - __main__ - INFO - 🤖 BOT-AUSFÜHRUNG FÜR ALLE USER (SEQUENTIELL)
+2025-10-10 18:15:59,845 - __main__ - INFO -    Anzahl User: 2
+2025-10-10 18:15:59,845 - __main__ - INFO -    Modus: scrape
+2025-10-10 18:15:59,845 - __main__ - INFO - ================================================================================
+2025-10-10 18:15:59,845 - __main__ - INFO - 
+
+================================================================================
+2025-10-10 18:15:59,846 - __main__ - INFO - 👤 USER 1/2: testuser1
+2025-10-10 18:15:59,846 - __main__ - INFO - ================================================================================
+2025-10-10 18:15:59,846 - __main__ - WARNING - ⚠️  Template value in: personal_info.vorname
+2025-10-10 18:15:59,846 - __main__ - WARNING - ⚠️  Template value in: personal_info.nachname
+2025-10-10 18:15:59,846 - __main__ - INFO - ================================================================================
+2025-10-10 18:15:59,846 - __main__ - INFO - 🤖 BOT-AUSFÜHRUNG FÜR USER: testuser1
+2025-10-10 18:15:59,846 - __main__ - INFO - ================================================================================
+2025-10-10 18:15:59,846 - __main__ - INFO - 
+🔍 Modus: Nur Wohnungssuche
+2025-10-10 18:15:59,846 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-10 18:15:59,846 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=40&gesamtflaeche_bis=45&zimmer_von=&zimmer_bis=1&sort-by=&bezirke%5B%5D=friedrichshain-kreuzberg&bezirke%5B%5D=neukoelln
+2025-10-10 18:16:00,653 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-10 18:16:00,655 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-10 18:16:00,700 - gewobag_bot - INFO - 3 Angebote gefunden
+2025-10-10 18:16:00,701 - gewobag_bot - INFO - 3 Angebote erfolgreich extrahiert
+2025-10-10 18:16:00,701 - gewobag_bot - INFO - 📊 Seite 1: 3 Wohnungen gefunden
+2025-10-10 18:16:00,732 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-10 18:16:00,732 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 3 Wohnungen gefunden
+2025-10-10 18:16:00,736 - __main__ - INFO - 
+✅ 3 Wohnungen für User 'testuser1' gefunden
+2025-10-10 18:16:00,736 - __main__ - INFO - 
+⏸️  Pausiere 60 Sekunden vor nächstem User...
+2025-10-10 18:17:01,004 - __main__ - INFO - 
+
+================================================================================
+2025-10-10 18:17:01,005 - __main__ - INFO - 👤 USER 2/2: testuser2
+2025-10-10 18:17:01,005 - __main__ - INFO - ================================================================================
+2025-10-10 18:17:01,007 - __main__ - WARNING - ⚠️  Template value in: personal_info.vorname
+2025-10-10 18:17:01,007 - __main__ - WARNING - ⚠️  Template value in: personal_info.nachname
+2025-10-10 18:17:01,007 - __main__ - INFO - ================================================================================
+2025-10-10 18:17:01,008 - __main__ - INFO - 🤖 BOT-AUSFÜHRUNG FÜR USER: testuser2
+2025-10-10 18:17:01,008 - __main__ - INFO - ================================================================================
+2025-10-10 18:17:01,008 - __main__ - INFO - 
+🔍 Modus: Nur Wohnungssuche
+2025-10-10 18:17:01,013 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-10 18:17:01,013 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=700&gesamtmiete_bis=740&gesamtflaeche_von=60&gesamtflaeche_bis=70&zimmer_von=&zimmer_bis=3&sort-by=&bezirke%5B%5D=spandau
+2025-10-10 18:17:01,770 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-10 18:17:01,773 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-10 18:17:01,828 - gewobag_bot - INFO - 1 Angebote gefunden
+2025-10-10 18:17:01,828 - gewobag_bot - INFO - 1 Angebote erfolgreich extrahiert
+2025-10-10 18:17:01,828 - gewobag_bot - INFO - 📊 Seite 1: 1 Wohnungen gefunden
+2025-10-10 18:17:01,862 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-10 18:17:01,862 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 1 Wohnungen gefunden
+2025-10-10 18:17:01,865 - __main__ - INFO - 
+✅ 1 Wohnungen für User 'testuser2' gefunden
+2025-10-10 18:17:01,865 - __main__ - INFO - 
+
+================================================================================
+2025-10-10 18:17:01,865 - __main__ - INFO - ✅ ALLE USER ABGESCHLOSSEN
+2025-10-10 18:17:01,865 - __main__ - INFO - ================================================================================
+2025-10-10 18:19:17,132 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-10 18:19:17,132 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-10 18:19:17,135 - __main__ - WARNING - ⚠️  Template value in: personal_info.vorname
+2025-10-10 18:19:17,135 - __main__ - WARNING - ⚠️  Template value in: personal_info.nachname
+2025-10-10 18:19:17,135 - __main__ - INFO - ================================================================================
+2025-10-10 18:19:17,135 - __main__ - INFO - 🤖 BOT-AUSFÜHRUNG FÜR USER: testuser1
+2025-10-10 18:19:17,135 - __main__ - INFO - ================================================================================
+2025-10-10 18:19:17,135 - __main__ - INFO - 
+📝 Modus: Nur Bewerbungen
+2025-10-10 18:19:19,071 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-76605-0102-0154/
+2025-10-10 18:19:23,389 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-10 18:19:23,430 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-10 18:19:25,479 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-10 18:19:25,482 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-10 18:19:28,887 - application_bot - INFO - 🔍 Warte auf Formular-iFrame...
+2025-10-10 18:19:28,887 - application_bot - INFO - ✅ iFrame gefunden - fülle Formular aus...
+2025-10-10 18:19:33,166 - application_bot - INFO - ✓ Anrede: Herr
+2025-10-10 18:19:34,094 - application_bot - INFO - ✓ Vorname: Ihr Vorname
+2025-10-10 18:19:34,955 - application_bot - INFO - ✓ Nachname: Ihr Nachname
+2025-10-10 18:19:35,712 - application_bot - INFO - ✓ E-Mail: ihre.email@example.com
+2025-10-10 18:19:36,721 - application_bot - INFO - ✓ Telefon: +49 123 456789
+2025-10-10 18:19:38,089 - application_bot - INFO - ✓ Für wen wird die Anfrage gestellt: Für mich selbst
+2025-10-10 18:19:38,953 - application_bot - INFO - ✓ Anzahl Erwachsene: 1
+2025-10-10 18:19:39,563 - application_bot - INFO - ✓ Anzahl Kinder: 0
+2025-10-10 18:19:40,458 - application_bot - INFO - ✓ Mobilfunknummer: +49 123 456789
+2025-10-10 18:19:41,462 - application_bot - INFO - ✓ WBS vorhanden: Nein
+2025-10-10 18:19:43,288 - application_bot - INFO - ✓ Haushaltseinkommen in Spanne: Ja
+2025-10-10 18:20:14,381 - application_bot - INFO - ✓ 2 Datenschutz-Checkbox(en) aktiviert
+2025-10-10 18:20:14,383 - application_bot - INFO - 📝 Formular ausgefüllt - bereit zum Absenden
+2025-10-10 18:20:14,383 - application_bot - INFO - ⚠️  AUTO-SUBMIT DEAKTIVIERT (NO_SUBMIT=1)
+2025-10-10 18:20:14,383 - application_bot - INFO - 💡 Browser bleibt offen - Sie können das Formular prüfen
+2025-10-10 18:20:14,383 - application_bot - INFO - ⏸️  Warte 60 Sekunden, dann Browser schließen...
+2025-10-10 18:21:14,873 - __main__ - INFO - 
+✅ Bewerbungen abgeschlossen: {'success': 1, 'failed': 0, 'total': 1}

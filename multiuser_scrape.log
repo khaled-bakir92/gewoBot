@@ -1,0 +1,70 @@
+2025-10-10 18:15:59,843 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-10 18:15:59,843 - application_bot - WARNING - Installation: pip install playwright-stealth
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║                    🏠 GEWOBAG BOT v2.1 (MULTI-USER) 🤖                   ║
+║                                                                           ║
+║         Automatische Wohnungssuche und Bewerbung für Gewobag             ║
+║                       Mehrere Nutzer - Separate Sessions                 ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+    
+2025-10-10 18:15:59,845 - __main__ - INFO - ================================================================================
+2025-10-10 18:15:59,845 - __main__ - INFO - 🤖 BOT-AUSFÜHRUNG FÜR ALLE USER (SEQUENTIELL)
+2025-10-10 18:15:59,845 - __main__ - INFO -    Anzahl User: 2
+2025-10-10 18:15:59,845 - __main__ - INFO -    Modus: scrape
+2025-10-10 18:15:59,845 - __main__ - INFO - ================================================================================
+2025-10-10 18:15:59,845 - __main__ - INFO - 
+
+================================================================================
+2025-10-10 18:15:59,846 - __main__ - INFO - 👤 USER 1/2: testuser1
+2025-10-10 18:15:59,846 - __main__ - INFO - ================================================================================
+2025-10-10 18:15:59,846 - __main__ - WARNING - ⚠️  Template value in: personal_info.vorname
+2025-10-10 18:15:59,846 - __main__ - WARNING - ⚠️  Template value in: personal_info.nachname
+2025-10-10 18:15:59,846 - __main__ - INFO - ================================================================================
+2025-10-10 18:15:59,846 - __main__ - INFO - 🤖 BOT-AUSFÜHRUNG FÜR USER: testuser1
+2025-10-10 18:15:59,846 - __main__ - INFO - ================================================================================
+2025-10-10 18:15:59,846 - __main__ - INFO - 
+🔍 Modus: Nur Wohnungssuche
+2025-10-10 18:15:59,846 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-10 18:15:59,846 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=40&gesamtflaeche_bis=45&zimmer_von=&zimmer_bis=1&sort-by=&bezirke%5B%5D=friedrichshain-kreuzberg&bezirke%5B%5D=neukoelln
+2025-10-10 18:16:00,653 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-10 18:16:00,655 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-10 18:16:00,700 - gewobag_bot - INFO - 3 Angebote gefunden
+2025-10-10 18:16:00,701 - gewobag_bot - INFO - 3 Angebote erfolgreich extrahiert
+2025-10-10 18:16:00,701 - gewobag_bot - INFO - 📊 Seite 1: 3 Wohnungen gefunden
+2025-10-10 18:16:00,732 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-10 18:16:00,732 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 3 Wohnungen gefunden
+2025-10-10 18:16:00,736 - __main__ - INFO - 
+✅ 3 Wohnungen für User 'testuser1' gefunden
+2025-10-10 18:16:00,736 - __main__ - INFO - 
+⏸️  Pausiere 60 Sekunden vor nächstem User...
+2025-10-10 18:17:01,004 - __main__ - INFO - 
+
+================================================================================
+2025-10-10 18:17:01,005 - __main__ - INFO - 👤 USER 2/2: testuser2
+2025-10-10 18:17:01,005 - __main__ - INFO - ================================================================================
+2025-10-10 18:17:01,007 - __main__ - WARNING - ⚠️  Template value in: personal_info.vorname
+2025-10-10 18:17:01,007 - __main__ - WARNING - ⚠️  Template value in: personal_info.nachname
+2025-10-10 18:17:01,007 - __main__ - INFO - ================================================================================
+2025-10-10 18:17:01,008 - __main__ - INFO - 🤖 BOT-AUSFÜHRUNG FÜR USER: testuser2
+2025-10-10 18:17:01,008 - __main__ - INFO - ================================================================================
+2025-10-10 18:17:01,008 - __main__ - INFO - 
+🔍 Modus: Nur Wohnungssuche
+2025-10-10 18:17:01,013 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-10 18:17:01,013 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=700&gesamtmiete_bis=740&gesamtflaeche_von=60&gesamtflaeche_bis=70&zimmer_von=&zimmer_bis=3&sort-by=&bezirke%5B%5D=spandau
+2025-10-10 18:17:01,770 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-10 18:17:01,773 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-10 18:17:01,828 - gewobag_bot - INFO - 1 Angebote gefunden
+2025-10-10 18:17:01,828 - gewobag_bot - INFO - 1 Angebote erfolgreich extrahiert
+2025-10-10 18:17:01,828 - gewobag_bot - INFO - 📊 Seite 1: 1 Wohnungen gefunden
+2025-10-10 18:17:01,862 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-10 18:17:01,862 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 1 Wohnungen gefunden
+2025-10-10 18:17:01,865 - __main__ - INFO - 
+✅ 1 Wohnungen für User 'testuser2' gefunden
+2025-10-10 18:17:01,865 - __main__ - INFO - 
+
+================================================================================
+2025-10-10 18:17:01,865 - __main__ - INFO - ✅ ALLE USER ABGESCHLOSSEN
+2025-10-10 18:17:01,865 - __main__ - INFO - ================================================================================

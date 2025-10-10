@@ -1,0 +1,24 @@
+{
+  "personal_info": {
+    "anrede": "Herr",
+    "vorname": "Ihr Vorname",
+    "nachname": "Ihr Nachname",
+    "email": "ihre.email@example.com",
+    "telefon": "+49 123 456789",
+    "geburtsdatum": "01.01.1990",
+    "staatsangehoerigkeit": "Deutsch"
+  },
+  "household": {
+    "anzahl_personen": 1,
+    "haushaltseinkommen": "3000"
+  },
+  "documents": {
+    "personalausweis": "/absoluter/pfad/zu/personalausweis.pdf",
+    "gehaltsnachweis_1": "/absoluter/pfad/zu/gehaltsnachweis1.pdf",
+    "gehaltsnachweis_2": "/absoluter/pfad/zu/gehaltsnachweis2.pdf",
+    "gehaltsnachweis_3": "/absoluter/pfad/zu/gehaltsnachweis3.pdf",
+    "schufa": "/absoluter/pfad/zu/schufa.pdf",
+    "mietschuldenfreiheit": "/absoluter/pfad/zu/mietschuldenfreiheit.pdf"
+  },
+  "nachricht": "Sehr geehrte Damen und Herren,\\n\\nhiermit bewerbe ich mich um die ausgeschriebene Wohnung.\\n\\nMit freundlichen Grüßen"
+}

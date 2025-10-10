@@ -1,0 +1,26 @@
+2025-10-10 18:19:17 - user.testuser1.applications - INFO - [testuser1] ================================================================================
+2025-10-10 18:19:17 - user.testuser1.applications - INFO - [testuser1] 🤖 GEWOBAG APPLICATION BOT - USER: testuser1
+2025-10-10 18:19:17 - user.testuser1.applications - INFO - [testuser1] ================================================================================
+2025-10-10 18:19:17 - user.testuser1.applications - WARNING - [testuser1] ⚠️  Template value in: personal_info.vorname
+2025-10-10 18:19:17 - user.testuser1.applications - WARNING - [testuser1] ⚠️  Template value in: personal_info.nachname
+2025-10-10 18:19:17 - user.testuser1.applications - INFO - [testuser1] ⚠️  Limitiere auf 1 Bewerbungen (von 4)
+2025-10-10 18:19:17 - user.testuser1.applications - INFO - [testuser1] 
+📋 Bewerbung 1/1
+2025-10-10 18:19:17 - user.testuser1.applications - INFO - [testuser1] 📍 Wohnung: Singlewohnung! (Kreuzberg)
+2025-10-10 18:19:17 - user.testuser1.applications - INFO - [testuser1] ================================================================================
+2025-10-10 18:19:17 - user.testuser1.applications - INFO - [testuser1] 🏠 Starte Bewerbung für: Singlewohnung!
+2025-10-10 18:19:17 - user.testuser1.applications - INFO - [testuser1] 👤 User: testuser1
+2025-10-10 18:19:17 - user.testuser1.applications - INFO - [testuser1] 📍 Bezirk: Kreuzberg
+2025-10-10 18:19:17 - user.testuser1.applications - INFO - [testuser1] 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-76605-0102-0154/
+2025-10-10 18:19:17 - user.testuser1.applications - INFO - [testuser1] ================================================================================
+2025-10-10 18:19:17 - user.testuser1.applications - INFO - [testuser1] 🌐 Starte Browser mit erweiterten Anti-Detection-Einstellungen...
+2025-10-10 18:21:14 - user.testuser1.applications - INFO - [testuser1] ✅ Bewerbung erfolgreich!
+2025-10-10 18:21:14 - user.testuser1.applications - INFO - [testuser1] ✅ Bewerbung 1/1: ERFOLGREICH
+2025-10-10 18:21:14 - user.testuser1.applications - INFO - [testuser1] 
+================================================================================
+2025-10-10 18:21:14 - user.testuser1.applications - INFO - [testuser1] 📊 BEWERBUNGS-ZUSAMMENFASSUNG - USER: testuser1
+2025-10-10 18:21:14 - user.testuser1.applications - INFO - [testuser1] ================================================================================
+2025-10-10 18:21:14 - user.testuser1.applications - INFO - [testuser1] ✅ Erfolgreich: 1
+2025-10-10 18:21:14 - user.testuser1.applications - INFO - [testuser1] ❌ Fehlgeschlagen: 0
+2025-10-10 18:21:14 - user.testuser1.applications - INFO - [testuser1] 📈 Gesamt verarbeitet: 1
+2025-10-10 18:21:14 - user.testuser1.applications - INFO - [testuser1] ================================================================================

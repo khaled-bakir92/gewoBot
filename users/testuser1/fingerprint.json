@@ -1,0 +1,12 @@
+{
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0",
+  "viewport_width": 1536,
+  "viewport_height": 864,
+  "latitude": 52.539651,
+  "longitude": 13.410566,
+  "locale": "de-DE",
+  "timezone": "Europe/Berlin",
+  "platform": "Win32",
+  "hardware_concurrency": 8,
+  "device_memory": 8
+}

@@ -1,0 +1,14 @@
+{
+  "_kommentar": "Filter für testuser1 - sucht kleine 2-Zimmer-Wohnungen",
+  "gewuenschte_bezirke": [
+    "friedrichshain-kreuzberg",
+    "neukoelln"
+  ],
+  "gesamtmiete_von": "",
+  "gesamtmiete_bis": "",
+  "gesamtflaeche_von": "40",
+  "gesamtflaeche_bis": "45",
+  "zimmer_von": "1",
+  "zimmer_bis": "1",
+  "wbs": ""
+}

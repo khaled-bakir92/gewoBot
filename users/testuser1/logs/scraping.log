@@ -1,0 +1,16 @@
+2025-10-10 18:06:17 - user.testuser1.scraping - INFO - [testuser1] ======================================================================
+2025-10-10 18:06:17 - user.testuser1.scraping - INFO - [testuser1] Starte Gewobag Wohnungssuche für User: testuser1
+2025-10-10 18:06:17 - user.testuser1.scraping - INFO - [testuser1] ======================================================================
+2025-10-10 18:06:17 - user.testuser1.scraping - INFO - [testuser1] Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-10 18:06:18 - user.testuser1.scraping - WARNING - [testuser1] Keine Wohnungen gefunden
+2025-10-10 18:15:59 - user.testuser1.scraping - INFO - [testuser1] ======================================================================
+2025-10-10 18:15:59 - user.testuser1.scraping - INFO - [testuser1] Starte Gewobag Wohnungssuche für User: testuser1
+2025-10-10 18:15:59 - user.testuser1.scraping - INFO - [testuser1] ======================================================================
+2025-10-10 18:15:59 - user.testuser1.scraping - INFO - [testuser1] Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-10 18:16:00 - user.testuser1.scraping - INFO - [testuser1] Neue Wohnung gespeichert: Singlewohnung! in Kreuzberg
+2025-10-10 18:16:00 - user.testuser1.scraping - INFO - [testuser1] Neue Wohnung gespeichert: Seniorenwohnung ab 55 Jahren! in Kreuzberg
+2025-10-10 18:16:00 - user.testuser1.scraping - INFO - [testuser1] Neue Wohnung gespeichert: Günstiges Wohnen für Personen ab dem 55. Lebensalter in Buckow
+2025-10-10 18:16:00 - user.testuser1.scraping - INFO - [testuser1] Speicherung abgeschlossen: 3 neu, 0 bereits vorhanden
+2025-10-10 18:16:00 - user.testuser1.scraping - INFO - [testuser1] ======================================================================
+2025-10-10 18:16:00 - user.testuser1.scraping - INFO - [testuser1] Zusammenfassung: 3 Angebote gefunden, 3 neu gespeichert, 0 bereits bekannt
+2025-10-10 18:16:00 - user.testuser1.scraping - INFO - [testuser1] ======================================================================

@@ -1,13 +1,23 @@
 {
   "gewuenschte_bezirke": [
     "charlottenburg-wilmersdorf",
+    "charlottenburg-wilmersdorf-charlottenburg",
+    "charlottenburg-wilmersdorf-nord",
+    "charlottenburg-wilmersdorf-grunewald",
+    "charlottenburg-wilmersdorf-schmargendorf",
+    "charlottenburg-wilmersdorf-wilmersdorf",
     "neukoelln",
+    "neukoelln-britz",
+    "neukoelln-buckow",
+    "neukoelln-neukoelln",
+    "neukoelln-rudow",
     "steglitz-zehlendorf",
+    "steglitz-zehlendorf-lichterfelde",
     "tempelhof-schoeneberg",
-    "Charlottenburg-Wilmersdorf",
-    "Neukölln ",
-    "Steglitz-Zehlendorf",
-    "Tempelhof-Schöneberg"
+    "tempelhof-schoeneberg-lichtenrade",
+    "tempelhof-schoeneberg-mariendorf",
+    "tempelhof-schoeneberg-marienfelde",
+    "tempelhof-schoeneberg-schoeneberg"
   ],
   "gesamtmiete_von": "",
   "gesamtmiete_bis": "1200",

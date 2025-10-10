@@ -196,24 +196,102 @@ function displayBezirkeCheckboxes(bezirke) {
         return;
     }
 
-    container.innerHTML = bezirke.map(bezirk => {
-        // Bezirke können entweder Objekte {value, name, typ} oder Strings sein
+    // Gruppiere Bezirke nach Hauptbezirk
+    const grouped = {};
+    const seen = new Set();
+
+    bezirke.forEach(bezirk => {
         const value = typeof bezirk === 'string' ? bezirk : bezirk.value;
         const name = typeof bezirk === 'string' ? bezirk : bezirk.name;
         const typ = typeof bezirk === 'object' ? bezirk.typ : '';
 
-        // Gruppiere nach Typ (nur Hauptbezirke anzeigen für bessere Übersicht)
-        if (typ === 'Ortsteil') {
-            return ''; // Ortsteile überspringen
+        // Duplikate vermeiden (case-insensitive)
+        const uniqueKey = value.toLowerCase();
+        if (seen.has(uniqueKey)) {
+            return;
+        }
+        seen.add(uniqueKey);
+
+        if (typ === 'Hauptbezirk') {
+            // Hauptbezirk
+            const hauptbezirkKey = name.trim();
+            if (!grouped[hauptbezirkKey]) {
+                grouped[hauptbezirkKey] = {
+                    value: value,
+                    name: name,
+                    ortsteile: []
+                };
+            }
+        } else if (typ === 'Ortsteil') {
+            // Finde den Hauptbezirk
+            const parts = value.split('-');
+            const hauptbezirkSlug = parts[0];
+
+            // Suche den passenden Hauptbezirk
+            const hauptbezirkEntry = bezirke.find(b =>
+                typeof b === 'object' &&
+                b.typ === 'Hauptbezirk' &&
+                b.value.toLowerCase().includes(hauptbezirkSlug.toLowerCase())
+            );
+
+            if (hauptbezirkEntry) {
+                const hauptbezirkKey = hauptbezirkEntry.name.trim();
+                if (!grouped[hauptbezirkKey]) {
+                    grouped[hauptbezirkKey] = {
+                        value: hauptbezirkEntry.value,
+                        name: hauptbezirkEntry.name,
+                        ortsteile: []
+                    };
+                }
+                grouped[hauptbezirkKey].ortsteile.push({
+                    value: value,
+                    name: name
+                });
+            }
+        }
+    });
+
+    // Erstelle HTML mit Hauptbezirken und Ortsteilen
+    let html = '';
+
+    Object.keys(grouped).sort().forEach(hauptbezirkName => {
+        const bezirk = grouped[hauptbezirkName];
+
+        html += `
+            <div class="bezirk-group">
+                <label class="bezirk-hauptbezirk">
+                    <input type="checkbox" name="bezirk" value="${bezirk.value}" class="bezirk-checkbox hauptbezirk-checkbox" data-hauptbezirk="${bezirk.value}">
+                    <strong>${bezirk.name}</strong>
+                </label>
+        `;
+
+        // Ortsteile eingerückt anzeigen
+        if (bezirk.ortsteile.length > 0) {
+            bezirk.ortsteile.sort((a, b) => a.name.localeCompare(b.name)).forEach(ortsteil => {
+                html += `
+                    <label class="bezirk-ortsteil">
+                        <input type="checkbox" name="bezirk" value="${ortsteil.value}" class="bezirk-checkbox ortsteil-checkbox" data-parent="${bezirk.value}">
+                        ${ortsteil.name}
+                    </label>
+                `;
+            });
         }
 
-        return `
-            <label>
-                <input type="checkbox" name="bezirk" value="${value}" class="bezirk-checkbox">
-                ${name}
-            </label>
-        `;
-    }).filter(html => html !== '').join('');
+        html += '</div>';
+    });
+
+    container.innerHTML = html;
+
+    // Event Listener für Hauptbezirke (selektiert alle Ortsteile)
+    document.querySelectorAll('.hauptbezirk-checkbox').forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            const hauptbezirkValue = this.getAttribute('data-hauptbezirk');
+            const ortsteileCheckboxes = document.querySelectorAll(`.ortsteil-checkbox[data-parent="${hauptbezirkValue}"]`);
+            ortsteileCheckboxes.forEach(cb => {
+                cb.checked = this.checked;
+            });
+        });
+    });
 }
 
 async function loadFilterConfig() {

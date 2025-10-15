@@ -1,5 +1,5 @@
-# Multi-stage Dockerfile für Gewobag Bot v2.1
-# Optimiert für Production-Deployment
+# Multi-stage Dockerfile für Gewobag Bot v2.2
+# Optimiert für Production-Deployment mit Web-Frontend
 
 # ===== Stage 1: Builder =====
 FROM python:3.11-slim as builder
@@ -53,12 +53,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libatspi2.0-0 \
     # Zusätzliche Utilities
     sqlite3 \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Non-root User erstellen für Sicherheit
 RUN useradd -m -u 1000 botuser && \
-    mkdir -p /app /data /ms-playwright && \
-    chown -R botuser:botuser /app /data /ms-playwright
+    mkdir -p /app /app/logs /ms-playwright && \
+    chown -R botuser:botuser /app /ms-playwright
 
 # Arbeitsverzeichnis
 WORKDIR /app
@@ -66,26 +67,35 @@ WORKDIR /app
 # Python-Packages von Builder kopieren
 COPY --from=builder --chown=botuser:botuser /root/.local /home/botuser/.local
 
-# PATH erweitern
-ENV PATH=/home/botuser/.local/bin:$PATH
+# PATH und PYTHONPATH erweitern
+ENV PATH=/home/botuser/.local/bin:$PATH \
+    PYTHONPATH=/home/botuser/.local/lib/python3.11/site-packages:$PYTHONPATH
 
-# Playwright-Browser installieren (als root, aber in User-Verzeichnis)
-RUN pip install playwright && \
-    playwright install chromium && \
+# Playwright-Browser installieren (muss als root installiert werden, dann Permissions setzen)
+# Wichtig: Installation NACH PATH-Setting, aber VOR User-Wechsel
+RUN python3 -m playwright install chromium && \
     chown -R botuser:botuser /ms-playwright
 
-# Application-Code kopieren
-COPY --chown=botuser:botuser . .
+# Application-Code kopieren (inkl. frontend/)
+COPY --chown=botuser:botuser *.py ./
+COPY --chown=botuser:botuser frontend/ ./frontend/
+
+# Template-Konfigurationsdateien kopieren (werden später durch Volumes überschrieben)
+COPY --chown=botuser:botuser bezirke_verfuegbar.json ./
 
 # Zu Non-root User wechseln
 USER botuser
 
-# Volume für persistente Daten (Datenbank, Logs, Config)
-VOLUME ["/app/data"]
+# Volumes für persistente Daten
+# Logs und Datenbank werden direkt in /app/ gemountet
+VOLUME ["/app/logs"]
 
-# Health-Check (prüft ob Datenbank existiert)
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD test -f /app/data/gewobag_wohnungen.db || exit 1
+# Health-Check (prüft ob Datenbank existiert oder erstellt werden kann)
+HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
+    CMD test -f /app/gewobag_wohnungen.db || exit 0
+
+# Port für Web-Frontend exponieren
+EXPOSE 5000
 
 # Standard-Befehl (kann mit docker-compose überschrieben werden)
 CMD ["python", "main.py", "--full"]

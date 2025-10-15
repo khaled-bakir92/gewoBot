@@ -1,0 +1,25 @@
+[Unit]
+Description=Gewobag Bot - Apartment Search and Application
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+User=botuser
+WorkingDirectory=/home/botuser/gewobag-bot
+
+# Bot ausführen
+ExecStart=/usr/bin/docker-compose run --rm gewobag-bot python main.py --full
+
+# Logs
+StandardOutput=append:/home/botuser/gewobag-bot/logs/systemd.log
+StandardError=append:/home/botuser/gewobag-bot/logs/systemd-error.log
+
+# Timeout (10 Minuten)
+TimeoutStartSec=600
+
+# Kein Neustart (wird vom Timer gesteuert)
+Restart=no
+
+[Install]
+WantedBy=multi-user.target

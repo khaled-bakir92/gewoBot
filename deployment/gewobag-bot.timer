@@ -1,0 +1,36 @@
+[Unit]
+Description=Gewobag Bot Timer - Run every 15 minutes
+Requires=gewobag-bot.service
+
+[Timer]
+# Alle 15 Minuten ausführen
+OnCalendar=*:0/15
+
+# Alternative Zeitpläne (auskommentiert):
+# Alle 30 Minuten:
+# OnCalendar=*:0/30
+
+# Stündlich (zur vollen Stunde):
+# OnCalendar=hourly
+
+# Alle 6 Stunden:
+# OnCalendar=0/6:00
+
+# Mo-Fr, 9-18 Uhr, alle 15 Minuten:
+# OnCalendar=Mon..Fri 09..18:0/15
+
+# Zufällige Verzögerung (0-60 Sekunden)
+# Verhindert, dass alle Bots gleichzeitig starten
+RandomizedDelaySec=60
+
+# Nach System-Start 5 Minuten warten
+OnBootSec=5min
+
+# Falls ein Lauf verpasst wurde, nachholen
+Persistent=true
+
+# Präzision (optional, für genauere Zeitplanung)
+AccuracySec=1s
+
+[Install]
+WantedBy=timers.target

@@ -39,9 +39,8 @@ env/
 *~
 .DS_Store
 
-# Logs
+# Logs (werden über Volume gemounted)
 *.log
-logs/
 gewobag-bot.log
 application-bot.log
 gewobag-main.log
@@ -51,13 +50,12 @@ gewobag-main.log
 *.db-journal
 gewobag_wohnungen.db
 
-# Screenshots
-*.png
+# Screenshots (generiert zur Laufzeit)
 error_screenshot_*.png
 timeout_error_*.png
 general_error_*.png
 
-# Sensitive Data (WICHTIG!)
+# Sensitive Data (wird über Volume gemounted)
 user_data.json
 documents/
 *.pdf
@@ -70,6 +68,11 @@ documents/
 # Documentation (nicht für Runtime benötigt)
 README.md
 CLAUDE.md
+FRONTEND.md
+DEPLOYMENT.md
+DOCKER_TEST.md
+DOCKER_QUICKSTART.md
+VPS_DEPLOYMENT_GUIDE.md
 view.html
 anfrage.html
 
@@ -78,11 +81,13 @@ Dockerfile
 docker-compose.yml
 .dockerignore
 
-# Configuration (wird über Volume gemounted)
+# Configuration (Template-Dateien werden kopiert, Rest über Volume)
 filter_config.json
-bezirke_verfuegbar.json
+# bezirke_verfuegbar.json wird NICHT ignoriert (als Template benötigt)
 
-# Pytest
+# Test-Dateien
+test_*.py
+*_test.py
 .pytest_cache/
 .coverage
 htmlcov/
@@ -99,3 +104,4 @@ package-lock.json
 *.tmp
 .env
 .env.local
+.env.example

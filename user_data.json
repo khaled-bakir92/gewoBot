@@ -1,30 +1,28 @@
 {
   "personal_info": {
-    "anrede": "Frau",
-    "vorname": "Dina",
-    "nachname": "Amasha",
+    "anrede": "Herr",
+    "vorname": "Hatem ",
+    "nachname": "Abou-Tay",
     "email": "khaled132112@gmail.com",
-    "telefon": "016099110555",
-    "mobil": "016099110555",
+    "telefon": 16099110555,
+    "mobil": 16099110555,
+    "geburtsdatum": "03.12.1997",
+    "staatsangehoerigkeit": "Deutsch",
     "strasse": "Mariendorfer Damm",
-    "hausnummer": "57",
-    "plz": "12109",
+    "hausnummer": 57,
+    "plz": 12109,
     "stadt": "Berlin",
     "adresszusatz": "",
-    "fuer_wen_anfrage": "Für mich selbst",
-    "geburtsdatum": "03.12.1997",
-    "staatsangehoerigkeit": "Deutsch"
+    "fuer_wen_anfrage": "Für mich selbst"
   },
   "household": {
     "anzahl_personen": 2,
     "anzahl_kinder": 0,
-    "wbs_vorhanden": false,
+    "haushaltseinkommen": 4000,
     "wbs_gueltig_bis": "31.12.2025",
     "wbs_art": "WBS 140",
-    "wbs_zimmer": "2",
-    "paragraph_9_bescheinigung": false,
-    "einkommen_in_spanne": true,
-    "haushaltseinkommen": "4000"
+    "wbs_zimmer": 2,
+    "wbs_vorhanden": 0
   },
   "documents": {
     "personalausweis": "/path/to/personalausweis.pdf",

@@ -1,4 +1,5 @@
 services:
+  # ===== Bot-Service (CLI-Modus) =====
   gewobag-bot:
     build:
       context: .
@@ -6,7 +7,7 @@ services:
     container_name: gewobag-bot
     restart: unless-stopped
 
-    # Umgebungsvariablen (optional)
+    # Umgebungsvariablen
     environment:
       - TZ=Europe/Berlin
       - PYTHONUNBUFFERED=1
@@ -56,33 +57,106 @@ services:
       retries: 3
       start_period: 10s
 
-  # ===== Optional: Cronjob-Service für regelmäßige Ausführung =====
-  # Uncomment für automatische, geplante Ausführung
-  # gewobag-bot-cron:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   container_name: gewobag-bot-cron
-  #   restart: unless-stopped
-  #
-  #   environment:
-  #     - TZ=Europe/Berlin
-  #     - CRON_SCHEDULE=0 */6 * * *  # Alle 6 Stunden
-  #
-  #   volumes:
-  #     - ./user_data.json:/app/user_data.json:ro
-  #     - ./filter_config.json:/app/filter_config.json:ro
-  #     - ./gewobag_wohnungen.db:/app/gewobag_wohnungen.db
-  #     - ./logs:/app/logs
-  #
-  #   command: >
-  #     sh -c "
-  #       echo '$CRON_SCHEDULE python /app/main.py --full' > /etc/crontabs/botuser &&
-  #       crond -f -l 2
-  #     "
+  # ===== Web-Frontend Service (NEU in v2.2) =====
+  gewobag-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gewobag-web
+    restart: unless-stopped
 
-# ===== Optionale Services =====
+    # Umgebungsvariablen
+    environment:
+      - TZ=Europe/Berlin
+      - PYTHONUNBUFFERED=1
+      - FLASK_ENV=production
 
-# Webinterface zur Datenbankansicht (optional)
-# volumes:
-#   db-data:
+    # Port für Web-Interface
+    ports:
+      - "5000:5000"
+
+    # Volumes (gleiche wie Bot-Service)
+    volumes:
+      # Konfigurationsdateien (read-write für Web-Interface)
+      - ./user_data.json:/app/user_data.json
+      - ./filter_config.json:/app/filter_config.json
+
+      # Datenbank und Logs (read-write)
+      - ./gewobag_wohnungen.db:/app/gewobag_wohnungen.db
+      - ./logs:/app/logs
+
+      # Optionale Dokumente (read-only)
+      - ./documents:/app/documents:ro
+
+    # Ressourcen-Limits
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+
+    # Logging-Konfiguration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+    # Web-API starten
+    command: ["python", "web_api.py"]
+
+    # Healthcheck für Web-API
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5000/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # ===== Scheduler Service mit Ofelia (empfohlen für Production) =====
+  # Führt den Bot automatisch alle 15 Minuten aus
+  # Aktivieren: docker-compose up -d gewobag-scheduler
+  gewobag-scheduler:
+    image: mcuadros/ofelia:latest
+    container_name: gewobag-scheduler
+    restart: unless-stopped
+    depends_on:
+      - gewobag-bot
+
+    # Scheduler-Daemon starten
+    command: daemon --docker
+
+    # Docker-Socket für Container-Steuerung
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+    # Job-Konfiguration via Labels
+    labels:
+      # Job-Name: gewobag-bot-job
+      ofelia.job-exec.gewobag-bot-job.schedule: "@every 15m"
+      ofelia.job-exec.gewobag-bot-job.container: "gewobag-bot"
+      ofelia.job-exec.gewobag-bot-job.command: "python main.py --full"
+      ofelia.job-exec.gewobag-bot-job.no-overlap: "true"
+
+      # Alternative Zeitpläne (auskommentiert):
+      # Alle 30 Minuten:
+      # ofelia.job-exec.gewobag-bot-job.schedule: "@every 30m"
+
+      # Stündlich:
+      # ofelia.job-exec.gewobag-bot-job.schedule: "@hourly"
+
+      # Alle 6 Stunden:
+      # ofelia.job-exec.gewobag-bot-job.schedule: "@every 6h"
+
+      # Cron-Syntax (Mo-Fr, 9-18 Uhr, alle 15 Min):
+      # ofelia.job-exec.gewobag-bot-job.schedule: "*/15 9-18 * * 1-5"
+
+    # Logging
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "2"

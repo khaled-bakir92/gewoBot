@@ -2107,3 +2107,75 @@ Call log:
 2025-10-10 19:15:04,824 - gewobag_bot - WARNING - Keine Wohnungen gefunden
 2025-10-10 19:15:04,824 - __main__ - INFO - 
 ℹ️  Keine Wohnungen gefunden
+2025-10-13 15:49:55,821 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-13 15:49:55,822 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-13 15:49:55,822 - __main__ - INFO - 
+================================================================================
+2025-10-13 15:49:55,822 - __main__ - INFO - 🤖 MODUS: VOLLAUTOMATISCH (SUCHE + BEWERBUNG)
+2025-10-13 15:49:55,822 - __main__ - INFO - ================================================================================
+2025-10-13 15:49:55,822 - __main__ - INFO - 
+📍 Schritt 1/2: Wohnungssuche...
+2025-10-13 15:49:55,822 - gewobag_bot - INFO - ======================================================================
+2025-10-13 15:49:55,822 - gewobag_bot - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-13 15:49:55,822 - gewobag_bot - INFO - ======================================================================
+2025-10-13 15:49:55,823 - gewobag_bot - INFO - Aktive Filter: Bezirke: charlottenburg-wilmersdorf, charlottenburg-wilmersdorf-charlottenburg, charlottenburg-wilmersdorf-nord, charlottenburg-wilmersdorf-grunewald, charlottenburg-wilmersdorf-schmargendorf, charlottenburg-wilmersdorf-wilmersdorf, neukoelln, neukoelln-britz, neukoelln-buckow, neukoelln-neukoelln, neukoelln-rudow, steglitz-zehlendorf, steglitz-zehlendorf-lichterfelde, tempelhof-schoeneberg, tempelhof-schoeneberg-lichtenrade, tempelhof-schoeneberg-mariendorf, tempelhof-schoeneberg-marienfelde, tempelhof-schoeneberg-schoeneberg | Miete:  - 1200 € | Fläche: 60 -  m² | Zimmer: 3 -  | WBS: nur ohne WBS
+2025-10-13 15:49:55,823 - gewobag_bot - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-13 15:49:55,823 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-13 15:49:55,823 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1200&gesamtflaeche_von=60&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=charlottenburg-wilmersdorf&bezirke%5B%5D=charlottenburg-wilmersdorf-charlottenburg&bezirke%5B%5D=charlottenburg-wilmersdorf-nord&bezirke%5B%5D=charlottenburg-wilmersdorf-grunewald&bezirke%5B%5D=charlottenburg-wilmersdorf-schmargendorf&bezirke%5B%5D=charlottenburg-wilmersdorf-wilmersdorf&bezirke%5B%5D=neukoelln&bezirke%5B%5D=neukoelln-britz&bezirke%5B%5D=neukoelln-buckow&bezirke%5B%5D=neukoelln-neukoelln&bezirke%5B%5D=neukoelln-rudow&bezirke%5B%5D=steglitz-zehlendorf&bezirke%5B%5D=steglitz-zehlendorf-lichterfelde&bezirke%5B%5D=tempelhof-schoeneberg&bezirke%5B%5D=tempelhof-schoeneberg-lichtenrade&bezirke%5B%5D=tempelhof-schoeneberg-mariendorf&bezirke%5B%5D=tempelhof-schoeneberg-marienfelde&bezirke%5B%5D=tempelhof-schoeneberg-schoeneberg
+2025-10-13 15:49:56,919 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-13 15:49:56,920 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-13 15:49:56,950 - gewobag_bot - WARNING - Keine Angebote gefunden!
+2025-10-13 15:49:56,950 - gewobag_bot - INFO - 📊 Seite 1: 0 Wohnungen gefunden
+2025-10-13 15:49:56,980 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-13 15:49:56,981 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 0 Wohnungen gefunden
+2025-10-13 15:49:56,981 - gewobag_bot - WARNING - Keine Wohnungen gefunden
+2025-10-13 15:49:56,981 - __main__ - INFO - 
+ℹ️  Keine Wohnungen gefunden - keine Bewerbungen möglich
+2025-10-13 15:50:42,259 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-13 15:50:42,259 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-13 15:50:42,260 - gewobag_bot - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-13 15:50:42,260 - gewobag_bot - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-13 15:50:42,260 - __main__ - INFO - 
+================================================================================
+2025-10-13 15:50:42,260 - __main__ - INFO - 🔍 MODUS: NUR WOHNUNGSSUCHE
+2025-10-13 15:50:42,260 - __main__ - INFO - ================================================================================
+2025-10-13 15:50:42,260 - gewobag_bot - INFO - ======================================================================
+2025-10-13 15:50:42,260 - gewobag_bot - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-13 15:50:42,260 - gewobag_bot - INFO - ======================================================================
+2025-10-13 15:50:42,260 - gewobag_bot - INFO - Aktive Filter: Bezirke: charlottenburg-wilmersdorf, charlottenburg-wilmersdorf-charlottenburg, charlottenburg-wilmersdorf-nord, charlottenburg-wilmersdorf-grunewald, charlottenburg-wilmersdorf-schmargendorf, charlottenburg-wilmersdorf-wilmersdorf, neukoelln, neukoelln-britz, neukoelln-buckow, neukoelln-neukoelln, neukoelln-rudow, steglitz-zehlendorf, steglitz-zehlendorf-lichterfelde, tempelhof-schoeneberg, tempelhof-schoeneberg-lichtenrade, tempelhof-schoeneberg-mariendorf, tempelhof-schoeneberg-marienfelde, tempelhof-schoeneberg-schoeneberg | Miete:  - 1200 € | Fläche: 60 -  m² | Zimmer: 3 -  | WBS: nur ohne WBS
+2025-10-13 15:50:42,261 - gewobag_bot - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-13 15:50:42,261 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-13 15:50:42,261 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1200&gesamtflaeche_von=60&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=charlottenburg-wilmersdorf&bezirke%5B%5D=charlottenburg-wilmersdorf-charlottenburg&bezirke%5B%5D=charlottenburg-wilmersdorf-nord&bezirke%5B%5D=charlottenburg-wilmersdorf-grunewald&bezirke%5B%5D=charlottenburg-wilmersdorf-schmargendorf&bezirke%5B%5D=charlottenburg-wilmersdorf-wilmersdorf&bezirke%5B%5D=neukoelln&bezirke%5B%5D=neukoelln-britz&bezirke%5B%5D=neukoelln-buckow&bezirke%5B%5D=neukoelln-neukoelln&bezirke%5B%5D=neukoelln-rudow&bezirke%5B%5D=steglitz-zehlendorf&bezirke%5B%5D=steglitz-zehlendorf-lichterfelde&bezirke%5B%5D=tempelhof-schoeneberg&bezirke%5B%5D=tempelhof-schoeneberg-lichtenrade&bezirke%5B%5D=tempelhof-schoeneberg-mariendorf&bezirke%5B%5D=tempelhof-schoeneberg-marienfelde&bezirke%5B%5D=tempelhof-schoeneberg-schoeneberg
+2025-10-13 15:50:43,350 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-13 15:50:43,354 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-13 15:50:43,410 - gewobag_bot - WARNING - Keine Angebote gefunden!
+2025-10-13 15:50:43,410 - gewobag_bot - INFO - 📊 Seite 1: 0 Wohnungen gefunden
+2025-10-13 15:50:43,444 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-13 15:50:43,444 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 0 Wohnungen gefunden
+2025-10-13 15:50:43,444 - gewobag_bot - WARNING - Keine Wohnungen gefunden
+2025-10-13 15:50:43,444 - __main__ - INFO - 
+ℹ️  Keine Wohnungen gefunden
+2025-10-14 17:34:31,037 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-14 17:34:31,037 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-14 17:34:31,038 - gewobag_bot - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-14 17:34:31,038 - gewobag_bot - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-14 17:34:31,038 - __main__ - INFO - 
+================================================================================
+2025-10-14 17:34:31,038 - __main__ - INFO - 🔍 MODUS: NUR WOHNUNGSSUCHE
+2025-10-14 17:34:31,038 - __main__ - INFO - ================================================================================
+2025-10-14 17:34:31,038 - gewobag_bot - INFO - ======================================================================
+2025-10-14 17:34:31,038 - gewobag_bot - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-14 17:34:31,038 - gewobag_bot - INFO - ======================================================================
+2025-10-14 17:34:31,039 - gewobag_bot - INFO - Aktive Filter: Bezirke: charlottenburg-wilmersdorf, charlottenburg-wilmersdorf-charlottenburg, charlottenburg-wilmersdorf-nord, charlottenburg-wilmersdorf-grunewald, charlottenburg-wilmersdorf-schmargendorf, charlottenburg-wilmersdorf-wilmersdorf, neukoelln, neukoelln-britz, neukoelln-buckow, neukoelln-neukoelln, neukoelln-rudow, steglitz-zehlendorf, steglitz-zehlendorf-lichterfelde, tempelhof-schoeneberg, tempelhof-schoeneberg-lichtenrade, tempelhof-schoeneberg-mariendorf, tempelhof-schoeneberg-marienfelde, tempelhof-schoeneberg-schoeneberg | Miete:  - 1200 € | Fläche: 60 -  m² | Zimmer: 3 -  | WBS: nur ohne WBS
+2025-10-14 17:34:31,039 - gewobag_bot - INFO - Hinweis: zimmer_von wird clientseitig gefiltert (Website-Bug)
+2025-10-14 17:34:31,040 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-14 17:34:31,040 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=1200&gesamtflaeche_von=60&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=charlottenburg-wilmersdorf&bezirke%5B%5D=charlottenburg-wilmersdorf-charlottenburg&bezirke%5B%5D=charlottenburg-wilmersdorf-nord&bezirke%5B%5D=charlottenburg-wilmersdorf-grunewald&bezirke%5B%5D=charlottenburg-wilmersdorf-schmargendorf&bezirke%5B%5D=charlottenburg-wilmersdorf-wilmersdorf&bezirke%5B%5D=neukoelln&bezirke%5B%5D=neukoelln-britz&bezirke%5B%5D=neukoelln-buckow&bezirke%5B%5D=neukoelln-neukoelln&bezirke%5B%5D=neukoelln-rudow&bezirke%5B%5D=steglitz-zehlendorf&bezirke%5B%5D=steglitz-zehlendorf-lichterfelde&bezirke%5B%5D=tempelhof-schoeneberg&bezirke%5B%5D=tempelhof-schoeneberg-lichtenrade&bezirke%5B%5D=tempelhof-schoeneberg-mariendorf&bezirke%5B%5D=tempelhof-schoeneberg-marienfelde&bezirke%5B%5D=tempelhof-schoeneberg-schoeneberg
+2025-10-14 17:34:31,963 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-14 17:34:31,965 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-14 17:34:32,005 - gewobag_bot - WARNING - Keine Angebote gefunden!
+2025-10-14 17:34:32,006 - gewobag_bot - INFO - 📊 Seite 1: 0 Wohnungen gefunden
+2025-10-14 17:34:32,043 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-14 17:34:32,043 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 0 Wohnungen gefunden
+2025-10-14 17:34:32,043 - gewobag_bot - WARNING - Keine Wohnungen gefunden
+2025-10-14 17:34:32,043 - __main__ - INFO - 
+ℹ️  Keine Wohnungen gefunden

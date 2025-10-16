@@ -22,6 +22,9 @@ services:
       - ./gewobag_wohnungen.db:/app/gewobag_wohnungen.db
       - ./logs:/app/logs
 
+      # Heartbeat-Datei (für Status-Tracking)
+      - ./.bot_heartbeat.json:/app/.bot_heartbeat.json
+
       # Optionale Dokumente (read-only)
       - ./documents:/app/documents:ro
 
@@ -47,7 +50,7 @@ services:
 
     # Standard-Kommando (kann überschrieben werden)
     # Optionen: --scrape, --apply, --full, --setup
-    command: ["python", "main.py", "--full"]
+    command: ["tail", "-f", "/dev/null"]
 
     # Healthcheck
     healthcheck:
@@ -84,6 +87,9 @@ services:
       # Datenbank und Logs (read-write)
       - ./gewobag_wohnungen.db:/app/gewobag_wohnungen.db
       - ./logs:/app/logs
+
+      # Heartbeat-Datei (für Status-Tracking)
+      - ./.bot_heartbeat.json:/app/.bot_heartbeat.json
 
       # Optionale Dokumente (read-only)
       - ./documents:/app/documents:ro

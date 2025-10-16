@@ -543,6 +543,13 @@ async function updateBotStatus() {
         document.getElementById('botStarted').textContent =
             data.status.started_at ? formatDateTime(data.status.started_at) : '-';
 
+        // Zeige die letzte Bot-Ausführung (Heartbeat)
+        const lastRunText = data.status.last_run
+            ? formatDateTime(data.status.last_run) +
+              (data.status.last_run_message ? ` (${data.status.last_run_message})` : '')
+            : '-';
+        document.getElementById('botLastRun').textContent = lastRunText;
+
         // Zeige die echte letzte Aktivität aus der Datenbank
         const lastActivityText = data.status.last_activity
             ? formatDateTime(data.status.last_activity) +

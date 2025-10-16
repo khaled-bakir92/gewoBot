@@ -9,6 +9,8 @@ import sys
 import logging
 import argparse
 from pathlib import Path
+import json
+from datetime import datetime
 
 # Import der Module
 try:
@@ -50,6 +52,34 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Heartbeat-Datei für Bot-Status-Tracking
+HEARTBEAT_FILE = '.bot_heartbeat.json'
+
+
+def update_bot_heartbeat(mode: str, status: str, message: str = None):
+    """
+    Aktualisiert die Heartbeat-Datei mit dem aktuellen Bot-Status.
+
+    Args:
+        mode: Bot-Modus (scrape, apply, full, setup)
+        status: Status (started, running, completed, failed)
+        message: Optional - Zusätzliche Nachricht
+    """
+    try:
+        heartbeat_data = {
+            'mode': mode,
+            'status': status,
+            'timestamp': datetime.now().isoformat(),
+            'message': message
+        }
+
+        with open(HEARTBEAT_FILE, 'w') as f:
+            json.dump(heartbeat_data, f, indent=2)
+
+        logger.debug(f"Heartbeat aktualisiert: {mode} - {status}")
+    except Exception as e:
+        logger.warning(f"Konnte Heartbeat nicht aktualisieren: {e}")
+
 
 def setup_initial_config():
     """
@@ -86,6 +116,8 @@ def run_scrape_only():
     """
     Führt nur die Wohnungssuche durch (ohne Bewerbung).
     """
+    update_bot_heartbeat('scrape', 'started')
+
     logger.info("\n" + "=" * 80)
     logger.info("🔍 MODUS: NUR WOHNUNGSSUCHE")
     logger.info("=" * 80)
@@ -95,8 +127,10 @@ def run_scrape_only():
     if wohnungen:
         logger.info(f"\n✅ {len(wohnungen)} Wohnungen gefunden")
         logger.info("💡 Führen Sie 'python main.py --apply' aus, um sich zu bewerben")
+        update_bot_heartbeat('scrape', 'completed', f'{len(wohnungen)} Wohnungen gefunden')
     else:
         logger.info("\nℹ️  Keine Wohnungen gefunden")
+        update_bot_heartbeat('scrape', 'completed', 'Keine Wohnungen gefunden')
 
 
 def run_apply_only(headless: bool = True, max_applications: int = None):
@@ -107,6 +141,8 @@ def run_apply_only(headless: bool = True, max_applications: int = None):
         headless: Browser im Headless-Modus
         max_applications: Maximale Anzahl Bewerbungen
     """
+    update_bot_heartbeat('apply', 'started')
+
     logger.info("\n" + "=" * 80)
     logger.info("📝 MODUS: NUR BEWERBUNGEN")
     logger.info("=" * 80)
@@ -117,12 +153,14 @@ def run_apply_only(headless: bool = True, max_applications: int = None):
     if not unapplied:
         logger.info("ℹ️  Keine neuen Wohnungen für Bewerbung gefunden")
         logger.info("💡 Führen Sie zuerst 'python main.py --scrape' aus")
+        update_bot_heartbeat('apply', 'completed', 'Keine Wohnungen zum Bewerben')
         return
 
     logger.info(f"📊 {len(unapplied)} Wohnungen ohne Bewerbung gefunden")
 
     # Starte Bewerbungsbot
     run_application_bot(headless=headless, max_applications=max_applications)
+    update_bot_heartbeat('apply', 'completed', f'{len(unapplied)} Bewerbungen versendet')
 
 
 def run_full_automation(headless: bool = True, max_applications: int = None):
@@ -133,6 +171,8 @@ def run_full_automation(headless: bool = True, max_applications: int = None):
         headless: Browser im Headless-Modus
         max_applications: Maximale Anzahl Bewerbungen
     """
+    update_bot_heartbeat('full', 'started')
+
     logger.info("\n" + "=" * 80)
     logger.info("🤖 MODUS: VOLLAUTOMATISCH (SUCHE + BEWERBUNG)")
     logger.info("=" * 80)
@@ -143,6 +183,7 @@ def run_full_automation(headless: bool = True, max_applications: int = None):
 
     if not wohnungen:
         logger.info("\nℹ️  Keine Wohnungen gefunden - keine Bewerbungen möglich")
+        update_bot_heartbeat('full', 'completed', 'Keine Wohnungen gefunden')
         return
 
     logger.info(f"\n✅ {len(wohnungen)} Wohnungen gefunden")
@@ -155,6 +196,7 @@ def run_full_automation(headless: bool = True, max_applications: int = None):
 
     if not unapplied:
         logger.info("ℹ️  Alle Wohnungen haben bereits eine Bewerbung")
+        update_bot_heartbeat('full', 'completed', f'{len(wohnungen)} Wohnungen gefunden, alle bereits beworben')
         return
 
     logger.info(f"📊 {len(unapplied)} neue Wohnungen - starte Bewerbungen...")
@@ -165,6 +207,8 @@ def run_full_automation(headless: bool = True, max_applications: int = None):
     logger.info("\n" + "=" * 80)
     logger.info("✅ VOLLAUTOMATISCHE AUSFÜHRUNG ABGESCHLOSSEN")
     logger.info("=" * 80)
+
+    update_bot_heartbeat('full', 'completed', f'{len(unapplied)} Bewerbungen versendet')
 
 
 def main():

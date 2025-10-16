@@ -42,6 +42,7 @@ USER_DATA_PATH = os.path.join(BASE_DIR, 'user_data.json')
 FILTER_CONFIG_PATH = os.path.join(BASE_DIR, 'filter_config.json')
 BEZIRKE_PATH = os.path.join(BASE_DIR, 'bezirke_verfuegbar.json')
 DB_PATH = os.path.join(BASE_DIR, 'gewobag_wohnungen.db')
+HEARTBEAT_FILE = os.path.join(BASE_DIR, '.bot_heartbeat.json')
 
 # ============================================================================
 # HELPER FUNCTIONS
@@ -198,6 +199,17 @@ def check_docker_bot_running():
         # Docker nicht verfügbar oder Fehler
         logger.debug(f"Docker-Check fehlgeschlagen: {e}")
         return False
+
+def load_bot_heartbeat():
+    """Lädt die Heartbeat-Datei mit dem letzten Bot-Run"""
+    try:
+        if os.path.exists(HEARTBEAT_FILE):
+            with open(HEARTBEAT_FILE, 'r') as f:
+                return json.load(f)
+        return None
+    except Exception as e:
+        logger.debug(f"Konnte Heartbeat nicht laden: {e}")
+        return None
 
 # ============================================================================
 # FRONTEND ROUTES
@@ -506,6 +518,14 @@ def get_bot_status():
 
     # Prüfe ob automatischer Bot-Container läuft (Docker)
     bot_status['auto_bot_running'] = check_docker_bot_running()
+
+    # Lade Heartbeat-Daten (letzte Bot-Ausführung)
+    heartbeat = load_bot_heartbeat()
+    if heartbeat:
+        bot_status['last_run'] = heartbeat.get('timestamp')
+        bot_status['last_run_mode'] = heartbeat.get('mode')
+        bot_status['last_run_status'] = heartbeat.get('status')
+        bot_status['last_run_message'] = heartbeat.get('message')
 
     return jsonify({
         'status': bot_status,

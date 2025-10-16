@@ -7,7 +7,7 @@
 // GLOBAL VARIABLES & CONFIG
 // ============================================================================
 
-const API_BASE_URL = 'http://localhost:8080/api';
+const API_BASE_URL = '/api';
 let statusUpdateInterval = null;
 let availableBezirke = [];
 

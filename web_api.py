@@ -36,11 +36,12 @@ bot_status = {
     'message': 'Bot ist gestoppt'
 }
 
-# Pfade
-USER_DATA_PATH = 'user_data.json'
-FILTER_CONFIG_PATH = 'filter_config.json'
-BEZIRKE_PATH = 'bezirke_verfuegbar.json'
-DB_PATH = 'gewobag_wohnungen.db'
+# Pfade - Absolute Pfade basierend auf dem Skript-Verzeichnis
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+USER_DATA_PATH = os.path.join(BASE_DIR, 'user_data.json')
+FILTER_CONFIG_PATH = os.path.join(BASE_DIR, 'filter_config.json')
+BEZIRKE_PATH = os.path.join(BASE_DIR, 'bezirke_verfuegbar.json')
+DB_PATH = os.path.join(BASE_DIR, 'gewobag_wohnungen.db')
 
 # ============================================================================
 # HELPER FUNCTIONS
@@ -60,11 +61,36 @@ def load_json_file(filepath):
 def save_json_file(filepath, data):
     """Speichert JSON-Datei"""
     try:
+        # Prüfe ob Verzeichnis existiert
+        directory = os.path.dirname(filepath)
+        if directory and not os.path.exists(directory):
+            logger.error(f"Verzeichnis existiert nicht: {directory}")
+            return False
+
+        # Prüfe Schreibrechte
+        if os.path.exists(filepath) and not os.access(filepath, os.W_OK):
+            logger.error(f"Keine Schreibrechte für Datei: {filepath}")
+            return False
+
+        # Prüfe Verzeichnis-Schreibrechte (für neue Dateien)
+        if not os.path.exists(filepath):
+            parent_dir = os.path.dirname(filepath) or '.'
+            if not os.access(parent_dir, os.W_OK):
+                logger.error(f"Keine Schreibrechte für Verzeichnis: {parent_dir}")
+                return False
+
         with open(filepath, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
+
+        logger.info(f"✅ Datei erfolgreich gespeichert: {filepath}")
         return True
+    except PermissionError as e:
+        logger.error(f"❌ Keine Berechtigung zum Schreiben: {filepath} - {e}")
+        return False
     except Exception as e:
-        logger.error(f"Fehler beim Speichern von {filepath}: {e}")
+        logger.error(f"❌ Fehler beim Speichern von {filepath}: {type(e).__name__} - {e}")
+        import traceback
+        logger.error(traceback.format_exc())
         return False
 
 def get_db_stats():
@@ -152,6 +178,27 @@ def get_recent_applications(limit=10):
         logger.error(f"Fehler beim Abrufen der letzten Bewerbungen: {e}")
         return []
 
+def check_docker_bot_running():
+    """Prüft ob der automatische Bot-Container (gewobag-bot) läuft"""
+    try:
+        # Prüfe ob Docker verfügbar ist
+        result = subprocess.run(
+            ['docker', 'ps', '--filter', 'name=gewobag-bot', '--format', '{{.Names}}'],
+            capture_output=True,
+            text=True,
+            timeout=2
+        )
+
+        # Wenn der Container läuft, wird sein Name zurückgegeben
+        if result.returncode == 0 and 'gewobag-bot' in result.stdout:
+            return True
+
+        return False
+    except (subprocess.TimeoutExpired, FileNotFoundError, Exception) as e:
+        # Docker nicht verfügbar oder Fehler
+        logger.debug(f"Docker-Check fehlgeschlagen: {e}")
+        return False
+
 # ============================================================================
 # FRONTEND ROUTES
 # ============================================================================
@@ -168,22 +215,37 @@ def index():
 @app.route('/api/user-data', methods=['GET'])
 def get_user_data():
     """Gibt die aktuellen User-Daten zurück"""
-    data = load_json_file(USER_DATA_PATH)
-    return jsonify(data)
+    try:
+        logger.info(f"📥 GET /api/user-data - Lade Datei: {USER_DATA_PATH}")
+        data = load_json_file(USER_DATA_PATH)
+        logger.info(f"✅ GET /api/user-data - Erfolgreich geladen")
+        return jsonify(data)
+    except Exception as e:
+        logger.error(f"❌ GET /api/user-data - Fehler: {type(e).__name__} - {e}")
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/api/user-data', methods=['POST'])
 def save_user_data():
     """Speichert User-Daten"""
     try:
+        logger.info(f"📤 POST /api/user-data - Speichere in: {USER_DATA_PATH}")
         data = request.json
+
+        if not data:
+            logger.error("❌ POST /api/user-data - Keine Daten erhalten")
+            return jsonify({'success': False, 'message': 'Keine Daten erhalten'}), 400
+
         if save_json_file(USER_DATA_PATH, data):
-            logger.info("User-Daten erfolgreich gespeichert")
+            logger.info("✅ POST /api/user-data - User-Daten erfolgreich gespeichert")
             return jsonify({'success': True, 'message': 'Daten erfolgreich gespeichert'})
         else:
-            return jsonify({'success': False, 'message': 'Fehler beim Speichern'}), 500
+            logger.error("❌ POST /api/user-data - save_json_file() gab False zurück")
+            return jsonify({'success': False, 'message': 'Fehler beim Speichern der Datei'}), 500
     except Exception as e:
-        logger.error(f"Fehler beim Speichern der User-Daten: {e}")
-        return jsonify({'success': False, 'message': str(e)}), 500
+        logger.error(f"❌ POST /api/user-data - Exception: {type(e).__name__} - {e}")
+        import traceback
+        logger.error(traceback.format_exc())
+        return jsonify({'success': False, 'message': f'{type(e).__name__}: {str(e)}'}), 500
 
 # ============================================================================
 # API ROUTES - FILTER CONFIG
@@ -192,22 +254,37 @@ def save_user_data():
 @app.route('/api/filter-config', methods=['GET'])
 def get_filter_config():
     """Gibt die aktuellen Filter zurück"""
-    data = load_json_file(FILTER_CONFIG_PATH)
-    return jsonify(data)
+    try:
+        logger.info(f"📥 GET /api/filter-config - Lade Datei: {FILTER_CONFIG_PATH}")
+        data = load_json_file(FILTER_CONFIG_PATH)
+        logger.info(f"✅ GET /api/filter-config - Erfolgreich geladen")
+        return jsonify(data)
+    except Exception as e:
+        logger.error(f"❌ GET /api/filter-config - Fehler: {type(e).__name__} - {e}")
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/api/filter-config', methods=['POST'])
 def save_filter_config():
     """Speichert Filter-Konfiguration"""
     try:
+        logger.info(f"📤 POST /api/filter-config - Speichere in: {FILTER_CONFIG_PATH}")
         data = request.json
+
+        if not data:
+            logger.error("❌ POST /api/filter-config - Keine Daten erhalten")
+            return jsonify({'success': False, 'message': 'Keine Daten erhalten'}), 400
+
         if save_json_file(FILTER_CONFIG_PATH, data):
-            logger.info("Filter-Konfiguration erfolgreich gespeichert")
+            logger.info("✅ POST /api/filter-config - Filter-Konfiguration erfolgreich gespeichert")
             return jsonify({'success': True, 'message': 'Filter erfolgreich gespeichert'})
         else:
-            return jsonify({'success': False, 'message': 'Fehler beim Speichern'}), 500
+            logger.error("❌ POST /api/filter-config - save_json_file() gab False zurück")
+            return jsonify({'success': False, 'message': 'Fehler beim Speichern der Datei'}), 500
     except Exception as e:
-        logger.error(f"Fehler beim Speichern der Filter-Konfiguration: {e}")
-        return jsonify({'success': False, 'message': str(e)}), 500
+        logger.error(f"❌ POST /api/filter-config - Exception: {type(e).__name__} - {e}")
+        import traceback
+        logger.error(traceback.format_exc())
+        return jsonify({'success': False, 'message': f'{type(e).__name__}: {str(e)}'}), 500
 
 @app.route('/api/bezirke', methods=['GET'])
 def get_bezirke():
@@ -385,6 +462,51 @@ def get_bot_status():
         bot_status['message'] = 'Bot wurde beendet'
         bot_process = None
 
+    # Hole die ECHTE letzte Aktivität aus der Datenbank
+    # (unabhängig davon, ob der Bot manuell oder automatisch lief)
+    real_last_activity = None
+    last_activity_type = None
+
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        cursor = conn.cursor()
+
+        # Letzte Bewerbung (egal ob erfolgreich oder fehlgeschlagen)
+        cursor.execute("SELECT MAX(applied_ts) FROM wohnungen WHERE applied = 1")
+        last_application = cursor.fetchone()[0]
+
+        # Letzter Datenbank-Eintrag (neue Wohnung gefunden)
+        cursor.execute("SELECT MAX(ts) FROM wohnungen")
+        last_scrape = cursor.fetchone()[0]
+
+        conn.close()
+
+        # Bestimme die neueste Aktivität und ihren Typ
+        if last_application and last_scrape:
+            if last_application > last_scrape:
+                real_last_activity = last_application
+                last_activity_type = "Bewerbung gesendet"
+            else:
+                real_last_activity = last_scrape
+                last_activity_type = "Wohnung gefunden"
+        elif last_application:
+            real_last_activity = last_application
+            last_activity_type = "Bewerbung gesendet"
+        elif last_scrape:
+            real_last_activity = last_scrape
+            last_activity_type = "Wohnung gefunden"
+
+        # Überschreibe die last_activity mit der echten Aktivität aus der DB
+        if real_last_activity:
+            bot_status['last_activity'] = real_last_activity
+            bot_status['last_activity_type'] = last_activity_type
+
+    except Exception as e:
+        logger.error(f"Fehler beim Abrufen der letzten Aktivität aus der DB: {e}")
+
+    # Prüfe ob automatischer Bot-Container läuft (Docker)
+    bot_status['auto_bot_running'] = check_docker_bot_running()
+
     return jsonify({
         'status': bot_status,
         'stats': get_db_stats()
@@ -461,14 +583,30 @@ def get_all_applications():
 
 if __name__ == '__main__':
     # Prüfe ob Frontend-Ordner existiert
-    if not os.path.exists('frontend'):
-        os.makedirs('frontend')
+    frontend_path = os.path.join(BASE_DIR, 'frontend')
+    if not os.path.exists(frontend_path):
+        os.makedirs(frontend_path)
         logger.info("Frontend-Ordner erstellt")
 
-    PORT = 8080  # Geänderter Port, da 5000 oft von AirPlay Receiver belegt ist
+    PORT = 5000  # Standard-Port
 
+    logger.info("=" * 60)
     logger.info("Starte Gewobag Bot Web API...")
-    logger.info(f"Frontend verfügbar unter: http://localhost:{PORT}")
-    logger.info(f"API verfügbar unter: http://localhost:{PORT}/api/")
+    logger.info(f"📂 Arbeitsverzeichnis: {BASE_DIR}")
+    logger.info(f"📄 User-Daten: {USER_DATA_PATH}")
+    logger.info(f"🔍 Filter-Config: {FILTER_CONFIG_PATH}")
+    logger.info(f"🗄️  Datenbank: {DB_PATH}")
+    logger.info(f"🌐 Frontend verfügbar unter: http://localhost:{PORT}")
+    logger.info(f"🔌 API verfügbar unter: http://localhost:{PORT}/api/")
+    logger.info("=" * 60)
+
+    # Prüfe Dateiberechtigungen
+    for filepath in [USER_DATA_PATH, FILTER_CONFIG_PATH, BEZIRKE_PATH]:
+        if os.path.exists(filepath):
+            readable = os.access(filepath, os.R_OK)
+            writable = os.access(filepath, os.W_OK)
+            logger.info(f"{'✅' if readable else '❌'} Lesen | {'✅' if writable else '❌'} Schreiben: {os.path.basename(filepath)}")
+        else:
+            logger.warning(f"⚠️  Datei existiert nicht: {os.path.basename(filepath)}")
 
     app.run(host='0.0.0.0', port=PORT, debug=True)

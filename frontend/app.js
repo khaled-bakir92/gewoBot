@@ -512,29 +512,43 @@ async function updateBotStatus() {
 
         // Update status indicator
         const statusIndicator = document.getElementById('statusIndicator');
-        const statusText = statusIndicator.querySelector('.status-text');
+        const statusTextElement = statusIndicator.querySelector('.status-text');
 
         statusIndicator.className = 'status-indicator';
 
         if (data.status.running && !data.status.paused) {
             statusIndicator.classList.add('running');
-            statusText.textContent = data.status.message || 'Bot läuft';
+            statusTextElement.textContent = data.status.message || 'Bot läuft';
         } else if (data.status.paused) {
             statusIndicator.classList.add('paused');
-            statusText.textContent = 'Bot pausiert';
+            statusTextElement.textContent = 'Bot pausiert';
+        } else if (data.status.auto_bot_running) {
+            statusIndicator.classList.add('running');
+            statusTextElement.textContent = 'Bot läuft automatisch (Docker)';
         } else {
-            statusText.textContent = 'Bot gestoppt';
+            statusTextElement.textContent = 'Bot gestoppt';
         }
 
         // Update bot status card
-        document.getElementById('botStatusText').textContent =
-            data.status.running ? (data.status.paused ? 'Pausiert' : 'Läuft') : 'Gestoppt';
+        let botStatusText = 'Gestoppt';
+        if (data.status.running) {
+            botStatusText = data.status.paused ? 'Pausiert' : 'Läuft';
+        } else if (data.status.auto_bot_running) {
+            botStatusText = 'Automatisch (Docker)';
+        }
+
+        document.getElementById('botStatusText').textContent = botStatusText;
         document.getElementById('botMode').textContent =
-            data.status.mode || '-';
+            data.status.mode || (data.status.auto_bot_running ? 'Automatisch (alle 15 Min)' : '-');
         document.getElementById('botStarted').textContent =
             data.status.started_at ? formatDateTime(data.status.started_at) : '-';
-        document.getElementById('botLastActivity').textContent =
-            data.status.last_activity ? formatDateTime(data.status.last_activity) : '-';
+
+        // Zeige die echte letzte Aktivität aus der Datenbank
+        const lastActivityText = data.status.last_activity
+            ? formatDateTime(data.status.last_activity) +
+              (data.status.last_activity_type ? ` (${data.status.last_activity_type})` : '')
+            : '-';
+        document.getElementById('botLastActivity').textContent = lastActivityText;
 
         // Update controls
         updateBotControls(data.status.running, data.status.paused);

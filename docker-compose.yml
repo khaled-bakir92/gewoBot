@@ -129,37 +129,12 @@ services:
     restart: unless-stopped
 
     # Scheduler-Daemon starten
-    command: daemon --docker
+    command: daemon --config=/etc/ofelia/config.ini
 
-    # Docker-Socket für Container-Steuerung
+    # Docker-Socket und Config für Container-Steuerung
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
-
-    # Job-Konfiguration via Labels
-    labels:
-      # Job-Name: gewobag-bot-job
-      # WICHTIG: job-run startet NEUE Container (nicht job-exec!)
-      ofelia.job-run.gewobag-bot-job.schedule: "@every 15m"
-      ofelia.job-run.gewobag-bot-job.image: "gewobot-gewobag-bot:latest"
-      ofelia.job-run.gewobag-bot-job.network: "gewobot_default"
-      ofelia.job-run.gewobag-bot-job.delete: "true"
-      ofelia.job-run.gewobag-bot-job.no-overlap: "true"
-      ofelia.job-run.gewobag-bot-job.volume: "./user_data.json:/app/user_data.json:ro,./filter_config.json:/app/filter_config.json:ro,./gewobag_wohnungen.db:/app/gewobag_wohnungen.db,./logs:/app/logs,./.bot_heartbeat.json:/app/.bot_heartbeat.json,./documents:/app/documents:ro"
-      ofelia.job-run.gewobag-bot-job.environment: "TZ=Europe/Berlin,PYTHONUNBUFFERED=1"
-      ofelia.job-run.gewobag-bot-job.command: "python main.py --full"
-
-      # Alternative Zeitpläne (auskommentiert):
-      # Alle 30 Minuten:
-      # ofelia.job-run.gewobag-bot-job.schedule: "@every 30m"
-
-      # Stündlich:
-      # ofelia.job-run.gewobag-bot-job.schedule: "@hourly"
-
-      # Alle 6 Stunden:
-      # ofelia.job-run.gewobag-bot-job.schedule: "@every 6h"
-
-      # Cron-Syntax (Mo-Fr, 9-18 Uhr, alle 15 Min):
-      # ofelia.job-run.gewobag-bot-job.schedule: "*/15 9-18 * * 1-5"
+      - ./ofelia-config.ini:/etc/ofelia/config.ini:ro
 
     # Logging
     logging:

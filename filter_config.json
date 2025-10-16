@@ -5,25 +5,13 @@
     "charlottenburg-wilmersdorf-nord",
     "charlottenburg-wilmersdorf-grunewald",
     "charlottenburg-wilmersdorf-schmargendorf",
-    "charlottenburg-wilmersdorf-wilmersdorf",
-    "neukoelln",
-    "neukoelln-britz",
-    "neukoelln-buckow",
-    "neukoelln-neukoelln",
-    "neukoelln-rudow",
-    "steglitz-zehlendorf",
-    "steglitz-zehlendorf-lichterfelde",
-    "tempelhof-schoeneberg",
-    "tempelhof-schoeneberg-lichtenrade",
-    "tempelhof-schoeneberg-mariendorf",
-    "tempelhof-schoeneberg-marienfelde",
-    "tempelhof-schoeneberg-schoeneberg"
+    "charlottenburg-wilmersdorf-wilmersdorf"
   ],
   "gesamtmiete_von": "",
-  "gesamtmiete_bis": "1200",
-  "gesamtflaeche_von": "60",
+  "gesamtmiete_bis": "",
+  "gesamtflaeche_von": "",
   "gesamtflaeche_bis": "",
-  "zimmer_von": "3",
+  "zimmer_von": "",
   "zimmer_bis": "",
-  "wbs": "ohne"
+  "wbs": ""
 }

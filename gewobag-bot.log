@@ -2179,3 +2179,101 @@ Call log:
 2025-10-14 17:34:32,043 - gewobag_bot - WARNING - Keine Wohnungen gefunden
 2025-10-14 17:34:32,043 - __main__ - INFO - 
 ℹ️  Keine Wohnungen gefunden
+2025-10-16 16:24:15,524 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-16 16:24:15,525 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-16 16:24:15,528 - gewobag_bot - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-16 16:24:15,528 - gewobag_bot - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-16 16:24:15,528 - __main__ - INFO - 
+================================================================================
+2025-10-16 16:24:15,528 - __main__ - INFO - 🔍 MODUS: NUR WOHNUNGSSUCHE
+2025-10-16 16:24:15,528 - __main__ - INFO - ================================================================================
+2025-10-16 16:24:15,528 - gewobag_bot - INFO - ======================================================================
+2025-10-16 16:24:15,528 - gewobag_bot - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-16 16:24:15,528 - gewobag_bot - INFO - ======================================================================
+2025-10-16 16:24:15,528 - gewobag_bot - INFO - Keine Filter aktiv - suche alle Wohnungen
+2025-10-16 16:24:15,528 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-16 16:24:15,529 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-16 16:24:16,485 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-16 16:24:16,487 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-16 16:24:16,559 - gewobag_bot - INFO - 18 Angebote gefunden
+2025-10-16 16:24:16,562 - gewobag_bot - INFO - 18 Angebote erfolgreich extrahiert
+2025-10-16 16:24:16,562 - gewobag_bot - INFO - 📊 Seite 1: 18 Wohnungen gefunden
+2025-10-16 16:24:16,605 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-16 16:24:16,605 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 18 Wohnungen gefunden
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: Wohnen in Haselhorst in Haselhorst
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: Schöner Neubau am Südkreuz sucht Nachmieter*in zum 01.11.2025 in Schöneberg
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: 2 Zimmer mit Loggia und großzügiger Küche in Alt-Hohenschönhausen
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: 2 Zimmer mit Loggia und großzügiger Küche in Alt-Hohenschönhausen
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: 3 Zimmer mit Loggia und großzügiger Küche in Alt-Hohenschönhausen
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: 3 Zimmer mit Parkett und Laminat in Alt-Hohenschönhausen
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: 3 Zimmer mit großzügiger Küche in Alt-Hohenschönhausen
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: 3 Zimmer mit Loggia in Alt-Hohenschönhausen
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: 4-Zimmer-Wohnung in den Buckower Höfen ab dem 01.11. verfügbar in Buckow
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: Wohnung für Personen ab dem 60. Lebensjahr in Lichtenrade
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: Helle Wohnung – WBS mit besonderen Wohnbedarf erforderlich in Lichtenrade
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: Neubauwohnung in Reinickendorf in Reinickendorf
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: 2 Zimmerwohnung im Neubau sucht neuen Mieter ab SOFORT! in Prenzlauer Berg
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: Nachmieter zum 01.01.26 gesucht! in Friedrichsfelde
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: WBS mit besonderem Wohnbedarf benötigt in Prenzlauer Berg
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: Neubauwohnung mit Fußbodenheizung und Balkon in Lichtenberg
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: Wohnen in Hakenfelde in Hakenfelde
+2025-10-16 16:24:16,606 - gewobag_bot - INFO - Neue Wohnung gespeichert: Neubauwohnung mit Fußbodenheizung und Terrasse in Falkenberg
+2025-10-16 16:24:16,607 - gewobag_bot - INFO - Speicherung abgeschlossen: 18 neu, 0 bereits vorhanden
+2025-10-16 16:24:16,607 - gewobag_bot - INFO - ======================================================================
+2025-10-16 16:24:16,607 - gewobag_bot - INFO - Zusammenfassung: 18 Angebote gefunden (mit aktiven Filtern), 18 neu gespeichert, 0 bereits bekannt
+2025-10-16 16:24:16,607 - gewobag_bot - INFO - ======================================================================
+2025-10-16 16:24:16,607 - __main__ - INFO - 
+✅ 18 Wohnungen gefunden
+2025-10-16 16:24:16,607 - __main__ - INFO - 💡 Führen Sie 'python main.py --apply' aus, um sich zu bewerben
+2025-10-16 16:28:44,746 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-16 16:28:44,746 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-16 16:28:44,747 - gewobag_bot - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-16 16:28:44,747 - gewobag_bot - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-16 16:28:44,747 - __main__ - INFO - 
+================================================================================
+2025-10-16 16:28:44,747 - __main__ - INFO - 🔍 MODUS: NUR WOHNUNGSSUCHE
+2025-10-16 16:28:44,747 - __main__ - INFO - ================================================================================
+2025-10-16 16:28:44,747 - gewobag_bot - INFO - ======================================================================
+2025-10-16 16:28:44,747 - gewobag_bot - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-16 16:28:44,747 - gewobag_bot - INFO - ======================================================================
+2025-10-16 16:28:44,747 - gewobag_bot - INFO - Keine Filter aktiv - suche alle Wohnungen
+2025-10-16 16:28:44,747 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-16 16:28:44,747 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=
+2025-10-16 16:28:45,663 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-16 16:28:45,666 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-16 16:28:45,748 - gewobag_bot - INFO - 19 Angebote gefunden
+2025-10-16 16:28:45,751 - gewobag_bot - INFO - 19 Angebote erfolgreich extrahiert
+2025-10-16 16:28:45,751 - gewobag_bot - INFO - 📊 Seite 1: 19 Wohnungen gefunden
+2025-10-16 16:28:45,794 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-16 16:28:45,794 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 19 Wohnungen gefunden
+2025-10-16 16:28:45,795 - gewobag_bot - INFO - Neue Wohnung gespeichert: Vorfristig zum 01.11.2025… in Prenzlauer Berg
+2025-10-16 16:28:45,796 - gewobag_bot - INFO - Speicherung abgeschlossen: 1 neu, 18 bereits vorhanden
+2025-10-16 16:28:45,796 - gewobag_bot - INFO - ======================================================================
+2025-10-16 16:28:45,796 - gewobag_bot - INFO - Zusammenfassung: 19 Angebote gefunden (mit aktiven Filtern), 1 neu gespeichert, 18 bereits bekannt
+2025-10-16 16:28:45,796 - gewobag_bot - INFO - ======================================================================
+2025-10-16 16:28:45,796 - __main__ - INFO - 
+✅ 19 Wohnungen gefunden
+2025-10-16 16:28:45,796 - __main__ - INFO - 💡 Führen Sie 'python main.py --apply' aus, um sich zu bewerben
+2025-10-16 16:30:32,995 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-16 16:30:32,995 - application_bot - WARNING - Installation: pip install playwright-stealth
+2025-10-16 16:30:32,996 - gewobag_bot - INFO - Datenbank 'gewobag_wohnungen.db' erfolgreich initialisiert
+2025-10-16 16:30:32,996 - gewobag_bot - INFO - Konfigurationsdatei 'filter_config.json' existiert bereits
+2025-10-16 16:30:32,996 - __main__ - INFO - 
+================================================================================
+2025-10-16 16:30:32,996 - __main__ - INFO - 🔍 MODUS: NUR WOHNUNGSSUCHE
+2025-10-16 16:30:32,996 - __main__ - INFO - ================================================================================
+2025-10-16 16:30:32,996 - gewobag_bot - INFO - ======================================================================
+2025-10-16 16:30:32,996 - gewobag_bot - INFO - Starte Gewobag Wohnungssuche (mit Paginierung)
+2025-10-16 16:30:32,996 - gewobag_bot - INFO - ======================================================================
+2025-10-16 16:30:32,996 - gewobag_bot - INFO - Aktive Filter: Bezirke: charlottenburg-wilmersdorf, charlottenburg-wilmersdorf-charlottenburg, charlottenburg-wilmersdorf-nord, charlottenburg-wilmersdorf-grunewald, charlottenburg-wilmersdorf-schmargendorf, charlottenburg-wilmersdorf-wilmersdorf
+2025-10-16 16:30:32,996 - gewobag_bot - INFO - 📄 Starte Paginierung - lade Seite 1...
+2025-10-16 16:30:32,996 - gewobag_bot - INFO - 🌐 Lade Seite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/?objekttyp%5B%5D=wohnung&gesamtmiete_von=&gesamtmiete_bis=&gesamtflaeche_von=&gesamtflaeche_bis=&zimmer_von=&zimmer_bis=&sort-by=&bezirke%5B%5D=charlottenburg-wilmersdorf&bezirke%5B%5D=charlottenburg-wilmersdorf-charlottenburg&bezirke%5B%5D=charlottenburg-wilmersdorf-nord&bezirke%5B%5D=charlottenburg-wilmersdorf-grunewald&bezirke%5B%5D=charlottenburg-wilmersdorf-schmargendorf&bezirke%5B%5D=charlottenburg-wilmersdorf-wilmersdorf
+2025-10-16 16:30:33,801 - gewobag_bot - INFO - ✅ Seite erfolgreich geladen (Status: 200)
+2025-10-16 16:30:33,806 - gewobag_bot - INFO - Starte Parsing des HTML-Codes
+2025-10-16 16:30:33,862 - gewobag_bot - WARNING - Keine Angebote gefunden!
+2025-10-16 16:30:33,862 - gewobag_bot - INFO - 📊 Seite 1: 0 Wohnungen gefunden
+2025-10-16 16:30:33,896 - gewobag_bot - INFO - Keine Paginierung gefunden - nur 1 Seite vorhanden
+2025-10-16 16:30:33,896 - gewobag_bot - INFO - ✅ Alle 1 Seiten erfolgreich geladen - insgesamt 0 Wohnungen gefunden
+2025-10-16 16:30:33,896 - gewobag_bot - WARNING - Keine Wohnungen gefunden
+2025-10-16 16:30:33,896 - __main__ - INFO - 
+ℹ️  Keine Wohnungen gefunden

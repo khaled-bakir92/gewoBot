@@ -608,7 +608,7 @@ if __name__ == '__main__':
         os.makedirs(frontend_path)
         logger.info("Frontend-Ordner erstellt")
 
-    PORT = 5000  # Standard-Port
+    PORT = int(os.environ.get('PORT', 5000))  # Port aus Umgebungsvariable oder Standard 5000
 
     logger.info("=" * 60)
     logger.info("Starte Gewobag Bot Web API...")

@@ -16,12 +16,15 @@ Die neue Konfiguration verwendet `job-run` statt `job-exec`. Das bedeutet:
 
 ## Deployment-Schritte auf VPS
 
-### 1. Neue docker-compose.yml hochladen
+### 1. Neue Dateien hochladen
 ```bash
 # Auf lokalem Rechner (Desktop)
-scp docker-compose.yml root@vmd181811.contaboserver.net:~/gewoBot/
+scp docker-compose.yml ofelia-config.ini root@vmd181811.contaboserver.net:~/gewoBot/
 
-# ODER: Wenn SSH-Key fehlt, File manuell kopieren (z.B. via FTP/SCP-Client)
+# ODER: Wenn SSH-Key fehlt, Files manuell kopieren (z.B. via FTP/SCP-Client)
+# Benötigte Dateien:
+#   - docker-compose.yml (aktualisiert)
+#   - ofelia-config.ini (NEU!)
 ```
 
 ### 2. Auf VPS einloggen
@@ -30,7 +33,21 @@ ssh root@vmd181811.contaboserver.net
 cd ~/gewoBot
 ```
 
-### 3. Alte Container stoppen und entfernen
+### 3. **WICHTIG:** Pfade in ofelia-config.ini anpassen
+```bash
+# Aktuellen Pfad ermitteln
+pwd
+# Sollte /root/gewoBot sein
+
+# Wenn anders, ofelia-config.ini bearbeiten:
+nano ofelia-config.ini
+# Alle Zeilen mit "volume = /root/gewoBot/..." anpassen
+
+# Beispiel: Wenn Pfad /home/user/gewobag ist:
+# volume = /home/user/gewobag/user_data.json:/app/user_data.json:ro
+```
+
+### 4. Alte Container stoppen und entfernen
 ```bash
 # Alle Services stoppen
 docker-compose down
@@ -39,7 +56,7 @@ docker-compose down
 docker-compose ps
 ```
 
-### 4. Docker Image neu bauen
+### 5. Docker Image neu bauen
 ```bash
 # Wichtig: Image mit richtigem Namen bauen
 docker-compose build gewobag-bot
@@ -53,7 +70,7 @@ Erwartete Ausgabe:
 gewobot-gewobag-bot   latest   abc123def456   ...
 ```
 
-### 5. Nur Web-Frontend und Scheduler starten
+### 6. Nur Web-Frontend und Scheduler starten
 ```bash
 # Web-Frontend starten (dauerhaft)
 docker-compose up -d gewobag-web
@@ -64,7 +81,7 @@ docker-compose up -d gewobag-scheduler
 
 **Wichtig:** Der `gewobag-bot` Container läuft **nicht** dauerhaft! Er wird nur vom Scheduler gestartet.
 
-### 6. Logs prüfen
+### 7. Logs prüfen
 ```bash
 # Scheduler-Logs (sollten jetzt keine Fehler mehr zeigen)
 docker-compose logs -f gewobag-scheduler
@@ -75,7 +92,7 @@ docker-compose logs -f gewobag-scheduler
 # [Job "gewobag-bot-job"] Finished in "45s"
 ```
 
-### 7. Bot-Logs prüfen (nach Job-Ausführung)
+### 8. Bot-Logs prüfen (nach Job-Ausführung)
 ```bash
 # Logs im Volume prüfen
 tail -f logs/gewobag-main.log

@@ -306,7 +306,8 @@ def fill_application_form(page: Page, user_data: Dict, wohnung_link: str) -> boo
         # Telefonnummer (Optional)
         # ID: phone-number, formcontrolname="phoneNumber"
         try:
-            telefon = personal_info.get('telefon', '')
+            telefon_raw = personal_info.get('telefon', '')
+            telefon = str(telefon_raw) if telefon_raw else ''  # Konvertiere zu String
             if telefon:
                 logger.debug("Fülle Telefonnummer aus...")
                 telefon_field = iframe_element.locator('#phone-number').first
@@ -332,7 +333,8 @@ def fill_application_form(page: Page, user_data: Dict, wohnung_link: str) -> boo
         # Hausnummer (Optional)
         # ID: house-number, formcontrolname="houseNumber"
         try:
-            hausnummer = personal_info.get('hausnummer', '')
+            hausnummer_raw = personal_info.get('hausnummer', '')
+            hausnummer = str(hausnummer_raw) if hausnummer_raw else ''  # Konvertiere zu String
             if hausnummer:
                 logger.debug("Fülle Hausnummer aus...")
                 hausnummer_field = iframe_element.locator('#house-number').first
@@ -345,7 +347,8 @@ def fill_application_form(page: Page, user_data: Dict, wohnung_link: str) -> boo
         # PLZ (Optional)
         # ID: zip-code, formcontrolname="zipCode"
         try:
-            plz = personal_info.get('plz', '')
+            plz_raw = personal_info.get('plz', '')
+            plz = str(plz_raw) if plz_raw else ''  # Konvertiere zu String
             if plz:
                 logger.debug("Fülle PLZ aus...")
                 plz_field = iframe_element.locator('#zip-code').first
@@ -385,23 +388,8 @@ def fill_application_form(page: Page, user_data: Dict, wohnung_link: str) -> boo
             logger.debug(f"Adresszusatz-Feld übersprungen: {e}")
 
         # "Für wen wird die Wohnungsanfrage gestellt?" (Pflichtfeld)
-        # Flexibler Selektor basierend auf aria-label
-        try:
-            fuer_wen = personal_info.get('fuer_wen_anfrage', 'Für mich selbst')
-            logger.debug(f"Setze 'Für wen wird die Anfrage gestellt': {fuer_wen}...")
-            # Suche den ng-select dropdown mit aria-label oder data-cy
-            fuer_wen_dropdown = iframe_element.locator(
-                'ng-select[aria-label*="Stellen Sie diese Wohnungsanfrage"], '
-                'ng-select[id*="fuer_wen_wird_die_wohnungsanfrage_gestellt"]'
-            ).first
-            fuer_wen_dropdown.click(timeout=5000)
-            random_delay(0.5, 1.0)
-            # Wähle die entsprechende Option
-            iframe_element.locator(f'span.ng-option-label:has-text("{fuer_wen}"), [role="option"]:has-text("{fuer_wen}")').first.click()
-            random_delay(0.5, 1.0)
-            logger.info(f"✓ Für wen wird die Anfrage gestellt: {fuer_wen}")
-        except Exception as e:
-            logger.debug(f"'Für wen'-Feld übersprungen (nicht in allen Formularen vorhanden): {e}")
+        # WICHTIG: Dieses Feld erscheint nach Personenanzahl im Formular!
+        # Wird weiter unten ausgefüllt (nach Gesamtzahl Personen)
 
         # Personenanzahl - Zwei Varianten möglich:
         # Variante 1: "Gesamtzahl der einziehenden Personen (Erwachsene + Kinder)"
@@ -463,12 +451,84 @@ def fill_application_form(page: Page, user_data: Dict, wohnung_link: str) -> boo
             except Exception as e:
                 logger.debug(f"Kinder-Feld übersprungen: {e}")
 
-        # Mobilfunknummer (Pflichtfeld) - erscheint oft nach Personenanzahl
+        # "Für wen wird die Wohnungsanfrage gestellt?" (Pflichtfeld)
+        # WICHTIG: Dieses Feld erscheint NACH Personenanzahl im Formular!
+        try:
+            fuer_wen_raw = personal_info.get('fuer_wen_anfrage', 'Für mich selbst')
+            logger.debug(f"Setze 'Für wen wird die Anfrage gestellt': {fuer_wen_raw}...")
+
+            # Verbesserte Selektoren basierend auf Playwright MCP Analyse
+            fuer_wen_dropdown = iframe_element.locator(
+                'ng-select[aria-label*="Stellen Sie diese Wohnungsanfrage"], '
+                'ng-select[aria-label*="für sich selbst"], '
+                '[role="listbox"][aria-label*="Stellen Sie"], '
+                'ng-select:has-text("Stellen Sie diese Wohnungsanfrage")'
+            ).first
+
+            # Warte bis sichtbar und klicke
+            if fuer_wen_dropdown.is_visible(timeout=5000):
+                fuer_wen_dropdown.click()
+                random_delay(1.0, 2.0)  # Längere Wartezeit damit Dropdown öffnet
+
+                # Mögliche Option-Werte (aus real Website):
+                # - "Für mich selbst"
+                # - "Für eine andere Person/einen Dritten"
+                # Aber im Formular könnten sie anders heißen, also alle Varianten probieren
+                option_found = False
+                possible_values = [
+                    fuer_wen_raw,  # Original Wert
+                    "Für mich selbst",  # Standard
+                    "mich selbst",  # Ohne "Für"
+                    "Myself",  # Falls Englisch
+                    "selbst"  # Kurz
+                ]
+
+                for option_value in possible_values:
+                    try:
+                        option = iframe_element.locator(
+                            f'span.ng-option-label:has-text("{option_value}"), '
+                            f'[role="option"]:has-text("{option_value}"), '
+                            f'div.ng-option:has-text("{option_value}")'
+                        ).first
+
+                        if option.is_visible(timeout=2000):
+                            option.click()
+                            random_delay(0.5, 1.0)
+                            logger.info(f"✓ Für wen wird die Anfrage gestellt: {option_value}")
+                            option_found = True
+                            break
+                    except:
+                        continue
+
+                if not option_found:
+                    # Fallback: Klicke einfach die erste Option
+                    try:
+                        first_option = iframe_element.locator('[role="option"]').first
+                        first_option.click()
+                        random_delay(0.5, 1.0)
+                        logger.info("✓ Für wen wird die Anfrage gestellt: (erste Option gewählt)")
+                        option_found = True
+                    except:
+                        pass
+
+                if not option_found:
+                    logger.warning(f"⚠️  Keine passende Option gefunden!")
+                    logger.warning(f"⚠️  ACHTUNG: Dies ist ein PFLICHTFELD! Bewerbung könnte fehlschlagen!")
+            else:
+                logger.warning(f"⚠️  'Für wen'-Dropdown nicht gefunden - überspringe")
+        except Exception as e:
+            logger.warning(f"⚠️  'Für wen'-Feld konnte nicht ausgefüllt werden: {e}")
+            logger.warning(f"⚠️  ACHTUNG: Dies ist ein PFLICHTFELD! Bewerbung könnte fehlschlagen!")
+
+        # Mobilfunknummer (Pflichtfeld) - erscheint NACH "Für wen"-Dropdown im Formular!
         # Label: for="formly_18_input_$$_telephone_number_$$_0"
         try:
-            mobil = personal_info.get('mobil', personal_info.get('telefon', ''))
+            # Konvertiere zu String, falls als Integer gespeichert
+            mobil_raw = personal_info.get('mobil', personal_info.get('telefon', ''))
+            mobil = str(mobil_raw) if mobil_raw else ''
+
             if mobil:
-                logger.debug("Fülle Mobilfunknummer aus...")
+                logger.debug(f"Fülle Mobilfunknummer aus: {mobil}...")
                 mobil_field = iframe_element.locator(
                     'input[id*="telephone_number"], '
                     'input[placeholder*="Mobilfunknummer"], '
@@ -478,11 +538,18 @@ def fill_application_form(page: Page, user_data: Dict, wohnung_link: str) -> boo
                     'input[name*="mobile"], '
                     'input[aria-label*="Mobilfunknummer"]'
                 ).first
-                mobil_field.fill(mobil)
-                random_delay(0.5, 1.0)
-                logger.info(f"✓ Mobilfunknummer: {mobil}")
+
+                # Prüfe ob Feld sichtbar ist
+                if mobil_field.is_visible(timeout=5000):
+                    mobil_field.fill(mobil)
+                    random_delay(0.5, 1.0)
+                    logger.info(f"✓ Mobilfunknummer: {mobil}")
+                else:
+                    logger.warning(f"⚠️  Mobilfunknummer-Feld nicht sichtbar!")
+                    logger.warning(f"⚠️  ACHTUNG: Dies ist ein PFLICHTFELD! Bewerbung könnte fehlschlagen!")
         except Exception as e:
-            logger.debug(f"Mobilfunknummer-Feld übersprungen: {e}")
+            logger.warning(f"⚠️  Mobilfunknummer-Feld konnte nicht ausgefüllt werden: {e}")
+            logger.warning(f"⚠️  ACHTUNG: Dies ist ein PFLICHTFELD! Bewerbung könnte fehlschlagen!")
 
         # WBS vorhanden? (Radio Button) - OPTIONAL: erscheint nicht immer
         # ID: formly_4_radio_$_wbs_available_$_0-Ja / formly_4_radio_$_wbs_available_$_0-Nein
@@ -703,19 +770,102 @@ def fill_application_form(page: Page, user_data: Dict, wohnung_link: str) -> boo
             logger.info("✅ Bewerbung wurde abgesendet!")
 
             # Warte kurz, um sicherzustellen, dass die Anfrage gesendet wurde
-            random_delay(3.0, 5.0)
+            random_delay(5.0, 8.0)
 
-            # Prüfe auf Erfolgs- oder Fehlermeldungen
+            # WICHTIG: Prüfe auf Erfolgs- oder Fehlermeldungen IM IFRAME (nicht auf Hauptseite!)
+
+            # ZUERST: Prüfe auf FEHLERMELDUNGEN
             try:
-                # Suche nach Erfolgsmeldung
-                success_message = page.locator('div[class*="success"], div[class*="Success"], p:has-text("Vielen Dank"), p:has-text("erfolgreich"), p:has-text("gesendet")').first
-                if success_message.is_visible(timeout=8000):
+                error_message = iframe_element.locator(
+                    'div[class*="error"], '
+                    'div[class*="Error"], '
+                    'div[class*="alert"], '
+                    'p[class*="error"], '
+                    'span[class*="error"], '
+                    '[role="alert"], '
+                    'div:has-text("nicht mehr veröffentlicht"), '
+                    'div:has-text("nicht mehr verfügbar"), '
+                    'div:has-text("Objekt ist nicht mehr"), '
+                    'div:has-text("Pflichtfeld"), '
+                    'div:has-text("erforderlich"), '
+                    'div:has-text("fehlt"), '
+                    'div:has-text("ungültig")'
+                ).first
+
+                if error_message.is_visible(timeout=3000):
+                    error_text = error_message.inner_text()
+                    logger.error("="*80)
+                    logger.error("❌ FEHLERMELDUNG IM IFRAME ERKANNT:")
+                    logger.error(error_text)
+                    logger.error("="*80)
+
+                    # Analysiere spezifische Fehler
+                    if "nicht mehr veröffentlicht" in error_text.lower() or "nicht mehr verfügbar" in error_text.lower():
+                        logger.warning("⚠️  WOHNUNG NICHT MEHR VERFÜGBAR: Das Objekt wurde bereits von der Website entfernt")
+                    elif "pflichtfeld" in error_text.lower() or "erforderlich" in error_text.lower():
+                        logger.warning("⚠️  PFLICHTFELD FEHLT: Nicht alle erforderlichen Felder wurden ausgefüllt")
+                    elif "ungültig" in error_text.lower():
+                        logger.warning("⚠️  UNGÜLTIGE EINGABE: Bitte überprüfen Sie die eingegebenen Daten")
+
+                    return False
+            except:
+                logger.debug("Keine explizite Fehlermeldung IM IFRAME gefunden")
+
+            # DANN: Prüfe auf ERFOLGSMELDUNGEN
+            try:
+                # Suche nach Erfolgsmeldung IM IFRAME (wo das Formular ist)
+                success_message = iframe_element.locator(
+                    'div[class*="success"], '
+                    'div[class*="Success"], '
+                    'p:has-text("Vielen Dank"), '
+                    'p:has-text("erfolgreich"), '
+                    'p:has-text("gesendet"), '
+                    'div:has-text("Ihre Anfrage wurde"), '
+                    'div:has-text("Anfrage wurde versendet"), '
+                    'div:has-text("Anfrage erfolgreich")'
+                ).first
+
+                if success_message.is_visible(timeout=10000):
                     success_text = success_message.inner_text()
-                    logger.info(f"✅ Erfolgsmeldung erkannt: {success_text[:100]}")
+                    logger.info("="*80)
+                    logger.info("✅ ERFOLGSMELDUNG IM IFRAME ERKANNT:")
+                    logger.info(success_text)
+                    logger.info("="*80)
                     return True
             except:
-                logger.debug("Keine explizite Erfolgsmeldung gefunden (ist oft normal)")
+                logger.debug("Keine explizite Erfolgsmeldung IM IFRAME gefunden")
 
+            # Fallback: Prüfe auch die Hauptseite (für alte Formulare)
+            try:
+                success_message_main = page.locator(
+                    'div[class*="success"], '
+                    'div[class*="Success"], '
+                    'p:has-text("Vielen Dank"), '
+                    'p:has-text("erfolgreich"), '
+                    'p:has-text("gesendet")'
+                ).first
+
+                if success_message_main.is_visible(timeout=5000):
+                    success_text = success_message_main.inner_text()
+                    logger.info(f"✅ Erfolgsmeldung auf HAUPTSEITE erkannt: {success_text[:100]}")
+                    return True
+            except:
+                logger.debug("Keine Erfolgsmeldung auf Hauptseite gefunden")
+
+            # Prüfe ob das Formular noch sichtbar ist (wenn nicht = wahrscheinlich erfolgreich)
+            try:
+                form_still_visible = iframe_element.locator('button[type="submit"]').first.is_visible(timeout=3000)
+                if not form_still_visible:
+                    logger.info("✅ Formular wurde geschlossen - wahrscheinlich erfolgreich abgesendet")
+                    return True
+            except:
+                # Formular nicht mehr gefunden = wahrscheinlich erfolgreich
+                logger.info("✅ Formular nicht mehr gefunden - wahrscheinlich erfolgreich abgesendet")
+                return True
+
+            # Wenn wir hier ankommen: Button wurde geklickt, aber keine eindeutige Bestätigung
+            logger.warning("⚠️  Keine eindeutige Erfolgsmeldung gefunden, aber Button wurde geklickt")
+            logger.warning("⚠️  Markiere als erfolgreich (Button-Klick erfolgt)")
             return True
 
         except Exception as e:

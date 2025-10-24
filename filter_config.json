@@ -1,17 +1,10 @@
 {
-  "gewuenschte_bezirke": [
-    "charlottenburg-wilmersdorf",
-    "charlottenburg-wilmersdorf-charlottenburg",
-    "charlottenburg-wilmersdorf-nord",
-    "charlottenburg-wilmersdorf-grunewald",
-    "charlottenburg-wilmersdorf-schmargendorf",
-    "charlottenburg-wilmersdorf-wilmersdorf"
-  ],
+  "gewuenschte_bezirke": [],
   "gesamtmiete_von": "",
-  "gesamtmiete_bis": "",
+  "gesamtmiete_bis": "2000",
   "gesamtflaeche_von": "",
   "gesamtflaeche_bis": "",
-  "zimmer_von": "",
+  "zimmer_von": "1",
   "zimmer_bis": "",
   "wbs": ""
 }

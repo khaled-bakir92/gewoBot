@@ -1,0 +1,73 @@
+2025-10-24 19:51:48,767 - application_bot - WARNING - ⚠️  playwright-stealth nicht installiert - erweiterte Anti-Detection deaktiviert
+2025-10-24 19:51:48,767 - application_bot - WARNING - Installation: pip install playwright-stealth
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║                       🏠 GEWOBAG BOT v2.0 🤖                              ║
+║                                                                           ║
+║         Automatische Wohnungssuche und Bewerbung für Gewobag             ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+    
+2025-10-24 19:51:48,768 - __main__ - INFO - 
+================================================================================
+2025-10-24 19:51:48,768 - __main__ - INFO - 📝 MODUS: NUR BEWERBUNGEN
+2025-10-24 19:51:48,768 - __main__ - INFO - ================================================================================
+2025-10-24 19:51:48,768 - application_bot - INFO - 📊 11 Wohnungen ohne Bewerbung gefunden
+2025-10-24 19:51:48,768 - __main__ - INFO - 📊 11 Wohnungen ohne Bewerbung gefunden
+2025-10-24 19:51:48,768 - application_bot - INFO - ================================================================================
+2025-10-24 19:51:48,768 - application_bot - INFO - 🤖 GEWOBAG APPLICATION BOT GESTARTET
+2025-10-24 19:51:48,768 - application_bot - INFO - ================================================================================
+2025-10-24 19:51:48,769 - application_bot - INFO - ✅ Benutzerdaten erfolgreich geladen
+2025-10-24 19:51:48,769 - application_bot - INFO - 📊 11 Wohnungen ohne Bewerbung gefunden
+2025-10-24 19:51:48,769 - application_bot - INFO - ⚠️  Limitiere auf 1 Bewerbungen (von 11)
+2025-10-24 19:51:48,769 - application_bot - INFO - 
+📋 Bewerbung 1/1
+2025-10-24 19:51:48,769 - application_bot - INFO - 📍 Wohnung: Modernisierte Wohnung im ruhigen und grünen Süden von Berlin (Buckow)
+2025-10-24 19:51:48,769 - application_bot - INFO - ================================================================================
+2025-10-24 19:51:48,769 - application_bot - INFO - 🏠 Starte Bewerbung für: Modernisierte Wohnung im ruhigen und grünen Süden von Berlin
+2025-10-24 19:51:48,769 - application_bot - INFO - 📍 Bezirk: Buckow
+2025-10-24 19:51:48,769 - application_bot - INFO - 🔗 Link: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-77702-0101-0154/
+2025-10-24 19:51:48,769 - application_bot - INFO - ================================================================================
+2025-10-24 19:51:49,119 - application_bot - INFO - 🌐 Starte Browser mit erweiterten Anti-Detection-Einstellungen...
+2025-10-24 19:51:50,335 - application_bot - INFO - 🔧 Browser-Kontext erstellt:
+2025-10-24 19:51:50,998 - application_bot - INFO - 🌐 Öffne Wohnungsseite: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-77702-0101-0154/
+2025-10-24 19:51:54,117 - application_bot - INFO - 🍪 Prüfe Cookie-Banner...
+2025-10-24 19:51:54,139 - application_bot - INFO - 🍪 Akzeptiere Cookies...
+2025-10-24 19:51:55,845 - application_bot - INFO - 🔍 Suche 'Anfrage senden' Button...
+2025-10-24 19:51:55,853 - application_bot - INFO - 🖱️  Klicke auf 'Anfrage senden'...
+2025-10-24 19:51:58,343 - application_bot - INFO - 🔍 Warte auf Formular-iFrame...
+2025-10-24 19:51:58,344 - application_bot - INFO - ✅ iFrame gefunden - fülle Formular aus...
+2025-10-24 19:52:02,552 - application_bot - INFO - ✓ Anrede: Herr
+2025-10-24 19:52:03,389 - application_bot - INFO - ✓ Vorname: Hatem 
+2025-10-24 19:52:04,078 - application_bot - INFO - ✓ Nachname: Abou-Tay
+2025-10-24 19:52:04,866 - application_bot - INFO - ✓ E-Mail: khaled132112@gmail.com
+2025-10-24 19:52:05,448 - application_bot - INFO - ✓ Telefon: 016099110555
+2025-10-24 19:52:06,062 - application_bot - INFO - ✓ Straße: Mariendorfer Damm
+2025-10-24 19:52:06,732 - application_bot - INFO - ✓ Hausnummer: 57
+2025-10-24 19:52:07,403 - application_bot - INFO - ✓ PLZ: 12109
+2025-10-24 19:52:08,220 - application_bot - INFO - ✓ Stadt: Berlin
+2025-10-24 19:52:08,832 - application_bot - INFO - ✓ Gesamtzahl Personen: 2
+2025-10-24 19:52:11,630 - application_bot - INFO - ✓ Für wen wird die Anfrage gestellt: Für mich selbst
+2025-10-24 19:52:12,493 - application_bot - INFO - ✓ Mobilfunknummer: 016099110555
+2025-10-24 19:52:43,248 - application_bot - INFO - ✓ 1 Datenschutz-Checkbox(en) aktiviert
+2025-10-24 19:52:43,250 - application_bot - INFO - 📝 Formular ausgefüllt - bereit zum Absenden
+2025-10-24 19:52:43,250 - application_bot - INFO - 🚀 Sende Bewerbung automatisch ab...
+2025-10-24 19:52:43,342 - application_bot - INFO - ✅ Bewerbung wurde abgesendet!
+2025-10-24 19:52:48,542 - application_bot - INFO - ✅ Formular wurde geschlossen - wahrscheinlich erfolgreich abgesendet
+2025-10-24 19:52:48,739 - application_bot - INFO - ✅ Bewerbung erfolgreich!
+2025-10-24 19:52:48,740 - application_bot - INFO - ✅ Datenbank aktualisiert: https://www.gewobag.de/fuer-mietinteressentinnen/mietangebote/7100-77702-0101-0154/ -> Status: success
+2025-10-24 19:52:48,744 - application_bot - INFO - ✅ Bewerbung 1/1: ERFOLGREICH
+2025-10-24 19:52:48,744 - application_bot - INFO - 
+================================================================================
+2025-10-24 19:52:48,744 - application_bot - INFO - 📊 BEWERBUNGS-ZUSAMMENFASSUNG
+2025-10-24 19:52:48,744 - application_bot - INFO - ================================================================================
+2025-10-24 19:52:48,744 - application_bot - INFO - ✅ Erfolgreich: 1
+2025-10-24 19:52:48,744 - application_bot - INFO - ❌ Fehlgeschlagen: 0
+2025-10-24 19:52:48,744 - application_bot - INFO - 📈 Gesamt verarbeitet: 1
+2025-10-24 19:52:48,744 - application_bot - INFO - ================================================================================
+2025-10-24 19:52:48,744 - application_bot - INFO - 
+📊 GESAMTSTATISTIK (alle bisherigen Bewerbungen):
+2025-10-24 19:52:48,744 - application_bot - INFO -    ✅ Erfolgreich: 4
+2025-10-24 19:52:48,744 - application_bot - INFO -    ❌ Fehlgeschlagen: 0
+2025-10-24 19:52:48,744 - application_bot - INFO -    📈 Gesamt beworben: 4

@@ -2,7 +2,7 @@
 # Optimiert für Production-Deployment mit Web-Frontend
 
 # ===== Stage 1: Builder =====
-FROM python:3.11-slim as builder
+FROM python:3.11-slim AS builder
 
 # Umgebungsvariablen für Python
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -69,7 +69,7 @@ COPY --from=builder --chown=botuser:botuser /root/.local /home/botuser/.local
 
 # PATH und PYTHONPATH erweitern
 ENV PATH=/home/botuser/.local/bin:$PATH \
-    PYTHONPATH=/home/botuser/.local/lib/python3.11/site-packages:$PYTHONPATH
+    PYTHONPATH=/home/botuser/.local/lib/python3.11/site-packages
 
 # Playwright-Browser installieren (muss als root installiert werden, dann Permissions setzen)
 # Wichtig: Installation NACH PATH-Setting, aber VOR User-Wechsel

@@ -30,6 +30,7 @@ except ImportError:
 # Konstanten
 DB_NAME = "gewobag_wohnungen.db"
 USER_DATA_FILE = "user_data.json"
+FILTER_CONFIG_FILE = "filter_config.json"
 APPLICATION_TIMEOUT = 60000  # 60 Sekunden für Formular-Operationen
 
 # Anti-Detection: Erweiterte realistische User-Agents für 2025
@@ -90,6 +91,163 @@ def load_user_data() -> Optional[Dict]:
     except Exception as e:
         logger.error(f"❌ Fehler beim Laden der Benutzerdaten: {e}")
         return None
+
+
+def load_filter_config() -> Dict[str, any]:
+    """
+    Lädt die Filter-Konfiguration aus der JSON-Konfigurationsdatei.
+
+    Returns:
+        Dictionary mit allen Filtern (bezirke, miete, fläche, zimmer, wbs)
+    """
+    config_path = Path(FILTER_CONFIG_FILE)
+
+    default_config = {
+        'gewuenschte_bezirke': [],
+        'gesamtmiete_von': '',
+        'gesamtmiete_bis': '',
+        'gesamtflaeche_von': '',
+        'gesamtflaeche_bis': '',
+        'zimmer_von': '',
+        'zimmer_bis': '',
+        'wbs': ''
+    }
+
+    if not config_path.exists():
+        logger.warning(f"⚠️  Konfigurationsdatei '{FILTER_CONFIG_FILE}' nicht gefunden - keine Filter aktiv")
+        return default_config
+
+    try:
+        with open(config_path, 'r', encoding='utf-8') as f:
+            config = json.load(f)
+
+        # Filter aus Konfiguration extrahieren
+        filter_config = {
+            'gewuenschte_bezirke': config.get('gewuenschte_bezirke', []),
+            'gesamtmiete_von': config.get('gesamtmiete_von', ''),
+            'gesamtmiete_bis': config.get('gesamtmiete_bis', ''),
+            'gesamtflaeche_von': config.get('gesamtflaeche_von', ''),
+            'gesamtflaeche_bis': config.get('gesamtflaeche_bis', ''),
+            'zimmer_von': config.get('zimmer_von', ''),
+            'zimmer_bis': config.get('zimmer_bis', ''),
+            'wbs': config.get('wbs', '').lower()  # Normalisieren zu lowercase
+        }
+
+        # Logging der aktiven Filter
+        active_filters = []
+        bezirke_gefiltert = [b for b in filter_config['gewuenschte_bezirke'] if b and b.strip()]
+        if bezirke_gefiltert:
+            active_filters.append(f"Bezirke: {', '.join(bezirke_gefiltert)}")
+        if filter_config['gesamtmiete_von'] or filter_config['gesamtmiete_bis']:
+            active_filters.append(f"Miete: {filter_config['gesamtmiete_von']} - {filter_config['gesamtmiete_bis']} €")
+        if filter_config['gesamtflaeche_von'] or filter_config['gesamtflaeche_bis']:
+            active_filters.append(f"Fläche: {filter_config['gesamtflaeche_von']} - {filter_config['gesamtflaeche_bis']} m²")
+        if filter_config['zimmer_von'] or filter_config['zimmer_bis']:
+            active_filters.append(f"Zimmer: {filter_config['zimmer_von']} - {filter_config['zimmer_bis']}")
+        if filter_config['wbs']:
+            wbs_text = "nur mit WBS" if filter_config['wbs'] == 'mit' else "nur ohne WBS" if filter_config['wbs'] == 'ohne' else "WBS egal"
+            active_filters.append(f"WBS: {wbs_text}")
+
+        if active_filters:
+            logger.info(f"🔍 Aktive Bewerbungs-Filter: {' | '.join(active_filters)}")
+        else:
+            logger.info("ℹ️  Keine Bewerbungs-Filter aktiv")
+
+        return filter_config
+
+    except json.JSONDecodeError as e:
+        logger.error(f"❌ Fehler beim Laden der Filter-Konfiguration: {e}")
+        return default_config
+    except Exception as e:
+        logger.error(f"❌ Unerwarteter Fehler beim Laden der Filter-Konfiguration: {e}")
+        return default_config
+
+
+def wohnung_erfuellt_filter(wohnung: Dict[str, any], filter_config: Dict[str, any]) -> bool:
+    """
+    Prüft, ob eine Wohnung alle Filter-Kriterien erfüllt.
+
+    Args:
+        wohnung: Dictionary mit Wohnungsdaten
+        filter_config: Dictionary mit Filter-Konfiguration
+
+    Returns:
+        True wenn Wohnung alle Filter erfüllt, False sonst
+    """
+    # Bezirksfilter
+    gewuenschte_bezirke = [b for b in filter_config.get('gewuenschte_bezirke', []) if b and b.strip()]
+    if gewuenschte_bezirke:
+        wohnung_bezirk = wohnung.get('bezirk', '').lower()
+        if not any(wohnung_bezirk == bezirk.lower() for bezirk in gewuenschte_bezirke):
+            logger.debug(f"❌ Bezirk '{wohnung.get('bezirk')}' nicht in Filterliste")
+            return False
+
+    # Mieten-Filter
+    miete_von = filter_config.get('gesamtmiete_von', '')
+    miete_bis = filter_config.get('gesamtmiete_bis', '')
+    if miete_von or miete_bis:
+        miete_text = wohnung.get('miete', '').replace('€', '').replace('.', '').replace(',', '.').strip()
+        try:
+            miete_wert = float(miete_text.split()[0]) if miete_text else 0
+            if miete_von and miete_wert < float(miete_von):
+                logger.debug(f"❌ Miete {miete_wert}€ < {miete_von}€")
+                return False
+            if miete_bis and miete_wert > float(miete_bis):
+                logger.debug(f"❌ Miete {miete_wert}€ > {miete_bis}€")
+                return False
+        except (ValueError, IndexError):
+            logger.debug(f"⚠️  Konnte Miete nicht parsen: {wohnung.get('miete')}")
+            return False
+
+    # Flächen-Filter
+    flaeche_von = filter_config.get('gesamtflaeche_von', '')
+    flaeche_bis = filter_config.get('gesamtflaeche_bis', '')
+    if flaeche_von or flaeche_bis:
+        flaeche_text = wohnung.get('flaeche', '').replace('m²', '').replace(',', '.').strip()
+        try:
+            flaeche_wert = float(flaeche_text.split()[0]) if flaeche_text else 0
+            if flaeche_von and flaeche_wert < float(flaeche_von):
+                logger.debug(f"❌ Fläche {flaeche_wert}m² < {flaeche_von}m²")
+                return False
+            if flaeche_bis and flaeche_wert > float(flaeche_bis):
+                logger.debug(f"❌ Fläche {flaeche_wert}m² > {flaeche_bis}m²")
+                return False
+        except (ValueError, IndexError):
+            logger.debug(f"⚠️  Konnte Fläche nicht parsen: {wohnung.get('flaeche')}")
+            return False
+
+    # Zimmer-Filter
+    zimmer_von = filter_config.get('zimmer_von', '')
+    zimmer_bis = filter_config.get('zimmer_bis', '')
+    if zimmer_von or zimmer_bis:
+        zimmer_text = wohnung.get('zimmer', '')
+        try:
+            # Extrahiere Zimmerzahl aus "3 Zimmer" -> 3
+            zimmer_str = zimmer_text.split()[0] if zimmer_text else '0'
+            zimmer_zahl = float(zimmer_str.replace(',', '.'))
+
+            if zimmer_von and zimmer_zahl < float(zimmer_von):
+                logger.debug(f"❌ Zimmer {zimmer_zahl} < {zimmer_von}")
+                return False
+            if zimmer_bis and zimmer_zahl > float(zimmer_bis):
+                logger.debug(f"❌ Zimmer {zimmer_zahl} > {zimmer_bis}")
+                return False
+        except (ValueError, IndexError):
+            logger.debug(f"⚠️  Konnte Zimmerzahl nicht parsen: {zimmer_text}")
+            return False
+
+    # WBS-Filter
+    wbs_filter = filter_config.get('wbs', '').lower()
+    if wbs_filter and wbs_filter in ['mit', 'ohne']:
+        wbs_erforderlich = wohnung.get('wbs_erforderlich', 0)
+        if wbs_filter == 'mit' and wbs_erforderlich != 1:
+            logger.debug(f"❌ WBS erforderlich, aber Wohnung hat kein WBS")
+            return False
+        if wbs_filter == 'ohne' and wbs_erforderlich == 1:
+            logger.debug(f"❌ Kein WBS gewünscht, aber Wohnung erfordert WBS")
+            return False
+
+    return True
 
 
 def random_delay(min_seconds: float = 1.0, max_seconds: float = 3.0) -> None:
@@ -968,14 +1126,22 @@ def mark_application_in_db(link: str, status: str, error: Optional[str] = None) 
         logger.error(f"❌ Fehler beim Update der Datenbank: {e}")
 
 
-def get_unapplied_wohnungen() -> List[Dict[str, str]]:
+def get_unapplied_wohnungen(filter_config: Dict[str, any] = None) -> List[Dict[str, str]]:
     """
-    Holt alle Wohnungen aus der Datenbank, für die noch keine Bewerbung abgesendet wurde.
+    Holt alle Wohnungen aus der Datenbank, für die noch keine Bewerbung abgesendet wurde
+    und die die Filter-Kriterien erfüllen.
+
+    Args:
+        filter_config: Optional - Filter-Konfiguration (wird geladen wenn nicht übergeben)
 
     Returns:
-        Liste von Wohnungs-Dictionaries
+        Liste von Wohnungs-Dictionaries, die Filter erfüllen
     """
     try:
+        # Filter laden wenn nicht übergeben
+        if filter_config is None:
+            filter_config = load_filter_config()
+
         conn = sqlite3.connect(DB_NAME)
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
@@ -989,9 +1155,10 @@ def get_unapplied_wohnungen() -> List[Dict[str, str]]:
         rows = cursor.fetchall()
         conn.close()
 
-        wohnungen = []
+        # Alle unbeworbenen Wohnungen sammeln
+        alle_wohnungen = []
         for row in rows:
-            wohnungen.append({
+            alle_wohnungen.append({
                 'id': row['id'],
                 'bezirk': row['bezirk'],
                 'adresse': row['adresse'],
@@ -1004,8 +1171,20 @@ def get_unapplied_wohnungen() -> List[Dict[str, str]]:
                 'ts': row['ts']
             })
 
-        logger.info(f"📊 {len(wohnungen)} Wohnungen ohne Bewerbung gefunden")
-        return wohnungen
+        logger.info(f"📊 {len(alle_wohnungen)} unbeworbene Wohnungen in Datenbank gefunden")
+
+        # Filter anwenden
+        gefilterte_wohnungen = []
+        for wohnung in alle_wohnungen:
+            if wohnung_erfuellt_filter(wohnung, filter_config):
+                gefilterte_wohnungen.append(wohnung)
+            else:
+                logger.info(f"⏭️  Überspringe: {wohnung['titel']} ({wohnung['bezirk']}) - erfüllt nicht alle Filter-Kriterien")
+
+        if len(gefilterte_wohnungen) < len(alle_wohnungen):
+            logger.info(f"✅ {len(gefilterte_wohnungen)} von {len(alle_wohnungen)} Wohnungen erfüllen die Filter-Kriterien")
+
+        return gefilterte_wohnungen
 
     except sqlite3.Error as e:
         logger.error(f"❌ Fehler beim Abrufen der Wohnungen: {e}")
@@ -1259,11 +1438,14 @@ def run_application_bot(headless: bool = True, max_applications: int = None) -> 
         logger.error("❌ Konnte Benutzerdaten nicht laden - Abbruch")
         return
 
-    # Unbeworbene Wohnungen abrufen
-    wohnungen = get_unapplied_wohnungen()
+    # Filter-Konfiguration laden
+    filter_config = load_filter_config()
+
+    # Unbeworbene Wohnungen abrufen (mit Filter-Prüfung)
+    wohnungen = get_unapplied_wohnungen(filter_config)
 
     if not wohnungen:
-        logger.info("ℹ️  Keine neuen Wohnungen für Bewerbung gefunden")
+        logger.info("ℹ️  Keine neuen Wohnungen für Bewerbung gefunden (die Filter erfüllen)")
         return
 
     # Limitiere Anzahl der Bewerbungen

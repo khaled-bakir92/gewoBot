@@ -15,15 +15,23 @@ import time
 from datetime import datetime
 import logging
 
-app = Flask(__name__, static_folder='frontend', static_url_path='')
-CORS(app)
-
 # Logging Setup
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+
+app = Flask(__name__, static_folder='frontend', static_url_path='')
+CORS(app)
+
+# Import Filter-Funktionen aus application_bot
+try:
+    from application_bot import load_filter_config, wohnung_erfuellt_filter
+    FILTER_AVAILABLE = True
+except ImportError:
+    logger.warning("⚠️  Konnte Filter-Funktionen nicht importieren")
+    FILTER_AVAILABLE = False
 
 # Globale Variablen für Bot-Steuerung
 bot_process = None
@@ -556,8 +564,16 @@ def get_recent():
 
 @app.route('/api/applications/all', methods=['GET'])
 def get_all_applications():
-    """Gibt alle Wohnungen aus der Datenbank zurück"""
+    """Gibt alle Wohnungen aus der Datenbank zurück (mit Filter-Status)"""
     try:
+        # Filter-Konfiguration laden
+        filter_config = None
+        if FILTER_AVAILABLE:
+            try:
+                filter_config = load_filter_config()
+            except Exception as e:
+                logger.warning(f"Konnte Filter-Config nicht laden: {e}")
+
         conn = sqlite3.connect(DB_PATH)
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
@@ -575,7 +591,7 @@ def get_all_applications():
 
         applications = []
         for row in rows:
-            applications.append({
+            wohnung = {
                 'id': row['id'],
                 'titel': row['titel'],
                 'adresse': row['adresse'],
@@ -583,13 +599,28 @@ def get_all_applications():
                 'zimmer': row['zimmer'],
                 'flaeche': row['flaeche'],
                 'miete': row['miete'],
-                'wbs_erforderlich': bool(row['wbs_erforderlich']),
+                'wbs_erforderlich': row['wbs_erforderlich'],
                 'link': row['link'],
                 'applied': bool(row['applied']),
                 'status': row['application_status'],
                 'timestamp': row['applied_ts'],
                 'error': row['application_error']
-            })
+            }
+
+            # Prüfe ob Wohnung aktuelle Filter erfüllt
+            if FILTER_AVAILABLE and filter_config:
+                try:
+                    wohnung['matches_filter'] = wohnung_erfuellt_filter(wohnung, filter_config)
+                except Exception as e:
+                    logger.debug(f"Filter-Prüfung fehlgeschlagen: {e}")
+                    wohnung['matches_filter'] = None  # Unbekannt
+            else:
+                wohnung['matches_filter'] = None  # Filter nicht verfügbar
+
+            # Konvertiere wbs_erforderlich zu bool für JSON
+            wohnung['wbs_erforderlich'] = bool(wohnung['wbs_erforderlich'])
+
+            applications.append(wohnung)
 
         return jsonify(applications)
 

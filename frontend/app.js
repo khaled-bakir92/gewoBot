@@ -685,9 +685,18 @@ function displayApplicationsTable(applications) {
         return;
     }
 
-    tbody.innerHTML = applications.map(app => `
-        <tr>
-            <td>${app.titel || '-'}</td>
+    tbody.innerHTML = applications.map(app => {
+        // Filter-Status bestimmen
+        let filterBadge = '';
+        if (app.matches_filter === true) {
+            filterBadge = ' <span class="filter-badge match" title="Erfüllt aktuelle Filter">✓</span>';
+        } else if (app.matches_filter === false) {
+            filterBadge = ' <span class="filter-badge no-match" title="Erfüllt NICHT die aktuellen Filter">✗</span>';
+        }
+
+        return `
+        <tr class="${app.matches_filter === false ? 'filter-mismatch' : ''}">
+            <td>${app.titel || '-'}${filterBadge}</td>
             <td>${app.adresse || '-'}</td>
             <td>${app.bezirk || '-'}</td>
             <td>${app.zimmer || '-'}</td>
@@ -701,7 +710,8 @@ function displayApplicationsTable(applications) {
             </td>
             <td>${app.timestamp ? formatDateTime(app.timestamp) : '-'}</td>
         </tr>
-    `).join('');
+        `;
+    }).join('');
 }
 
 function getStatusText(status) {

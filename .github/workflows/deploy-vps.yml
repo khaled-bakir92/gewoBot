@@ -16,39 +16,3 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: /root/deploy.sh
-```
-
-Klick auf **"Commit changes"** und speichern.
-
----
-
-## **Schritt 4: GitHub Secrets hinzufügen**
-
-Das ist der wichtigste Teil! Hier speicherst du deine sensiblen Daten sicher.
-
-**Im GitHub Repository:**
-1. Gehe zu **Settings** (oben rechts im Repo)
-2. Klick auf **"Secrets and variables"** (links)
-3. Klick auf **"Actions"**
-4. Klick auf **"New repository secret"** (grüner Button)
-
-### **Secret 1: VPS_HOST**
-- **Name:** `VPS_HOST`
-- **Value:** `157.173.99.84`
-- Klick **"Add secret"**
-
-### **Secret 2: VPS_USER**
-- **Name:** `VPS_USER`
-- **Value:** `root`
-- Klick **"Add secret"**
-
-### **Secret 3: VPS_SSH_KEY** (Der wichtigste!)
-- **Name:** `VPS_SSH_KEY`
-- **Value:** Hier pastest du den KOMPLETTEN privaten SSH-Key von vorhin (von `-----BEGIN...` bis `-----END...`)
-- Klick **"Add secret"**
-
-Nach dem Hinzufügen siehst du alle 3 Secrets:
-```
-VPS_HOST        •••••••••••
-VPS_USER        •••••••••••
-VPS_SSH_KEY     •••••••••••

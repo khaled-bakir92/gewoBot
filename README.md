@@ -20,7 +20,7 @@ Dieser Bot sucht automatisch nach Wohnungen auf der Gewobag-Website, filtert nac
 - ✅ **Intelligente Nachrichtenerkennung** nach Submit
 - ❌ **Fehlermeldungs-Analyse** (z.B. "Objekt nicht mehr verfügbar")
 - 🛡️ Anti-Detection (User-Agent-Rotation, Stealth-Modus)
-- 🔒 Duplikat-Schutz - Keine doppelten Bewerbungen
+- 🔒 Duplikat-Schutz - Keine doppelten Bewerbung
 
 ## 🚀 Schnellstart
 

@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize navigation
     initNavigation();
 
+    // Initialize mobile menu
+    initMobileMenu();
+
     // Load initial data
     loadDashboard();
     loadUserData();
@@ -48,8 +51,91 @@ function initNavigation() {
         item.addEventListener('click', function() {
             const targetTab = this.getAttribute('data-tab');
             switchTab(targetTab);
+
+            // Close mobile menu when navigating
+            closeMobileMenu();
         });
     });
+}
+
+// ============================================================================
+// MOBILE MENU
+// ============================================================================
+
+function initMobileMenu() {
+    const menuToggle = document.getElementById('mobileMenuToggle');
+    const overlay = document.getElementById('mobileOverlay');
+    const sidebar = document.querySelector('.sidebar');
+
+    if (!menuToggle || !overlay || !sidebar) return;
+
+    // Toggle menu on button click
+    menuToggle.addEventListener('click', function() {
+        toggleMobileMenu();
+    });
+
+    // Close menu on overlay click
+    overlay.addEventListener('click', function() {
+        closeMobileMenu();
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeMobileMenu();
+        }
+    });
+}
+
+function toggleMobileMenu() {
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.getElementById('mobileOverlay');
+    const menuToggle = document.getElementById('mobileMenuToggle');
+
+    const isActive = sidebar.classList.contains('active');
+
+    if (isActive) {
+        closeMobileMenu();
+    } else {
+        openMobileMenu();
+    }
+}
+
+function openMobileMenu() {
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.getElementById('mobileOverlay');
+    const menuToggle = document.getElementById('mobileMenuToggle');
+
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+    overlay.style.display = 'block';
+    menuToggle.innerHTML = '✕';
+    menuToggle.setAttribute('aria-label', 'Menu schließen');
+
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu() {
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.getElementById('mobileOverlay');
+    const menuToggle = document.getElementById('mobileMenuToggle');
+
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+
+    // Wait for transition to complete before hiding
+    setTimeout(() => {
+        if (!overlay.classList.contains('active')) {
+            overlay.style.display = 'none';
+        }
+    }, 300);
+
+    menuToggle.innerHTML = '☰';
+    menuToggle.setAttribute('aria-label', 'Menu öffnen');
+
+    // Restore body scroll
+    document.body.style.overflow = '';
 }
 
 function switchTab(tabName) {
